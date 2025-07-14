@@ -1,0 +1,15 @@
+{
+  "projects": {
+    "default": "vive-project"
+  },
+  "targets": {
+    "vive-project": {
+      "hosting": {
+        "vive-blog": [
+          "vive-blog"
+        ]
+      }
+    }
+  },
+  "etags": {}
+}

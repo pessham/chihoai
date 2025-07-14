@@ -1,0 +1,15 @@
+User-agent: *
+Allow: /
+
+# サイトマップの場所
+Sitemap: https://chihoai.com/sitemap.xml
+
+# 地方AIブースター - 生成AIで地方の現場を労く未来形へ
+# 製造業・観光業・農業の現場を生成AIで変革する実践ガイド
+
+# クロール優先ページ
+Allow: /index.html
+Allow: /articles/
+
+# SEO対策
+# 地方AI, 生成AI, 製造業DX, 観光業DX, 農業DX, AI導入

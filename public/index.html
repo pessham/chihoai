@@ -1,0 +1,1429 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>地方AIブースター - 生成AIで地方の現場を労く未来形へ</title>
+    <meta name="description" content="製造業・観光業・農業の現場を生成AIで変革する実践ガイド。地方企業が一番早くAIを導入・活用するためのノウハウとケーススタディを提供します。">
+    <meta name="keywords" content="地方AIブースター,地方AI,生成AI,製造業DX,観光業DX,農業DX,AI導入,ローカルAI,現場改善,AI活用,スマート農業,中小企業AI,地域DX,デジタル変革">
+    
+    <!-- SEO強化タグ -->
+    <meta name="robots" content="index, follow">
+    <meta name="googlebot" content="index, follow">
+    <link rel="canonical" href="https://chihoai.com/">
+    <meta name="geo.region" content="JP">
+    <meta name="geo.placename" content="日本">
+    <meta name="language" content="ja">
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/x-icon" href="/images/metamakeblack.jpg">
+    <link rel="icon" type="image/png" href="/images/metamakeblack.jpg">
+    <link rel="apple-touch-icon" href="/images/metamakeblack.jpg">
+    
+    <!-- Open Graph -->
+    <meta property="og:title" content="地方AIブースター - 生成AIで地方の現場を労く未来形へ">
+    <meta property="og:description" content="製造業・観光業・農業の現場を生成AIで変革する実践ガイド。地方企業が一番早くAIを導入・活用するためのノウハウとケーススタディを提供します。">
+    <meta property="og:image" content="/images/chihoaitop.png">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://chihoai.com/">
+    
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="地方AIブースター - 生成AIで地方の現場を労く未来形へ">
+    <meta name="twitter:description" content="製造業・観光業・農業の現場を生成AIで変革する実践ガイド。地方企業が一番早くAIを導入・活用するためのノウハウとケーススタディを提供します。">
+    <meta name="twitter:image" content="/images/chihoaitop.png">
+    
+    <!-- 構造化データ（JSON-LD） -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "WebSite",
+        "name": "地方AIブースター",
+        "alternateName": "地方AIブースター - 生成AIで地方の現場を労く未来形へ",
+        "url": "https://chihoai.com/",
+        "description": "製造業・観光業・農業の現場を生成AIで変革する実践ガイド。地方企業が一番早くAIを導入・活用するためのノウハウとケーススタディを提供します。",
+        "inLanguage": "ja",
+        "publisher": {
+            "@type": "Organization",
+            "name": "地方AIブースター",
+            "url": "https://chihoai.com/"
+        },
+        "potentialAction": {
+            "@type": "SearchAction",
+            "target": "https://chihoai.com/?s={search_term_string}",
+            "query-input": "required name=search_term_string"
+        },
+        "keywords": ["地方AIブースター", "地方AI", "生成AI", "製造業DX", "観光業DX", "農業DX", "AI導入", "中小企業AI", "地域DX"]
+    }
+    </script>
+
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700;900&family=BIZ+UDPGothic:wght@400;700&display=swap" rel="stylesheet">
+    
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <style>
+        :root {
+            /* 地方AIブースター color scheme */
+            --clr-primary: #18634B; /* ディープグリーン */
+            --clr-primary-light: #2B8A64;
+            --clr-primary-dark: #0F4A38;
+            --clr-accent: #29D3C3; /* エメラルドシアン */
+            --clr-accent-light: #4DDDD1;
+            --clr-secondary: #EADDC9; /* サンドベージュ */
+            --clr-black: #000000;
+            --clr-gray-dark: #333333;
+            --clr-gray: #666666;
+            --clr-gray-light: #f8f8f8;
+            --clr-white: #ffffff;
+            --clr-bg-1: #F7F8FA; /* やや灰がかったホワイト */
+            --clr-bg-2: #EADDC9; /* サンドベージュ */
+            --radius: 8px;
+            --shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+            --transition: all 0.3s ease;
+            
+            /* Font families for 地方AIブースター */
+            font-family: 'Noto Sans JP', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            line-height: 1.6;
+            font-weight: 400;
+            
+            color: var(--clr-gray-dark);
+            
+            font-synthesis: none;
+            text-rendering: optimizeLegibility;
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            margin: 0;
+            min-width: 320px;
+            min-height: 100vh;
+            background: linear-gradient(135deg, var(--clr-bg-1) 0%, var(--clr-bg-2) 100%);
+            color: var(--clr-gray-dark);
+            font-family: 'Noto Sans JP', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+        }
+
+        /* Typography for 地方AIブースター */
+        h1, h2, h3, h4, h5, h6 {
+            font-family: 'BIZ UDPGothic', 'Noto Sans JP', sans-serif;
+            font-weight: 700;
+            line-height: 1.2;
+            color: var(--clr-black);
+        }
+
+        h1 {
+            font-size: clamp(2rem, 5vw, 4rem);
+        }
+
+        h2 {
+            font-size: clamp(1.5rem, 4vw, 2.5rem);
+        }
+
+        h3 {
+            font-size: clamp(1.2rem, 3vw, 1.8rem);
+        }
+
+        .heading-accent {
+            font-family: 'BIZ UDPGothic', 'Noto Sans JP', sans-serif;
+        }
+
+        /* Links styling */
+        a {
+            color: var(--clr-primary);
+            text-decoration: none;
+            transition: all 0.3s ease;
+        }
+
+        a:hover {
+            color: var(--clr-accent);
+            transform: translateY(-1px);
+        }
+
+        /* Buttons styling */
+        .btn-primary {
+            background: linear-gradient(135deg, var(--clr-primary) 0%, var(--clr-primary-light) 100%);
+            color: white;
+            border: none;
+            border-radius: 8px;
+            padding: 12px 24px;
+            font-weight: 700;
+            font-family: 'BIZ UDPGothic', 'Noto Sans JP', sans-serif;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 15px rgba(24, 99, 75, 0.3);
+            text-decoration: none;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .btn-primary:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px rgba(24, 99, 75, 0.4);
+            color: white;
+        }
+
+        .btn-secondary {
+            background: transparent;
+            color: var(--clr-black);
+            border: 2px solid var(--clr-black);
+            border-radius: 8px;
+            padding: 10px 22px;
+            font-weight: 700;
+            font-family: 'BIZ UDPGothic', 'Noto Sans JP', sans-serif;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            text-decoration: none;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .btn-secondary:hover {
+            background: var(--clr-black);
+            color: white;
+            transform: translateY(-1px);
+        }
+
+        /* Card styles */
+        .card {
+            background: rgba(255, 255, 255, 0.9);
+            border-radius: 8px;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+            transition: all 0.3s ease;
+            backdrop-filter: blur(10px);
+        }
+
+        .card:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 8px 30px rgba(0, 0, 0, 0.15);
+        }
+
+        /* Navigation links */
+        .nav-link:hover {
+            background: rgba(24, 99, 75, 0.1);
+            color: var(--clr-primary) !important;
+            transform: translateY(-1px);
+        }
+
+        /* Enhanced emphasis styles */
+        .text-accent {
+            color: var(--clr-primary);
+        }
+
+        .bg-accent {
+            background: var(--clr-primary);
+        }
+
+        .bg-accent-gradient {
+            background: linear-gradient(135deg, var(--clr-primary) 0%, var(--clr-primary-light) 100%);
+        }
+
+        .border-accent {
+            border-color: var(--clr-primary);
+        }
+
+        .shadow-accent {
+            box-shadow: 0 4px 20px rgba(24, 99, 75, 0.3);
+        }
+
+        /* Vibe coding specific styles */
+        .vibe-highlight {
+            background: linear-gradient(135deg, var(--clr-primary) 0%, var(--clr-primary-light) 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            font-weight: 900;
+        }
+
+        .vibe-card {
+            background: rgba(255, 255, 255, 0.95);
+            border: 2px solid transparent;
+            border-image: linear-gradient(135deg, var(--clr-primary) 0%, var(--clr-primary-light) 100%) 1;
+            border-radius: var(--radius);
+            transition: var(--transition);
+        }
+
+        .vibe-card:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 12px 40px rgba(24, 99, 75, 0.2);
+        }
+
+        .animate-pulse {
+            animation: pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+        }
+
+        @keyframes pulse {
+            0%, 100% {
+                opacity: 1;
+            }
+            50% {
+                opacity: .5;
+            }
+        }
+
+        .line-clamp-2 {
+            display: -webkit-box;
+            -webkit-line-clamp: 2;
+            -webkit-box-orient: vertical;
+            overflow: hidden;
+        }
+
+        .line-clamp-3 {
+            display: -webkit-box;
+            -webkit-line-clamp: 3;
+            -webkit-box-orient: vertical;
+            overflow: hidden;
+        }
+
+        .aspect-ratio-4-3 {
+            aspect-ratio: 4/3;
+        }
+
+        /* Custom scrollbar */
+        ::-webkit-scrollbar {
+            width: 8px;
+        }
+
+        ::-webkit-scrollbar-track {
+            background: var(--clr-bg-2);
+        }
+
+        ::-webkit-scrollbar-thumb {
+            background: var(--clr-primary);
+            border-radius: 4px;
+        }
+
+        ::-webkit-scrollbar-thumb:hover {
+            background: var(--clr-primary-light);
+        }
+
+        /* Button border styles */
+        .btn-manufacturing {
+            border: 2px solid var(--clr-primary);
+            color: var(--clr-primary);
+        }
+
+        .btn-manufacturing:hover {
+            background: var(--clr-primary);
+            color: white;
+        }
+
+        .btn-tourism {
+            border: 2px solid var(--clr-accent);
+            color: var(--clr-accent);
+        }
+
+        .btn-tourism:hover {
+            background: var(--clr-accent);
+            color: white;
+        }
+
+        /* Mobile responsiveness */
+        @media (max-width: 768px) {
+            .mobile-menu {
+                display: none;
+            }
+            
+            .mobile-menu.active {
+                display: block;
+            }
+        }
+    </style>
+</head>
+<body class="min-h-screen flex flex-col">
+    <!-- Header -->
+    <header class="shadow-lg border-b-4 sticky top-0 z-50" style="border-bottom-color: var(--clr-primary); background: rgba(255, 255, 255, 0.98); backdrop-filter: blur(15px);">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-16">
+                <a href="#" class="flex items-center group">
+                    <div class="flex items-center gap-3">
+                        <img 
+                            src="images/metamakeblack.jpg" 
+                            alt="メタマケロゴ" 
+                            class="w-10 h-10 rounded-lg object-cover shadow-md group-hover:scale-105 transition-transform"
+                        />
+                        <h1 class="heading-accent text-lg font-black group-hover:scale-105 transition-transform whitespace-nowrap" style="color: var(--clr-black);">
+                            地方<span style="color: var(--clr-primary);">AI</span><span style="color: var(--clr-accent);">ブースター</span>
+                        </h1>
+                    </div>
+                </a>
+                
+                <nav class="hidden md:flex space-x-6">
+                    <a href="#" class="nav-link px-4 py-2 rounded-lg text-sm font-bold transition-all hover:scale-105" style="color: var(--clr-gray-dark);">
+                        ホーム
+                    </a>
+                    <a href="manufacturing.html" class="nav-link px-4 py-2 rounded-lg text-sm font-bold transition-all hover:scale-105" style="color: var(--clr-gray-dark);">
+                        製造業DX
+                    </a>
+                    <a href="tourism.html" class="nav-link px-4 py-2 rounded-lg text-sm font-bold transition-all hover:scale-105" style="color: var(--clr-gray-dark);">
+                        観光業DX
+                    </a>
+                    <a href="agriculture.html" class="nav-link px-4 py-2 rounded-lg text-sm font-bold transition-all hover:scale-105" style="color: var(--clr-gray-dark);">
+                        農業DX
+                    </a>
+                    <a href="blog-list.html" class="nav-link px-4 py-2 rounded-lg text-sm font-bold transition-all hover:scale-105" style="color: var(--clr-gray-dark);">
+                        すべて
+                    </a>
+                    <a href="#ai-diagnosis" class="btn-primary text-sm px-4 py-2" style="background: linear-gradient(135deg, var(--clr-accent) 0%, var(--clr-accent-light) 100%); border: none;">
+                        AI導入診断
+                    </a>
+                    <a href="#about" class="btn-primary text-sm px-4 py-2">
+                        運営者
+                    </a>
+                </nav>
+                
+                <!-- Mobile menu button -->
+                <div class="md:hidden">
+                    <button
+                        type="button"
+                        class="rounded-lg p-2 inline-flex items-center justify-center transition-all hover:scale-105"
+                        style="background: linear-gradient(135deg, var(--clr-primary) 0%, var(--clr-primary-light) 100%); color: var(--clr-white);"
+                        onclick="toggleMobileMenu()"
+                    >
+                        <span class="sr-only">メニューを開く</span>
+                        <svg class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/>
+                        </svg>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main class="flex-grow">
+        <!-- Hero Section -->
+        <section class="relative overflow-hidden min-h-screen bg-gradient-to-br from-[var(--clr-bg-1)] to-[var(--clr-bg-2)]">
+            <!-- Background Pattern -->
+            <div class="absolute inset-0 opacity-10">
+                <svg class="w-full h-full" viewBox="0 0 100 100" preserveAspectRatio="xMidYMid slice">
+                    <defs>
+                        <pattern id="mountainPattern" x="0" y="0" width="20" height="20" patternUnits="userSpaceOnUse">
+                            <polygon points="10,5 15,15 5,15" fill="var(--clr-primary)" opacity="0.3"/>
+                            <line x1="0" y1="10" x2="20" y2="10" stroke="var(--clr-accent)" stroke-width="0.5" opacity="0.5"/>
+                        </pattern>
+                    </defs>
+                    <rect width="100%" height="100%" fill="url(#mountainPattern)"/>
+                </svg>
+            </div>
+
+            <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-24 relative z-10 min-h-screen flex items-center">
+                <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center w-full">
+                    <!-- Left: Main Copy -->
+                    <div class="text-left">
+                        <h1 class="text-4xl md:text-6xl font-bold mb-6 leading-tight">
+                            <span class="text-[var(--clr-primary)]">地方の現場</span>を、<br/>
+                            <span class="text-[var(--clr-accent)]">生成AI</span>で<br/>
+                            <span class="text-[var(--clr-gray-dark)]">"働く未来形"へ</span>
+                        </h1>
+                        <p class="text-xl text-[var(--clr-gray)] mb-8 leading-relaxed">
+                            製造業・観光業・農業の現場に特化した生成AI活用ガイド。<br/>
+                            地方企業が確実にAI導入を成功させるための実践的なノウハウとケーススタディをお届けします。
+                        </p>
+                        
+                        <!-- CTA Buttons -->
+                        <div class="flex flex-col sm:flex-row gap-4 mb-8">
+                            <a href="#ai-diagnosis-simulator" class="btn-primary text-center px-8 py-4 text-lg font-bold" style="background: linear-gradient(135deg, var(--clr-accent) 0%, var(--clr-accent-light) 100%); transform: scale(1.1); box-shadow: 0 8px 25px rgba(41, 211, 195, 0.3);">
+                                🚀 AI導入診断を開始する
+                            </a>
+                        </div>
+                        
+                        <div class="flex flex-col sm:flex-row gap-4 mb-12">
+                            <a href="manufacturing.html" class="btn-primary text-center px-6 py-3 text-base font-bold">
+                                製造業DXを読む
+                            </a>
+                            <a href="tourism.html" class="btn-secondary text-center px-6 py-3 text-base font-bold btn-manufacturing">
+                                観光ビジネスを読む
+                            </a>
+                            <a href="agriculture.html" class="btn-secondary text-center px-6 py-3 text-base font-bold btn-tourism">
+                                農業DXを読む
+                            </a>
+                            <a href="blog-list.html" class="btn-secondary text-center px-6 py-3 text-base font-bold btn-all-articles">
+                                全ての記事を読む
+                            </a>
+                        </div>
+                    </div>
+
+                    <!-- Right: Hero Image -->
+                    <div class="flex justify-center lg:justify-end">
+                        <img 
+                            src="images/chihoaitop.png" 
+                            alt="地方の現場をAIで変革するイメージ" 
+                            class="w-full max-w-md h-auto rounded-2xl shadow-2xl object-cover"
+                        />
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 最新記事グリッド -->
+        <section class="py-20 bg-[var(--clr-bg-1)]" id="blog">
+            <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+                <h2 class="text-3xl md:text-4xl font-bold text-center mb-16 text-[var(--clr-primary)]">
+                    最新の実践ガイド
+                </h2>
+                
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                    <!-- Blog Card 1 - 最新記事 20250714-manufacturing-report -->
+                    <article class="card overflow-hidden">
+                        <a href="articles/20250714-chatgpt-manufacturing-report.html" class="block relative aspect-ratio-4-3 overflow-hidden">
+                            <img 
+                                src="https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?w=800&h=450&fit=crop&crop=center" 
+                                alt="製造業の作業日報作成" 
+                                class="w-full h-full object-cover hover:scale-105 transition-transform duration-300"
+                            />
+                            <div class="absolute inset-0 bg-gradient-to-t from-black/90 via-black/30 to-transparent">
+                                <div class="absolute bottom-4 left-4 right-4">
+                                    <h2 class="text-white text-lg font-bold leading-tight line-clamp-2" style="text-shadow: 2px 2px 4px rgba(0,0,0,0.8);">
+                                        【地方製造業のDX】もう日報作成に時間はかけない！ChatGPTで実現する「技術が伝わる」作業日報の作り方
+                                    </h2>
+                                </div>
+                            </div>
+                        </a>
+                        <div class="p-6">
+                            <div class="flex items-center mb-3">
+                                <time class="text-sm text-gray-500">2025年7月14日</time>
+                                <span class="ml-2 px-2 py-1 bg-red-500 text-white text-xs rounded-full">NEW</span>
+                            </div>
+                            <p class="text-gray-700 mb-4 line-clamp-3">
+                                音声入力でスマホに話すだけで質の高い作業日報が完成。製造現場のノウハウを次世代に継承する革新的な手法を具体的なプロンプトとともに解説。
+                            </p>
+                            <div class="flex flex-wrap gap-2 mb-4">
+                                <span class="px-3 py-1 bg-blue-100 text-blue-800 text-sm rounded-full">製造DX</span>
+                                <span class="px-3 py-1 bg-blue-100 text-blue-800 text-sm rounded-full">日報作成</span>
+                            </div>
+                            <a href="articles/20250714-chatgpt-manufacturing-report.html" class="btn-primary text-sm">
+                                続きを読む
+                                <svg class="ml-2 w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/>
+                                </svg>
+                            </a>
+                        </div>
+                    </article>
+
+                    <!-- Blog Card 2 - 2番目の記事 20250714-claim-simulation -->
+                    <article class="card overflow-hidden">
+                        <a href="articles/20250714-chatgpt-claim-simulation.html" class="block relative aspect-ratio-4-3 overflow-hidden">
+                            <img 
+                                src="https://images.unsplash.com/photo-1559136555-9303baea8ebd?w=800&h=450&fit=crop&crop=center" 
+                                alt="観光業のクレーム応対" 
+                                class="w-full h-full object-cover hover:scale-105 transition-transform duration-300"
+                            />
+                            <div class="absolute inset-0 bg-gradient-to-t from-black/90 via-black/30 to-transparent">
+                                <div class="absolute bottom-4 left-4 right-4">
+                                    <h2 class="text-white text-lg font-bold leading-tight line-clamp-2" style="text-shadow: 2px 2px 4px rgba(0,0,0,0.8);">
+                                        【地方観光業向け】もうクレームは怖くない！ChatGPT音声会話で実践する、お客様の心を掴む応対術
+                                    </h2>
+                                </div>
+                            </div>
+                        </a>
+                        <div class="p-6">
+                            <div class="flex items-center mb-3">
+                                <time class="text-sm text-gray-500">2025年7月14日</time>
+                                <span class="ml-2 px-2 py-1 bg-red-500 text-white text-xs rounded-full">NEW</span>
+                            </div>
+                            <p class="text-gray-700 mb-4 line-clamp-3">
+                                24時間いつでもリアルなクレーム応対シミュレーションが可能。観光業スタッフの応対スキルを劇的に向上させるAI活用法を具体的なシナリオとともに解説。
+                            </p>
+                            <div class="flex flex-wrap gap-2 mb-4">
+                                <span class="px-3 py-1 bg-green-100 text-green-800 text-sm rounded-full">観光DX</span>
+                                <span class="px-3 py-1 bg-green-100 text-green-800 text-sm rounded-full">接客研修</span>
+                            </div>
+                            <a href="articles/20250714-chatgpt-claim-simulation.html" class="btn-primary text-sm">
+                                続きを読む
+                                <svg class="ml-2 w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/>
+                                </svg>
+                            </a>
+                        </div>
+                    </article>
+
+                    <!-- Blog Card 3 - 3番目の記事 20250716 -->
+                    <article class="card overflow-hidden">
+                        <a href="articles/20250716.html" class="block relative aspect-ratio-4-3 overflow-hidden">
+                            <img 
+                                src="https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?w=800&h=450&fit=crop&crop=center" 
+                                alt="なぜなぜ分析ボット" 
+                                class="w-full h-full object-cover hover:scale-105 transition-transform duration-300"
+                            />
+                            <div class="absolute inset-0 bg-gradient-to-t from-black/90 via-black/30 to-transparent">
+                                <div class="absolute bottom-4 left-4 right-4">
+                                    <h2 class="text-white text-lg font-bold leading-tight line-clamp-2" style="text-shadow: 2px 2px 4px rgba(0,0,0,0.8);">
+                                        【DX仕事術】なぜ？を5回繰り返すだけ！ChatGPTとNotebookLMで作る「最強のなぜなぜ分析」ボット
+                                    </h2>
+                                </div>
+                            </div>
+                        </a>
+                        <div class="p-6">
+                            <div class="flex items-center mb-3">
+                                <time class="text-sm text-gray-500">2025年7月16日</time>
+                            </div>
+                            <p class="text-gray-700 mb-4 line-clamp-3">
+                                問題の根本原因を見つけるなぜなぜ分析をAIで効率化。ChatGPTとNotebookLMを組み合わせた分析ボットで、製造業の品質改善を劇的にスピードアップ。
+                            </p>
+                            <div class="flex flex-wrap gap-2 mb-4">
+                                <span class="px-3 py-1 bg-orange-100 text-orange-800 text-sm rounded-full">品質改善</span>
+                                <span class="px-3 py-1 bg-orange-100 text-orange-800 text-sm rounded-full">なぜなぜ分析</span>
+                            </div>
+                            <a href="articles/20250716.html" class="btn-primary text-sm">
+                                続きを読む
+                                <svg class="ml-2 w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/>
+                                </svg>
+                            </a>
+                        </div>
+                    </article>
+
+                    <!-- Blog Card 4 - 4番目の記事 20250715 -->
+                    <article class="card overflow-hidden">
+                        <a href="articles/20250715.html" class="block relative aspect-ratio-4-3 overflow-hidden">
+                            <img 
+                                src="https://images.unsplash.com/photo-1522202176988-66273c2fd55f?w=800&h=450&fit=crop&crop=faces" 
+                                alt="外国人従業員向けやさしい日本語トレーニング" 
+                                class="w-full h-full object-cover hover:scale-105 transition-transform duration-300"
+                            />
+                            <div class="absolute inset-0 bg-gradient-to-t from-black/90 via-black/30 to-transparent">
+                                <div class="absolute bottom-4 left-4 right-4">
+                                    <h2 class="text-white text-lg font-bold leading-tight line-clamp-2" style="text-shadow: 2px 2px 4px rgba(0,0,0,0.8);">
+                                        【製造業・観光業向け】言葉の壁を乗り越える！ChatGPTで作る、外国人従業員向け「やさしい日本語」トレーニング術
+                                    </h2>
+                                </div>
+                            </div>
+                        </a>
+                        <div class="p-6">
+                            <div class="flex items-center mb-3">
+                                <time class="text-sm text-gray-500">2025年7月15日</time>
+                            </div>
+                            <p class="text-gray-700 mb-4 line-clamp-3">
+                                製造業・観光業の現場で外国人従業員との言葉の壁を解決。ChatGPTを活用して現場に特化した「やさしい日本語」教材を作成する方法を具体的に解説。
+                            </p>
+                            <div class="flex flex-wrap gap-2 mb-4">
+                                <span class="px-3 py-1 bg-purple-100 text-purple-800 text-sm rounded-full">多文化共生</span>
+                                <span class="px-3 py-1 bg-purple-100 text-purple-800 text-sm rounded-full">人材育成</span>
+                            </div>
+                            <a href="articles/20250715.html" class="btn-primary text-sm">
+                                続きを読む
+                                <svg class="ml-2 w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/>
+                                </svg>
+                            </a>
+                        </div>
+                    </article>
+
+                    <!-- Blog Card 5 - 5番目の記事 20250714 -->
+                    <article class="card overflow-hidden">
+                        <a href="articles/20250714.html" class="block relative aspect-ratio-4-3 overflow-hidden">
+                            <img 
+                                src="https://images.unsplash.com/photo-1600880292203-757bb62b4baf?w=800&h=450&fit=crop&crop=faces" 
+                                alt="中小企業AI導入の現実的な進め方" 
+                                class="w-full h-full object-cover hover:scale-105 transition-transform duration-300"
+                            />
+                            <div class="absolute inset-0 bg-gradient-to-t from-black/90 via-black/30 to-transparent">
+                                <div class="absolute bottom-4 left-4 right-4">
+                                    <h2 class="text-white text-lg font-bold leading-tight line-clamp-2" style="text-shadow: 2px 2px 4px rgba(0,0,0,0.8);">
+                                        中小企業AI導入の現実的な進め方｜段階的アプローチで成功率を高める実践ガイド
+                                    </h2>
+                                </div>
+                            </div>
+                        </a>
+                        <div class="p-6">
+                            <div class="flex items-center mb-3">
+                                <time class="text-sm text-gray-500">2025年7月14日</time>
+                            </div>
+                            <p class="text-gray-700 mb-4 line-clamp-3">
+                                中小企業がAI導入で失敗しないための段階的アプローチを解説。コスト対効果を重視した現実的な導入プロセスと、実際の成功事例を基にした実践的なガイドライン。
+                            </p>
+                            <div class="flex flex-wrap gap-2 mb-4">
+                                <span class="px-3 py-1 bg-blue-100 text-blue-800 text-sm rounded-full">横断的</span>
+                                <span class="px-3 py-1 bg-blue-100 text-blue-800 text-sm rounded-full">AI導入ガイド</span>
+                            </div>
+                            <a href="articles/20250714.html" class="btn-primary text-sm">
+                                続きを読む
+                                <svg class="ml-2 w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/>
+                                </svg>
+                            </a>
+                        </div>
+                    </article>
+
+                    <!-- Blog Card 6 - 6番目の記事 20250713 -->
+                    <article class="card overflow-hidden">
+                        <a href="articles/20250713.html" class="block relative aspect-ratio-4-3 overflow-hidden">
+                            <img 
+                                src="https://images.unsplash.com/photo-1551882547-ff40c63fe5fa?w=800&h=450&fit=crop&crop=center" 
+                                alt="地方旅館AI導入の実践ガイド" 
+                                class="w-full h-full object-cover hover:scale-105 transition-transform duration-300"
+                            />
+                            <div class="absolute inset-0 bg-gradient-to-t from-black/90 via-black/30 to-transparent">
+                                <div class="absolute bottom-4 left-4 right-4">
+                                    <h2 class="text-white text-lg font-bold leading-tight line-clamp-2" style="text-shadow: 2px 2px 4px rgba(0,0,0,0.8);">
+                                        地方旅館AI導入の実践ガイド｜効果的な活用手法と現実的な改善目標設定を解説
+                                    </h2>
+                                </div>
+                            </div>
+                        </a>
+                        <div class="p-6">
+                            <div class="flex items-center mb-3">
+                                <time class="text-sm text-gray-500">2025年7月13日</time>
+                            </div>
+                            <p class="text-gray-700 mb-4 line-clamp-3">
+                                地方旅館・民宿でのAI活用について、現実的な改善効果と導入手法を解説。業界データに基づいた目標設定と段階的な導入プロセスを詳しく説明します。
+                            </p>
+                            <div class="flex flex-wrap gap-2 mb-4">
+                                <span class="px-3 py-1 bg-orange-100 text-orange-800 text-sm rounded-full">観光業DX</span>
+                                <span class="px-3 py-1 bg-orange-100 text-orange-800 text-sm rounded-full">AI導入事例</span>
+                            </div>
+                            <a href="articles/20250713.html" class="btn-primary text-sm">
+                                続きを読む
+                                <svg class="ml-2 w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/>
+                                </svg>
+                            </a>
+                        </div>
+                    </article>
+
+                    <!-- Blog Card 7 - 7番目の記事 20250707 -->
+                    <article class="card overflow-hidden">
+                        <a href="articles/20250707.html" class="block relative aspect-ratio-4-3 overflow-hidden">
+                            <img 
+                                src="https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?w=800&h=450&fit=crop&crop=center" 
+                                alt="地方製造業のAI導入事例" 
+                                class="w-full h-full object-cover hover:scale-105 transition-transform duration-300"
+                            />
+                            <div class="absolute inset-0 bg-gradient-to-t from-black/90 via-black/30 to-transparent">
+                                <div class="absolute bottom-4 left-4 right-4">
+                                    <h2 class="text-white text-lg font-bold leading-tight line-clamp-2" style="text-shadow: 2px 2px 4px rgba(0,0,0,0.8);">
+                                        製造業AI導入事例｜品質管理で不良品率35%削減した町工場の成功ノウハウ
+                                    </h2>
+                                </div>
+                            </div>
+                        </a>
+                        <div class="p-6">
+                            <div class="flex items-center mb-3">
+                                <time class="text-sm text-gray-500">2025年7月7日</time>
+                            </div>
+                            <p class="text-gray-700 mb-4 line-clamp-3">
+                                従業員18名の町工場が品質管理AIを導入し、不良品率35%削減と検査時間40%短縮を実現。地方中小製造業のAI活用成功事例を詳しく解説します...
+                            </p>
+                            <div class="flex flex-wrap gap-2 mb-4">
+                                <span class="px-3 py-1 bg-blue-100 text-blue-800 text-sm rounded-full">製造業DX</span>
+                                <span class="px-3 py-1 bg-blue-100 text-blue-800 text-sm rounded-full">AI導入事例</span>
+                            </div>
+                            <a href="articles/20250707.html" class="btn-primary text-sm">
+                                続きを読む
+                                <svg class="ml-2 w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/>
+                                </svg>
+                            </a>
+                        </div>
+                    </article>
+
+                    <!-- Blog Card 8 - 8番目の記事 20250706 -->
+                    <article class="card overflow-hidden">
+                        <a href="articles/20250706.html" class="block relative aspect-ratio-4-3 overflow-hidden">
+                            <img 
+                                src="https://images.unsplash.com/photo-1500651230702-0e2d8a49d4ad?w=800&h=450&fit=crop&crop=center" 
+                                alt="スマート農業のAI活用事例" 
+                                class="w-full h-full object-cover hover:scale-105 transition-transform duration-300"
+                            />
+                            <div class="absolute inset-0 bg-gradient-to-t from-black/90 via-black/30 to-transparent">
+                                <div class="absolute bottom-4 left-4 right-4">
+                                    <h2 class="text-white text-lg font-bold leading-tight line-clamp-2" style="text-shadow: 2px 2px 4px rgba(0,0,0,0.8);">
+                                        スマート農業AI活用で収穫量25%向上｜気象データ分析の導入事例と効果
+                                    </h2>
+                                </div>
+                            </div>
+                        </a>
+                        <div class="p-6">
+                            <div class="flex items-center mb-3">
+                                <time class="text-sm text-gray-500">2025年7月6日</time>
+                            </div>
+                            <p class="text-gray-700 mb-4 line-clamp-3">
+                                気象データと栽培履歴をAIで分析することで、収穫量25%向上、病害虫被害30%削減を実現した地方のスマート農園C農場の事例をご紹介します...
+                            </p>
+                            <div class="flex flex-wrap gap-2 mb-4">
+                                <span class="px-3 py-1 bg-blue-100 text-blue-800 text-sm rounded-full">農業DX</span>
+                                <span class="px-3 py-1 bg-blue-100 text-blue-800 text-sm rounded-full">スマート農業</span>
+                            </div>
+                            <a href="articles/20250706.html" class="btn-primary text-sm">
+                                続きを読む
+                                <svg class="ml-2 w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/>
+                                </svg>
+                            </a>
+                        </div>
+                    </article>
+
+                    <!-- Blog Card 9 - 9番目の記事 20250710 -->
+                    <article class="card overflow-hidden">
+                        <a href="articles/20250710.html" class="block relative aspect-ratio-4-3 overflow-hidden">
+                            <img 
+                                src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?w=800&h=450&fit=crop&crop=faces" 
+                                alt="AI初心者向けデジタル変革入門｜地方企業の業務効率化実践ガイド" 
+                                class="w-full h-full object-cover hover:scale-105 transition-transform duration-300"
+                            />
+                            <div class="absolute inset-0 bg-gradient-to-t from-black/90 via-black/30 to-transparent">
+                                <div class="absolute bottom-4 left-4 right-4">
+                                    <h2 class="text-white text-lg font-bold leading-tight line-clamp-2" style="text-shadow: 2px 2px 4px rgba(0,0,0,0.8);">
+                                        AI初心者向けデジタル変革入門｜地方企業の業務効率化実践ガイド
+                                    </h2>
+                                </div>
+                            </div>
+                        </a>
+                        <div class="p-6">
+                            <div class="flex items-center mb-3">
+                                <time class="text-sm text-gray-500">2025年7月10日</time>
+                            </div>
+                            <p class="text-gray-700 mb-4 line-clamp-3">
+                                AI初心者でも安心！地方企業のデジタル変革を成功させる実践的なステップバイステップガイド。基礎知識から導入まで完全サポート...
+                            </p>
+                            <div class="flex flex-wrap gap-2 mb-4">
+                                <span class="px-3 py-1 bg-green-100 text-green-800 text-sm rounded-full">AI入門</span>
+                                <span class="px-3 py-1 bg-green-100 text-green-800 text-sm rounded-full">DX</span>
+                            </div>
+                            <a href="articles/20250710.html" class="btn-primary text-sm">
+                                続きを読む
+                                <svg class="ml-2 w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/>
+                                </svg>
+                            </a>
+                        </div>
+                    </article>
+
+                    <!-- Blog Card 10 - 10番目の記事 20250705 -->
+                    <article class="card overflow-hidden">
+                        <a href="articles/20250705.html" class="block relative aspect-ratio-4-3 overflow-hidden">
+                            <img 
+                                src="https://images.unsplash.com/photo-1516062423079-7ca13cdc7f5a?w=800&h=450&fit=crop&crop=center" 
+                                alt="地方都市の移住促進SNS戦略" 
+                                class="w-full h-full object-cover hover:scale-105 transition-transform duration-300"
+                            />
+                            <div class="absolute inset-0 bg-gradient-to-t from-black/90 via-black/30 to-transparent">
+                                <div class="absolute bottom-4 left-4 right-4">
+                                    <h2 class="text-white text-lg font-bold leading-tight line-clamp-2" style="text-shadow: 2px 2px 4px rgba(0,0,0,0.8);">
+                                        地方移住促進SNS戦略｜小林市290万再生の成功事例に学ぶマーケティング術
+                                    </h2>
+                                </div>
+                            </div>
+                        </a>
+                        <div class="p-6">
+                            <div class="flex items-center mb-3">
+                                <time class="text-sm text-gray-500">2025年7月5日</time>
+                            </div>
+                            <p class="text-gray-700 mb-4 line-clamp-3">
+                                人口減少に悩む地方都市にとって、移住促進は喫緊の課題です。SNSを活用した戦略的なマーケティングで成功を収めた松本市・茅野市の実例を詳しく解説します...
+                            </p>
+                            <div class="flex flex-wrap gap-2 mb-4">
+                                <span class="px-3 py-1 bg-blue-100 text-blue-800 text-sm rounded-full">観光業DX</span>
+                                <span class="px-3 py-1 bg-blue-100 text-blue-800 text-sm rounded-full">SNSマーケティング</span>
+                            </div>
+                            <a href="articles/20250705.html" class="btn-primary text-sm">
+                                続きを読む
+                                <svg class="ml-2 w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/>
+                                </svg>
+                            </a>
+                        </div>
+                    </article>
+                </div>
+                
+                <div class="text-center mt-12">
+                    <a href="blog-list.html" class="btn-primary px-8 py-4 text-lg font-bold">
+                        すべての記事を見る
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        
+
+        <!-- Why / 課題共感 Section -->
+        <section class="py-20 bg-white">
+            <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+                <h2 class="text-3xl md:text-4xl font-bold text-center mb-16 text-[var(--clr-primary)]">
+                    現場の"痛み"、わかります
+                </h2>
+                
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                    <!-- ペルソナ① 製造業 -->
+                    <div class="bg-gradient-to-br from-[var(--clr-bg-1)] to-white p-6 rounded-2xl shadow-lg">
+                        <h3 class="text-xl font-bold mb-4 text-[var(--clr-primary)]">製造現場の課題</h3>
+                        <div class="space-y-3 text-[var(--clr-gray-dark)] leading-relaxed text-sm">
+                            <p>「品質管理のデータ分析、<br/>手作業で時間ばかりかかって...」</p>
+                            <p>「不良品の原因特定、<br/>ベテランの勘頼みから脱却したい」</p>
+                            <p>「生産効率化のヒント、<br/>データの山から見つけられずにいる」</p>
+                        </div>
+                    </div>
+
+                    <!-- ペルソナ② 観光業 -->
+                    <div class="bg-gradient-to-br from-white to-[var(--clr-secondary)] p-6 rounded-2xl shadow-lg">
+                        <h3 class="text-xl font-bold mb-4 text-[var(--clr-primary)]">観光ビジネスの課題</h3>
+                        <div class="space-y-3 text-[var(--clr-gray-dark)] leading-relaxed text-sm">
+                            <p>「お客様のニーズ把握、<br/>アンケートだけでは限界が...」</p>
+                            <p>「魅力的な観光コンテンツ、<br/>どう作ればいいかわからない」</p>
+                            <p>「SNS発信やマーケティング、<br/>効果的な方法が見えてこない」</p>
+                        </div>
+                    </div>
+
+                    <!-- ペルソナ③ 農業 -->
+                    <div class="bg-gradient-to-br from-[var(--clr-accent)] to-white p-6 rounded-2xl shadow-lg">
+                        <h3 class="text-xl font-bold mb-4 text-[var(--clr-primary)]">農業経営の課題</h3>
+                        <div class="space-y-3 text-[var(--clr-gray-dark)] leading-relaxed text-sm">
+                            <p>「天候や病害虫の予測、<br/>経験だけでは限界がある...」</p>
+                            <p>「収穫時期の最適化、<br/>データ活用の仕方がわからない」</p>
+                            <p>「販路開拓や価格設定、<br/>市場動向を効率的に分析したい」</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- AI導入効果シミュレーター セクション -->
+        <section id="ai-diagnosis-simulator" class="py-20 bg-[var(--clr-bg-1)]">
+            <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+                <h2 class="text-3xl md:text-4xl font-bold text-center mb-8 text-[var(--clr-primary)]">
+                    あなたの会社のAI導入効果を診断
+                </h2>
+                <p class="text-center text-[var(--clr-gray)] mb-12 text-lg">
+                    業種・規模・課題に応じた削減効果を3分で算出
+                </p>
+                
+                <!-- シミュレーター プレビューカード -->
+                <div class="max-w-4xl mx-auto">
+                    <!-- プレビューラベル -->
+                    <div class="text-center mb-4">
+                        <span class="inline-block bg-orange-100 text-orange-600 px-4 py-2 rounded-full text-sm font-bold border-2 border-orange-200">
+                            📱 診断結果プレビュー
+                        </span>
+                    </div>
+                    
+                    <div class="relative">
+                        <!-- 枠線とシャドウで「画面感」を演出 -->
+                        <div class="bg-white rounded-2xl shadow-2xl overflow-hidden hover:shadow-3xl transition-all duration-300 hover:scale-105 cursor-pointer border-4 border-orange-200 hover:border-orange-300" onclick="window.open('simulator.html', '_blank')">
+                            <!-- 擬似的なブラウザヘッダー -->
+                            <div class="bg-gray-100 px-4 py-2 flex items-center space-x-2 border-b-2 border-orange-200">
+                                <div class="w-3 h-3 bg-red-400 rounded-full"></div>
+                                <div class="w-3 h-3 bg-yellow-400 rounded-full"></div>
+                                <div class="w-3 h-3 bg-green-400 rounded-full"></div>
+                                <div class="flex-1 bg-white rounded px-3 py-1 ml-4">
+                                    <span class="text-xs text-gray-500">🔗 simulator.html</span>
+                                </div>
+                            </div>
+                            
+                            <!-- シミュレーター画面内容 -->
+                            <div class="bg-gradient-to-br from-blue-50 to-indigo-50">
+                                <!-- ヘッダー部分（少し色を変更） -->
+                                <div class="bg-gradient-to-r from-indigo-600 to-purple-600 text-white p-6 text-center">
+                                    <h3 class="text-2xl font-bold mb-2">AI導入効果シミュレーター</h3>
+                                    <p class="opacity-90">あなたの会社のAI導入効果を3分で診断</p>
+                                </div>
+                                
+                                <!-- プログレスバー -->
+                                <div class="px-6 pt-4">
+                                    <div class="bg-gray-200 h-2 rounded-full overflow-hidden">
+                                        <div class="bg-gradient-to-r from-blue-400 to-purple-500 h-full rounded-full animate-pulse" style="width: 80%"></div>
+                                    </div>
+                                </div>
+                                
+                                <!-- 診断結果プレビュー -->
+                                <div class="p-6">
+                                    <div class="text-center mb-6">
+                                        <h4 class="text-xl font-bold text-indigo-700 mb-2">🎯 AI導入効果</h4>
+                                        <p class="text-gray-600">あなたの会社の予想される効果です</p>
+                                    </div>
+                                    
+                                    <!-- 結果サマリー（色を変更してプレビュー感を強調） -->
+                                    <div class="bg-gradient-to-br from-indigo-600 to-purple-600 text-white p-6 rounded-xl text-center border-2 border-purple-300 shadow-lg">
+                                        <div class="text-sm opacity-90 mb-2">年間人件費削減効果</div>
+                                        <div class="text-4xl font-bold mb-4 animate-pulse">840万円</div>
+                                        <div class="grid grid-cols-2 gap-4">
+                                            <div class="bg-white bg-opacity-20 rounded-lg p-3">
+                                                <div class="text-sm opacity-90">月間削減額</div>
+                                                <div class="text-2xl font-bold">70万円</div>
+                                            </div>
+                                            <div class="bg-white bg-opacity-20 rounded-lg p-3">
+                                                <div class="text-sm opacity-90">削減率</div>
+                                                <div class="text-2xl font-bold">23%</div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    
+                                    <!-- CTA部分 -->
+                                    <div class="mt-6 text-center">
+                                        <div class="bg-gradient-to-r from-orange-500 to-red-500 text-white px-8 py-4 rounded-xl font-bold text-lg inline-block hover:from-orange-600 hover:to-red-600 transition-all shadow-lg transform hover:scale-105">
+                                            🚀 無料で診断を開始する
+                                        </div>
+                                        <p class="text-sm text-gray-600 mt-3">※所要時間約3分・登録不要</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <!-- 角にプレビューバッジ -->
+                        <div class="absolute -top-2 -right-2 bg-orange-500 text-white px-3 py-1 rounded-full text-xs font-bold shadow-lg rotate-12">
+                            PREVIEW
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- 特徴説明 -->
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-6 mt-12">
+                    <div class="text-center">
+                        <div class="text-3xl mb-3">⚡</div>
+                        <h4 class="font-bold text-[var(--clr-primary)] mb-2">3分で完了</h4>
+                        <p class="text-[var(--clr-gray)] text-sm">簡単な質問に答えるだけで、具体的な削減効果を算出</p>
+                    </div>
+                    <div class="text-center">
+                        <div class="text-3xl mb-3">🎯</div>
+                        <h4 class="font-bold text-[var(--clr-primary)] mb-2">業種別対応</h4>
+                        <p class="text-[var(--clr-gray)] text-sm">製造業・観光業・農業・その他の業種に特化した診断</p>
+                    </div>
+                    <div class="text-center">
+                        <div class="text-3xl mb-3">📊</div>
+                        <h4 class="font-bold text-[var(--clr-primary)] mb-2">詳細レポート</h4>
+                        <p class="text-[var(--clr-gray)] text-sm">投資回収期間・推奨AI・改善項目まで詳しく表示</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 導入ステップ & テンプレート -->
+        <section class="py-20 bg-white">
+            <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+                <h2 class="text-3xl md:text-4xl font-bold text-center mb-16 text-[var(--clr-primary)]">
+                    AI導入を確実に成功させる
+                </h2>
+                
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+                    <div class="bg-gradient-to-br from-[var(--clr-bg-1)] to-white p-6 rounded-xl shadow-lg text-center hover:shadow-2xl transition-all duration-300 hover:-translate-y-2">
+                        <div class="text-4xl mb-4">📋</div>
+                        <h3 class="text-xl font-bold mb-2 text-[var(--clr-primary)]">現状分析</h3>
+                        <p class="text-[var(--clr-gray)] mb-4">チェックリスト</p>
+                        <button class="text-[var(--clr-accent)] font-bold hover:text-[var(--clr-primary)] transition-colors">
+                            無料ダウンロード ↓
+                        </button>
+                    </div>
+                    <div class="bg-gradient-to-br from-[var(--clr-bg-1)] to-white p-6 rounded-xl shadow-lg text-center hover:shadow-2xl transition-all duration-300 hover:-translate-y-2">
+                        <div class="mb-4">
+                            <img src="images/ai-guidelines-template.png" alt="社内ガイドライン雛形テンプレート" class="w-24 h-24 mx-auto object-contain">
+                        </div>
+                        <h3 class="text-xl font-bold mb-2 text-[var(--clr-primary)]">社内ガイドライン</h3>
+                        <p class="text-[var(--clr-gray)] mb-4">雛形テンプレート</p>
+                        <button class="text-[var(--clr-accent)] font-bold hover:text-[var(--clr-primary)] transition-colors">
+                            無料ダウンロード ↓
+                        </button>
+                    </div>
+                    <div class="bg-gradient-to-br from-[var(--clr-bg-1)] to-white p-6 rounded-xl shadow-lg text-center hover:shadow-2xl transition-all duration-300 hover:-translate-y-2">
+                        <div class="text-4xl mb-4">🚀</div>
+                        <h3 class="text-xl font-bold mb-2 text-[var(--clr-primary)]">ファーストPoC</h3>
+                        <p class="text-[var(--clr-gray)] mb-4">実行プラン</p>
+                        <button class="text-[var(--clr-accent)] font-bold hover:text-[var(--clr-primary)] transition-colors">
+                            無料ダウンロード ↓
+                        </button>
+                    </div>
+                    <div class="bg-gradient-to-br from-[var(--clr-bg-1)] to-white p-6 rounded-xl shadow-lg text-center hover:shadow-2xl transition-all duration-300 hover:-translate-y-2">
+                        <div class="text-4xl mb-4">📊</div>
+                        <h3 class="text-xl font-bold mb-2 text-[var(--clr-primary)]">効果測定</h3>
+                        <p class="text-[var(--clr-gray)] mb-4">KPIダッシュボード</p>
+                        <button class="text-[var(--clr-accent)] font-bold hover:text-[var(--clr-primary)] transition-colors">
+                            無料ダウンロード ↓
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ニュースレター登録 CTA -->
+        <section class="py-20 bg-[var(--clr-secondary)]">
+            <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+                <h2 class="text-3xl md:text-4xl font-bold mb-6 text-[var(--clr-primary)]">
+                    "社内で一番早くAIを動かす人"になるヒントを毎週お届け
+                </h2>
+                <p class="text-xl text-[var(--clr-gray-dark)] mb-8">
+                    最新のAI活用事例、導入ノウハウ、業界別の成功パターンを厳選してお送りします。
+                </p>
+                
+                <div class="flex flex-col sm:flex-row gap-4 max-w-md mx-auto">
+                    <input 
+                        type="email" 
+                        placeholder="メールアドレス"
+                        class="flex-1 px-4 py-3 rounded-lg border border-[var(--clr-primary)] focus:outline-none focus:ring-2 focus:ring-[var(--clr-accent)]"
+                    />
+                    <button class="btn-primary px-8 py-3 whitespace-nowrap">
+                        無料登録
+                    </button>
+                </div>
+                <p class="text-sm text-[var(--clr-gray)] mt-4">
+                    ※いつでも配信停止できます
+                </p>
+            </div>
+        </section>
+
+        <!-- 実践ストーリー（ケーススタディ） -->
+        <section class="py-20 bg-white">
+            <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+                <h2 class="text-3xl md:text-4xl font-bold text-center mb-16 text-[var(--clr-primary)]">
+                    実践ストーリー
+                </h2>
+                
+                <div class="grid grid-cols-1 lg:grid-cols-3 gap-8">
+                    <!-- 製造業事例 -->
+                    <div class="bg-gradient-to-br from-[var(--clr-bg-1)] to-white p-6 rounded-2xl shadow-lg">
+                        <h3 class="text-xl font-bold mb-4 text-[var(--clr-primary)]">中堅製造業A社の場合</h3>
+                        <div class="mb-4">
+                            <div class="grid grid-cols-2 gap-2 text-center">
+                                <div>
+                                    <div class="text-2xl font-bold text-[var(--clr-accent)]">35%</div>
+                                    <div class="text-xs text-[var(--clr-gray)]">不良品率減少</div>
+                                </div>
+                                <div>
+                                    <div class="text-2xl font-bold text-[var(--clr-accent)]">2.5h</div>
+                                    <div class="text-xs text-[var(--clr-gray)]">分析時間短縮/日</div>
+                                </div>
+                            </div>
+                        </div>
+                        <p class="text-[var(--clr-gray-dark)] leading-relaxed text-sm">
+                            品質管理データの分析にChatGPTを活用。過去3年間の不良品データから傾向を発見し、
+                            予防策を立案。結果として不良品率35%減少、分析作業も大幅に効率化。
+                        </p>
+                    </div>
+
+                    <!-- 観光業事例 -->
+                    <div class="bg-gradient-to-br from-white to-[var(--clr-secondary)] p-6 rounded-2xl shadow-lg">
+                        <h3 class="text-xl font-bold mb-4 text-[var(--clr-primary)]">地域観光協会B団体の場合</h3>
+                        <div class="mb-4">
+                            <div class="grid grid-cols-2 gap-2 text-center">
+                                <div>
+                                    <div class="text-2xl font-bold text-[var(--clr-accent)]">150%</div>
+                                    <div class="text-xs text-[var(--clr-gray)]">SNSエンゲージ増</div>
+                                </div>
+                                <div>
+                                    <div class="text-2xl font-bold text-[var(--clr-accent)]">40%</div>
+                                    <div class="text-xs text-[var(--clr-gray)]">観光客増加</div>
+                                </div>
+                            </div>
+                        </div>
+                        <p class="text-[var(--clr-gray-dark)] leading-relaxed text-sm">
+                            AIを活用した観光コンテンツ作成とSNS戦略の最適化。地域の魅力を効果的に発信し、
+                            SNSエンゲージメント150%向上、実際の観光客数も40%増加を実現。
+                        </p>
+                    </div>
+
+                    <!-- 農業事例 -->
+                    <div class="bg-gradient-to-br from-[var(--clr-accent)] to-white p-6 rounded-2xl shadow-lg">
+                        <h3 class="text-xl font-bold mb-4 text-[var(--clr-primary)]">スマート農園C農場の場合</h3>
+                        <div class="mb-4">
+                            <div class="grid grid-cols-2 gap-2 text-center">
+                                <div>
+                                    <div class="text-2xl font-bold text-[var(--clr-primary)]">25%</div>
+                                    <div class="text-xs text-[var(--clr-gray)]">収穫量向上</div>
+                                </div>
+                                <div>
+                                    <div class="text-2xl font-bold text-[var(--clr-primary)]">30%</div>
+                                    <div class="text-xs text-[var(--clr-gray)]">病害虫被害削減</div>
+                                </div>
+                            </div>
+                        </div>
+                        <p class="text-[var(--clr-gray-dark)] leading-relaxed text-sm">
+                            気象データと栽培履歴をAIで分析し、最適な収穫時期を予測。病害虫発生リスクの早期警告により、
+                            収穫量25%向上、病害虫被害30%削減を達成。
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-white">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <div>
+                    <h3 class="text-lg font-semibold mb-4">地方AIブースター</h3>
+                    <p class="text-gray-300">
+                        製造業・観光業・農業の現場に特化した生成AI活用ガイド。地方企業のDX推進を支援します。
+                    </p>
+                </div>
+                
+                <div>
+                    <h3 class="text-lg font-semibold mb-4">リンク</h3>
+                    <ul class="space-y-2">
+                        <li>
+                            <a href="#" class="text-gray-300 hover:text-white transition-colors">
+                                ホーム
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#blog" class="text-gray-300 hover:text-white transition-colors">
+                                ブログ
+                            </a>
+                        </li>
+                        <li>
+                            <a href="author.html" class="text-gray-300 hover:text-white transition-colors">
+                                運営者について
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h3 class="text-lg font-semibold mb-4">お問い合わせ</h3>
+                    <p class="text-gray-300">
+                        Email: info@local-ai-booster.com
+                    </p>
+                    <div class="flex space-x-4 mt-4">
+                        <a
+                            href="#"
+                            class="text-gray-300 hover:text-white transition-colors"
+                            aria-label="Twitter"
+                        >
+                            <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
+                                <path d="M23.953 4.57a10 10 0 01-2.825.775 4.958 4.958 0 002.163-2.723c-.951.555-2.005.959-3.127 1.184a4.92 4.92 0 00-8.384 4.482C7.69 8.095 4.067 6.13 1.64 3.162a4.822 4.822 0 00-.666 2.475c0 1.71.87 3.213 2.188 4.096a4.904 4.904 0 01-2.228-.616v.06a4.923 4.923 0 003.946 4.827 4.996 4.996 0 01-2.212.085 4.936 4.936 0 004.604 3.417 9.867 9.867 0 01-6.102 2.105c-.39 0-.779-.023-1.17-.067a13.995 13.995 0 007.557 2.209c9.053 0 13.998-7.496 13.998-13.985 0-.21 0-.42-.015-.63A9.935 9.935 0 0024 4.59z"/>
+                            </svg>
+                        </a>
+                        <a
+                            href="#"
+                            class="text-gray-300 hover:text-white transition-colors"
+                            aria-label="GitHub"
+                        >
+                            <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
+                                <path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/>
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="border-t border-gray-800 pt-8 mt-8">
+                <p class="text-center text-gray-300">
+                    © 2025 地方AIブースター. All rights reserved.
+                </p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Simple mobile menu toggle (if needed)
+        function toggleMobileMenu() {
+            const menu = document.querySelector('.mobile-menu');
+            if (menu) {
+                menu.classList.toggle('active');
+            }
+        }
+
+        // Smooth scrolling for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth'
+                    });
+                }
+            });
+        });
+
+        // Convert markdown-style bold text to HTML
+        function convertMarkdownBold() {
+            const textElements = document.querySelectorAll('p, h1, h2, h3, h4, h5, h6, li, div, span');
+            textElements.forEach(element => {
+                if (element.innerHTML && !element.querySelector('script, style')) {
+                    element.innerHTML = element.innerHTML.replace(/\*\*(.*?)\*\*/g, '<strong>$1</strong>');
+                }
+            });
+        }
+
+        // Add some interactive effects
+        document.addEventListener('DOMContentLoaded', function() {
+            // Convert markdown bold text
+            convertMarkdownBold();
+
+            // Add hover effects to cards
+            const cards = document.querySelectorAll('.card');
+            cards.forEach(card => {
+                card.addEventListener('mouseenter', function() {
+                    this.style.transform = 'translateY(-4px)';
+                });
+                card.addEventListener('mouseleave', function() {
+                    this.style.transform = 'translateY(0)';
+                });
+            });
+
+            // Newsletter form submission
+            const newsletterForm = document.querySelector('input[type="email"]');
+            const newsletterButton = document.querySelector('button');
+            
+            if (newsletterButton) {
+                newsletterButton.addEventListener('click', function(e) {
+                    e.preventDefault();
+                    alert('ニュースレターの登録機能は準備中です。しばらくお待ちください。');
+                });
+            }
+
+            // AI診断機能
+            let selectedAnswers = {};
+            const diagnosisOptions = document.querySelectorAll('.diagnosis-option');
+            const startButton = document.getElementById('start-diagnosis');
+            const diagnosisForm = document.getElementById('diagnosis-form');
+            const diagnosisResult = document.getElementById('diagnosis-result');
+            const resultContent = document.getElementById('result-content');
+            const restartButton = document.getElementById('restart-diagnosis');
+
+            // 選択肢のクリック処理
+            diagnosisOptions.forEach(option => {
+                option.addEventListener('click', function() {
+                    const question = this.closest('div').querySelector('label').textContent.split('.')[0];
+                    const value = this.getAttribute('data-value');
+                    
+                    // 同じ質問グループの他の選択肢から選択状態を解除
+                    this.closest('div').querySelectorAll('.diagnosis-option').forEach(opt => {
+                        opt.classList.remove('border-[var(--clr-primary)]', 'bg-[var(--clr-bg-1)]');
+                        opt.classList.add('border-gray-300');
+                    });
+                    
+                    // 選択した選択肢をハイライト
+                    this.classList.remove('border-gray-300');
+                    this.classList.add('border-[var(--clr-primary)]', 'bg-[var(--clr-bg-1)]');
+                    
+                    selectedAnswers[question] = value;
+                    
+                    // 全ての質問に答えたか確認
+                    if (Object.keys(selectedAnswers).length === 3) {
+                        startButton.disabled = false;
+                        startButton.style.opacity = '1';
+                    }
+                });
+            });
+
+            // 診断結果を表示
+            startButton.addEventListener('click', function() {
+                const industry = selectedAnswers['1'];
+                const size = selectedAnswers['2'];
+                const challenge = selectedAnswers['3'];
+                
+                const result = generateDiagnosisResult(industry, size, challenge);
+                resultContent.innerHTML = result;
+                
+                diagnosisForm.classList.add('hidden');
+                diagnosisResult.classList.remove('hidden');
+            });
+
+            // 診断をリスタート
+            restartButton.addEventListener('click', function() {
+                selectedAnswers = {};
+                diagnosisOptions.forEach(option => {
+                    option.classList.remove('border-[var(--clr-primary)]', 'bg-[var(--clr-bg-1)]');
+                    option.classList.add('border-gray-300');
+                });
+                startButton.disabled = true;
+                startButton.style.opacity = '0.5';
+                
+                diagnosisForm.classList.remove('hidden');
+                diagnosisResult.classList.add('hidden');
+            });
+
+            // 診断結果を生成する関数
+            function generateDiagnosisResult(industry, size, challenge) {
+                let result = '';
+                let recommendation = '';
+                let articles = [];
+
+                // 業種別の基本推奨
+                if (industry === 'manufacturing') {
+                    result += '<h4 class="text-xl font-bold text-[var(--clr-primary)] mb-4">🏭 製造業向けAI活用プラン</h4>';
+                    if (challenge === 'efficiency') {
+                        recommendation = 'ChatGPTを活用した作業日報の自動化から始めることをお勧めします。音声入力で簡単に詳細な日報が作成でき、技術継承にも役立ちます。';
+                        articles = ['articles/20250719.html'];
+                    } else if (challenge === 'analysis') {
+                        recommendation = 'まずは品質データの分析からスタート。AIを使って不良品の原因パターンを発見し、予防保全に活用できます。';
+                    } else {
+                        recommendation = 'IoTセンサーとAIを組み合わせた設備監視システムから始めましょう。';
+                    }
+                } else if (industry === 'tourism') {
+                    result += '<h4 class="text-xl font-bold text-[var(--clr-primary)] mb-4">🏨 観光・宿泊業向けAI活用プラン</h4>';
+                    if (challenge === 'customer') {
+                        recommendation = 'ChatGPTを活用したクレーム対応シミュレーションで、スタッフのスキルアップを図りましょう。24時間練習できる環境を整えることで、接客品質が向上します。';
+                        articles = ['articles/20250720.html'];
+                    } else if (challenge === 'marketing') {
+                        recommendation = 'AI画像生成ツールを使った魅力的な宣伝コンテンツ作成から始めましょう。';
+                    } else {
+                        recommendation = '多言語対応チャットボットの導入で、インバウンド対応を強化しましょう。';
+                    }
+                } else if (industry === 'agriculture') {
+                    result += '<h4 class="text-xl font-bold text-[var(--clr-primary)] mb-4">🌾 農業向けAI活用プラン</h4>';
+                    if (challenge === 'efficiency') {
+                        recommendation = '作業記録の自動化から始めましょう。ChatGPTの音声入力で栽培日記を効率化し、データに基づいた農業経営を実現できます。';
+                    } else if (challenge === 'analysis') {
+                        recommendation = '気象データと収穫データをAIで分析し、最適な栽培スケジュールを作成しましょう。';
+                    } else {
+                        recommendation = 'SNSマーケティングの自動化で、農産物の販路拡大を図りましょう。';
+                    }
+                }
+
+                // 企業規模別のアドバイス
+                let sizeAdvice = '';
+                if (size === 'small') {
+                    sizeAdvice = '小規模企業様には、まず無料のChatGPTから始めることをお勧めします。月額3,000円程度の投資で大きな効果が期待できます。';
+                } else if (size === 'medium') {
+                    sizeAdvice = '中規模企業様には、段階的な導入がお勧めです。まずは一部門で成功事例を作り、それを他部門に展開しましょう。';
+                } else {
+                    sizeAdvice = '大規模企業様には、包括的なAI戦略の策定をお勧めします。複数のAIツールを組み合わせた効率化が可能です。';
+                }
+
+                result += `
+                    <div class="bg-[var(--clr-bg-1)] p-6 rounded-lg mb-4">
+                        <h5 class="font-bold text-[var(--clr-primary)] mb-2">📋 あなたへの推奨プラン</h5>
+                        <p class="text-[var(--clr-gray-dark)]">${recommendation}</p>
+                    </div>
+                    
+                    <div class="bg-blue-50 p-6 rounded-lg mb-4">
+                        <h5 class="font-bold text-blue-800 mb-2">💡 企業規模に応じたアドバイス</h5>
+                        <p class="text-blue-700">${sizeAdvice}</p>
+                    </div>
+                    
+                    <div class="bg-green-50 p-6 rounded-lg">
+                        <h5 class="font-bold text-green-800 mb-2">🎯 次のステップ</h5>
+                        <ol class="list-decimal list-inside text-green-700 space-y-2">
+                            <li>推奨記事を読んで具体的な導入方法を学ぶ</li>
+                            <li>小さな範囲で試験導入を実施</li>
+                            <li>効果を測定し、段階的に拡大</li>
+                        </ol>
+                    </div>
+                `;
+
+                // ボタンエリア
+                result += `
+                    <div class="mt-6 text-center space-y-4">
+                        <div class="flex flex-col sm:flex-row gap-4 justify-center">
+                `;
+                
+                if (articles.length > 0) {
+                    result += `
+                            <a href="${articles[0]}" class="btn-primary px-6 py-3 text-base font-bold">
+                                📖 推奨記事を読む
+                            </a>
+                    `;
+                }
+                
+                result += `
+                            <a href="images/ai_checklist.pdf" download class="btn-primary px-6 py-3 text-base font-bold" style="background: linear-gradient(135deg, var(--clr-primary) 0%, var(--clr-primary-light) 100%);">
+                                📄 チェックリストをダウンロード
+                            </a>
+                        </div>
+                    </div>
+                `;
+
+                return result;
+            }
+        });
+    </script>
+</body>
+</html>

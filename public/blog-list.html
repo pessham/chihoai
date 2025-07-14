@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>記事一覧 - AI活用ブログ</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <style>
+        body {
+            background-color: #f4f4f9;
+            color: #333;
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+        }
+        .container {
+            max-width: 900px;
+            margin: 20px auto;
+            padding: 0 20px;
+        }
+        h1 {
+            text-align: center;
+            margin-bottom: 40px;
+            color: #444;
+        }
+        .article-list {
+            list-style: none;
+            padding: 0;
+        }
+        .article-item {
+            background-color: #fff;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            margin-bottom: 20px;
+            padding: 20px;
+            display: flex;
+            align-items: flex-start;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+            transition: transform 0.2s, box-shadow 0.2s;
+        }
+        .article-item:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+        }
+        .article-thumbnail {
+            flex-shrink: 0;
+            margin-right: 20px;
+        }
+        .article-thumbnail img {
+            width: 150px;
+            height: 150px;
+            object-fit: cover;
+            border-radius: 8px;
+            border: 1px solid #eee;
+        }
+        .article-content {
+            flex-grow: 1;
+        }
+        .article-title {
+            font-size: 1.4em;
+            margin: 0 0 10px;
+            font-weight: bold;
+        }
+        .article-title a {
+            text-decoration: none;
+            color: #333;
+        }
+        .article-title a:hover {
+            color: #007bff;
+        }
+        .article-excerpt {
+            font-size: 0.9em;
+            color: #666;
+            line-height: 1.6;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>AI活用ブログ - 記事一覧</h1>
+        <ul class="article-list">
+            <li class="article-item">
+                <div class="article-thumbnail">
+                    <a href="articles/20250724.html"><img src="images/placeholder.svg" alt="チラシやポップのデザイン"></a>
+                </div>
+                <div class="article-content">
+                    <h2 class="article-title"><a href="articles/20250724.html">【無料デザイン革命】もうパワポで苦労しない！MiriCanvasとChatGPTで作る、プロ級チラシ＆ポップ作成術</a></h2>
+                    <p class="article-excerpt">「チラシを作りたいけど、デザイナーに頼む予算がない…」そんな悩みを解決！無料デザインツール「MiriCanvas」とAIを組み合わせ、プロ級の販促物を誰でも簡単に作成する方法を解説します。</p>
+                </div>
+            </li>
+            <li class="article-item">
+                <div class="article-thumbnail">
+                    <a href="articles/20250723.html"><img src="images/placeholder.svg" alt="地図とスマートフォン"></a>
+                </div>
+                <div class="article-content">
+                    <h2 class="article-title"><a href="articles/20250723.html">【観光案内の決定版】もう「近くの美味しいお店」に悩まない！ChatGPTと作る、最強の周辺施設まとめリスト術</a></h2>
+                    <p class="article-excerpt">「この近くで…」という急な質問にもう悩まない。ChatGPTを活用し、お客様のニーズに合わせた質の高い「周辺施設まとめリスト」を瞬時に作成し、最高の案内を実現する方法を学びます。</p>
+                </div>
+            </li>
+            <li class="article-item">
+                <div class="article-thumbnail">
+                    <a href="articles/20250722.html"><img src="images/placeholder.svg" alt="ペンと紙"></a>
+                </div>
+                <div class="article-content">
+                    <h2 class="article-title"><a href="articles/20250722.html">【観光DXの文章術】「すごい」しか言えない紹介文は卒業！ChatGPTと作る、心に刺さる観光施設のキャッチコピー術</a></h2>
+                    <p class="article-excerpt">事実を並べただけの退屈な紹介文を、お客様の心に刺さるキャッチーな文章へ。ChatGPTを「言葉の魔術師」として活用し、施設の魅力を最大限に引き出すコピーライティング術を解説します。</p>
+                </div>
+            </li>
+            <li class="article-item">
+                <div class="article-thumbnail">
+                    <a href="articles/20250721.html"><img src="images/placeholder.svg" alt="旅行の計画"></a>
+                </div>
+                <div class="article-content">
+                    <h2 class="article-title"><a href="articles/20250721.html">【観光DXの新常識】もうモデルコースに頼らない！ChatGPTと作る「お客様一人ひとり」に響く旅のプランニング術</a></h2>
+                    <p class="article-excerpt">画一的な情報提供から脱却し、顧客満足度を飛躍的に高める。ChatGPTを「旅のコンシェルジュ」として活用し、お客様一人ひとりに合わせた特別な旅行プランをデザインする方法を学びます。</p>
+                </div>
+            </li>
+            <li class="article-item">
+                <div class="article-thumbnail">
+                    <a href="articles/20250720.html"><img src="images/placeholder.svg" alt="会議の風景"></a>
+                </div>
+                <div class="article-content">
+                    <h2 class="article-title"><a href="articles/20250720.html">【会議が変わる仕事術】もう議事録作成に追われない！ChatGPTとAI文字起こしで作る「未来志向の会議術」</a></h2>
+                    <p class="article-excerpt">会議の準備と後処理に追われる日々はもう終わり。ChatGPTとAI文字起こしツールを組み合わせ、アジェンダ作成から議事録作成までを劇的に効率化し、会議の生産性を飛躍的に高める方法を解説します。</p>
+                </div>
+            </li>
+            <li class="article-item">
+                <div class="article-thumbnail">
+                    <a href="articles/20250719.html"><img src="images/placeholder.svg" alt="若者と話す"></a>
+                </div>
+                <div class="article-content">
+                    <h2 class="article-title"><a href="articles/20250719.html">【若手指導の決定版】なぜ君の指示は伝わらない？ChatGPTと作る、部下の心が動く「技術指導の喩え話」</a></h2>
+                    <p class="article-excerpt">「見て覚えろ」が通用しない現代の若手指導。ChatGPTを「ストーリーテラー」として活用し、複雑な技術や仕事の哲学を、若者の心に響く「喩え話」に変換して伝える新しい指導法を解説します。</p>
+                </div>
+            </li>
+            <li class="article-item">
+                <div class="article-thumbnail">
+                    <a href="articles/20250718.html"><img src="images/placeholder.svg" alt="倉庫の在庫"></a>
+                </div>
+                <div class="article-content">
+                    <h2 class="article-title"><a href="articles/20250718.html">【DX仕事術】在庫のムダ・欠品ゼロへ！ChatGPTと考える「最強の資材在庫管理表」設計術</a></h2>
+                    <p class="article-excerpt">Excelでの在庫管理の限界を突破する。ChatGPTを「在庫管理コンサルタント」として活用し、自社に最適化された、意思決定に繋がる「戦略的在庫管理表」の構成を考える方法を解説します。</p>
+                </div>
+            </li>
+            <li class="article-item">
+                <div class="article-thumbnail">
+                    <a href="articles/20250717.html"><img src="images/placeholder.svg" alt="チェックリスト"></a>
+                </div>
+                <div class="article-content">
+                    <h2 class="article-title"><a href="articles/20250717.html">【ミスゼロ仕事術】ヒューマンエラーは仕組みで防ぐ！ChatGPTと作る「最強の作業チェックリスト」作成術</a></h2>
+                    <p class="article-excerpt">個人の注意力に頼るのではなく、「仕組み」でミスを防ぐ。ChatGPTを「チェックリスト設計士」として活用し、実用的で形骸化しない、現場のための作業チェックリストを作成する方法を学びます。</p>
+                </div>
+            </li>
+            <li class="article-item">
+                <div class="article-thumbnail">
+                    <a href="articles/20250716.html"><img src="images/placeholder.svg" alt="電球のアイデア"></a>
+                </div>
+                <div class="article-content">
+                    <h2 class="article-title"><a href="articles/20250716.html">【DX仕事術】なぜ？を5回繰り返すだけ！ChatGPTとNotebookLMで作る「最強のなぜなぜ分析」ボット</a></h2>
+                    <p class="article-excerpt">問題の根本原因を探る「なぜなぜ分析」を、AIと共に実践する。ChatGPTとNotebookLMを組み合わせ、客観的で論理的な問題解決を実現する新しい手法を解説します。</p>
+                </div>
+            </li>
+            <li class="article-item">
+                <div class="article-thumbnail">
+                    <a href="articles/20250715.html"><img src="images/placeholder.svg" alt="多国籍のチーム"></a>
+                </div>
+                <div class="article-content">
+                    <h2 class="article-title"><a href="articles/20250715.html">【製造業・観光業向け】言葉の壁を乗り越える！ChatGPTで作る、外国人従業員向け「やさしい日本語」トレーニング術</a></h2>
+                    <p class="article-excerpt">外国人従業員とのコミュニケーション課題を解決。ChatGPTを活用し、現場ですぐに使える「やさしい日本語」の会話スクリプトを、多言語翻訳付きで簡単に作成する方法を解説します。</p>
+                </div>
+            </li>
+            <li class="article-item">
+                <div class="article-thumbnail">
+                    <a href="articles/20250714-2.html"><img src="images/placeholder.svg" alt="工場の作業員"></a>
+                </div>
+                <div class="article-content">
+                    <h2 class="article-title"><a href="articles/20250714-2.html">【地方製造業のDX】もう日報作成に時間はかけない！ChatGPTで実現する「技術が伝わる」作業日報の作り方</a></h2>
+                    <p class="article-excerpt">日報作成の負担を軽減し、技術継承を促進する。ChatGPTの音声入力を活用し、要点がまとまった質の高い作業日報を、誰でも簡単に作成できる方法を解説します。</p>
+                </div>
+            </li>
+            <li class="article-item">
+                <div class="article-thumbnail">
+                    <a href="articles/20250714-1.html"><img src="images/placeholder.svg" alt="クレーム対応"></a>
+                </div>
+                <div class="article-content">
+                    <h2 class="article-title"><a href="articles/20250714-1.html">【地方観光業向け】もうクレームは怖くない！ChatGPT音声会話で実践する、お客様の心を掴む応対術</a></h2>
+                    <p class="article-excerpt">クレーム応対の練習を、いつでも、何度でも。ChatGPTの高度な音声機能を活用し、会話形式でリアルなクレーム応対シミュレーションを行う方法を、観光業の現場向けに解説します。</p>
+                </div>
+            </li>
+        </ul>
+    </div>
+</body>
+</html>

@@ -1,0 +1,13 @@
+{
+  "name": "vive-blog",
+  "version": "1.0.0",
+  "scripts": {
+    "build": "make build",
+    "dev": "make dev",
+    "serve": "make serve",
+    "preview": "make preview",
+    "deploy": "make deploy",
+    "deploy:firebase": "DEPLOY_PROVIDER=firebase ./system/workflow/deploy.sh",
+    "deploy:vercel": "DEPLOY_PROVIDER=vercel ./system/workflow/deploy.sh"
+  }
+}

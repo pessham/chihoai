@@ -1,0 +1,426 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>製造業DX | 地方AIブースター</title>
+    <meta name="description" content="地方製造業向けのAI・DX導入支援。品質管理システム、生産効率化、コスト削減など、実践的な製造業DXソリューションを提供します。">
+    <meta name="keywords" content="地方AIブースター,製造業DX,製造業AI,品質管理AI,生産効率化,スマートファクトリー,工場自動化,製造業デジタル化,AI品質検査,予知保全,中小製造業AI">
+    <meta name="author" content="ペスハム">
+    
+    <!-- SEO強化タグ -->
+    <meta name="robots" content="index, follow">
+    <meta name="googlebot" content="index, follow">
+    <link rel="canonical" href="https://chihoai.com/manufacturing.html">
+    <meta name="geo.region" content="JP">
+    <meta name="geo.placename" content="日本">
+    <meta name="language" content="ja">
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/x-icon" href="images/metamakeblack.jpg">
+    <link rel="icon" type="image/png" href="images/metamakeblack.jpg">
+    <link rel="apple-touch-icon" href="images/metamakeblack.jpg">
+    
+    <!-- Open Graph -->
+    <meta property="og:title" content="製造業DX | 地方AIブースター">
+    <meta property="og:description" content="地方製造業向けのAI・DX導入支援。品質管理システム、生産効率化、コスト削減など、実践的な製造業DXソリューションを提供します。">
+    <meta property="og:image" content="/images/chihoaitop.png">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://chihoai.com/manufacturing.html">
+    
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="製造業DX | 地方AIブースター">
+    <meta name="twitter:description" content="地方製造業向けのAI・DX導入支援。品質管理システム、生産効率化、コスト削減など、実践的な製造業DXソリューションを提供します。">
+    <meta name="twitter:image" content="/images/chihoaitop.png">
+    
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700;900&family=BIZ+UDPGothic:wght@400;700&display=swap" rel="stylesheet">
+    
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <style>
+        :root {
+            /* 地方AIブースター color scheme */
+            --clr-primary: #18634B; /* ディープグリーン */
+            --clr-primary-light: #2B8A64;
+            --clr-primary-dark: #0F4A38;
+            --clr-accent: #29D3C3; /* エメラルドシアン */
+            --clr-accent-light: #4DDDD1;
+            --clr-secondary: #EADDC9; /* サンドベージュ */
+            --clr-black: #000000;
+            --clr-gray-dark: #333333;
+            --clr-gray: #666666;
+            --clr-gray-light: #f8f8f8;
+            --clr-white: #ffffff;
+            --clr-bg-1: #F7F8FA; /* やや灰がかったホワイト */
+            --clr-bg-2: #EADDC9; /* サンドベージュ */
+            --radius: 8px;
+            --shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+            --transition: all 0.3s ease;
+            
+            /* Font families for 地方AIブースター */
+            font-family: 'Noto Sans JP', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            line-height: 1.6;
+            font-weight: 400;
+            
+            color: var(--clr-gray-dark);
+            
+            font-synthesis: none;
+            text-rendering: optimizeLegibility;
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+        }
+
+        body {
+            margin: 0;
+            background: var(--clr-white);
+            color: var(--clr-gray-dark);
+        }
+
+        .header {
+            background: var(--clr-white);
+            border-bottom: 1px solid #e5e7eb;
+            position: sticky;
+            top: 0;
+            z-index: 50;
+        }
+
+        .nav-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 1rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            height: 4rem;
+        }
+
+        .logo {
+            font-size: 1.5rem;
+            font-weight: 900;
+            color: var(--clr-primary);
+            text-decoration: none;
+        }
+
+        .nav-menu {
+            display: flex;
+            gap: 2rem;
+            align-items: center;
+        }
+
+        .nav-link {
+            color: var(--clr-gray-dark);
+            text-decoration: none;
+            font-weight: 500;
+            padding: 0.5rem 1rem;
+            border-radius: var(--radius);
+            transition: var(--transition);
+        }
+
+        .nav-link:hover {
+            background: rgba(24, 99, 75, 0.1);
+            color: var(--clr-primary);
+        }
+
+        .nav-link.active {
+            background: var(--clr-primary);
+            color: var(--clr-white);
+        }
+
+        .main-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 2rem 1rem;
+        }
+
+        .page-title {
+            font-size: 2.5rem;
+            font-weight: 900;
+            color: var(--clr-primary);
+            text-align: center;
+            margin-bottom: 1rem;
+        }
+
+        .page-description {
+            text-align: center;
+            color: var(--clr-gray);
+            margin-bottom: 3rem;
+            font-size: 1.125rem;
+        }
+
+        .empty-state {
+            text-align: center;
+            padding: 4rem 2rem;
+            background: var(--clr-bg-1);
+            border-radius: var(--radius);
+            margin: 2rem 0;
+        }
+
+        .empty-state h2 {
+            color: var(--clr-primary);
+            font-size: 1.5rem;
+            margin-bottom: 1rem;
+        }
+
+        .empty-state p {
+            color: var(--clr-gray);
+            margin-bottom: 2rem;
+        }
+
+        .cta-button {
+            display: inline-block;
+            background: var(--clr-primary);
+            color: var(--clr-white);
+            padding: 0.75rem 1.5rem;
+            border-radius: var(--radius);
+            text-decoration: none;
+            font-weight: 600;
+            transition: var(--transition);
+        }
+
+        .cta-button:hover {
+            background: var(--clr-primary-dark);
+            transform: translateY(-2px);
+        }
+
+        .footer {
+            background: var(--clr-primary);
+            color: var(--clr-white);
+            text-align: center;
+            padding: 2rem 1rem;
+            margin-top: 4rem;
+        }
+
+        .articles-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 2rem;
+            margin-bottom: 3rem;
+        }
+
+        .article-card {
+            background: var(--clr-white);
+            border-radius: var(--radius);
+            box-shadow: var(--shadow);
+            overflow: hidden;
+            transition: var(--transition);
+        }
+
+        .article-card:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 8px 30px rgba(0, 0, 0, 0.15);
+        }
+
+        .article-image {
+            width: 100%;
+            height: 200px;
+            background-size: cover;
+            background-position: center;
+        }
+
+        .article-content {
+            padding: 1.5rem;
+        }
+
+        .article-meta {
+            display: flex;
+            gap: 1rem;
+            margin-bottom: 0.75rem;
+            font-size: 0.875rem;
+            color: var(--clr-gray);
+        }
+
+        .article-category {
+            background: var(--clr-primary);
+            color: var(--clr-white);
+            padding: 0.25rem 0.5rem;
+            border-radius: 4px;
+            font-size: 0.75rem;
+        }
+
+        .article-title {
+            margin-bottom: 0.75rem;
+        }
+
+        .article-title a {
+            color: var(--clr-primary);
+            text-decoration: none;
+            font-weight: 600;
+            line-height: 1.4;
+        }
+
+        .article-title a:hover {
+            color: var(--clr-primary-dark);
+        }
+
+        .article-excerpt {
+            color: var(--clr-gray);
+            margin-bottom: 1rem;
+            line-height: 1.6;
+        }
+
+        .read-more {
+            color: var(--clr-primary);
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 0.875rem;
+        }
+
+        .read-more:hover {
+            color: var(--clr-primary-dark);
+        }
+
+        .related-articles {
+            background: var(--clr-bg-1);
+            padding: 2rem;
+            border-radius: var(--radius);
+            margin-top: 3rem;
+        }
+
+        .related-articles h2 {
+            color: var(--clr-primary);
+            margin-bottom: 1.5rem;
+            text-align: center;
+        }
+
+        .category-links {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 1rem;
+        }
+
+        .category-link {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+            padding: 1rem;
+            background: var(--clr-white);
+            border-radius: var(--radius);
+            text-decoration: none;
+            color: var(--clr-gray-dark);
+            transition: var(--transition);
+        }
+
+        .category-link:hover {
+            transform: translateY(-2px);
+            box-shadow: var(--shadow);
+        }
+
+        .category-icon {
+            font-size: 2rem;
+        }
+
+        .category-info h3 {
+            margin: 0 0 0.25rem 0;
+            color: var(--clr-primary);
+            font-size: 1rem;
+        }
+
+        .category-info p {
+            margin: 0;
+            font-size: 0.875rem;
+            color: var(--clr-gray);
+        }
+    </style>
+</head>
+<body>
+    <header class="header">
+        <div class="nav-container">
+            <a href="index.html" class="logo">地方AIブースター</a>
+            <nav class="nav-menu">
+                <a href="agriculture.html" class="nav-link">農業DX</a>
+                <a href="tourism.html" class="nav-link">観光業DX</a>
+                <a href="manufacturing.html" class="nav-link active">製造業DX</a>
+                <a href="blog-list.html" class="nav-link">ブログ一覧</a>
+            </nav>
+        </div>
+    </header>
+
+    <main class="main-container">
+        <h1 class="page-title">製造業DX</h1>
+        <p class="page-description">地方製造業の競争力向上を支援するAI・DXソリューション</p>
+        
+        <div class="articles-grid">
+            <article class="article-card">
+                <div class="article-image" style="background-image: url('https://images.unsplash.com/photo-1567789884554-0b844b597180?w=800&h=300&fit=crop&crop=center');"></div>
+                <div class="article-content">
+                    <div class="article-meta">
+                        <span class="article-date">2025-07-12</span>
+                        <span class="article-category">製造業DX</span>
+                    </div>
+                    <h3 class="article-title">
+                        <a href="articles/20250712.html">製造業AI品質管理システム導入事例｜不良品率78%削減を実現した中小企業の成功ストーリー</a>
+                    </h3>
+                    <p class="article-excerpt">地方の中小製造業がAI品質管理システムで不良品率78%削減、年間コスト1,800万円削減を実現。導入から運用まで、実際の数値データと共に詳しく解説します。</p>
+                    <a href="articles/20250712.html" class="read-more">続きを読む →</a>
+                </div>
+            </article>
+
+            <article class="article-card">
+                <div class="article-image" style="background-image: url('https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?w=800&h=300&fit=crop&crop=center');"></div>
+                <div class="article-content">
+                    <div class="article-meta">
+                        <span class="article-date">2025-07-07</span>
+                        <span class="article-category">製造業DX</span>
+                    </div>
+                    <h3 class="article-title">
+                        <a href="articles/20250707.html">製造業AI導入事例｜品質管理で不良品率35%削減した町工場の成功ノウハウ</a>
+                    </h3>
+                    <p class="article-excerpt">従業員18名の町工場がAI品質管理システムで不良品率35%削減、検査時間40%短縮を実現。小規模製造業でも導入可能な実践的ノウハウを詳しく解説します。</p>
+                    <a href="articles/20250707.html" class="read-more">続きを読む →</a>
+                </div>
+            </article>
+        </div>
+
+        <div class="related-articles">
+            <h2>その他のカテゴリも見る</h2>
+            <div class="category-links">
+                <a href="agriculture.html" class="category-link">
+                    <div class="category-icon">🌱</div>
+                    <div class="category-info">
+                        <h3>農業DX</h3>
+                        <p>スマート農業・収穫予測</p>
+                    </div>
+                </a>
+                <a href="tourism.html" class="category-link">
+                    <div class="category-icon">🏨</div>
+                    <div class="category-info">
+                        <h3>観光業DX</h3>
+                        <p>宿泊業・業務効率化</p>
+                    </div>
+                </a>
+                <a href="blog-list.html" class="category-link">
+                    <div class="category-icon">📝</div>
+                    <div class="category-info">
+                        <h3>すべての記事</h3>
+                        <p>全業界横断記事</p>
+                    </div>
+                </a>
+            </div>
+        </div>
+    </main>
+
+    <footer class="footer">
+        <p>&copy; 2024 地方AIブースター. All rights reserved.</p>
+    </footer>
+
+    <script>
+        // Convert markdown-style bold text to HTML
+        function convertMarkdownBold() {
+            const textElements = document.querySelectorAll('p, h1, h2, h3, h4, h5, h6, li, div, span');
+            textElements.forEach(element => {
+                if (element.innerHTML && !element.querySelector('script, style')) {
+                    element.innerHTML = element.innerHTML.replace(/\*\*(.*?)\*\*/g, '<strong>$1</strong>');
+                }
+            });
+        }
+
+        // Initialize when page loads
+        document.addEventListener('DOMContentLoaded', function() {
+            convertMarkdownBold();
+        });
+    </script>
+</body>
+</html>
