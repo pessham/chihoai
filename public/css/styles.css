@@ -30,7 +30,7 @@
 }
 
 body {
-    font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'SF Pro Display', 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+    font-family: 'Noto Sans JP', 'Inter', -apple-system, BlinkMacSystemFont, 'SF Pro Display', 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
     background-color: var(--background-secondary);
     color: var(--text-color);
     line-height: 1.7;
@@ -38,6 +38,8 @@ body {
     -moz-osx-font-smoothing: grayscale;
     position: relative;
     overflow-x: hidden;
+    font-feature-settings: 'palt' 1;
+    letter-spacing: 0.02em;
 }
 
 body::before {
@@ -600,10 +602,27 @@ body::before {
     gap: 8px;
     color: var(--primary-color);
     text-decoration: none;
-    margin-bottom: 48px;
-    font-weight: 500;
-    font-size: 0.9375rem;
-    transition: all 0.2s ease;
+    margin: 0 0 40px 0;
+    padding: 12px 20px;
+    font-weight: 600;
+    font-size: 0.95rem;
+    background: rgba(91, 71, 224, 0.08);
+    border-radius: 8px;
+    border: 1px solid rgba(91, 71, 224, 0.15);
+    transition: all 0.3s ease;
+    max-width: fit-content;
+}
+
+.back-link::before {
+    content: '←';
+    font-size: 1.1rem;
+    font-weight: 700;
+}
+
+.back-link:hover {
+    background: rgba(91, 71, 224, 0.15);
+    transform: translateX(-4px);
+    box-shadow: var(--shadow-md);
 }
 
 .back-link:hover {
@@ -614,17 +633,64 @@ body::before {
     background: var(--background-color);
 }
 
+/* 記事コンテナ全体のスタイル */
+.article-container {
+    max-width: 1000px;
+    margin: 100px auto 80px;
+    padding: 40px;
+    position: relative;
+    background: var(--background-color);
+    border-radius: 20px;
+    box-shadow: var(--shadow-lg);
+    overflow: hidden;
+}
+
+.article-container::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 4px;
+    background: var(--gradient-primary);
+    z-index: 1;
+}
+
+@media (max-width: 1024px) {
+    .article-container {
+        margin: 80px 20px;
+        padding: 32px;
+        border-radius: 16px;
+    }
+}
+
+@media (max-width: 768px) {
+    .article-container {
+        margin: 60px 16px;
+        padding: 24px;
+        border-radius: 12px;
+    }
+}
+
 .article-hero {
     width: 100%;
-    height: 0;
-    padding-bottom: 56.25%; /* 16:9 ratio */
-    margin: 32px 0 48px 0;
+    height: 400px;
+    margin: 0 0 48px 0;
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
     position: relative;
     border-radius: 16px;
     overflow: hidden;
+    box-shadow: var(--shadow-lg);
+}
+
+@media (max-width: 768px) {
+    .article-hero {
+        height: 280px;
+        margin: 0 0 32px 0;
+        border-radius: 12px;
+    }
 }
 
 .article-hero::before {
@@ -643,26 +709,48 @@ body::before {
 }
 
 .full-article h1 {
-    font-size: 2.8rem;
-    margin-bottom: 24px;
-    line-height: 1.1;
+    font-size: 3.2rem;
+    margin-bottom: 32px;
+    line-height: 1.15;
     font-weight: 900;
     letter-spacing: -0.04em;
     background: var(--gradient-primary);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     background-clip: text;
+    position: relative;
+    padding-bottom: 24px;
+}
+
+.full-article h1::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 120px;
+    height: 4px;
+    background: var(--gradient-primary);
+    border-radius: 2px;
 }
 
 .full-article .article-meta {
     display: flex;
     gap: 24px;
-    font-size: 0.9375rem;
+    font-size: 0.95rem;
     color: var(--text-secondary);
-    margin-bottom: 48px;
-    padding-bottom: 48px;
-    border-bottom: 2px solid var(--border-light);
+    margin: 32px 0 56px 0;
+    padding: 20px 24px;
+    background: rgba(247, 249, 251, 0.8);
+    border-radius: 12px;
+    border: 1px solid var(--border-light);
     position: relative;
+    align-items: center;
+}
+
+.full-article .article-meta::before {
+    content: '📅';
+    font-size: 1.2rem;
+    margin-right: 8px;
 }
 
 .full-article .article-meta::after {
@@ -679,9 +767,18 @@ body::before {
     font-weight: 500;
 }
 
+.article-content {
+    font-size: 1.125rem;
+    line-height: 1.8;
+    color: var(--text-color);
+    max-width: 800px;
+    margin: 0 auto;
+    position: relative;
+}
+
 .full-article .article-content {
     font-size: 1.125rem;
-    line-height: 1.7;
+    line-height: 1.8;
     color: var(--text-color);
 }
 
@@ -689,31 +786,75 @@ body::before {
     max-width: 100%;
     height: auto;
     display: block;
-    margin: 32px 0;
-    border-radius: 12px;
+    margin: 40px auto;
+    border-radius: 16px;
+    box-shadow: var(--shadow-lg);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.full-article .article-content img:hover {
+    transform: scale(1.02);
+    box-shadow: var(--shadow-xl);
+}
+
+/* 記事内のサブイメージ(セクションイメージ)のスタイル */
+.article-h2-image {
+    width: 80px;
+    height: 80px;
+    margin: 0 auto 24px;
+    border-radius: 50%;
     box-shadow: var(--shadow-md);
+    display: block;
+    object-fit: cover;
+}
+
+/* トップイメージのスタイル */
+.article-top-image {
+    width: 100%;
+    height: 300px;
+    object-fit: cover;
+    border-radius: 16px;
+    margin: 0 auto 40px;
+    box-shadow: var(--shadow-lg);
+    display: block;
+}
+
+@media (max-width: 768px) {
+    .article-top-image {
+        height: 200px;
+        border-radius: 12px;
+        margin-bottom: 32px;
+    }
+    
+    .article-h2-image {
+        width: 60px;
+        height: 60px;
+        margin-bottom: 20px;
+    }
 }
 
 .full-article .article-content h2 {
-    font-size: 2rem;
-    margin: 56px 0 16px;
-    font-weight: 600;
+    font-size: 2.2rem;
+    margin: 64px 0 24px;
+    font-weight: 700;
     letter-spacing: -0.02em;
     color: var(--text-color);
     position: relative;
-    padding-left: 16px;
+    padding: 24px 0 16px 24px;
+    background: rgba(91, 71, 224, 0.03);
+    border-radius: 12px;
+    border-left: 6px solid var(--primary-color);
 }
 
 .full-article .article-content h2::before {
-    content: '';
+    content: '# ';
     position: absolute;
-    left: 0;
+    left: 16px;
     top: 50%;
     transform: translateY(-50%);
-    width: 4px;
-    height: 24px;
-    background: var(--gradient-primary);
-    border-radius: 2px;
+    font-size: 1.5rem;
+    color: var(--primary-color);
+    font-weight: 900;
 }
 
 /* H2直下の導入文章（結論ファースト）スタイル */
@@ -730,25 +871,27 @@ body::before {
 }
 
 .full-article .article-content h3 {
-    font-size: 1.5rem;
-    margin: 40px 0 12px;
+    font-size: 1.6rem;
+    margin: 48px 0 16px;
     font-weight: 600;
     letter-spacing: -0.01em;
     color: var(--text-color);
     position: relative;
-    padding-left: 12px;
+    padding: 16px 0 12px 20px;
+    background: rgba(78, 205, 196, 0.05);
+    border-radius: 8px;
+    border-left: 4px solid var(--accent-color);
 }
 
 .full-article .article-content h3::before {
-    content: '';
+    content: '## ';
     position: absolute;
-    left: 0;
+    left: 12px;
     top: 50%;
     transform: translateY(-50%);
-    width: 3px;
-    height: 20px;
-    background: var(--accent-color);
-    border-radius: 2px;
+    font-size: 1.2rem;
+    color: var(--accent-color);
+    font-weight: 700;
 }
 
 /* H3直下の導入文章スタイル */
@@ -764,26 +907,123 @@ body::before {
 }
 
 .full-article .article-content p {
-    margin-bottom: 28px;
+    margin-bottom: 32px;
+    text-align: justify;
+    text-justify: inter-ideograph;
+}
+
+.full-article .article-content p:first-of-type {
+    font-size: 1.2rem;
+    font-weight: 500;
+    color: var(--primary-dark);
+    padding: 20px;
+    background: rgba(91, 71, 224, 0.08);
+    border-radius: 12px;
+    border: 1px solid rgba(91, 71, 224, 0.15);
+    position: relative;
+}
+
+.full-article .article-content p:first-of-type::before {
+    content: '💡';
+    position: absolute;
+    left: 16px;
+    top: 16px;
+    font-size: 1.5rem;
 }
 
 /* データ・数値を含む文章の強調 */
 .full-article .article-content strong {
     color: var(--primary-dark);
     font-weight: 700;
-    background: rgba(91, 71, 224, 0.08);
-    padding: 2px 4px;
-    border-radius: 3px;
+    background: rgba(91, 71, 224, 0.12);
+    padding: 3px 6px;
+    border-radius: 4px;
+    font-size: 1.05em;
+}
+
+/* 引用・重要な情報のボックス */
+.full-article .article-content blockquote {
+    margin: 32px 0;
+    padding: 24px 28px;
+    background: rgba(78, 205, 196, 0.08);
+    border-left: 6px solid var(--accent-color);
+    border-radius: 0 12px 12px 0;
+    font-style: italic;
+    position: relative;
+}
+
+.full-article .article-content blockquote::before {
+    content: '💡';
+    position: absolute;
+    left: 20px;
+    top: 16px;
+    font-size: 1.3rem;
+    font-style: normal;
+}
+
+/* モバイルレスポンシブ対応 */
+@media (max-width: 768px) {
+    .full-article h1 {
+        font-size: 2.4rem;
+        line-height: 1.2;
+        margin-bottom: 24px;
+    }
+    
+    .full-article .article-content h2 {
+        font-size: 1.8rem;
+        padding: 20px 0 12px 20px;
+    }
+    
+    .full-article .article-content h3 {
+        font-size: 1.4rem;
+        padding: 14px 0 10px 16px;
+    }
+    
+    .full-article .article-content {
+        font-size: 1.05rem;
+        line-height: 1.75;
+    }
+    
+    .full-article .article-content ul,
+    .full-article .article-content ol {
+        padding: 20px 24px;
+    }
+    
+    .full-article .article-content blockquote {
+        padding: 20px 24px;
+        margin: 24px 0;
+    }
+    
+    .full-article .article-content p {
+        margin-bottom: 24px;
+    }
 }
 
 .full-article .article-content ul,
 .full-article .article-content ol {
-    margin-bottom: 28px;
-    padding-left: 0;
-    background: rgba(247, 249, 251, 0.8);
-    padding: 20px 24px;
-    border-radius: 8px;
-    border: 1px solid var(--border-light);
+    margin-bottom: 32px;
+    padding: 24px 28px;
+    background: rgba(247, 249, 251, 0.9);
+    border-radius: 12px;
+    border: 1px solid var(--border-color);
+    box-shadow: var(--shadow-sm);
+    position: relative;
+}
+
+.full-article .article-content ul::before {
+    content: '📝';
+    position: absolute;
+    left: 20px;
+    top: 16px;
+    font-size: 1.2rem;
+}
+
+.full-article .article-content ol::before {
+    content: '📊';
+    position: absolute;
+    left: 20px;
+    top: 16px;
+    font-size: 1.2rem;
 }
 
 .full-article .article-content ul {
@@ -796,7 +1036,39 @@ body::before {
 }
 
 .full-article .article-content li {
-    margin-bottom: 12px;
+    margin-bottom: 16px;
+    padding-left: 32px;
+    position: relative;
+    line-height: 1.7;
+}
+
+.full-article .article-content ul li::before {
+    content: '▸';
+    position: absolute;
+    left: 12px;
+    top: 0;
+    color: var(--primary-color);
+    font-weight: 700;
+    font-size: 1.1rem;
+}
+
+.full-article .article-content ol li {
+    counter-increment: item;
+}
+
+.full-article .article-content ol li::before {
+    content: counter(item) '.';
+    position: absolute;
+    left: 8px;
+    top: 0;
+    color: var(--accent-color);
+    font-weight: 700;
+    font-size: 1rem;
+    background: rgba(78, 205, 196, 0.15);
+    padding: 2px 6px;
+    border-radius: 4px;
+    min-width: 20px;
+    text-align: center;
     position: relative;
     padding-left: 24px;
     line-height: 1.6;
