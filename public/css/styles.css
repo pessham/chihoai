@@ -696,32 +696,141 @@ body::before {
 
 .full-article .article-content h2 {
     font-size: 2rem;
-    margin: 56px 0 24px;
+    margin: 56px 0 16px;
     font-weight: 600;
     letter-spacing: -0.02em;
     color: var(--text-color);
+    position: relative;
+    padding-left: 16px;
+}
+
+.full-article .article-content h2::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 4px;
+    height: 24px;
+    background: var(--gradient-primary);
+    border-radius: 2px;
+}
+
+/* H2直下の導入文章（結論ファースト）スタイル */
+.full-article .article-content h2 + p {
+    font-weight: 600;
+    font-size: 1.15rem;
+    color: var(--primary-dark);
+    background: rgba(91, 71, 224, 0.05);
+    padding: 16px 20px;
+    border-left: 4px solid var(--primary-color);
+    border-radius: 0 8px 8px 0;
+    margin-bottom: 20px;
+    line-height: 1.6;
 }
 
 .full-article .article-content h3 {
     font-size: 1.5rem;
-    margin: 40px 0 20px;
+    margin: 40px 0 12px;
     font-weight: 600;
     letter-spacing: -0.01em;
     color: var(--text-color);
+    position: relative;
+    padding-left: 12px;
+}
+
+.full-article .article-content h3::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 3px;
+    height: 20px;
+    background: var(--accent-color);
+    border-radius: 2px;
+}
+
+/* H3直下の導入文章スタイル */
+.full-article .article-content h3 + p {
+    font-weight: 500;
+    color: var(--primary-color);
+    margin-bottom: 16px;
+    padding-left: 12px;
+    border-left: 2px solid var(--accent-color);
+    background: rgba(78, 205, 196, 0.03);
+    padding: 12px 16px;
+    border-radius: 0 6px 6px 0;
 }
 
 .full-article .article-content p {
     margin-bottom: 28px;
 }
 
+/* データ・数値を含む文章の強調 */
+.full-article .article-content strong {
+    color: var(--primary-dark);
+    font-weight: 700;
+    background: rgba(91, 71, 224, 0.08);
+    padding: 2px 4px;
+    border-radius: 3px;
+}
+
 .full-article .article-content ul,
 .full-article .article-content ol {
     margin-bottom: 28px;
-    padding-left: 28px;
+    padding-left: 0;
+    background: rgba(247, 249, 251, 0.8);
+    padding: 20px 24px;
+    border-radius: 8px;
+    border: 1px solid var(--border-light);
+}
+
+.full-article .article-content ul {
+    list-style: none;
+}
+
+.full-article .article-content ol {
+    counter-reset: item;
+    list-style: none;
 }
 
 .full-article .article-content li {
     margin-bottom: 12px;
+    position: relative;
+    padding-left: 24px;
+    line-height: 1.6;
+}
+
+.full-article .article-content ul li::before {
+    content: '▶';
+    position: absolute;
+    left: 0;
+    top: 0;
+    color: var(--primary-color);
+    font-weight: bold;
+    font-size: 0.8em;
+}
+
+.full-article .article-content ol li {
+    counter-increment: item;
+}
+
+.full-article .article-content ol li::before {
+    content: counter(item) '.';
+    position: absolute;
+    left: 0;
+    top: 0;
+    color: var(--primary-color);
+    font-weight: bold;
+    background: rgba(91, 71, 224, 0.1);
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 0.75em;
 }
 
 .full-article .article-content code {
@@ -738,8 +847,38 @@ body::before {
     padding: 28px;
     border-radius: 12px;
     overflow-x: auto;
-    margin-bottom: 32px;
+    margin: 32px 0;
     font-size: 0.875rem;
+    border: 1px solid var(--border-light);
+    box-shadow: var(--shadow-sm);
+}
+
+/* ブロッククォート（引用）のスタイリング */
+.full-article .article-content blockquote {
+    background: rgba(91, 71, 224, 0.03);
+    border-left: 4px solid var(--primary-color);
+    padding: 20px 24px;
+    margin: 32px 0;
+    border-radius: 0 8px 8px 0;
+    font-style: italic;
+    position: relative;
+}
+
+.full-article .article-content blockquote::before {
+    content: '"';
+    font-size: 3rem;
+    color: var(--primary-color);
+    position: absolute;
+    top: -10px;
+    left: 16px;
+    font-family: serif;
+    opacity: 0.3;
+}
+
+.full-article .article-content blockquote p {
+    margin-bottom: 16px;
+    color: var(--text-color);
+    padding-left: 20px;
 }
 
 .full-article .article-content pre code {
@@ -839,6 +978,76 @@ body::before {
 .blog-post:nth-child(5) { animation-delay: 0.5s; }
 .blog-post:nth-child(6) { animation-delay: 0.6s; }
 
+/* 記事内の数値・データ強調 */
+.data-highlight {
+    background: linear-gradient(135deg, rgba(91, 71, 224, 0.1) 0%, rgba(78, 205, 196, 0.1) 100%);
+    padding: 3px 6px;
+    border-radius: 4px;
+    font-weight: 700;
+    color: var(--primary-dark);
+}
+
+/* CTAボタンスタイル */
+.cta-button {
+    display: inline-block;
+    background: var(--gradient-primary);
+    color: white;
+    padding: 12px 24px;
+    border-radius: 8px;
+    text-decoration: none;
+    font-weight: 600;
+    margin: 20px 0;
+    transition: all 0.3s ease;
+    box-shadow: var(--shadow-md);
+}
+
+.cta-button:hover {
+    transform: translateY(-2px);
+    box-shadow: var(--shadow-lg);
+    color: white;
+}
+
+/* モバイル対応改善 */
+@media (max-width: 768px) {
+    .full-article .article-content h2 {
+        font-size: 1.5rem;
+        margin: 40px 0 12px;
+        padding-left: 12px;
+    }
+    
+    .full-article .article-content h2::before {
+        width: 3px;
+        height: 20px;
+    }
+    
+    .full-article .article-content h3 {
+        font-size: 1.25rem;
+        margin: 32px 0 8px;
+        padding-left: 8px;
+    }
+    
+    .full-article .article-content h3::before {
+        width: 2px;
+        height: 16px;
+    }
+    
+    .full-article .article-content h2 + p,
+    .full-article .article-content h3 + p {
+        font-size: 1rem;
+        padding: 12px 16px;
+    }
+    
+    .full-article .article-content ul,
+    .full-article .article-content ol {
+        padding: 16px 20px;
+    }
+    
+    .full-article .article-content blockquote {
+        padding: 16px 20px;
+        margin: 24px 0;
+    }
+}
+
 /* Responsive Design */
 @media (max-width: 768px) {
     .header .container {
@@ -878,6 +1087,11 @@ body::before {
     
     .full-article .article-content {
         font-size: 1rem;
+        line-height: 1.8;
+    }
+    
+    .full-article .article-content p {
+        margin-bottom: 24px;
     }
 }
 
