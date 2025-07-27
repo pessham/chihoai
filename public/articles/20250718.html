@@ -3,20 +3,41 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>【DX仕事術】在庫のムダ・欠品ゼロへ！ChatGPTと考える「最強の資材在庫管理表」設計術</title>
+    <title>【DX仕事術】在庫のムダ・欠品ゼロへ！ChatGPTと考える「最強の資材在庫管理表」設計術 | 地方AIブースター</title>
+    <meta name="description" content="ChatGPTを活用して効率的な資材在庫管理表を設計する手法を徹底解説。在庫のムダと欠品を同時に解決する実践的なDX仕事術を紹介します。">
     <link rel="stylesheet" href="../css/styles.css">
 </head>
 <body>
-    <div class="container">
-        <header>
-            <a href="../blog-list.html">記事一覧へ戻る</a>
-        </header>
-        <article>
+    <header class="header">
+        <div class="container">
+            <nav>
+                <a href="../index.html" class="logo">地方AIブースター</a>
+                <div class="nav-menu">
+                    <a href="../agriculture.html" class="nav-link">農業DX</a>
+                    <a href="../tourism.html" class="nav-link">観光業DX</a>
+                    <a href="../manufacturing.html" class="nav-link active">製造業DX</a>
+                    <a href="../blog-list.html" class="nav-link">ブログ一覧</a>
+                </div>
+            </nav>
+        </div>
+    </header>
+    
+    <div class="article-container">
+        <a href="../index.html" class="back-link">← 記事一覧に戻る</a>
+        
+        <div class="article-hero" style="background-image: url('https://images.unsplash.com/photo-1516062423079-7ca13cdc7f5a?w=800&h=450&fit=crop&crop=center');"></div>
+        
+        <div class="article-meta">
+            <span>2025-07-18</span>
+            <span>ペスハム</span>
+        </div>
+        
+        <div class="article-content">
             <h1>【DX仕事術】在庫のムダ・欠品ゼロへ！ChatGPTと考える「最強の資材在庫管理表」設計術</h1>
             <img src="https://images.unsplash.com/photo-1516062423079-7ca13cdc7f5a?w=800&h=450&fit=crop&crop=center" alt="倉庫の棚と在庫" class="article-top-image">
 
             <h2>はじめに</h2>
-            <img src="../images/article-20250718-01.jpg" alt="悩む倉庫管理者" class="article-h2-image">
+            <img src="https://images.unsplash.com/photo-1586528116311-ad8dd3c8310d?w=800&h=450&fit=crop&crop=center" alt="悩む倉庫管理者" class="article-h2-image">
             <p>「あれ、あの部品の在庫、いくつあったっけ…？ 発注しなきゃ！」</p>
             <p>「いつの間にか、使わない資材が倉庫の奥に山積みになっている…」</p>
             <p>「欠品が怖くて多めに発注したら、今度は過剰在庫でキャッシュフローが…」</p>
@@ -27,7 +48,7 @@
             <p>この記事では、ChatGPTをあなたの会社の「在庫管理コンサルタント」として活用し、単なる記録簿ではない、<strong>未来の意思決定を支える「戦略的在庫管理表」</strong>を設計する方法を、具体的なプロンプト（指示文）を交えながら3ステップで徹底解説します。</p>
 
             <h2>なぜ、あなたの在庫管理表は「ただの記録」で終わるのか？</h2>
-            <img src="../images/article-20250718-02.jpg" alt="古い記録簿" class="article-h2-image">
+            <img src="https://images.unsplash.com/photo-1554224155-6726b3ff858f?w=800&h=450&fit=crop&crop=center" alt="古い記録簿" class="article-h2-image">
             <p>心を込めて作ったはずの在庫管理表が、いつの間にか「誰も更新しない」「情報が古くて信用できない」ファイルになってしまう。その背景には、いくつかの共通した原因があります。</p>
             <ul>
                 <li><strong>項目が足りない、または多すぎる:</strong> 在庫数しか記録しておらず、誰がいつ発注すべきか分からない。逆に、細かすぎる項目が多くて入力が面倒になり、誰も続けられない。</li>
@@ -38,7 +59,7 @@
             <p>結局のところ、多くの在庫管理表は、過去を記録する<strong>「バックミラー」</strong>にはなっても、未来を照らす<strong>「ヘッドライト」</strong>にはなっていないのです。この問題を解決するには、表を作る前に「何を、何のために管理するのか」という<strong>「設計思想」</strong>を固める必要があります。そして、その思考プロセスを最も強力にサポートしてくれるのが、ChatGPTなのです。</p>
 
             <h2>ChatGPTは、あなたの会社の「在庫管理コンサルタント」である</h2>
-            <img src="../images/article-20250718-03.jpg" alt="コンサルタントのアイコン" class="article-h2-image">
+            <img src="https://images.unsplash.com/photo-1560472354-b33ff0c44a43?w=800&h=450&fit=crop&crop=center" alt="コンサルタントのアイコン" class="article-h2-image">
             <p>ChatGPTに在庫管理表の構成を相談すると、まるで経験豊富なコンサルタントのように、あなたに的確な質問を投げかけ、思考を整理してくれます。</p>
             <ol>
                 <li><strong>網羅的な項目を洗い出す「アナリスト」:</strong><br>在庫管理に必要な項目は、単に「品名」と「数量」だけではありません。「発注点」「リードタイム」「保管場所」「サプライヤー情報」など、戦略的な管理に必要な項目を、ChatGPTは体系的に、そして網羅的に洗い出してくれます。</li>
@@ -48,7 +69,7 @@
             <p>AIと対話することで、あなたは一人で悩むことなく、自社の実態に即した、継続可能で実用的な在庫管理の「仕組み」そのものを設計できるのです。</p>
 
             <h2>実践！3ステップでAIと作る「使える」在庫管理表</h2>
-            <img src="../images/article-20250718-04.jpg" alt="3ステップの図解" class="article-h2-image">
+            <img src="https://images.unsplash.com/photo-1434626881859-194d67b2b86f?w=800&h=450&fit=crop&crop=center" alt="3ステップの図解" class="article-h2-image">
             <p>では、具体的な作成プロセスを3つのステップで見ていきましょう。</p>
             <h3>Step 1: 要件定義 - 管理したいモノと目的をAIに伝える</h3>
             <p>まず、ChatGPTに今回の目的と、あなたの会社の基本情報を伝えます。この最初のインプットが、AIの提案の質を大きく左右します。</p>
@@ -70,7 +91,7 @@
             <p>この指示により、あなたは明日から使える在庫管理表のテンプレートを手に入れることができます。</p>
 
             <h2>【業界別】管理項目カスタマイズのヒント</h2>
-            <img src="../images/article-20250718-05.jpg" alt="製造業と飲食店のアイコン" class="article-h2-image">
+            <img src="https://images.unsplash.com/photo-1565515636369-2b51b83d2bee?w=800&h=450&fit=crop&crop=center" alt="製造業と飲食店のアイコン" class="article-h2-image">
             <p>基本の管理表ができたら、次はあなたの業界に合わせてカスタマイズしましょう。</p>
             <h3>《製造業編》</h3>
             <ul>
@@ -84,7 +105,7 @@
             </ul>
 
             <h2>在庫管理表を「会社の神経」にするための運用法</h2>
-            <img src="../images/article-20250718-06.jpg" alt="チームで運用する様子" class="article-h2-image">
+            <img src="https://images.unsplash.com/photo-1522202176988-66273c2fd55f?w=800&h=450&fit=crop&crop=center" alt="チームで運用する様子" class="article-h2-image">
             <p>最後に、作成した管理表を形骸化させないための運用法も、AIに相談しましょう。</p>
             <ul>
                 <li><strong>リアルタイム化:</strong> 「この在庫管理表を、Googleスプレッドシートを使って、複数の担当者がリアルタイムで更新できるようにしたい。運用上の注意点は？」</li>
@@ -93,14 +114,27 @@
             </ul>
 
             <h2>おわりに</h2>
-            <img src="../images/article-20250718-07.jpg" alt="羅針盤" class="article-h2-image">
+            <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=800&h=450&fit=crop&crop=center" alt="羅針盤" class="article-h2-image">
             <p>もはや、在庫管理は「ただ数える」だけの作業ではありません。それは、<strong>会社の血液である「モノ」と「カネ」の流れを最適化し、日々の経営判断を支える、極めて戦略的な活動</strong>です。</p>
             <p>優れた在庫管理表は、その活動の「羅針盤」となります。どこに進むべきか、どこに危険があるのかを正確に示してくれます。</p>
             <p>ChatGPTという強力な思考パートナーと共に、あなたも自社のための「羅針盤」を設計してみませんか。それは、単にExcelの表を一つ作ることではありません。属人化から脱却し、データに基づいた意思決定ができる、強くしなやかな組織作りの、確かな第一歩となるはずです。</p>
-        </article>
-        <footer>
-            <a href="../blog-list.html">記事一覧へ戻る</a>
-        </footer>
+        </div>
+        
+        <div class="author-info">
+            <img src="../images/jissha.png" alt="ペスハム" class="author-avatar">
+            <div class="author-details">
+                <h4>ペスハム</h4>
+                <p>最新技術エバンジェリスト</p>
+                <p>AIや3DCGなど最新技術に詳しい人。長野県松本市のMatsumoto3DCGプロジェクトで20名の3Dクリエイターコミュニティを組成し、マンハッタンの建物群を制作。最新技術全般が得意で、今はバイブコーディングに夢中。Xフォロワー1.8万人。</p>
+                <a href="https://x.com/pess_ham" class="x-button" target="_blank">@pess_ham</a>
+            </div>
+        </div>
     </div>
+    
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2024 地方AIブースター. All rights reserved.</p>
+        </div>
+    </footer>
 </body>
 </html>

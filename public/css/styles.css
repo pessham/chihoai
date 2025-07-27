@@ -2,6 +2,9 @@
     --primary-color: #5B47E0;
     --primary-light: #7B6AEF;
     --primary-dark: #4936B8;
+    --green-color: #18634B;
+    --green-light: #2B8A64;
+    --green-dark: #0F4A38;
     --secondary-color: #FF6B6B;
     --accent-color: #4ECDC4;
     --background-color: #FFFFFF;
@@ -799,11 +802,12 @@ body::before {
 
 /* 記事内のサブイメージ(セクションイメージ)のスタイル */
 .article-h2-image {
-    width: 80px;
-    height: 80px;
-    margin: 0 auto 24px;
-    border-radius: 50%;
-    box-shadow: var(--shadow-md);
+    width: 100%;
+    max-width: 800px;
+    height: 300px;
+    margin: 32px auto 40px;
+    border-radius: 16px;
+    box-shadow: var(--shadow-lg);
     display: block;
     object-fit: cover;
 }
@@ -827,9 +831,9 @@ body::before {
     }
     
     .article-h2-image {
-        width: 60px;
-        height: 60px;
-        margin-bottom: 20px;
+        height: 200px;
+        margin: 24px auto 32px;
+        border-radius: 12px;
     }
 }
 
@@ -838,12 +842,12 @@ body::before {
     margin: 64px 0 24px;
     font-weight: 700;
     letter-spacing: -0.02em;
-    color: var(--text-color);
+    color: var(--green-color);
     position: relative;
     padding: 24px 0 16px 24px;
-    background: rgba(91, 71, 224, 0.03);
+    background: rgba(24, 99, 75, 0.03);
     border-radius: 12px;
-    border-left: 6px solid var(--primary-color);
+    border-left: 6px solid var(--green-color);
 }
 
 .full-article .article-content h2::before {
@@ -861,10 +865,10 @@ body::before {
 .full-article .article-content h2 + p {
     font-weight: 600;
     font-size: 1.15rem;
-    color: var(--primary-dark);
-    background: rgba(91, 71, 224, 0.05);
+    color: var(--green-dark);
+    background: rgba(24, 99, 75, 0.05);
     padding: 16px 20px;
-    border-left: 4px solid var(--primary-color);
+    border-left: 4px solid var(--green-color);
     border-radius: 0 8px 8px 0;
     margin-bottom: 20px;
     line-height: 1.6;
@@ -875,7 +879,7 @@ body::before {
     margin: 48px 0 16px;
     font-weight: 600;
     letter-spacing: -0.01em;
-    color: var(--text-color);
+    color: var(--primary-color);
     position: relative;
     padding: 16px 0 12px 20px;
     background: rgba(78, 205, 196, 0.05);
