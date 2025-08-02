@@ -2,12 +2,12 @@
   "name": "vive-blog",
   "version": "1.0.0",
   "scripts": {
-    "build": "make build",
-    "dev": "make dev",
-    "serve": "make serve",
-    "preview": "make preview",
-    "deploy": "make deploy",
-    "deploy:firebase": "DEPLOY_PROVIDER=firebase ./system/workflow/deploy.sh",
-    "deploy:vercel": "DEPLOY_PROVIDER=vercel ./system/workflow/deploy.sh"
+    "build": "node system/cms/tools/generate-contents.js",
+    "dev": "npm run build && npx serve public -p 4003",
+    "preview": "npm run build && open public/index.html",
+    "deploy": "npm run build && ./system/workflow/deploy.sh",
+    "clean": "rm -rf public/articles/*.html",
+    "deploy:firebase": "npm run build && DEPLOY_PROVIDER=firebase ./system/workflow/deploy.sh",
+    "deploy:vercel": "npm run build && DEPLOY_PROVIDER=vercel ./system/workflow/deploy.sh"
   }
 }

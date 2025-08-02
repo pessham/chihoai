@@ -1,6 +1,146 @@
 // Markdown記事のメタデータ
 const articles = [
     {
+        "id": "20250714-chatgpt-claim-simulation",
+        "filename": "20250714-chatgpt-claim-simulation.md",
+        "title": "記事 20250714-chatgpt-claim-simulation",
+        "date": "2025/8/2",
+        "author": "ペスハム",
+        "category": "未分類",
+        "thumbnail": "https://images.unsplash.com/photo-1516321318423-f06f85e504b3?w=800&h=450&fit=crop&crop=center",
+        "excerpt": ""
+    },
+    {
+        "id": "20250714-chatgpt-manufacturing-report",
+        "filename": "20250714-chatgpt-manufacturing-report.md",
+        "title": "記事 20250714-chatgpt-manufacturing-report",
+        "date": "2025/8/2",
+        "author": "ペスハム",
+        "category": "未分類",
+        "thumbnail": "https://images.unsplash.com/photo-1516321318423-f06f85e504b3?w=800&h=450&fit=crop&crop=center",
+        "excerpt": ""
+    },
+    {
+        "id": "20250715-aruyamu-chiikiokoshi-dao-report",
+        "filename": "20250715-aruyamu-chiikiokoshi-dao-report.md",
+        "title": "記事 20250715-aruyamu-chiikiokoshi-dao-report",
+        "date": "2025/8/2",
+        "author": "ペスハム",
+        "category": "未分類",
+        "thumbnail": "https://images.unsplash.com/photo-1516321318423-f06f85e504b3?w=800&h=450&fit=crop&crop=center",
+        "excerpt": ""
+    },
+    {
+        "id": "20250715-chatgpt-japanese-training",
+        "filename": "20250715-chatgpt-japanese-training.md",
+        "title": "記事 20250715-chatgpt-japanese-training",
+        "date": "2025/8/2",
+        "author": "ペスハム",
+        "category": "未分類",
+        "thumbnail": "https://images.unsplash.com/photo-1516321318423-f06f85e504b3?w=800&h=450&fit=crop&crop=center",
+        "excerpt": ""
+    },
+    {
+        "id": "20250716-chatgpt-notebooklm-5whys",
+        "filename": "20250716-chatgpt-notebooklm-5whys.md",
+        "title": "記事 20250716-chatgpt-notebooklm-5whys",
+        "date": "2025/8/2",
+        "author": "ペスハム",
+        "category": "未分類",
+        "thumbnail": "https://images.unsplash.com/photo-1516321318423-f06f85e504b3?w=800&h=450&fit=crop&crop=center",
+        "excerpt": ""
+    },
+    {
+        "id": "20250717-chatgpt-checklist",
+        "filename": "20250717-chatgpt-checklist.md",
+        "title": "記事 20250717-chatgpt-checklist",
+        "date": "2025/8/2",
+        "author": "ペスハム",
+        "category": "未分類",
+        "thumbnail": "https://images.unsplash.com/photo-1516321318423-f06f85e504b3?w=800&h=450&fit=crop&crop=center",
+        "excerpt": ""
+    },
+    {
+        "id": "20250718-chatgpt-inventory-management",
+        "filename": "20250718-chatgpt-inventory-management.md",
+        "title": "記事 20250718-chatgpt-inventory-management",
+        "date": "2025/8/2",
+        "author": "ペスハム",
+        "category": "未分類",
+        "thumbnail": "https://images.unsplash.com/photo-1516321318423-f06f85e504b3?w=800&h=450&fit=crop&crop=center",
+        "excerpt": ""
+    },
+    {
+        "id": "20250719-chatgpt-storytelling-coaching",
+        "filename": "20250719-chatgpt-storytelling-coaching.md",
+        "title": "記事 20250719-chatgpt-storytelling-coaching",
+        "date": "2025/8/2",
+        "author": "ペスハム",
+        "category": "未分類",
+        "thumbnail": "https://images.unsplash.com/photo-1516321318423-f06f85e504b3?w=800&h=450&fit=crop&crop=center",
+        "excerpt": ""
+    },
+    {
+        "id": "20250720-chatgpt-meeting-minutes",
+        "filename": "20250720-chatgpt-meeting-minutes.md",
+        "title": "記事 20250720-chatgpt-meeting-minutes",
+        "date": "2025/8/2",
+        "author": "ペスハム",
+        "category": "未分類",
+        "thumbnail": "https://images.unsplash.com/photo-1516321318423-f06f85e504b3?w=800&h=450&fit=crop&crop=center",
+        "excerpt": ""
+    },
+    {
+        "id": "20250721-chatgpt-travel-planner",
+        "filename": "20250721-chatgpt-travel-planner.md",
+        "title": "記事 20250721-chatgpt-travel-planner",
+        "date": "2025/8/2",
+        "author": "ペスハム",
+        "category": "未分類",
+        "thumbnail": "https://images.unsplash.com/photo-1516321318423-f06f85e504b3?w=800&h=450&fit=crop&crop=center",
+        "excerpt": ""
+    },
+    {
+        "id": "20250722-chatgpt-copywriting",
+        "filename": "20250722-chatgpt-copywriting.md",
+        "title": "記事 20250722-chatgpt-copywriting",
+        "date": "2025/8/2",
+        "author": "ペスハム",
+        "category": "未分類",
+        "thumbnail": "https://images.unsplash.com/photo-1516321318423-f06f85e504b3?w=800&h=450&fit=crop&crop=center",
+        "excerpt": ""
+    },
+    {
+        "id": "20250723-chatgpt-local-guide",
+        "filename": "20250723-chatgpt-local-guide.md",
+        "title": "記事 20250723-chatgpt-local-guide",
+        "date": "2025/8/2",
+        "author": "ペスハム",
+        "category": "未分類",
+        "thumbnail": "https://images.unsplash.com/photo-1516321318423-f06f85e504b3?w=800&h=450&fit=crop&crop=center",
+        "excerpt": ""
+    },
+    {
+        "id": "20250724-miricanvas-chatgpt-design",
+        "filename": "20250724-miricanvas-chatgpt-design.md",
+        "title": "記事 20250724-miricanvas-chatgpt-design",
+        "date": "2025/8/2",
+        "author": "ペスハム",
+        "category": "未分類",
+        "thumbnail": "https://images.unsplash.com/photo-1516321318423-f06f85e504b3?w=800&h=450&fit=crop&crop=center",
+        "excerpt": ""
+    },
+    {
+        "id": "author",
+        "filename": "author.md",
+        "title": "記事 author",
+        "date": "2025/8/2",
+        "author": "ペスハム",
+        "category": "未分類",
+        "thumbnail": "https://images.unsplash.com/photo-1516321318423-f06f85e504b3?w=800&h=450&fit=crop&crop=center",
+        "excerpt": ""
+    },
+    {
         "id": "20250728",
         "filename": "20250728.md",
         "title": "【デザイン革命】LovertAIでデザイン業務もチャットベースで：AIが拓くデザインの未来",
@@ -18,146 +158,6 @@ const articles = [
         "author": "ペスハム",
         "category": "汎用",
         "thumbnail": "https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?w=800&h=450&fit=crop&crop=center",
-        "excerpt": ""
-    },
-    {
-        "id": "20250714-chatgpt-claim-simulation",
-        "filename": "20250714-chatgpt-claim-simulation.md",
-        "title": "記事 20250714-chatgpt-claim-simulation",
-        "date": "2025/7/27",
-        "author": "ペスハム",
-        "category": "未分類",
-        "thumbnail": "https://images.unsplash.com/photo-1516321318423-f06f85e504b3?w=800&h=450&fit=crop&crop=center",
-        "excerpt": ""
-    },
-    {
-        "id": "20250714-chatgpt-manufacturing-report",
-        "filename": "20250714-chatgpt-manufacturing-report.md",
-        "title": "記事 20250714-chatgpt-manufacturing-report",
-        "date": "2025/7/27",
-        "author": "ペスハム",
-        "category": "未分類",
-        "thumbnail": "https://images.unsplash.com/photo-1516321318423-f06f85e504b3?w=800&h=450&fit=crop&crop=center",
-        "excerpt": ""
-    },
-    {
-        "id": "20250715-aruyamu-chiikiokoshi-dao-report",
-        "filename": "20250715-aruyamu-chiikiokoshi-dao-report.md",
-        "title": "記事 20250715-aruyamu-chiikiokoshi-dao-report",
-        "date": "2025/7/27",
-        "author": "ペスハム",
-        "category": "未分類",
-        "thumbnail": "https://images.unsplash.com/photo-1516321318423-f06f85e504b3?w=800&h=450&fit=crop&crop=center",
-        "excerpt": ""
-    },
-    {
-        "id": "20250715-chatgpt-japanese-training",
-        "filename": "20250715-chatgpt-japanese-training.md",
-        "title": "記事 20250715-chatgpt-japanese-training",
-        "date": "2025/7/27",
-        "author": "ペスハム",
-        "category": "未分類",
-        "thumbnail": "https://images.unsplash.com/photo-1516321318423-f06f85e504b3?w=800&h=450&fit=crop&crop=center",
-        "excerpt": ""
-    },
-    {
-        "id": "20250716-chatgpt-notebooklm-5whys",
-        "filename": "20250716-chatgpt-notebooklm-5whys.md",
-        "title": "記事 20250716-chatgpt-notebooklm-5whys",
-        "date": "2025/7/27",
-        "author": "ペスハム",
-        "category": "未分類",
-        "thumbnail": "https://images.unsplash.com/photo-1516321318423-f06f85e504b3?w=800&h=450&fit=crop&crop=center",
-        "excerpt": ""
-    },
-    {
-        "id": "20250717-chatgpt-checklist",
-        "filename": "20250717-chatgpt-checklist.md",
-        "title": "記事 20250717-chatgpt-checklist",
-        "date": "2025/7/27",
-        "author": "ペスハム",
-        "category": "未分類",
-        "thumbnail": "https://images.unsplash.com/photo-1516321318423-f06f85e504b3?w=800&h=450&fit=crop&crop=center",
-        "excerpt": ""
-    },
-    {
-        "id": "20250718-chatgpt-inventory-management",
-        "filename": "20250718-chatgpt-inventory-management.md",
-        "title": "記事 20250718-chatgpt-inventory-management",
-        "date": "2025/7/27",
-        "author": "ペスハム",
-        "category": "未分類",
-        "thumbnail": "https://images.unsplash.com/photo-1516321318423-f06f85e504b3?w=800&h=450&fit=crop&crop=center",
-        "excerpt": ""
-    },
-    {
-        "id": "20250719-chatgpt-storytelling-coaching",
-        "filename": "20250719-chatgpt-storytelling-coaching.md",
-        "title": "記事 20250719-chatgpt-storytelling-coaching",
-        "date": "2025/7/27",
-        "author": "ペスハム",
-        "category": "未分類",
-        "thumbnail": "https://images.unsplash.com/photo-1516321318423-f06f85e504b3?w=800&h=450&fit=crop&crop=center",
-        "excerpt": ""
-    },
-    {
-        "id": "20250720-chatgpt-meeting-minutes",
-        "filename": "20250720-chatgpt-meeting-minutes.md",
-        "title": "記事 20250720-chatgpt-meeting-minutes",
-        "date": "2025/7/27",
-        "author": "ペスハム",
-        "category": "未分類",
-        "thumbnail": "https://images.unsplash.com/photo-1516321318423-f06f85e504b3?w=800&h=450&fit=crop&crop=center",
-        "excerpt": ""
-    },
-    {
-        "id": "20250721-chatgpt-travel-planner",
-        "filename": "20250721-chatgpt-travel-planner.md",
-        "title": "記事 20250721-chatgpt-travel-planner",
-        "date": "2025/7/27",
-        "author": "ペスハム",
-        "category": "未分類",
-        "thumbnail": "https://images.unsplash.com/photo-1516321318423-f06f85e504b3?w=800&h=450&fit=crop&crop=center",
-        "excerpt": ""
-    },
-    {
-        "id": "20250722-chatgpt-copywriting",
-        "filename": "20250722-chatgpt-copywriting.md",
-        "title": "記事 20250722-chatgpt-copywriting",
-        "date": "2025/7/27",
-        "author": "ペスハム",
-        "category": "未分類",
-        "thumbnail": "https://images.unsplash.com/photo-1516321318423-f06f85e504b3?w=800&h=450&fit=crop&crop=center",
-        "excerpt": ""
-    },
-    {
-        "id": "20250723-chatgpt-local-guide",
-        "filename": "20250723-chatgpt-local-guide.md",
-        "title": "記事 20250723-chatgpt-local-guide",
-        "date": "2025/7/27",
-        "author": "ペスハム",
-        "category": "未分類",
-        "thumbnail": "https://images.unsplash.com/photo-1516321318423-f06f85e504b3?w=800&h=450&fit=crop&crop=center",
-        "excerpt": ""
-    },
-    {
-        "id": "20250724-miricanvas-chatgpt-design",
-        "filename": "20250724-miricanvas-chatgpt-design.md",
-        "title": "記事 20250724-miricanvas-chatgpt-design",
-        "date": "2025/7/27",
-        "author": "ペスハム",
-        "category": "未分類",
-        "thumbnail": "https://images.unsplash.com/photo-1516321318423-f06f85e504b3?w=800&h=450&fit=crop&crop=center",
-        "excerpt": ""
-    },
-    {
-        "id": "author",
-        "filename": "author.md",
-        "title": "記事 author",
-        "date": "2025/7/27",
-        "author": "ペスハム",
-        "category": "未分類",
-        "thumbnail": "https://images.unsplash.com/photo-1516321318423-f06f85e504b3?w=800&h=450&fit=crop&crop=center",
         "excerpt": ""
     },
     {
