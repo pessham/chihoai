@@ -230,16 +230,6 @@ window.articles = [
         "excerpt": "【DX仕事術】なぜ？を5回繰り返すだけ！ChatGPTとNotebookLMで作る「最強のなぜなぜ分析」ボット"
     },
     {
-        "id": "20250715-1",
-        "filename": "20250715-1.md",
-        "title": "Web3.0時代の地方創生：株式会社あるやうむと「地域おこし協力隊DAO」の全貌分析レポート",
-        "date": "2025/7/15",
-        "author": "ペスハム",
-        "category": "AI活用",
-        "thumbnail": "https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?w=800&h=450&fit=crop&crop=faces",
-        "excerpt": "Web3.0時代の地方創生：株式会社あるやうむと「地域おこし協力隊DAO」の全貌分析レポート"
-    },
-    {
         "id": "20250715-2",
         "filename": "20250715-2.md",
         "title": "【製造業・観光業向け】言葉の壁を乗り越える！ChatGPTで作る、外国人従業員向け「やさしい日本語」トレーニング術",
@@ -248,6 +238,16 @@ window.articles = [
         "category": "製造業DX",
         "thumbnail": "https://images.unsplash.com/photo-1567789884554-0b844b597180?w=800&h=450&fit=crop&crop=center",
         "excerpt": "【製造業・観光業向け】言葉の壁を乗り越える！ChatGPTで作る、外国人従業員向け「やさしい日本語」トレーニング術"
+    },
+    {
+        "id": "20250715",
+        "filename": "20250715.md",
+        "title": "Web3.0時代の地方創生：株式会社あるやうむと「地域おこし協力隊DAO」の全貌分析レポート",
+        "date": "2025/7/15",
+        "author": "ペスハム",
+        "category": "AI活用",
+        "thumbnail": "https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?w=800&h=450&fit=crop&crop=faces",
+        "excerpt": "Web3.0時代の地方創生：株式会社あるやうむと「地域おこし協力隊DAO」の全貌分析レポート"
     },
     {
         "id": "20250714-1",
