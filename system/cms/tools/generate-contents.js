@@ -287,7 +287,7 @@ function generateArticleHTML(article, content) {
     <meta property="og:description" content="${article.excerpt}">
     <meta property="og:image" content="${article.thumbnail}">
     <meta property="og:type" content="article">
-    <meta property="og:url" content="https://chihoai.com/articles/${article.id}.html">
+    <meta property="og:url" content="https://chihoai.com/articles/${article.id}">
     
     <!-- Twitter Card -->
     <meta name="twitter:card" content="summary_large_image">
@@ -613,26 +613,11 @@ function updateScriptJS(articles) {
     const scriptPath = path.join(__dirname, '..', '..', '..', 'public', 'js', 'script.js');
     
     try {
-        // 既存のscript.jsを読み込み
-        let scriptContent = fs.readFileSync(scriptPath, 'utf-8');
-        
         // articles配列を生成
-        const articlesJS = `const articles = ${JSON.stringify(articles, null, 4)};`;
-        
-        // articles配列の部分を置換
-        const articlesRegex = /const articles = \[\s\S\]*?\];/;
-        
-        if (articlesRegex.test(scriptContent)) {
-            scriptContent = scriptContent.replace(articlesRegex, articlesJS);
-        } else {
-            console.warn('⚠️  script.jsでarticles配列が見つかりませんでした');
-            // 配列が見つからない場合、ファイルの先頭に追加するフォールバック
-            scriptContent = articlesJS + '\n\n' + scriptContent;
-            console.log('  ✓ script.jsの先頭にarticles配列を追加しました');
-        }
-        
-        // ファイルに書き戻し
-        fs.writeFileSync(scriptPath, scriptContent, 'utf-8');
+        const articlesJS = `window.articles = ${JSON.stringify(articles, null, 4)};`;
+
+        // ファイルに書き戻し（常に上書き）
+        fs.writeFileSync(scriptPath, articlesJS, 'utf-8');
         console.log('  ✓ script.jsを更新');
         
     } catch (error) {

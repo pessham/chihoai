@@ -23,5 +23,8 @@
         }
       ]
     }
+  ],
+  "rewrites": [
+    { "source": "/articles/:id", "destination": "/articles/:id.html" }
   ]
 }

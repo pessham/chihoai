@@ -76,15 +76,9 @@ deploy_to_vercel() {
         fi
         print_info "プロジェクト: $project_name"
         
-        # .vercelディレクトリをpublicにコピーしてデプロイ
-        cp -r .vercel public/.vercel 2>/dev/null || true
-        
         # デプロイ実行とログキャプチャ
-        deploy_output=$(vercel --prod public --yes 2>&1)
+        deploy_output=$(vercel --prod --yes 2>&1)
         local exit_code=$?
-        
-        # デプロイ後に削除
-        rm -rf public/.vercel 2>/dev/null || true
         
         if [ $exit_code -eq 0 ]; then
             # URLを抽出
@@ -135,7 +129,7 @@ deploy_to_vercel() {
         echo ""
         
         # デプロイ実行
-        vercel --prod public --yes
+        vercel --prod --yes
         return $?
     fi
 }
