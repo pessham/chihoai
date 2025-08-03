@@ -1,3 +1,12 @@
+---
+title: "【ミスゼロ仕事術】ヒューマンエラーは仕組みで防ぐ！ChatGPTと作る「最強の作業チェックリスト」作成術"
+excerpt: "【ミスゼロ仕事術】ヒューマンエラーは仕組みで防ぐ！ChatGPTと作る「最強の作業チェックリスト」作成術"
+date: "2025/7/17"
+author: "ペスハム"
+thumbnail: "https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?w=800&h=450&fit=crop&crop=faces"
+category: "ビジネスDX"
+---
+
 # 【ミスゼロ仕事術】ヒューマンエラーは仕組みで防ぐ！ChatGPTと作る「最強の作業チェックリスト」作成術
 
 ## はじめに

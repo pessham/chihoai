@@ -1,3 +1,12 @@
+---
+title: "【地方観光業向け】もうクレームは怖くない！ChatGPT音声会話で実践する、お客様の心を掴む応対術"
+excerpt: "【地方観光業向け】もうクレームは怖くない！ChatGPT音声会話で実践する、お客様の心を掴む応対術"
+date: "2025/7/14"
+author: "ペスハム"
+thumbnail: "https://images.unsplash.com/photo-1582719478250-c89cae4dc85b?w=800&h=450&fit=crop&crop=center"
+category: "観光業DX"
+---
+
 # 【地方観光業向け】もうクレームは怖くない！ChatGPT音声会話で実践する、お客様の心を掴む応対術
 
 ## はじめに

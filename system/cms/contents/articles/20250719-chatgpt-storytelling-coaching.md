@@ -1,3 +1,12 @@
+---
+title: "【若手指導の決定版】なぜ君の指示は伝わらない？ChatGPTと作る、部下の心が動く「技術指導の喩え話」"
+excerpt: "【若手指導の決定版】なぜ君の指示は伝わらない？ChatGPTと作る、部下の心が動く「技術指導の喩え話」"
+date: "2025/7/19"
+author: "ペスハム"
+thumbnail: "https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?w=800&h=450&fit=crop&crop=faces"
+category: "ビジネスDX"
+---
+
 # 【若手指導の決定版】なぜ君の指示は伝わらない？ChatGPTと作る、部下の心が動く「技術指導の喩え話」
 
 ## はじめに

@@ -1,3 +1,12 @@
+---
+title: "【無料デザイン革命】もうパワポで苦労しない！MiriCanvasとChatGPTで作る、プロ級チラシ＆ポップ作成術"
+excerpt: "【無料デザイン革命】もうパワポで苦労しない！MiriCanvasとChatGPTで作る、プロ級チラシ＆ポップ作成術"
+date: "2025/7/24"
+author: "ペスハム"
+thumbnail: "https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?w=800&h=450&fit=crop&crop=faces"
+category: "ビジネスDX"
+---
+
 # 【無料デザイン革命】もうパワポで苦労しない！MiriCanvasとChatGPTで作る、プロ級チラシ＆ポップ作成術
 
 ## はじめに

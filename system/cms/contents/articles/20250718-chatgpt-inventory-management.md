@@ -1,3 +1,12 @@
+---
+title: "【DX仕事術】在庫のムダ・欠品ゼロへ！ChatGPTと考える「最強の資材在庫管理表」設計術"
+excerpt: "【DX仕事術】在庫のムダ・欠品ゼロへ！ChatGPTと考える「最強の資材在庫管理表」設計術"
+date: "2025/7/18"
+author: "ペスハム"
+thumbnail: "https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?w=800&h=450&fit=crop&crop=faces"
+category: "ビジネスDX"
+---
+
 # 【DX仕事術】在庫のムダ・欠品ゼロへ！ChatGPTと考える「最強の資材在庫管理表」設計術
 
 ## はじめに

@@ -1,3 +1,15 @@
+---
+title: "メールやFAXの受注処理はもう古い！AIエージェント「Comena」がもたらすB2B取引革命"
+excerpt: "---
+title: "メールやFAXの受注処理はもう古い！AIエージェント「Comena」がもたらすB2B取引革命"
+date: "2025年8月3日"
+thumbnail: "https://images.unsplash.com/photo-1542744173-8e7e53415bb0..."
+date: "2025/8/3"
+author: "ペスハム"
+thumbnail: "https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?w=800&h=450&fit=crop&crop=faces"
+category: "ビジネスDX"
+---
+
 
 ---
 title: "メールやFAXの受注処理はもう古い！AIエージェント「Comena」がもたらすB2B取引革命"

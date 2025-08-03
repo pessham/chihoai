@@ -1,3 +1,12 @@
+---
+title: "【観光DXの文章術】「すごい」しか言えない紹介文は卒業！ChatGPTと作る、心に刺さる観光施設のキャッチコピー術"
+excerpt: "【観光DXの文章術】「すごい」しか言えない紹介文は卒業！ChatGPTと作る、心に刺さる観光施設のキャッチコピー術"
+date: "2025/7/22"
+author: "ペスハム"
+thumbnail: "https://images.unsplash.com/photo-1582719478250-c89cae4dc85b?w=800&h=450&fit=crop&crop=center"
+category: "観光業DX"
+---
+
 # 【観光DXの文章術】「すごい」しか言えない紹介文は卒業！ChatGPTと作る、心に刺さる観光施設のキャッチコピー術
 
 ## はじめに

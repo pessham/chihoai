@@ -1,3 +1,12 @@
+---
+title: "【地方製造業のDX】もう日報作成に時間はかけない！ChatGPTで実現する「技術が伝わる」作業日報の作り方"
+excerpt: "【地方製造業のDX】もう日報作成に時間はかけない！ChatGPTで実現する「技術が伝わる」作業日報の作り方"
+date: "2025/7/14"
+author: "ペスハム"
+thumbnail: "https://images.unsplash.com/photo-1567789884554-0b844b597180?w=800&h=450&fit=crop&crop=center"
+category: "製造業DX"
+---
+
 # 【地方製造業のDX】もう日報作成に時間はかけない！ChatGPTで実現する「技術が伝わる」作業日報の作り方
 
 ## はじめに

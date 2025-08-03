@@ -1,3 +1,12 @@
+---
+title: "AIを使って紙のマニュアルをチャットボットにする方法"
+excerpt: "AIを使って紙のマニュアルをチャットボットにする方法"
+date: "2025/7/17"
+author: "ペスハム"
+thumbnail: "https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?w=800&h=450&fit=crop&crop=faces"
+category: "ビジネスDX"
+---
+
 # AIを使って紙のマニュアルをチャットボットにする方法
 
 ## 概要

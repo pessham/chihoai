@@ -1,3 +1,12 @@
+---
+title: "Web3.0時代の地方創生：株式会社あるやうむと「地域おこし協力隊DAO」の全貌分析レポート"
+excerpt: "Web3.0時代の地方創生：株式会社あるやうむと「地域おこし協力隊DAO」の全貌分析レポート"
+date: "2025/7/15"
+author: "ペスハム"
+thumbnail: "https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?w=800&h=450&fit=crop&crop=faces"
+category: "AI活用"
+---
+
 # Web3.0時代の地方創生：株式会社あるやうむと「地域おこし協力隊DAO」の全貌分析レポート
 
 「うちのまちも、だんだん人が減ってきてしまった…」

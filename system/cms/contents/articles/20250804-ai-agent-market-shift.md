@@ -1,3 +1,15 @@
+---
+title: "エージェント型AIの転換点：2025年8月第1週に見る市場変革の分析"
+excerpt: "---
+title: "エージェント型AIの転換点：2025年8月第1週に見る市場変革の分析"
+date: "2025年8月4日"
+thumbnail: "https://images.unsplash.com/photo-1516321318423-f06f85e504b3?w=800&h=..."
+date: "2025/8/4"
+author: "ペスハム"
+thumbnail: "https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?w=800&h=450&fit=crop&crop=faces"
+category: "ビジネスDX"
+---
+
 
 ---
 title: "エージェント型AIの転換点：2025年8月第1週に見る市場変革の分析"

@@ -1,3 +1,15 @@
+---
+title: "AIエージェント「Manus」が拓く、自律型ビジネスオートメーションの夜明け"
+excerpt: "---
+title: "AIエージェント「Manus」が拓く、自律型ビジネスオートメーションの夜明け"
+date: "2025年7月29日"
+thumbnail: "https://images.unsplash.com/photo-1550751827-4bd374c3f58b?w=800&..."
+date: "2025/7/29"
+author: "ペスハム"
+thumbnail: "https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?w=800&h=450&fit=crop&crop=faces"
+category: "ビジネスDX"
+---
+
 
 ---
 title: "AIエージェント「Manus」が拓く、自律型ビジネスオートメーションの夜明け"

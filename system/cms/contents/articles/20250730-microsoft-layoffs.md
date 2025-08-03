@@ -1,3 +1,15 @@
+---
+title: "「AIへの聖戦」か、それとも冷徹な経営判断か-マイクロソフト9000人リストラの深層"
+excerpt: "---
+title: "「AIへの聖戦」か、それとも冷徹な経営判断か-マイクロソフト9000人リストラの深層"
+date: "2025年7月30日"
+thumbnail: "https://images.unsplash.com/photo-1581091226825-a6a2a5aee158..."
+date: "2025/7/30"
+author: "ペスハム"
+thumbnail: "https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?w=800&h=450&fit=crop&crop=faces"
+category: "ビジネスDX"
+---
+
 
 ---
 title: "「AIへの聖戦」か、それとも冷徹な経営判断か-マイクロソフト9000人リストラの深層"

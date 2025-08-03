@@ -1,3 +1,15 @@
+---
+title: "AIエージェントの"神経系"、Apache Kafkaがリアルタイム知能化を加速する"
+excerpt: "---
+title: "AIエージェントの"神経系"、Apache Kafkaがリアルタイム知能化を加速する"
+date: "2025年7月31日"
+thumbnail: "https://images.unsplash.com/photo-1600880292203-757bb62b4baf..."
+date: "2025/7/31"
+author: "ペスハム"
+thumbnail: "https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?w=800&h=450&fit=crop&crop=faces"
+category: "ビジネスDX"
+---
+
 
 ---
 title: "AIエージェントの"神経系"、Apache Kafkaがリアルタイム知能化を加速する"

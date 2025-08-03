@@ -1,3 +1,15 @@
+---
+title: "「90210から10001まで、トラック一台の見積もりを」- 音声AI「Lanesurf」が変える貨物予約の未来"
+excerpt: "---
+title: "「90210から10001まで、トラック一台の見積もりを」- 音声AI「Lanesurf」が変える貨物予約の未来"
+date: "2025年8月2日"
+thumbnail: "https://images.unsplash.com/photo-1516062423079..."
+date: "2025/8/2"
+author: "ペスハム"
+thumbnail: "https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?w=800&h=450&fit=crop&crop=faces"
+category: "ビジネスDX"
+---
+
 
 ---
 title: "「90210から10001まで、トラック一台の見積もりを」- 音声AI「Lanesurf」が変える貨物予約の未来"
