@@ -143,7 +143,7 @@ function parseFrontmatter(markdown) {
         let value = metadata[key];
         // 前後の引用符を除去
         if (typeof value === 'string') {
-            value = value.replace(/^["']|["']$/g, '');
+            value = value.replace(/^[\"']|[\"']$/g, '');
             metadata[key] = value;
         }
     });
@@ -208,7 +208,7 @@ function parseMarkdown(markdown) {
     html = html.replace(/^---$/gm, '<hr>');
     
     // テーブルの変換
-    html = html.replace(/\|(.+)\|\n\|[-\s|]+\|\n((?:\|.+\|\n?)*)/g, (match, header, rows) => {
+    html = html.replace(/\|(.+)\|\n\|[-\s\|]+\|\n((?:\|.+\|\n?)*)/g, (match, header, rows) => {
         const headerCells = header.split('|').filter(cell => cell.trim()).map(cell => `<th>${cell.trim()}</th>`).join('');
         const bodyRows = rows.trim().split('\n').map(row => {
             const cells = row.split('|').filter(cell => cell.trim()).map(cell => `<td>${cell.trim()}</td>`).join('');
@@ -228,7 +228,7 @@ function parseMarkdown(markdown) {
         if (!para) return '';
         if (para.startsWith('<h') || para.startsWith('<pre') || para.startsWith('<ul') || 
             para.startsWith('<ol') || para.startsWith('<table') || para.startsWith('<li') ||
-            para.startsWith('<blockquote') || para.startsWith('<img') || para.startsWith('<hr') ||
+            para.startsWith('<blockquote>') || para.startsWith('<img') || para.startsWith('<hr') ||
             para.match(/^<h[1-6]>/)) {
             return para;
         }
@@ -315,7 +315,7 @@ function generateArticleHTML(article, content) {
         "datePublished": "${article.date}",
         "dateModified": "${new Date().toISOString()}"
     }
-    </script>
+    <\/script>
     
     <!-- Google Fonts -->
     <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700;900&family=BIZ+UDPGothic:wght@400;700&display=swap" rel="stylesheet">
@@ -564,7 +564,7 @@ function updateIndexHTML() {
         }
         // サイドバー用は images/ で出力
         const avatarPath = authorInfo.avatar.startsWith('/') ? authorInfo.avatar.substring(1) : authorInfo.avatar;
-        const avatarRegex = /<img src="images\/[^"]*" alt="[^"]*" \/>/;
+        const avatarRegex = /<img src="images\/[^\"]*" alt="[^\"]*" \/>/;
         const newAvatar = `<img src="${avatarPath}" alt="${authorInfo.name}" />`;
         if (avatarRegex.test(htmlContent)) {
             htmlContent = htmlContent.replace(avatarRegex, newAvatar);
@@ -595,7 +595,7 @@ function updateIndexHTML() {
         if (authorInfo.social.github) {
             socialLinks += `<a href="${authorInfo.social.github}" target="_blank" rel="noopener noreferrer" class="social-link">GitHub</a>`;
         }
-        socialLinks += '</div>';
+        socialLinks += '<\/div>';
         htmlContent = htmlContent.replace(socialRegex, socialLinks);
         
         console.log('  ✓ index.htmlの著者情報を更新');
@@ -617,17 +617,18 @@ function updateScriptJS(articles) {
         let scriptContent = fs.readFileSync(scriptPath, 'utf-8');
         
         // articles配列を生成
-        const articlesJS = `// Markdown記事のメタデータ
-const articles = ${JSON.stringify(articles, null, 4)};`;
+        const articlesJS = `const articles = ${JSON.stringify(articles, null, 4)};`;
         
         // articles配列の部分を置換
-        const articlesRegex = /\/\/ Markdown記事のメタデータ\nconst articles = \[[\s\S]*?\];/;
+        const articlesRegex = /const articles = \[\s\S\]*?\];/;
         
         if (articlesRegex.test(scriptContent)) {
             scriptContent = scriptContent.replace(articlesRegex, articlesJS);
         } else {
             console.warn('⚠️  script.jsでarticles配列が見つかりませんでした');
-            return;
+            // 配列が見つからない場合、ファイルの先頭に追加するフォールバック
+            scriptContent = articlesJS + '\n\n' + scriptContent;
+            console.log('  ✓ script.jsの先頭にarticles配列を追加しました');
         }
         
         // ファイルに書き戻し
