@@ -150,8 +150,8 @@ window.articles = [
         "excerpt": "【観光案内の決定版】もう「近くの美味しいお店」に悩まない！ChatGPTと作る、最強の周辺施設まとめリスト術"
     },
     {
-        "id": "20250722-chatgpt-copywriting",
-        "filename": "20250722-chatgpt-copywriting.md",
+        "id": "20250722",
+        "filename": "20250722.md",
         "title": "【観光DXの文章術】「すごい」しか言えない紹介文は卒業！ChatGPTと作る、心に刺さる観光施設のキャッチコピー術",
         "date": "2025/7/22",
         "author": "ペスハム",
@@ -160,8 +160,8 @@ window.articles = [
         "excerpt": "【観光DXの文章術】「すごい」しか言えない紹介文は卒業！ChatGPTと作る、心に刺さる観光施設のキャッチコピー術"
     },
     {
-        "id": "20250721-chatgpt-travel-planner",
-        "filename": "20250721-chatgpt-travel-planner.md",
+        "id": "20250721",
+        "filename": "20250721.md",
         "title": "【観光DXの新常識】もうモデルコースに頼らない！ChatGPTと作る「お客様一人ひとり」に響く旅のプランニング術",
         "date": "2025/7/21",
         "author": "ペスハム",
@@ -170,8 +170,8 @@ window.articles = [
         "excerpt": "ChatGPTを旅行コンシェルジュとして活用し、お客様一人ひとりのニーズに合わせた特別な観光プランを作成する方法を解説。画一的なモデルコースから脱却し、真のおもてなしを実現する実践的手法を紹介します。"
     },
     {
-        "id": "20250720-chatgpt-meeting-minutes",
-        "filename": "20250720-chatgpt-meeting-minutes.md",
+        "id": "20250720",
+        "filename": "20250720.md",
         "title": "【会議が変わる仕事術】もう議事録作成に追われない！ChatGPTとAI文字起こしで作る「未来志向の会議術」",
         "date": "2025/7/20",
         "author": "ペスハム",
@@ -180,8 +180,8 @@ window.articles = [
         "excerpt": "ChatGPTとAI文字起こしツールで会議の準備・記録・共有を革命的に効率化。アジェンダ設計から議事録作成まで、AI活用で会議を生産的な意思決定の場に変える実践的手法を解説します。"
     },
     {
-        "id": "20250719-chatgpt-storytelling-coaching",
-        "filename": "20250719-chatgpt-storytelling-coaching.md",
+        "id": "20250719",
+        "filename": "20250719.md",
         "title": "【若手指導の決定版】なぜ君の指示は伝わらない？ChatGPTと作る、部下の心が動く「技術指導の喩え話」",
         "date": "2025/7/19",
         "author": "ペスハム",
@@ -190,8 +190,8 @@ window.articles = [
         "excerpt": "【若手指導の決定版】なぜ君の指示は伝わらない？ChatGPTと作る、部下の心が動く「技術指導の喩え話」"
     },
     {
-        "id": "20250718-chatgpt-inventory-management",
-        "filename": "20250718-chatgpt-inventory-management.md",
+        "id": "20250718",
+        "filename": "20250718.md",
         "title": "【DX仕事術】在庫のムダ・欠品ゼロへ！ChatGPTと考える「最強の資材在庫管理表」設計術",
         "date": "2025/7/18",
         "author": "ペスハム",
@@ -200,8 +200,8 @@ window.articles = [
         "excerpt": "【DX仕事術】在庫のムダ・欠品ゼロへ！ChatGPTと考える「最強の資材在庫管理表」設計術"
     },
     {
-        "id": "20250717-chatgpt-checklist",
-        "filename": "20250717-chatgpt-checklist.md",
+        "id": "20250717-1",
+        "filename": "20250717-1.md",
         "title": "【ミスゼロ仕事術】ヒューマンエラーは仕組みで防ぐ！ChatGPTと作る「最強の作業チェックリスト」作成術",
         "date": "2025/7/17",
         "author": "ペスハム",
@@ -210,8 +210,8 @@ window.articles = [
         "excerpt": "【ミスゼロ仕事術】ヒューマンエラーは仕組みで防ぐ！ChatGPTと作る「最強の作業チェックリスト」作成術"
     },
     {
-        "id": "20250717-paper-manual-chatbot",
-        "filename": "20250717-paper-manual-chatbot.md",
+        "id": "20250717-2",
+        "filename": "20250717-2.md",
         "title": "AIを使って紙のマニュアルをチャットボットにする方法",
         "date": "2025/7/17",
         "author": "ペスハム",
@@ -220,8 +220,8 @@ window.articles = [
         "excerpt": "AIを使って紙のマニュアルをチャットボットにする方法"
     },
     {
-        "id": "20250716-chatgpt-notebooklm-5whys",
-        "filename": "20250716-chatgpt-notebooklm-5whys.md",
+        "id": "20250716",
+        "filename": "20250716.md",
         "title": "【DX仕事術】なぜ？を5回繰り返すだけ！ChatGPTとNotebookLMで作る「最強のなぜなぜ分析」ボット",
         "date": "2025/7/16",
         "author": "ペスハム",
@@ -230,8 +230,8 @@ window.articles = [
         "excerpt": "【DX仕事術】なぜ？を5回繰り返すだけ！ChatGPTとNotebookLMで作る「最強のなぜなぜ分析」ボット"
     },
     {
-        "id": "20250715-aruyamu-chiikiokoshi-dao-report",
-        "filename": "20250715-aruyamu-chiikiokoshi-dao-report.md",
+        "id": "20250715-1",
+        "filename": "20250715-1.md",
         "title": "Web3.0時代の地方創生：株式会社あるやうむと「地域おこし協力隊DAO」の全貌分析レポート",
         "date": "2025/7/15",
         "author": "ペスハム",
@@ -240,8 +240,8 @@ window.articles = [
         "excerpt": "Web3.0時代の地方創生：株式会社あるやうむと「地域おこし協力隊DAO」の全貌分析レポート"
     },
     {
-        "id": "20250715-chatgpt-japanese-training",
-        "filename": "20250715-chatgpt-japanese-training.md",
+        "id": "20250715-2",
+        "filename": "20250715-2.md",
         "title": "【製造業・観光業向け】言葉の壁を乗り越える！ChatGPTで作る、外国人従業員向け「やさしい日本語」トレーニング術",
         "date": "2025/7/15",
         "author": "ペスハム",
@@ -250,8 +250,8 @@ window.articles = [
         "excerpt": "【製造業・観光業向け】言葉の壁を乗り越える！ChatGPTで作る、外国人従業員向け「やさしい日本語」トレーニング術"
     },
     {
-        "id": "20250714",
-        "filename": "20250714.md",
+        "id": "20250714-1",
+        "filename": "20250714-1.md",
         "title": "中小企業AI導入の現実的な進め方｜段階的アプローチで成功率を高める実践ガイド",
         "date": "2025-07-14",
         "author": "ペスハム",
@@ -260,8 +260,8 @@ window.articles = [
         "excerpt": "中小企業がAI導入で失敗しないための段階的アプローチを解説。コスト対効果を重視した現実的な導入プロセスと、実際の成功事例を基にした実践的なガイドライン。"
     },
     {
-        "id": "20250714-chatgpt-claim-simulation",
-        "filename": "20250714-chatgpt-claim-simulation.md",
+        "id": "20250714-2",
+        "filename": "20250714-2.md",
         "title": "【地方観光業向け】もうクレームは怖くない！ChatGPT音声会話で実践する、お客様の心を掴む応対術",
         "date": "2025/7/14",
         "author": "ペスハム",
@@ -270,8 +270,8 @@ window.articles = [
         "excerpt": "【地方観光業向け】もうクレームは怖くない！ChatGPT音声会話で実践する、お客様の心を掴む応対術"
     },
     {
-        "id": "20250714-chatgpt-manufacturing-report",
-        "filename": "20250714-chatgpt-manufacturing-report.md",
+        "id": "20250714-3",
+        "filename": "20250714-3.md",
         "title": "【地方製造業のDX】もう日報作成に時間はかけない！ChatGPTで実現する「技術が伝わる」作業日報の作り方",
         "date": "2025/7/14",
         "author": "ペスハム",

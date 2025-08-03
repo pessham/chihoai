@@ -2,28 +2,6 @@
   "version": 2,
   "buildCommand": "npm run build",
   "outputDirectory": "public",
-  "installCommand": "npm install",
-  "cleanUrls": false,
-  "trailingSlash": false,
-  "headers": [
-    {
-      "source": "/(.*)",
-      "headers": [
-        {
-          "key": "Cache-Control",
-          "value": "no-cache, no-store, max-age=0, must-revalidate"
-        },
-        {
-          "key": "Pragma",
-          "value": "no-cache"
-        },
-        {
-          "key": "Expires",
-          "value": "0"
-        }
-      ]
-    }
-  ],
   "rewrites": [
     { "source": "/articles/:id", "destination": "/articles/:id.html" }
   ]
