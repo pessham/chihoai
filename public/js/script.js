@@ -1,5 +1,35 @@
 window.articles = [
     {
+        "id": "20250808",
+        "filename": "20250808.md",
+        "title": "【地方観光業向け】もうクレームは怖くない！ChatGPT音声会話で実践する、お客様の心を掴む応対術",
+        "date": "2025/8/8",
+        "author": "ペスハム",
+        "category": "観光業DX",
+        "thumbnail": "https://images.unsplash.com/photo-1582719478250-c89cae4dc85b?w=800&h=450&fit=crop&crop=center",
+        "excerpt": "【地方観光業向け】もうクレームは怖くない！ChatGPT音声会話で実践する、お客様の心を掴む応対術"
+    },
+    {
+        "id": "20250807",
+        "filename": "20250807.md",
+        "title": "【地方製造業のDX】もう日報作成に時間はかけない！ChatGPTで実現する「技術が伝わる」作業日報の作り方",
+        "date": "2025/8/7",
+        "author": "ペスハム",
+        "category": "製造業DX",
+        "thumbnail": "https://images.unsplash.com/photo-1567789884554-0b844b597180?w=800&h=450&fit=crop&crop=center",
+        "excerpt": "【地方製造業のDX】もう日報作成に時間はかけない！ChatGPTで実現する「技術が伝わる」作業日報の作り方"
+    },
+    {
+        "id": "20250806",
+        "filename": "20250806.md",
+        "title": "【製造業・観光業向け】言葉の壁を乗り越える！ChatGPTで作る、外国人従業員向け「やさしい日本語」トレーニング術",
+        "date": "2025/8/6",
+        "author": "ペスハム",
+        "category": "製造業DX",
+        "thumbnail": "https://images.unsplash.com/photo-1567789884554-0b844b597180?w=800&h=450&fit=crop&crop=center",
+        "excerpt": "【製造業・観光業向け】言葉の壁を乗り越える！ChatGPTで作る、外国人従業員向け「やさしい日本語」トレーニング術"
+    },
+    {
         "id": "20250805",
         "filename": "20250805.md",
         "title": "AIを使って紙のマニュアルをチャットボットにする方法",
@@ -20,6 +50,16 @@ window.articles = [
         "excerpt": "---"
     },
     {
+        "id": "author",
+        "filename": "author.md",
+        "title": "記事 author",
+        "date": "2025/8/4",
+        "author": "Unknown Author",
+        "category": "未分類",
+        "thumbnail": "https://images.unsplash.com/photo-1516321318423-f06f85e504b3?w=800&h=450&fit=crop&crop=center",
+        "excerpt": ""
+    },
+    {
         "id": "20250803-comena-ai-agent",
         "filename": "20250803-comena-ai-agent.md",
         "title": "メールやFAXの受注処理はもう古い！AIエージェント「Comena」がもたらすB2B取引革命",
@@ -28,16 +68,6 @@ window.articles = [
         "category": "ビジネスDX",
         "thumbnail": "https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?w=800&h=450&fit=crop&crop=faces",
         "excerpt": "---"
-    },
-    {
-        "id": "author",
-        "filename": "author.md",
-        "title": "記事 author",
-        "date": "2025/8/3",
-        "author": "Unknown Author",
-        "category": "未分類",
-        "thumbnail": "https://images.unsplash.com/photo-1516321318423-f06f85e504b3?w=800&h=450&fit=crop&crop=center",
-        "excerpt": ""
     },
     {
         "id": "20250802-lanesurf-ai-agent",
@@ -230,16 +260,6 @@ window.articles = [
         "excerpt": "【DX仕事術】なぜ？を5回繰り返すだけ！ChatGPTとNotebookLMで作る「最強のなぜなぜ分析」ボット"
     },
     {
-        "id": "20250715-2",
-        "filename": "20250715-2.md",
-        "title": "【製造業・観光業向け】言葉の壁を乗り越える！ChatGPTで作る、外国人従業員向け「やさしい日本語」トレーニング術",
-        "date": "2025/7/15",
-        "author": "ペスハム",
-        "category": "製造業DX",
-        "thumbnail": "https://images.unsplash.com/photo-1567789884554-0b844b597180?w=800&h=450&fit=crop&crop=center",
-        "excerpt": "【製造業・観光業向け】言葉の壁を乗り越える！ChatGPTで作る、外国人従業員向け「やさしい日本語」トレーニング術"
-    },
-    {
         "id": "20250715",
         "filename": "20250715.md",
         "title": "Web3.0時代の地方創生：株式会社あるやうむと「地域おこし協力隊DAO」の全貌分析レポート",
@@ -260,33 +280,13 @@ window.articles = [
         "excerpt": "中小企業がAI導入で失敗しないための段階的アプローチを解説。コスト対効果を重視した現実的な導入プロセスと、実際の成功事例を基にした実践的なガイドライン。"
     },
     {
-        "id": "20250714-2",
-        "filename": "20250714-2.md",
-        "title": "【地方観光業向け】もうクレームは怖くない！ChatGPT音声会話で実践する、お客様の心を掴む応対術",
-        "date": "2025/7/14",
-        "author": "ペスハム",
-        "category": "観光業DX",
-        "thumbnail": "https://images.unsplash.com/photo-1582719478250-c89cae4dc85b?w=800&h=450&fit=crop&crop=center",
-        "excerpt": "【地方観光業向け】もうクレームは怖くない！ChatGPT音声会話で実践する、お客様の心を掴む応対術"
-    },
-    {
-        "id": "20250714-3",
-        "filename": "20250714-3.md",
-        "title": "【地方製造業のDX】もう日報作成に時間はかけない！ChatGPTで実現する「技術が伝わる」作業日報の作り方",
-        "date": "2025/7/14",
-        "author": "ペスハム",
-        "category": "製造業DX",
-        "thumbnail": "https://images.unsplash.com/photo-1567789884554-0b844b597180?w=800&h=450&fit=crop&crop=center",
-        "excerpt": "【地方製造業のDX】もう日報作成に時間はかけない！ChatGPTで実現する「技術が伝わる」作業日報の作り方"
-    },
-    {
         "id": "20250713",
         "filename": "20250713.md",
         "title": "地方旅館AI導入の実践ガイド｜効果的な活用手法と現実的な改善目標設定を解説（※数値は仮想事例）",
         "date": "2025-07-13",
         "author": "ペスハム",
         "category": "観光業DX",
-        "thumbnail": "/images/chihoaitop.png",
+        "thumbnail": "https://images.unsplash.com/photo-1582719478250-c89cae4dc85b?w=800&h=450&fit=crop&crop=center",
         "excerpt": "地方旅館・民宿でのAI活用について、現実的な改善効果と導入手法を解説。業界データに基づいた目標設定と段階的な導入プロセスを詳しく説明します。"
     },
     {
