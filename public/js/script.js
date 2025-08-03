@@ -1,5 +1,15 @@
 window.articles = [
     {
+        "id": "20250805",
+        "filename": "20250805.md",
+        "title": "AIを使って紙のマニュアルをチャットボットにする方法",
+        "date": "2025/8/5",
+        "author": "ペスハム",
+        "category": "ビジネスDX",
+        "thumbnail": "https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?w=800&h=450&fit=crop&crop=faces",
+        "excerpt": "AIを使って紙のマニュアルをチャットボットにする方法"
+    },
+    {
         "id": "20250804-ai-agent-market-shift",
         "filename": "20250804-ai-agent-market-shift.md",
         "title": "エージェント型AIの転換点：2025年8月第1週に見る市場変革の分析",
@@ -200,24 +210,14 @@ window.articles = [
         "excerpt": "【DX仕事術】在庫のムダ・欠品ゼロへ！ChatGPTと考える「最強の資材在庫管理表」設計術"
     },
     {
-        "id": "20250717-1",
-        "filename": "20250717-1.md",
+        "id": "20250717",
+        "filename": "20250717.md",
         "title": "【ミスゼロ仕事術】ヒューマンエラーは仕組みで防ぐ！ChatGPTと作る「最強の作業チェックリスト」作成術",
         "date": "2025/7/17",
         "author": "ペスハム",
         "category": "ビジネスDX",
         "thumbnail": "https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?w=800&h=450&fit=crop&crop=faces",
         "excerpt": "【ミスゼロ仕事術】ヒューマンエラーは仕組みで防ぐ！ChatGPTと作る「最強の作業チェックリスト」作成術"
-    },
-    {
-        "id": "20250717-2",
-        "filename": "20250717-2.md",
-        "title": "AIを使って紙のマニュアルをチャットボットにする方法",
-        "date": "2025/7/17",
-        "author": "ペスハム",
-        "category": "ビジネスDX",
-        "thumbnail": "https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?w=800&h=450&fit=crop&crop=faces",
-        "excerpt": "AIを使って紙のマニュアルをチャットボットにする方法"
     },
     {
         "id": "20250716",
