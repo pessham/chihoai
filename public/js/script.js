@@ -140,8 +140,8 @@ window.articles = [
         "excerpt": "【無料デザイン革命】もうパワポで苦労しない！MiriCanvasとChatGPTで作る、プロ級チラシ＆ポップ作成術"
     },
     {
-        "id": "20250723-chatgpt-local-guide",
-        "filename": "20250723-chatgpt-local-guide.md",
+        "id": "20250723",
+        "filename": "20250723.md",
         "title": "【観光案内の決定版】もう「近くの美味しいお店」に悩まない！ChatGPTと作る、最強の周辺施設まとめリスト術",
         "date": "2025/7/23",
         "author": "ペスハム",
