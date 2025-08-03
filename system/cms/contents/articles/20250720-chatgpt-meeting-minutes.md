@@ -1,3 +1,12 @@
+---
+title: "【会議が変わる仕事術】もう議事録作成に追われない！ChatGPTとAI文字起こしで作る「未来志向の会議術」"
+excerpt: "ChatGPTとAI文字起こしツールで会議の準備・記録・共有を革命的に効率化。アジェンダ設計から議事録作成まで、AI活用で会議を生産的な意思決定の場に変える実践的手法を解説します。"
+date: "2025/7/20"
+author: "ペスハム"
+thumbnail: "https://images.unsplash.com/photo-1600880292203-757bb62b4baf?w=800&h=450&fit=crop&crop=center"
+category: "ビジネスDX"
+---
+
 # 【会議が変わる仕事術】もう議事録作成に追われない！ChatGPTとAI文字起こしで作る「未来志向の会議術」
 
 ## はじめに
