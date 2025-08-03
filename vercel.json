@@ -1,5 +1,6 @@
 {
   "version": 2,
+  "public": "public",
   "cleanUrls": true,
   "trailingSlash": false,
   "headers": [
@@ -11,16 +12,6 @@
           "value": "public, max-age=0, must-revalidate"
         }
       ]
-    }
-  ],
-  "rewrites": [
-    {
-      "source": "/",
-      "destination": "/public/index.html"
-    },
-    {
-      "source": "/(.*)",
-      "destination": "/public/$1"
     }
   ]
 }
