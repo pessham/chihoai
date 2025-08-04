@@ -79,7 +79,7 @@ function loadArticlesFromDirectory() {
                     id: id,
                     filename: filename,
                     title: metadata.title || `記事 ${id}`,
-                    date: metadata.date || new Date().toLocaleDateString('ja-JP'),
+                    date: metadata.date ? new Date(metadata.date.replace(/年|月|日/g, '-').replace(/-$/, '')).toISOString().slice(0, 10) : new Date().toISOString().slice(0, 10),
                     author: metadata.author || (authorInfo ? authorInfo.name : 'Unknown'),
                     category: metadata.category || '未分類',
                     thumbnail: metadata.thumbnail || 'https://images.unsplash.com/photo-1516321318423-f06f85e504b3?w=800&h=450&fit=crop&crop=center',
@@ -614,7 +614,11 @@ function updateScriptJS(articles) {
     
     try {
         // articles配列を生成
-        const articlesJS = `window.articles = ${JSON.stringify(articles, null, 4)};`;
+        const formattedArticles = articles.map(article => ({
+            ...article,
+            date: new Date(article.date).toISOString().slice(0, 10)
+        }));
+        const articlesJS = `window.articles = ${JSON.stringify(formattedArticles, null, 4)};`;
 
         // ファイルに書き戻し（常に上書き）
         fs.writeFileSync(scriptPath, articlesJS, 'utf-8');
