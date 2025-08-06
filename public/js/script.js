@@ -20,6 +20,16 @@ window.articles = [
         "excerpt": "【地方製造業のDX】もう日報作成に時間はかけない！ChatGPTで実現する「技術が伝わる」作業日報の作り方"
     },
     {
+        "id": "author",
+        "filename": "author.md",
+        "title": "記事 author",
+        "date": "2025-08-06",
+        "author": "Unknown Author",
+        "category": "未分類",
+        "thumbnail": "https://images.unsplash.com/photo-1516321318423-f06f85e504b3?w=800&h=450&fit=crop&crop=center",
+        "excerpt": ""
+    },
+    {
         "id": "20250806",
         "filename": "20250806.md",
         "title": "【製造業・観光業向け】言葉の壁を乗り越える！ChatGPTで作る、外国人従業員向け「やさしい日本語」トレーニング術",
@@ -40,18 +50,8 @@ window.articles = [
         "excerpt": "AIを使って紙のマニュアルをチャットボットにする方法"
     },
     {
-        "id": "author",
-        "filename": "author.md",
-        "title": "記事 author",
-        "date": "2025-08-04",
-        "author": "Unknown Author",
-        "category": "未分類",
-        "thumbnail": "https://images.unsplash.com/photo-1516321318423-f06f85e504b3?w=800&h=450&fit=crop&crop=center",
-        "excerpt": ""
-    },
-    {
-        "id": "20250804-ai-agent-market-shift",
-        "filename": "20250804-ai-agent-market-shift.md",
+        "id": "20250804",
+        "filename": "20250804.md",
         "title": "エージェント型AIの転換点：2025年8月第1週に見る市場変革の分析",
         "date": "2025-08-03",
         "author": "ペスハム",
@@ -60,8 +60,8 @@ window.articles = [
         "excerpt": "---"
     },
     {
-        "id": "20250803-comena-ai-agent",
-        "filename": "20250803-comena-ai-agent.md",
+        "id": "20250803",
+        "filename": "20250803.md",
         "title": "メールやFAXの受注処理はもう古い！AIエージェント「Comena」がもたらすB2B取引革命",
         "date": "2025-08-02",
         "author": "ペスハム",
@@ -70,8 +70,8 @@ window.articles = [
         "excerpt": "---"
     },
     {
-        "id": "20250802-lanesurf-ai-agent",
-        "filename": "20250802-lanesurf-ai-agent.md",
+        "id": "20250802",
+        "filename": "20250802.md",
         "title": "「90210から10001まで、トラック一台の見積もりを」- 音声AI「Lanesurf」が変える貨物予約の未来",
         "date": "2025-08-01",
         "author": "ペスハム",
@@ -80,8 +80,8 @@ window.articles = [
         "excerpt": "---"
     },
     {
-        "id": "20250801-certus-ai",
-        "filename": "20250801-certus-ai.md",
+        "id": "20250801",
+        "filename": "20250801.md",
         "title": "もう電話は鳴りっぱなしにさせない！レストランの救世主、音声AI「Certus AI」とは？",
         "date": "2025-07-31",
         "author": "ペスハム",
@@ -90,8 +90,8 @@ window.articles = [
         "excerpt": "---"
     },
     {
-        "id": "20250731-kafka-ai-agent",
-        "filename": "20250731-kafka-ai-agent.md",
+        "id": "20250731",
+        "filename": "20250731.md",
         "title": "AIエージェントの\"神経系\"、Apache Kafkaがリアルタイム知能化を加速する",
         "date": "2025-07-30",
         "author": "ペスハム",
@@ -100,8 +100,8 @@ window.articles = [
         "excerpt": "---"
     },
     {
-        "id": "20250730-microsoft-layoffs",
-        "filename": "20250730-microsoft-layoffs.md",
+        "id": "20250730",
+        "filename": "20250730.md",
         "title": "「AIへの聖戦」か、それとも冷徹な経営判断か-マイクロソフト9000人リストラの深層",
         "date": "2025-07-29",
         "author": "ペスハム",
@@ -120,8 +120,8 @@ window.articles = [
         "excerpt": ""
     },
     {
-        "id": "20250729-manus-ai-agent",
-        "filename": "20250729-manus-ai-agent.md",
+        "id": "20250729",
+        "filename": "20250729.md",
         "title": "AIエージェント「Manus」が拓く、自律型ビジネスオートメーションの夜明け",
         "date": "2025-07-28",
         "author": "ペスハム",
