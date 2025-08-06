@@ -24,7 +24,7 @@ window.articles = [
         "filename": "author.md",
         "title": "記事 author",
         "date": "2025-08-06",
-        "author": "Unknown Author",
+        "author": "ペスハム",
         "category": "未分類",
         "thumbnail": "https://images.unsplash.com/photo-1516321318423-f06f85e504b3?w=800&h=450&fit=crop&crop=center",
         "excerpt": ""

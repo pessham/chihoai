@@ -21,7 +21,7 @@ function loadAuthorInfo() {
                 role: metadata.role || '',
                 avatar: metadata.avatar || '/images/placeholder.svg',
                 social: parseSocialLinks(metadata.social),
-                bio: metadata.discription || parseMarkdown(authorContent) // discriptionフィールドを優先
+                bio: metadata.discription || '' // discriptionフィールドのみ使用
             };
             
             console.log('  ✓ 著者情報を読み込みました');
