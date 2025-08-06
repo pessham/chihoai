@@ -468,6 +468,15 @@ function generateArticleHTML(article, content) {
             color: var(--clr-primary);
         }
 
+        .article-content a {
+            text-decoration: underline;
+            color: var(--clr-primary);
+        }
+
+        .article-content a:hover {
+            color: var(--clr-primary-dark);
+        }
+
         .author-info {
             margin-top: 3rem;
             padding: 2rem;
