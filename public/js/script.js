@@ -20,16 +20,6 @@ window.articles = [
         "excerpt": "【地方製造業のDX】もう日報作成に時間はかけない！ChatGPTで実現する「技術が伝わる」作業日報の作り方"
     },
     {
-        "id": "author",
-        "filename": "author.md",
-        "title": "記事 author",
-        "date": "2025-08-06",
-        "author": "ペスハム",
-        "category": "未分類",
-        "thumbnail": "https://images.unsplash.com/photo-1516321318423-f06f85e504b3?w=800&h=450&fit=crop&crop=center",
-        "excerpt": ""
-    },
-    {
         "id": "20250806",
         "filename": "20250806.md",
         "title": "【製造業・観光業向け】言葉の壁を乗り越える！ChatGPTで作る、外国人従業員向け「やさしい日本語」トレーニング術",
@@ -38,6 +28,16 @@ window.articles = [
         "category": "製造業DX",
         "thumbnail": "https://images.unsplash.com/photo-1567789884554-0b844b597180?w=800&h=450&fit=crop&crop=center",
         "excerpt": "【製造業・観光業向け】言葉の壁を乗り越える！ChatGPTで作る、外国人従業員向け「やさしい日本語」トレーニング術"
+    },
+    {
+        "id": "author",
+        "filename": "author.md",
+        "title": "運営者情報",
+        "date": "2025-08-05",
+        "author": "ペスハム",
+        "category": "未分類",
+        "thumbnail": "https://images.unsplash.com/photo-1516321318423-f06f85e504b3?w=800&h=450&fit=crop&crop=center",
+        "excerpt": "地方AIブースター運営者ペスハムの詳細プロフィール"
     },
     {
         "id": "20250805",

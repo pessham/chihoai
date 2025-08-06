@@ -506,6 +506,7 @@ function generateArticleHTML(article, content) {
                 <a href="../index.html#tourism-business" class="nav-link">観光業DX</a>
                 <a href="../index.html#manufacturing-dx" class="nav-link">製造業DX</a>
                 <a href="../index.html#about" class="nav-link">すべて</a>
+                <a href="author.html" class="nav-link">運営者</a>
             </nav>
         </div>
     </header>
