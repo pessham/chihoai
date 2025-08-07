@@ -26,7 +26,7 @@ window.articles = [
         "date": "2025-08-05",
         "author": "ペスハム",
         "category": "製造業DX",
-        "thumbnail": "https://images.unsplash.com/photo-1567789884554-0b844b597180?w=800&h=450&fit=crop&crop=center",
+        "thumbnail": "https://images.unsplash.com/photo-qCi_MzVODoU?w=800&h=450&fit=crop&crop=faces",
         "excerpt": "【製造業・観光業向け】言葉の壁を乗り越える！ChatGPTで作る、外国人従業員向け「やさしい日本語」トレーニング術"
     },
     {
