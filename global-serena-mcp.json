@@ -1,0 +1,19 @@
+{
+  "mcpServers": {
+    "serena": {
+      "command": "/Users/macbookpro/.local/bin/uv",
+      "args": [
+        "run",
+        "serena-mcp-server",
+        "--context",
+        "ide-assistant",
+        "--mode",
+        "interactive,editing"
+      ],
+      "cwd": "/Users/macbookpro/Claude/serena",
+      "env": {
+        "PATH": "/Users/macbookpro/.local/bin:$PATH"
+      }
+    }
+  }
+}
