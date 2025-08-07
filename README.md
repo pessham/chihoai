@@ -121,11 +121,31 @@ AIと対話しながらレイアウトを変更したり、機能追加をして
 
 `system/cms/contents/common/author.md`で著者情報を変更できます。
 
+## 🛡️ セキュリティ
+
+このプロジェクトでは、AI を活用した自動セキュリティレビューシステムを導入しています：
+
+### Claude AI Security Review
+- **自動実行**: 全てのプルリクエストで自動的にセキュリティ分析
+- **AI分析**: Anthropic Claude による深層的なコード解析
+- **脆弱性検出**: インジェクション、認証、データ露出などの検出
+- **修正提案**: 具体的なセキュリティ改善提案
+
+### セットアップ
+1. [詳細なセットアップガイド](.github/SETUP.md) を参照
+2. Anthropic Claude API キーを取得
+3. GitHub Secrets に `CLAUDE_API_KEY` を設定
+
+### セキュリティポリシー
+- [セキュリティポリシー](.github/SECURITY.md) を確認してください
+- 脆弱性の報告は security@chihoai.com まで
+
 ## 必要環境
 
 - Node.js 14以上
 - Firebase CLI（Firebase Hostingを使用する場合）
 - Vercel CLI（Vercelを使用する場合）
+- Claude API キー（セキュリティレビュー用）
 
 ## ライセンス
 

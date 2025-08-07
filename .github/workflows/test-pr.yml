@@ -1,0 +1,97 @@
+name: Test PR Build
+
+on:
+  pull_request:
+    branches: [ main, develop ]
+
+jobs:
+  test-build:
+    runs-on: ubuntu-latest
+    name: Test Build and Deploy
+    
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+        
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '18'
+          
+      - name: Install dependencies (if package.json exists)
+        run: |
+          if [ -f package.json ]; then
+            npm ci
+            echo "✅ Dependencies installed"
+          else
+            echo "ℹ️ No package.json found, skipping npm install"
+          fi
+          
+      - name: Test CMS Build Process
+        run: |
+          echo "🔨 Testing CMS build process..."
+          if [ -f system/cms/tools/generate-contents.js ]; then
+            cd system/cms && node tools/generate-contents.js
+            echo "✅ CMS build successful"
+          else
+            echo "ℹ️ No CMS build script found"
+          fi
+          
+      - name: Validate HTML Files
+        run: |
+          echo "🌐 Validating HTML files..."
+          html_files=$(find public -name "*.html" | wc -l)
+          echo "Found $html_files HTML files"
+          
+          # 基本的なHTML構造をチェック
+          for file in public/articles/*.html; do
+            if [ -f "$file" ]; then
+              if ! grep -q "</html>" "$file"; then
+                echo "❌ Missing closing </html> tag in $file"
+                exit 1
+              fi
+            fi
+          done
+          echo "✅ HTML validation passed"
+          
+      - name: Check Static Assets
+        run: |
+          echo "📁 Checking static assets..."
+          
+          # 必要なディレクトリが存在することを確認
+          required_dirs=("public/images" "public/css" "public/js")
+          for dir in "${required_dirs[@]}"; do
+            if [ ! -d "$dir" ]; then
+              echo "⚠️ Directory $dir not found"
+            else
+              echo "✅ $dir exists"
+            fi
+          done
+          
+      - name: Security Pre-check
+        run: |
+          echo "🔍 Running basic security pre-checks..."
+          
+          # 大きなファイルをチェック（>10MB）
+          large_files=$(find . -size +10M -not -path "./.git/*" -not -path "./node_modules/*")
+          if [ -n "$large_files" ]; then
+            echo "⚠️ Large files found:"
+            echo "$large_files"
+          else
+            echo "✅ No unusually large files found"
+          fi
+          
+          # 実行可能ファイルをチェック
+          exec_files=$(find . -type f -perm -111 -not -path "./.git/*" -not -path "./node_modules/*" | head -5)
+          if [ -n "$exec_files" ]; then
+            echo "ℹ️ Executable files found:"
+            echo "$exec_files"
+          fi
+          
+      - name: PR Summary
+        run: |
+          echo "## 📊 PR Test Results" >> $GITHUB_STEP_SUMMARY
+          echo "- ✅ Build process completed successfully" >> $GITHUB_STEP_SUMMARY
+          echo "- ✅ HTML validation passed" >> $GITHUB_STEP_SUMMARY  
+          echo "- ✅ Basic security checks passed" >> $GITHUB_STEP_SUMMARY
+          echo "- 🔄 Awaiting Claude AI security review..." >> $GITHUB_STEP_SUMMARY

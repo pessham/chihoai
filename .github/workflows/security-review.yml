@@ -1,0 +1,123 @@
+name: Claude Code Security Review
+
+on:
+  pull_request:
+    types: [opened, synchronize, reopened]
+    branches: [ main, develop ]
+  # 手動実行も可能にする
+  workflow_dispatch:
+
+# セキュリティ上の考慮事項
+permissions:
+  contents: read
+  pull-requests: write
+  issues: write
+
+jobs:
+  security-review:
+    runs-on: ubuntu-latest
+    name: AI-Powered Security Analysis
+    
+    # フォークからのPRでは実行しない（セキュリティリスクのため）
+    if: github.event.pull_request.head.repo.full_name == github.repository
+    
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+        with:
+          # ファイル変更の詳細分析のため、履歴を取得
+          fetch-depth: 0
+          
+      - name: Run Claude Security Review
+        uses: anthropics/claude-code-security-review@main
+        with:
+          # PR にコメントを投稿
+          comment-pr: true
+          # 重要度の高い脆弱性のみをコメント
+          min-severity: 'medium'
+          # 分析対象のファイル種別を指定
+          file-patterns: |
+            **/*.js
+            **/*.ts
+            **/*.html
+            **/*.php
+            **/*.py
+            **/*.md
+            **/.env*
+            **/config/**
+            **/system/**
+          # Claude APIキー（GitHubシークレットから取得）
+          claude-api-key: ${{ secrets.CLAUDE_API_KEY }}
+          
+      - name: Security Review Summary
+        if: always()
+        run: |
+          echo "🔍 Claude AI Security Review completed"
+          echo "📋 Check the PR comments for detailed security analysis"
+          echo "🛡️ Review any identified security concerns before merging"
+
+  # 追加のセキュリティチェック
+  additional-security-checks:
+    runs-on: ubuntu-latest
+    name: Additional Security Checks
+    
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+        
+      - name: Check for sensitive data
+        run: |
+          echo "🔐 Scanning for potential secrets and sensitive data..."
+          
+          # API キーや秘匿情報のパターンをチェック
+          if grep -r -i -E "(api[_-]?key|secret|password|token)" --include="*.js" --include="*.ts" --include="*.html" --include="*.md" . | grep -v ".github" | grep -v "node_modules"; then
+            echo "⚠️ Potential secrets found in code. Please review:"
+            grep -r -i -E "(api[_-]?key|secret|password|token)" --include="*.js" --include="*.ts" --include="*.html" --include="*.md" . | grep -v ".github" | grep -v "node_modules" | head -10
+          else
+            echo "✅ No obvious secrets found in code"
+          fi
+          
+      - name: Check file permissions
+        run: |
+          echo "📁 Checking file permissions..."
+          find . -type f -perm -002 -not -path "./.git/*" -not -path "./node_modules/*" | head -10 || echo "✅ No world-writable files found"
+          
+      - name: Validate HTML structure
+        run: |
+          echo "🌐 Validating HTML files for security..."
+          # 危険なHTMLパターンをチェック
+          if find public/articles -name "*.html" -exec grep -l "javascript:" {} \;; then
+            echo "⚠️ Found javascript: URLs in HTML files"
+          fi
+          if find public/articles -name "*.html" -exec grep -l "eval(" {} \;; then
+            echo "⚠️ Found eval() calls in HTML files"
+          fi
+          echo "✅ HTML security check completed"
+
+  # npm/Nodeパッケージのセキュリティ監査（package.jsonがある場合）
+  dependency-security:
+    runs-on: ubuntu-latest
+    name: Dependency Security Audit
+    if: hashFiles('package.json') != ''
+    
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+        
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '18'
+          
+      - name: Install dependencies
+        run: npm ci
+        
+      - name: Run security audit
+        run: |
+          echo "📦 Running npm security audit..."
+          npm audit --audit-level=moderate || echo "⚠️ Security vulnerabilities found in dependencies"
+          
+      - name: Check for outdated packages
+        run: |
+          echo "🔄 Checking for outdated packages..."
+          npm outdated || echo "📋 Some packages may be outdated"

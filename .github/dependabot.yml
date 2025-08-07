@@ -1,0 +1,26 @@
+# Dependabot configuration for security updates
+version: 2
+updates:
+  # Enable version updates for npm
+  - package-ecosystem: "npm"
+    directory: "/"
+    schedule:
+      interval: "weekly"
+    open-pull-requests-limit: 5
+    reviewers:
+      - "pessham"
+    labels:
+      - "dependencies"
+      - "security"
+    
+  # Enable version updates for GitHub Actions
+  - package-ecosystem: "github-actions"
+    directory: "/"
+    schedule:
+      interval: "weekly"
+    open-pull-requests-limit: 3
+    reviewers:
+      - "pessham" 
+    labels:
+      - "github-actions"
+      - "security"
