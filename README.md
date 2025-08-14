@@ -41,6 +41,8 @@ vive-blog/
 
 ## 使い方
 
+> **⚠️ 重要**: 新記事作成時は必ず [記事リリース手順書](./ARTICLE_RELEASE_PROCEDURES.md) を参照してください。トップページへの掲載が必要です。
+
 ### 1. 記事作成
 
 `system/cms/contents/articles/`にMarkdownファイルを作成
