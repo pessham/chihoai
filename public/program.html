@@ -1,0 +1,932 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI活用研修プログラム - 地方AIブースター</title>
+    <meta name="description" content="業界別・職種別のAI活用研修プログラム。eラーニング＋実地5回で実践的なAI活用スキルを習得し、現場で即戦力として活用できる人材を育成します。">
+    <meta name="keywords" content="AI研修,AI活用,企業研修,地方企業,DX研修,ChatGPT研修,生成AI研修,業界別AI研修">
+    
+    <!-- SEO強化タグ -->
+    <meta name="robots" content="index, follow">
+    <meta name="googlebot" content="index, follow">
+    <link rel="canonical" href="https://chihoai.com/program.html">
+    <meta name="geo.region" content="JP">
+    <meta name="geo.placename" content="日本">
+    <meta name="language" content="ja">
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/x-icon" href="images/metamakeblack.jpg">
+    <link rel="icon" type="image/png" href="images/metamakeblack.jpg">
+    <link rel="apple-touch-icon" href="images/metamakeblack.jpg">
+    
+    <!-- Open Graph -->
+    <meta property="og:title" content="AI活用研修プログラム - 地方AIブースター">
+    <meta property="og:description" content="業界別・職種別のAI活用研修プログラム。eラーニング＋実地5回で実践的なAI活用スキルを習得し、現場で即戦力として活用できる人材を育成します。">
+    <meta property="og:image" content="https://images.unsplash.com/photo-1552664730-d307ca884978?w=800&h=450&fit=crop&crop=center">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://chihoai.com/program.html">
+    
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="AI活用研修プログラム - 地方AIブースター">
+    <meta name="twitter:description" content="業界別・職種別のAI活用研修プログラム。eラーニング＋実地5回で実践的なAI活用スキルを習得し、現場で即戦力として活用できる人材を育成します。">
+    <meta name="twitter:image" content="https://images.unsplash.com/photo-1552664730-d307ca884978?w=800&h=450&fit=crop&crop=center">
+
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700;900&family=BIZ+UDPGothic:wght@400;700&display=swap" rel="stylesheet">
+    
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <style>
+        :root {
+            /* 地方AIブースター color scheme */
+            --clr-primary: #18634B; /* ディープグリーン */
+            --clr-primary-light: #2B8A64;
+            --clr-primary-dark: #0F4A38;
+            --clr-accent: #29D3C3; /* エメラルドシアン */
+            --clr-accent-light: #4DDDD1;
+            --clr-secondary: #EADDC9; /* サンドベージュ */
+            --clr-black: #000000;
+            --clr-gray-dark: #333333;
+            --clr-gray: #666666;
+            --clr-gray-light: #f8f8f8;
+            --clr-white: #ffffff;
+            --clr-bg-1: #F7F8FA; /* やや灰がかったホワイト */
+            --clr-bg-2: #EADDC9; /* サンドベージュ */
+            --radius: 8px;
+            --shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+            --transition: all 0.3s ease;
+            
+            /* Font families for 地方AIブースター */
+            font-family: 'Noto Sans JP', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            line-height: 1.6;
+            font-weight: 400;
+            
+            color: var(--clr-gray-dark);
+            
+            font-synthesis: none;
+            text-rendering: optimizeLegibility;
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        .btn-primary {
+            background: linear-gradient(135deg, var(--clr-primary) 0%, var(--clr-primary-light) 100%);
+            color: white;
+            padding: 12px 24px;
+            border-radius: var(--radius);
+            font-weight: 600;
+            text-decoration: none;
+            display: inline-flex;
+            align-items: center;
+            transition: var(--transition);
+            border: none;
+            cursor: pointer;
+        }
+
+        .btn-primary:hover {
+            background: linear-gradient(135deg, var(--clr-primary-dark) 0%, var(--clr-primary) 100%);
+            transform: translateY(-2px);
+            box-shadow: var(--shadow);
+        }
+
+        .card {
+            background: var(--clr-white);
+            border-radius: 12px;
+            padding: 24px;
+            box-shadow: var(--shadow);
+            transition: var(--transition);
+            border: 1px solid #e5e7eb;
+        }
+
+        .card:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 8px 32px rgba(0, 0, 0, 0.15);
+        }
+
+        .program-card {
+            background: var(--clr-white);
+            border-radius: 16px;
+            padding: 32px;
+            margin-bottom: 32px;
+            box-shadow: var(--shadow);
+            transition: var(--transition);
+            border-left: 6px solid var(--clr-primary);
+        }
+
+        .program-card:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 12px 48px rgba(0, 0, 0, 0.15);
+        }
+
+        .session-card {
+            background: #f8fafc;
+            border-radius: 12px;
+            padding: 24px;
+            margin: 16px 0;
+            border-left: 4px solid var(--clr-accent);
+        }
+
+        .nav-link {
+            color: var(--clr-gray-dark);
+            text-decoration: none;
+            font-weight: 500;
+            padding: 8px 16px;
+            border-radius: 6px;
+            transition: var(--transition);
+        }
+
+        .nav-link:hover, .nav-link.active {
+            background: var(--clr-primary);
+            color: white;
+        }
+
+        .hero-gradient {
+            background: linear-gradient(135deg, var(--clr-primary) 0%, var(--clr-primary-light) 50%, var(--clr-accent) 100%);
+        }
+    </style>
+</head>
+
+<body class="bg-[var(--clr-bg-1)]">
+    <!-- ヘッダー -->
+    <header class="bg-white shadow-sm sticky top-0 z-50">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-16">
+                <a href="index.html" class="flex items-center">
+                    <span class="text-xl font-bold text-[var(--clr-primary)]">地方AIブースター</span>
+                </a>
+                
+                <nav class="hidden md:flex space-x-4">
+                    <a href="index.html" class="nav-link">ホーム</a>
+                    <a href="program.html" class="nav-link active">研修プログラム</a>
+                    <a href="blog-list.html" class="nav-link">ブログ一覧</a>
+                </nav>
+            </div>
+        </div>
+    </header>
+
+    <!-- ヒーローセクション -->
+    <section class="hero-gradient text-white py-20">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <h1 class="text-4xl md:text-5xl font-bold mb-6">
+                AI活用研修プログラム
+            </h1>
+            <p class="text-xl md:text-2xl mb-8 opacity-90">
+                会社でAI使ってるのはあなただけ...<br>
+                モヤモヤしませんか？
+            </p>
+            <div class="flex flex-wrap justify-center gap-4">
+                <div class="bg-white/20 backdrop-blur-sm rounded-lg px-6 py-3">
+                    <span class="text-lg font-semibold">eラーニング＋実地5回</span>
+                </div>
+                <div class="bg-white/20 backdrop-blur-sm rounded-lg px-6 py-3">
+                    <span class="text-lg font-semibold">実践重視</span>
+                </div>
+                <div class="bg-white/20 backdrop-blur-sm rounded-lg px-6 py-3">
+                    <span class="text-lg font-semibold">業界特化</span>
+                </div>
+            </div>
+            
+            <!-- YouTube Shorts 埋め込み -->
+            <div class="text-center mt-8">
+                <div class="max-w-md mx-auto">
+                    <iframe 
+                        width="360" 
+                        height="640" 
+                        src="https://www.youtube.com/embed/PoceCeaBwXM" 
+                        title="AI活用研修プログラム紹介" 
+                        frameborder="0" 
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+                        allowfullscreen
+                        style="border-radius: 12px; box-shadow: 0 8px 32px rgba(0, 0, 0, 0.2);">
+                    </iframe>
+                </div>
+            </div>
+            
+            <!-- ヒーローセクションの無料相談ボタン -->
+            <div class="text-center mt-8">
+                <a href="https://app.spirinc.com/patterns/availability-sharing/CuveLAwUnplEYK7KBzUsv/confirm" target="_blank" rel="noopener noreferrer" class="inline-block bg-white/90 hover:bg-white text-[var(--clr-primary)] font-bold py-4 px-8 rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 transform hover:scale-105">
+                    📅 無料相談を申し込む
+                    <svg class="inline-block ml-2 w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/>
+                    </svg>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- 研修概要 -->
+    <section class="py-16 bg-white">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl md:text-4xl font-bold text-[var(--clr-primary)] mb-6">
+                    プログラムの特徴
+                </h2>
+                <p class="text-lg text-gray-600 max-w-3xl mx-auto">
+                    各社が持つ具体的な課題をヒアリングした上で最適な研修をカスタマイズ<br>
+                    AIを「毎日使える道具」として習慣化
+                </p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <div class="card text-center">
+                    <div class="text-4xl mb-4">🏫</div>
+                    <h3 class="text-xl font-bold mb-4 text-gray-900">実地研修</h3>
+                    <p class="text-gray-600">
+                        eラーニングに加えてプロ講師による5回の実地研修を実施。理論と実践の両面からAI活用スキルを身につけます
+                    </p>
+                </div>
+
+                <div class="card text-center">
+                    <div class="text-4xl mb-4">⚡</div>
+                    <h3 class="text-xl font-bold mb-4 text-gray-900">実践重視</h3>
+                    <p class="text-gray-600">
+                        理論だけでなく、実際の業務で即活用できる具体的なプロンプトやツールの使い方を習得
+                    </p>
+                </div>
+
+                <div class="card text-center">
+                    <div class="text-4xl mb-4">🎯</div>
+                    <h3 class="text-xl font-bold mb-4 text-gray-900">業界特化型</h3>
+                    <p class="text-gray-600">
+                        広告・製造業・建設業など、各業界の具体的な課題とワークフローに特化した研修内容
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- eラーニングプログラム -->
+    <section class="py-16 bg-gradient-to-r from-green-50 to-blue-50">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-12">
+                <div class="inline-block bg-green-100 text-green-800 px-4 py-2 rounded-full text-sm font-semibold mb-4">
+                    人材開発支援助成金×申請まるごと代行
+                </div>
+                <h2 class="text-3xl md:text-4xl font-bold text-[var(--clr-primary)] mb-6">
+                    75％戻ってくる助成金活用
+                </h2>
+                <p class="text-lg text-gray-600 max-w-3xl mx-auto mb-8">
+                    各コース約20h eラーニング + 月1オフライン相談会（5回）
+                </p>
+                
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-6 mb-12">
+                    <div class="bg-white rounded-lg p-6 shadow-md">
+                        <div class="text-green-600 text-2xl mb-3">💰</div>
+                        <h3 class="font-bold text-lg mb-2">補助金利用で</h3>
+                        <p class="text-green-600 font-bold text-xl">実質7.5万円/人</p>
+                        <p class="text-sm text-gray-600">(75%戻ってくる)</p>
+                    </div>
+                    <div class="bg-white rounded-lg p-6 shadow-md">
+                        <div class="text-blue-600 text-2xl mb-3">📋</div>
+                        <h3 class="font-bold text-lg mb-2">申請書類は</h3>
+                        <p class="text-blue-600 font-bold text-lg">社労士がフル代行</p>
+                        <p class="text-sm text-gray-600">御社は押印するだけ</p>
+                    </div>
+                    <div class="bg-white rounded-lg p-6 shadow-md">
+                        <div class="text-purple-600 text-2xl mb-3">👨‍🏫</div>
+                        <h3 class="font-bold text-lg mb-2">講師サポート</h3>
+                        <p class="text-purple-600 font-bold text-lg">AI活用講師 石澤 亮輔</p>
+                        <p class="text-sm text-gray-600">eラーニング＋実地研修。手触り感を持って学べる</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- コース選択 -->
+            <div class="mb-12">
+                <h3 class="text-2xl font-bold text-center mb-8 text-gray-900">eラーニングは3タイプから選択</h3>
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                    <!-- 初級コース -->
+                    <div class="card border-l-4 border-green-500">
+                        <div class="flex items-center mb-4">
+                            <span class="bg-green-100 text-green-800 px-3 py-1 rounded-full text-sm font-semibold mr-3">初級</span>
+                            <span class="text-gray-600 font-medium">(17h)</span>
+                        </div>
+                        <ul class="space-y-2 text-sm text-gray-700">
+                            <li>• ChatGPTでメール自動化/コピーライティング</li>
+                            <li>• 画像・動画生成、GAS（マクロ）を使ったスプレッドシート効率化</li>
+                            <li>• Difyを使った簡単RPA、チャットボット作成</li>
+                            <li>• セキュリティ研修など</li>
+                        </ul>
+                    </div>
+
+                    <!-- 中級コース -->
+                    <div class="card border-l-4 border-blue-500">
+                        <div class="flex items-center mb-4">
+                            <span class="bg-blue-100 text-blue-800 px-3 py-1 rounded-full text-sm font-semibold mr-3">中級</span>
+                            <span class="text-gray-600 font-medium">(20h)</span>
+                        </div>
+                        <ul class="space-y-2 text-sm text-gray-700">
+                            <li>• 画像生成・動画生成の発展演習、マーケティング戦略への活用</li>
+                            <li>• Web制作の3Dアニメーション活用、高度FAQチャットボット</li>
+                            <li>• Dify発展、部門別ワークフロー自動化</li>
+                            <li>• AIプロジェクト、自社向けAIソリューションの構築</li>
+                        </ul>
+                    </div>
+
+                    <!-- 上級コース -->
+                    <div class="card border-l-4 border-purple-500">
+                        <div class="flex items-center mb-4">
+                            <span class="bg-purple-100 text-purple-800 px-3 py-1 rounded-full text-sm font-semibold mr-3">上級</span>
+                            <span class="text-gray-600 font-medium">(20h)</span>
+                        </div>
+                        <ul class="space-y-2 text-sm text-gray-700">
+                            <li>• 生成AIの最前線とビジネスモデル事例、MVP開発手法</li>
+                            <li>• 自動システム構築、業務特化型AIサービスとの事例</li>
+                            <li>• ライアンス、RAG実装、UXデザイン、MLOps</li>
+                            <li>• ローンチ戦略とマーケティング、多言語対応、海外展開</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <!-- eラーニングカリキュラム（初級例） -->
+            <div class="mb-12">
+                <h3 class="text-2xl font-bold text-center mb-8 text-gray-900">eラーニングのカリキュラム内容例（初級）</h3>
+                <div class="bg-white rounded-xl p-8 shadow-lg">
+                    <div class="grid grid-cols-2 md:grid-cols-6 gap-4">
+                        <div class="text-center">
+                            <div class="bg-blue-100 rounded-lg p-4 mb-3">
+                                <h4 class="font-bold text-sm mb-2">生成AIの基礎</h4>
+                                <p class="text-xs text-gray-600">生成AIの基本を理解し、検索や活用術を学ぶ</p>
+                            </div>
+                            <span class="text-xs text-gray-500">4時間</span>
+                        </div>
+                        <div class="text-center">
+                            <div class="bg-green-100 rounded-lg p-4 mb-3">
+                                <h4 class="font-bold text-sm mb-2">画像、映像、システム自動化</h4>
+                                <p class="text-xs text-gray-600">画像・映像、プログラムを多岐にわたり実践</p>
+                            </div>
+                            <span class="text-xs text-gray-500">5時間</span>
+                        </div>
+                        <div class="text-center">
+                            <div class="bg-purple-100 rounded-lg p-4 mb-3">
+                                <h4 class="font-bold text-sm mb-2">自動化</h4>
+                                <p class="text-xs text-gray-600">AIを活用した業務手作業やプロセス自動化の社内提示</p>
+                            </div>
+                            <span class="text-xs text-gray-500">4時間</span>
+                        </div>
+                        <div class="text-center">
+                            <div class="bg-orange-100 rounded-lg p-4 mb-3">
+                                <h4 class="font-bold text-sm mb-2">ビジネスへの組み込み</h4>
+                                <p class="text-xs text-gray-600">生成AIをビジネスへ組み込み、新サービス手法を実践</p>
+                            </div>
+                            <span class="text-xs text-gray-500">2時間</span>
+                        </div>
+                        <div class="text-center">
+                            <div class="bg-teal-100 rounded-lg p-4 mb-3">
+                                <h4 class="font-bold text-sm mb-2">セキュリティとリスク</h4>
+                                <p class="text-xs text-gray-600">AI活用に伴う情報漏洩を回避、安全運用を実現</p>
+                            </div>
+                            <span class="text-xs text-gray-500">2時間</span>
+                        </div>
+                        <div class="text-center">
+                            <div class="bg-gray-100 rounded-lg p-4 mb-3">
+                                <h4 class="font-bold text-sm mb-2">まとめ</h4>
+                                <p class="text-xs text-gray-600">学習内容を振り返り、生成AI活用の理解を総括</p>
+                            </div>
+                            <span class="text-xs text-gray-500">1時間</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 講師サポート -->
+            <div class="mb-12">
+                <div class="bg-white rounded-xl p-8 shadow-lg">
+                    <h3 class="text-2xl font-bold text-center mb-8 text-gray-900">講師サポート</h3>
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
+                        <div>
+                            <div class="flex items-center mb-6">
+                                <img src="images/jissha.png" alt="石澤 亮輔" class="w-16 h-16 rounded-full mr-4 object-cover">
+                                <div>
+                                    <h4 class="text-xl font-bold text-gray-900">AI活用講師 石澤 亮輔</h4>
+                                    <p class="text-gray-600">eラーニング＋実地研修。手触り感を持って学べる</p>
+                                </div>
+                            </div>
+                            <ul class="space-y-3 text-gray-700">
+                                <li class="flex items-start">
+                                    <span class="text-green-500 mr-2">💬</span>
+                                    <span>現場の「これ出来る？」を即解決、次の活用案もカスタマイズ提案</span>
+                                </li>
+                                <li class="flex items-start">
+                                    <span class="text-green-500 mr-2">👥</span>
+                                    <span>今だけ月1回の対面サポート（合計5回）を無料で実施</span>
+                                </li>
+                                <li class="flex items-start">
+                                    <span class="text-green-500 mr-2">💬</span>
+                                    <span>テキストでの質問への個別質問・相談は無制限対応</span>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="bg-green-50 rounded-lg p-6">
+                            <div class="transform rotate-12 bg-green-500 text-white px-4 py-2 rounded-lg mb-4 inline-block">
+                                <span class="font-bold">特別キャンペーン 今だけ特別に追加料金ゼロ</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- スケジュール例 -->
+            <div class="mb-12">
+                <h3 class="text-2xl font-bold text-center mb-8 text-gray-900">スケジュール（例）</h3>
+                <div class="bg-white rounded-xl p-8 shadow-lg">
+                    <div class="space-y-6">
+                        <div class="flex items-center">
+                            <div class="bg-green-500 text-white px-3 py-1 rounded-lg text-sm font-semibold mr-4">NOW</div>
+                            <div class="flex items-center">
+                                <div class="w-4 h-4 bg-green-500 rounded-full mr-4"></div>
+                                <span class="font-medium">無料相談・課題ヒアリング</span>
+                            </div>
+                        </div>
+                        <div class="flex items-center">
+                            <div class="bg-gray-200 text-gray-700 px-3 py-1 rounded-lg text-sm font-semibold mr-4">+1ヶ月</div>
+                            <div class="flex items-center">
+                                <div class="w-4 h-4 bg-green-500 rounded-full mr-4"></div>
+                                <div>
+                                    <span class="font-medium">計画書提出（社労士代行）</span>
+                                    <span class="text-gray-600 ml-2">(DataPivotStrategies)</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="flex items-center">
+                            <div class="bg-gray-200 text-gray-700 px-3 py-1 rounded-lg text-sm font-semibold mr-4">+2ヶ月</div>
+                            <div class="flex items-center">
+                                <div class="w-4 h-4 bg-green-500 rounded-full mr-4"></div>
+                                <div>
+                                    <span class="font-medium">受講開始 & Slack開設</span>
+                                    <br>
+                                    <span class="text-sm text-gray-600">プラス個別サポートスタート（メタマケ）</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="flex items-center">
+                            <div class="bg-gray-200 text-gray-700 px-3 py-1 rounded-lg text-sm font-semibold mr-4">+5ヶ月</div>
+                            <div class="flex items-center">
+                                <div class="w-4 h-4 bg-green-500 rounded-full mr-4"></div>
+                                <span class="font-medium text-green-600">eラーニング修了証配布（全編視聴）</span>
+                            </div>
+                        </div>
+                        <div class="flex items-center">
+                            <div class="bg-gray-200 text-gray-700 px-3 py-1 rounded-lg text-sm font-semibold mr-4">+6ヶ月</div>
+                            <div class="flex items-center">
+                                <div class="w-4 h-4 bg-green-500 rounded-full mr-4"></div>
+                                <div>
+                                    <span class="font-medium">支給決定</span>
+                                    <span class="text-green-600 ml-2">補助金入金</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="flex items-center">
+                            <div class="bg-gray-200 text-gray-700 px-3 py-1 rounded-lg text-sm font-semibold mr-4">6ヶ月〜</div>
+                            <div class="flex items-center">
+                                <div class="w-4 h-4 bg-green-500 rounded-full mr-4"></div>
+                                <span class="font-medium text-green-600">Slackコミュニティ で継続アップデート</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+            <!-- 無料相談ボタン -->
+            <div class="text-center mt-12 mb-8">
+                <a href="https://app.spirinc.com/patterns/availability-sharing/CuveLAwUnplEYK7KBzUsv/confirm" target="_blank" rel="noopener noreferrer" class="inline-block bg-gradient-to-r from-orange-500 to-red-500 hover:from-orange-600 hover:to-red-600 text-white font-bold py-4 px-8 rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 transform hover:scale-105 mb-6">
+                    📅 無料相談で補助金活用プランを確認する
+                    <svg class="inline-block ml-2 w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/>
+                    </svg>
+                </a>
+                <p class="text-lg text-gray-600">
+                    ⬇️ その詳細な実地研修が下記のプログラムです ⬇️
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- 詳細研修プログラム -->
+    <section class="py-16 bg-white">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl md:text-4xl font-bold text-[var(--clr-primary)] mb-6">
+                    詳細研修プログラム
+                </h2>
+                <p class="text-lg text-gray-600 max-w-3xl mx-auto">
+                    クリックして詳細をご確認ください
+                </p>
+            </div>
+
+            <!-- アコーディオン -->
+            <div class="space-y-4">
+                <!-- 第1回研修 -->
+                <div class="border border-gray-200 rounded-lg">
+                    <button class="accordion-button w-full px-6 py-4 text-left bg-gradient-to-r from-blue-50 to-green-50 hover:from-blue-100 hover:to-green-100 transition-colors duration-200 rounded-lg focus:outline-none" data-target="session1">
+                        <div class="flex justify-between items-center">
+                            <h3 class="text-xl font-bold text-gray-900">第1回研修（全社共通・必須）</h3>
+                            <span class="accordion-icon text-2xl text-gray-500">+</span>
+                        </div>
+                    </button>
+                    <div id="session1" class="accordion-content hidden px-6 pb-6">
+
+                        <div class="pt-4">
+                            <p class="text-lg text-gray-600 mb-6">
+                                すべての研修プログラムは、この基礎研修からスタートします
+                            </p>
+
+            <div class="program-card bg-gradient-to-r from-blue-50 to-green-50">
+                <div class="flex items-center mb-6">
+                    <div class="text-3xl mr-4">🧠</div>
+                    <h3 class="text-2xl font-bold text-gray-900">「まずは毎日10タッチ」"大脳拡張"としてAIを触ろう＋セキュリティ</h3>
+                </div>
+                
+                <div class="mb-8">
+                    <h4 class="text-lg font-bold mb-4 text-[var(--clr-primary)]">この研修で得られるもの</h4>
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                        <div class="flex items-start">
+                            <div class="text-2xl mr-3">💪</div>
+                            <div>
+                                <h5 class="font-bold text-gray-900 mb-2">変化に強くなるマインドセット</h5>
+                                <p class="text-gray-700 text-sm">技術の進化に対応できる柔軟な思考力と適応力を養います</p>
+                            </div>
+                        </div>
+                        <div class="flex items-start">
+                            <div class="text-2xl mr-3">🧠</div>
+                            <div>
+                                <h5 class="font-bold text-gray-900 mb-2">大脳拡張としてのAI理解</h5>
+                                <p class="text-gray-700 text-sm">AIを「脳の延長・拡張」として捉える新しい視点を獲得します</p>
+                            </div>
+                        </div>
+                        <div class="flex items-start">
+                            <div class="text-2xl mr-3">📱</div>
+                            <div>
+                                <h5 class="font-bold text-gray-900 mb-2">物理アイテムも活用して毎日AIを触る習慣作り</h5>
+                                <p class="text-gray-700 text-sm">継続的なAI活用を支える具体的な仕組みと習慣を構築します</p>
+                            </div>
+                        </div>
+                        <div class="flex items-start">
+                            <div class="text-2xl mr-3">🔒</div>
+                            <div>
+                                <h5 class="font-bold text-gray-900 mb-2">最低限意識すべきセキュリティと各社ニーズに応じた守りの意識醸成</h5>
+                                <p class="text-gray-700 text-sm">安全なAI活用のための基本知識と企業固有のリスク対策を学習します</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="session-card">
+                    <h4 class="text-lg font-bold mb-3 text-[var(--clr-primary)]">研修内容</h4>
+                    <ul class="space-y-2 text-gray-700">
+                        <li>• "なぜAIを使えていないか"を「原始時代から続く人間の本質」として自覚し、"AI毎日10タッチ"を自走できるマインドセット形成</li>
+                        <li>• AIを「脳の延長・拡張」と捉え、完成された問いだけでなく「モヤモヤした思考プロセス」ごとAIに投げかける重要性を学習</li>
+                        <li>• AIセキュリティの基本：モデル改善オフ運用、業務秘密・個人情報の取扱い、自社規約遵守</li>
+                    </ul>
+                </div>
+            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 2回目以降のプログラム選択 -->
+                <div class="border border-gray-200 rounded-lg">
+                    <button class="accordion-button w-full px-6 py-4 text-left bg-gray-50 hover:bg-gray-100 transition-colors duration-200 rounded-lg focus:outline-none" data-target="program-selection">
+                        <div class="flex justify-between items-center">
+                            <h3 class="text-xl font-bold text-gray-900">プログラム選択可能</h3>
+                            <span class="accordion-icon text-2xl text-gray-500">+</span>
+                        </div>
+                    </button>
+                    <div id="program-selection" class="accordion-content hidden px-6 pb-6">
+
+    <!-- 2回目以降の研修プログラム選択 -->
+    <section class="py-16 bg-[var(--clr-bg-1)]">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl md:text-4xl font-bold text-[var(--clr-primary)] mb-6">
+                    2回目以降のプログラム選択
+                </h2>
+                <div class="bg-yellow-50 border-l-4 border-yellow-400 p-6 rounded-lg max-w-4xl mx-auto">
+                    <div class="flex">
+                        <div class="flex-shrink-0">
+                            <svg class="h-5 w-5 text-yellow-400" viewBox="0 0 20 20" fill="currentColor">
+                                <path fill-rule="evenodd" d="M8.257 3.099c.765-1.36 2.722-1.36 3.486 0l5.58 9.92c.75 1.334-.213 2.98-1.742 2.98H4.42c-1.53 0-2.493-1.646-1.743-2.98l5.58-9.92zM11 13a1 1 0 11-2 0 1 1 0 012 0zm-1-8a1 1 0 00-1 1v3a1 1 0 002 0V6a1 1 0 00-1-1z" clip-rule="evenodd" />
+                            </svg>
+                        </div>
+                        <div class="ml-3">
+                            <p class="text-sm text-yellow-700">
+                                <strong>カスタマイズ対応：</strong> 業界別・職種別のプログラムは固定ではありません。様々なプログラムの中から御社に最適なプログラムをご提案させていただきます。
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 業界別研修プログラム例 -->
+            <div class="mb-16">
+                <h3 class="text-2xl font-bold text-center mb-8 text-gray-900">業界別プログラム例</h3>
+
+            <!-- 広告会社向け研修 -->
+            <div class="program-card">
+                <div class="flex items-center mb-6">
+                    <div class="text-3xl mr-4">📱</div>
+                    <h3 class="text-2xl font-bold text-gray-900">広告会社向けAI活用研修</h3>
+                </div>
+                
+                <div class="session-card">
+                    <h4 class="text-lg font-bold mb-3 text-[var(--clr-primary)]">企画・提案フェーズにおけるAI時短術</h4>
+                    <ul class="space-y-2 text-gray-700">
+                        <li>• ChatGPTを活用した競合調査と仮説生成、ペルソナの壁打ち、アイデア出しの伴走者としてのAI活用</li>
+                        <li>• 提案資料の構成や叩き台をAIで効率的に作成し、短納期での提案精度向上</li>
+                        <li>• 音声議事録からAIで要点を抽出し、クライアントの曖昧な課題を具体化する手法</li>
+                    </ul>
+                </div>
+
+                <div class="session-card">
+                    <h4 class="text-lg font-bold mb-3 text-[var(--clr-primary)]">クリエイティブ制作AI活用</h4>
+                    <ul class="space-y-2 text-gray-700">
+                        <li>• 画像生成AI（MiriCanvas, Midjourneyなど）を活用したKVラフやバナーのデザイン案作成</li>
+                        <li>• 動画AI（Veo3など）を用いた短尺動画の下書き生成や、SunoでのBGM・ジングル生成</li>
+                        <li>• ChatGPTなどを活用した感情トーン別キャッチコピーの大量自動出力とブランドガイド対応</li>
+                    </ul>
+                </div>
+
+                <div class="session-card">
+                    <h4 class="text-lg font-bold mb-3 text-[var(--clr-primary)]">運用・営業フェーズのAI支援</h4>
+                    <ul class="space-y-2 text-gray-700">
+                        <li>• GA4やSNSデータをChatGPTに連携させた週次レポートの下書きや要点サマリ自動生成</li>
+                        <li>• 顧客業種や課題に応じた提案内容の叩き台をAIで生成し、営業メールやLPコピーの反応率向上</li>
+                        <li>• バイブコーディング（Claude Code / Gemini CLI など）でLP・営業資料・簡易ダッシュボードの"動くプロトタイプ"を即時生成</li>
+                    </ul>
+                </div>
+
+                <div class="session-card">
+                    <h4 class="text-lg font-bold mb-3 text-[var(--clr-primary)]">成果発表と監査</h4>
+                    <ul class="space-y-2 text-gray-700">
+                        <li>• 制作/提案の活用成果を発表（初稿在庫/週・提案初稿時間・AB反応率の3指標＋実サンプル）</li>
+                        <li>• 権利・出典監査を報告（生成物のライセンス/素材の商用可否/クレジット/クライアント名の露出可否）</li>
+                        <li>• 利用規約/運用ガイドを更新し、横展開パッケージを仕上げて全チームに配布</li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- 一般企業・バックオフィス向け研修 -->
+            <div class="program-card">
+                <div class="flex items-center mb-6">
+                    <div class="text-3xl mr-4">🏢</div>
+                    <h3 class="text-2xl font-bold text-gray-900">一般企業・バックオフィス向けAI活用研修</h3>
+                </div>
+                
+
+                <div class="session-card">
+                    <h4 class="text-lg font-bold mb-3 text-[var(--clr-primary)]">文書作成・情報整理のAI時短術</h4>
+                    <ul class="space-y-2 text-gray-700">
+                        <li>• 営業メールや告知文、報告書などの「最初の一通/ファーストビュー」をAIで素早く作成</li>
+                        <li>• NotebookLMなどを活用し、マニュアル、会議メモ、自分メモを「呼び出せる知恵」として整理・知識ベース化</li>
+                        <li>• 「思考の断片」をそのままAIに与える習慣をつけ、モヤモヤした状態からアウトプットを生成</li>
+                    </ul>
+                </div>
+
+                <div class="session-card">
+                    <h4 class="text-lg font-bold mb-3 text-[var(--clr-primary)]">会議効率化とタスク管理</h4>
+                    <ul class="space-y-2 text-gray-700">
+                        <li>• DemoCreatorなどで会議を録音・文字起こしし、GPT-4oで要点抽出、タスク化する一気通貫プロセス</li>
+                        <li>• 意思決定会議や制作進行会議など、会議体に合わせて要約の指示文を設計し、精度の高い成果物を獲得</li>
+                    </ul>
+                </div>
+
+                <div class="session-card">
+                    <h4 class="text-lg font-bold mb-3 text-[var(--clr-primary)]">社内コミュニケーションと情報共有のAI強化</h4>
+                    <ul class="space-y-2 text-gray-700">
+                        <li>• NotebookLMを活用し、社内マニュアルやFAQから「FAQボット」を作成</li>
+                        <li>• 非構造化データから要点を抽出し、社内向けスライド素材や章立てを作成</li>
+                        <li>• バイブコーディングで社内FAQサイトや申請フォームの簡易UIをAIと対話しながら試作</li>
+                    </ul>
+                </div>
+
+                <div class="session-card">
+                    <h4 class="text-lg font-bold mb-3 text-[var(--clr-primary)]">成果発表と監査</h4>
+                    <ul class="space-y-2 text-gray-700">
+                        <li>• 社内文書の活用成果を発表（自動下書き率・テンプレ再利用数・返信/周知までの時間）</li>
+                        <li>• 個人情報・権限監査を報告（PIIのマスキング/共有権限の棚卸し/削除・保管ログ）</li>
+                        <li>• 利用規約/データ取扱い基準を更新し、横展開パッケージを整備して配布</li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- 製造業・R&D向け研修 -->
+            <div class="program-card">
+                <div class="flex items-center mb-6">
+                    <div class="text-3xl mr-4">🏭</div>
+                    <h3 class="text-2xl font-bold text-gray-900">製造業・R&D向けAI活用研修</h3>
+                </div>
+                
+
+                <div class="session-card">
+                    <h4 class="text-lg font-bold mb-3 text-[var(--clr-primary)]">技術文書作成・整理のAI時短術</h4>
+                    <ul class="space-y-2 text-gray-700">
+                        <li>• NotebookLMを活用し、技術マニュアル・会議記録にベテランの暗黙知を加えてQ&A/チェックリスト化</li>
+                        <li>• 技術仕様書や報告書の初稿をAIで自動生成し、見出し設計→要約→トーン調整まで一気通貫で実施</li>
+                        <li>• 見出し・タグ・バージョン規約を整え、再利用と監査に強い文書運用へ標準化</li>
+                    </ul>
+                </div>
+
+                <div class="session-card">
+                    <h4 class="text-lg font-bold mb-3 text-[var(--clr-primary)]">データ分析と異常検知のAI補助</h4>
+                    <ul class="space-y-2 text-gray-700">
+                        <li>• Google Spread SheetとChatGPTを連携させ、QCデータやログから"傾向要約→異常候補抽出→原因仮説→対策案"まで連鎖生成</li>
+                        <li>• 週次レポの骨子（KPIサマリ/差分コメント/次アクション）と"経営向け1行"＋"現場向けチェックリスト"を自動下書き</li>
+                        <li>• KPI定義・計算式・注意点を明文化し、指標のブレを無くす"指標定義カード"を整備</li>
+                    </ul>
+                </div>
+
+                <div class="session-card">
+                    <h4 class="text-lg font-bold mb-3 text-[var(--clr-primary)]">ディープリサーチ＆バイブコーディング活用</h4>
+                    <ul class="space-y-2 text-gray-700">
+                        <li>• Gemini Deep Researchを用いた深掘り調査や、GPT-4oによる比較軸出しで意思決定に必要な「論点の地図」を作成</li>
+                        <li>• Claude Codeを用いた対話コーディングで、手作業部分の自動化、既存レガシーコードの影響チェック、エラー原因発見の短略化を学習</li>
+                        <li>• バイブコーディングの型（要件→対話→即実行→差分指示）を習得し、ログ整形やCSV前処理など"5分の自動化"を積み上げ</li>
+                    </ul>
+                </div>
+
+                <div class="session-card">
+                    <h4 class="text-lg font-bold mb-3 text-[var(--clr-primary)]">現場成果発表とセキュリティ監査</h4>
+                    <ul class="space-y-2 text-gray-700">
+                        <li>• 各チームの活用サマリを発表（"初稿在庫/自動下書き率/テンプレ再利用数"の3指標＋実サンプル）</li>
+                        <li>• セキュリティ監査の結果を報告（遵守状況/逸脱ゼロの証跡/是正の有無）し、注意事例をミニドリル化</li>
+                        <li>• 自社利用規約/運用ガイドを更新し、横展開パッケージを完成して他ラインへ配布</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- 職種別研修プログラム -->
+    <section class="py-16 bg-white">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-12">
+                <h3 class="text-2xl font-bold text-center mb-8 text-gray-900">職種別プログラム例</h3>
+                <p class="text-lg text-gray-600 max-w-3xl mx-auto">
+                    職種特有の業務課題にフォーカスした、より専門的な研修プログラム例
+                </p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- 企画担当者向け -->
+                <div class="card">
+                    <div class="text-3xl mb-4">💡</div>
+                    <h3 class="text-xl font-bold mb-4 text-gray-900">企画担当者向け</h3>
+                    <ul class="space-y-2 text-gray-700 text-sm">
+                        <li>• アイデア出し・ブレインストーミングのAI伴走術</li>
+                        <li>• 企画構成・提案骨子のAI高速生成</li>
+                        <li>• 市場調査・競合分析のAI活用</li>
+                        <li>• 「勝ち筋」の可視化とKPI仮説生成</li>
+                    </ul>
+                    <div class="mt-6">
+                        <span class="inline-block bg-blue-100 text-blue-800 text-xs px-3 py-1 rounded-full">5回完結</span>
+                    </div>
+                </div>
+
+                <!-- 事務担当者向け -->
+                <div class="card">
+                    <div class="text-3xl mb-4">📋</div>
+                    <h3 class="text-xl font-bold mb-4 text-gray-900">事務担当者向け</h3>
+                    <ul class="space-y-2 text-gray-700 text-sm">
+                        <li>• 文書・社内周知の"最初の一通"を秒で作成</li>
+                        <li>• 申請・台帳・FAQの"呼び出せる知恵"化</li>
+                        <li>• 会議とタスクの一気通貫（録音→要点→ToDo→周知）</li>
+                        <li>• 定型業務の自動化とテンプレート化</li>
+                    </ul>
+                    <div class="mt-6">
+                        <span class="inline-block bg-green-100 text-green-800 text-xs px-3 py-1 rounded-full">5回完結</span>
+                    </div>
+                </div>
+
+                <!-- 営業担当者向け -->
+                <div class="card">
+                    <div class="text-3xl mb-4">📈</div>
+                    <h3 class="text-xl font-bold mb-4 text-gray-900">営業担当者向け</h3>
+                    <ul class="space-y-2 text-gray-700 text-sm">
+                        <li>• 顧客業種・課題リサーチのAI活用</li>
+                        <li>• 提案初稿・営業メールのAI高速生成</li>
+                        <li>• 商談準備とQ&A対応のAI支援</li>
+                        <li>• パーソナライズとA/Bテスト戦略</li>
+                    </ul>
+                    <div class="mt-6">
+                        <span class="inline-block bg-purple-100 text-purple-800 text-xs px-3 py-1 rounded-full">5回完結</span>
+                    </div>
+                </div>
+
+                <!-- 管理職向け -->
+                <div class="card">
+                    <div class="text-3xl mb-4">👔</div>
+                    <h3 class="text-xl font-bold mb-4 text-gray-900">管理職向け</h3>
+                    <ul class="space-y-2 text-gray-700 text-sm">
+                        <li>• チーム運用の型づくり（標準プロンプトと"白紙禁止"ルール）</li>
+                        <li>• 指標設計と可視化（時間/在庫/自動下書き率）</li>
+                        <li>• 1on1・育成を"AI＋人"で強化</li>
+                        <li>• チーム成果のダッシュボード設計</li>
+                    </ul>
+                    <div class="mt-6">
+                        <span class="inline-block bg-orange-100 text-orange-800 text-xs px-3 py-1 rounded-full">5回完結</span>
+                    </div>
+                </div>
+
+                <!-- 経営層向け -->
+                <div class="card md:col-span-2 lg:col-span-1">
+                    <div class="text-3xl mb-4">🎖️</div>
+                    <h3 class="text-xl font-bold mb-4 text-gray-900">経営層向け</h3>
+                    <ul class="space-y-2 text-gray-700 text-sm">
+                        <li>• AIによる業務改革とROI可視化</li>
+                        <li>• AI人材育成と「自ら学ぶ文化」の醸成</li>
+                        <li>• AI導入におけるリスク管理とセキュリティ戦略</li>
+                        <li>• 全社AI活用のガバナンス設計</li>
+                    </ul>
+                    <div class="mt-6">
+                        <span class="inline-block bg-red-100 text-red-800 text-xs px-3 py-1 rounded-full">5回完結</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA セクション -->
+    <section class="py-16 bg-gradient-to-r from-[var(--clr-primary)] to-[var(--clr-primary-light)] text-white">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <h2 class="text-3xl md:text-4xl font-bold mb-6">
+                研修プログラムのお申し込み・お問い合わせ
+            </h2>
+            <p class="text-xl mb-8 opacity-90">
+                貴社の業界・職種に最適な研修プログラムをご提案いたします
+            </p>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-8">
+                <div class="bg-white/10 backdrop-blur-sm rounded-lg p-6">
+                    <h3 class="text-lg font-bold mb-3">研修料金</h3>
+                    <p class="text-2xl font-bold mb-2">お見積もり</p>
+                    <p class="text-sm opacity-80">企業規模・研修内容により個別設定</p>
+                </div>
+                <div class="bg-white/10 backdrop-blur-sm rounded-lg p-6">
+                    <h3 class="text-lg font-bold mb-3">補助金活用</h3>
+                    <p class="text-2xl font-bold mb-2">最大75%戻ってくる</p>
+                    <p class="text-sm opacity-80">申請書類作成代行もサポート</p>
+                </div>
+            </div>
+
+            <div class="flex flex-col sm:flex-row gap-4 justify-center">
+                <a href="https://app.spirinc.com/patterns/availability-sharing/CuveLAwUnplEYK7KBzUsv/confirm" target="_blank" rel="noopener noreferrer" class="bg-white text-[var(--clr-primary)] font-bold py-4 px-8 rounded-xl hover:bg-gray-100 transition-all duration-300 transform hover:scale-105">
+                    📅 無料相談を申し込む
+                </a>
+                <a href="index.html" class="bg-white/20 backdrop-blur-sm border-2 border-white text-white font-bold py-4 px-8 rounded-xl hover:bg-white/30 transition-all duration-300">
+                    ← トップページに戻る
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- フッター -->
+    <footer class="bg-gray-900 text-white py-12">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <div>
+                    <h3 class="text-xl font-bold mb-4">地方AIブースター</h3>
+                    <p class="text-gray-400">
+                        地方企業の現場を生成AIで変革する実践ガイド
+                    </p>
+                </div>
+                
+                <div>
+                    <h4 class="text-lg font-semibold mb-4">サービス</h4>
+                    <ul class="space-y-2">
+                        <li><a href="program.html" class="text-gray-400 hover:text-white transition-colors">研修プログラム</a></li>
+                        <li><a href="blog-list.html" class="text-gray-400 hover:text-white transition-colors">ブログ一覧</a></li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h4 class="text-lg font-semibold mb-4">業界特化</h4>
+                    <ul class="space-y-2">
+                        <li><a href="manufacturing.html" class="text-gray-400 hover:text-white transition-colors">製造業DX</a></li>
+                        <li><a href="tourism.html" class="text-gray-400 hover:text-white transition-colors">観光業DX</a></li>
+                        <li><a href="agriculture.html" class="text-gray-400 hover:text-white transition-colors">農業DX</a></li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="border-t border-gray-800 mt-8 pt-8 text-center">
+                <p class="text-gray-400">
+                    © 2025 地方AIブースター. All rights reserved.
+                </p>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>
