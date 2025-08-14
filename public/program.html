@@ -928,5 +928,31 @@
             </div>
         </div>
     </footer>
+
+    <script>
+        // アコーディオン機能
+        document.addEventListener('DOMContentLoaded', function() {
+            const accordionButtons = document.querySelectorAll('.accordion-button');
+            
+            accordionButtons.forEach(button => {
+                button.addEventListener('click', function() {
+                    const targetId = this.getAttribute('data-target');
+                    const targetContent = document.getElementById(targetId);
+                    const icon = this.querySelector('.accordion-icon');
+                    
+                    if (targetContent) {
+                        // コンテンツの表示/非表示を切り替え
+                        if (targetContent.classList.contains('hidden')) {
+                            targetContent.classList.remove('hidden');
+                            icon.textContent = '-';
+                        } else {
+                            targetContent.classList.add('hidden');
+                            icon.textContent = '+';
+                        }
+                    }
+                });
+            });
+        });
+    </script>
 </body>
 </html>
