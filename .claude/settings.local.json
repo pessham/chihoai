@@ -44,7 +44,20 @@
       "WebFetch(domain:docs.google.com)",
       "Bash(git add:*)",
       "Bash(git commit:*)",
-      "Bash(git push:*)"
+      "Bash(git push:*)",
+      "Bash(comm:*)",
+      "WebFetch(domain:images.unsplash.com)",
+      "Bash(git -C '/Users/macbookpro/Claude/vive-blog' add public/articles/20250815.html public/articles/20250816.html)",
+      "Bash(git -C '/Users/macbookpro/Claude/vive-blog' status)",
+      "Bash(git -C '/Users/macbookpro/Claude/vive-blog' diff --cached)",
+      "Bash(git -C '/Users/macbookpro/Claude/vive-blog' add public/articles/20250817.html)",
+      "Bash(git -C '/Users/macbookpro/Claude/vive-blog' push origin main)",
+      "Bash(git -C '/Users/macbookpro/Claude/vive-blog' add public/index.html)",
+      "Bash(git -C '/Users/macbookpro/Claude/vive-blog' commit -m \"Update homepage: add 20250816 and 20250817 article cards\n\n- Add 20250817.html card as newest article\n- Add 20250816.html card \n- Reorder by date: 0817 → 0816 → 0815 → 0814 → 0813\n- Update image URLs and remove old NEW badges\n\n🤖 Generated with Claude Code\n\nCo-Authored-By: Claude <noreply@anthropic.com>\")",
+      "Bash(git -C '/Users/macbookpro/Claude/vive-blog' commit -m \"Update homepage content sections\n\n✅ Changes made:\n- Update challenge/solution section to new ❌/✅ format\n- Change from generic business issues to emotional, personal impact\n- Remove success case studies section (製造業A社, サービス業B社, 建設業C社)  \n- Update subsidy timeline text: 申請から承認 → 申請から研修開始\n\n🎯 Content updated for stronger emotional connection and clarity\n\n🤖 Generated with Claude Code\n\nCo-Authored-By: Claude <noreply@anthropic.com>\")",
+      "Bash(git -C '/Users/macbookpro/Claude/vive-blog' commit -m \"Update terminology: 補助金 → 助成金\n\n🔄 Changes made:\n- Change \"\"補助金活用AI研修\"\" to \"\"助成金活用AI研修\"\"\n- Update \"\"補助金75%OFF\"\" to \"\"助成金75%OFF\"\"\n- Change \"\"補助金活用で75%戻ってくる\"\" to \"\"助成金活用で75%戻ってくる\"\"\n- Update \"\"補助金適用後：100万円\"\" to \"\"助成金適用後：100万円\"\"\n- Change \"\"補助金申請サポート\"\" to \"\"助成金申請サポート\"\"\n- Update CTA button text to \"\"助成金活用プラン\"\"\n- Update article title and descriptions accordingly\n\n📝 Consistent use of \"\"助成金\"\" terminology throughout the site\n\n🤖 Generated with Claude Code\n\nCo-Authored-By: Claude <noreply@anthropic.com>\")",
+      "Bash(git -C '/Users/macbookpro/Claude/vive-blog' commit -m \"Update AI section design: switch from blue to green theme\n\n🎨 Changed ''AIで手を解き放ち、頭を広げ、心を育てる'' section styling:\n- Background: blue gradient → green theme (bg-[var(--clr-bg-1)])\n- Title: blue text → green theme (text-[var(--clr-primary)])\n- Badge: red background → green accent (bg-[var(--clr-accent-light)])\n- All headings: gray/blue → green theme consistency\n- Text colors: gray-700 → green theme variables\n- Bullet points: blue → green for visual harmony\n\n✅ Now matches the site''s green color scheme throughout\n\n🤖 Generated with [Claude Code](https://claude.ai/code)\n\nCo-Authored-By: Claude <noreply@anthropic.com>\")",
+      "Bash(git -C '/Users/macbookpro/Claude/vive-blog' log --oneline -5)"
     ],
     "deny": []
   },
