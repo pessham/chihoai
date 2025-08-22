@@ -75,6 +75,12 @@
             margin: 2rem 0 1rem 0;
         }
         
+        .content-section p {
+            margin-bottom: 1.5rem;
+            line-height: 1.8;
+            color: #374151;
+        }
+        
         .highlight-box, .data-box, .method-box, .certification-box, .guidelines-box {
             background: #f0fdf4;
             border-left: 4px solid #18634B;
@@ -153,6 +159,24 @@
             border-radius: 0.5rem;
             box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
         }
+
+        /* Mobile hamburger menu animation */
+        #mobile-menu {
+            transition: all 0.3s ease;
+        }
+
+        /* Color variable definitions for consistency */
+        :root {
+            --text-primary: #5B47E0;
+        }
+        
+        .text-primary {
+            color: var(--text-primary);
+        }
+        
+        .hover\:text-primary:hover {
+            color: var(--text-primary);
+        }
     </style>
     
     <!-- Google Analytics -->
@@ -175,27 +199,54 @@
                     </a>
                 </div>
                 
-                <nav class="nav-menu">
-                    <a href="../agriculture.html" class="nav-link">農業DX</a>
-                    <a href="../tourism.html" class="nav-link">観光業DX</a>
-                    <a href="../manufacturing.html" class="nav-link">製造業DX</a>
-                    <a href="../blog-list.html" class="nav-link">ブログ一覧</a>
+                <!-- Desktop Navigation -->
+                <nav class="hidden md:flex nav-menu space-x-8">
+                    <a href="../agriculture.html" class="nav-link text-gray-700 hover:text-primary transition-colors">農業DX</a>
+                    <a href="../tourism.html" class="nav-link text-gray-700 hover:text-primary transition-colors">観光業DX</a>
+                    <a href="../manufacturing.html" class="nav-link text-gray-700 hover:text-primary transition-colors">製造業DX</a>
+                    <a href="../blog-list.html" class="nav-link text-gray-700 hover:text-primary transition-colors">ブログ一覧</a>
                 </nav>
+
+                <!-- Mobile menu button -->
+                <button class="md:hidden p-2" id="mobile-menu-button">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+                    </svg>
+                </button>
+            </div>
+
+            <!-- Mobile Navigation -->
+            <div class="md:hidden hidden" id="mobile-menu">
+                <div class="px-2 pt-2 pb-3 space-y-1 bg-white border-t">
+                    <a href="../agriculture.html" class="block px-3 py-2 text-gray-700 hover:bg-gray-50 hover:text-primary transition-colors">農業DX</a>
+                    <a href="../tourism.html" class="block px-3 py-2 text-gray-700 hover:bg-gray-50 hover:text-primary transition-colors">観光業DX</a>
+                    <a href="../manufacturing.html" class="block px-3 py-2 text-gray-700 hover:bg-gray-50 hover:text-primary transition-colors">製造業DX</a>
+                    <a href="../blog-list.html" class="block px-3 py-2 text-gray-700 hover:bg-gray-50 hover:text-primary transition-colors">ブログ一覧</a>
+                </div>
             </div>
         </div>
     </header>
 
-    <!-- Article Hero -->
+    <!-- Article Hero Image -->
     <div class="article-hero relative h-64 md:h-80 bg-cover bg-center" style="background-image: url('https://images.unsplash.com/photo-1563013544-824ae1b704d3?w=800&h=450&fit=crop&crop=center');">
-        <div class="absolute inset-0 bg-black bg-opacity-50"></div>
-        <div class="absolute inset-0 flex items-center justify-center">
-            <div class="text-center text-white px-4">
-                <h1 class="text-2xl md:text-4xl font-bold mb-4 leading-tight">
-                    ChatGPTセキュリティの真実：データ利用オプトアウト設定で「正しく恐れる」情報保護対策2025
-                </h1>
-                <p class="text-lg md:text-xl opacity-90">
-                    過剰な恐れから脱却し、適切なセキュリティ意識でAIを活用しよう
-                </p>
+        <div class="absolute inset-0 bg-black bg-opacity-30"></div>
+    </div>
+
+    <!-- Article Title Section -->
+    <div class="bg-white py-8">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+            <h1 class="text-3xl md:text-4xl font-bold text-gray-900 mb-4 leading-tight">
+                ChatGPTセキュリティの真実：データ利用オプトアウト設定で「正しく恐れる」情報保護対策2025
+            </h1>
+            <p class="text-xl text-gray-600 mb-6">
+                過剰な恐れから脱却し、適切なセキュリティ意識でAIを活用しよう
+            </p>
+            <div class="flex flex-wrap gap-2">
+                <span class="px-3 py-1 bg-green-100 text-green-800 text-sm rounded-full">ChatGPT</span>
+                <span class="px-3 py-1 bg-green-100 text-green-800 text-sm rounded-full">セキュリティ</span>
+                <span class="px-3 py-1 bg-green-100 text-green-800 text-sm rounded-full">データ保護</span>
+                <span class="px-3 py-1 bg-green-100 text-green-800 text-sm rounded-full">オプトアウト</span>
+                <span class="px-3 py-1 bg-green-100 text-green-800 text-sm rounded-full">情報漏洩対策</span>
             </div>
         </div>
     </div>
@@ -215,19 +266,14 @@
     <main class="main-content">
 
         <!-- 記事メタ情報 -->
-        <div class="article-meta">
-            <time class="publish-date">2025年8月23日</time>
-            <div class="article-tags">
-                <span class="tag">ChatGPT</span>
-                <span class="tag">セキュリティ</span>
-                <span class="tag">データ保護</span>
-                <span class="tag">オプトアウト</span>
-                <span class="tag">情報漏洩対策</span>
+        <div class="bg-gray-50 py-4">
+            <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+                <time class="text-gray-500 text-sm">2025年8月23日</time>
             </div>
         </div>
 
         <!-- 記事本文 -->
-        <article class="article-content">
+        <article class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
             <!-- はじめに -->
             <section class="content-section">
                 <h1>はじめに：ChatGPTセキュリティへの「正しい恐れ」とは</h1>
@@ -638,5 +684,32 @@
             <p>&copy; 2025 地方AIブースター All rights reserved.</p>
         </div>
     </footer>
+
+    <script>
+        // Mobile menu toggle
+        document.addEventListener('DOMContentLoaded', function() {
+            const mobileMenuButton = document.getElementById('mobile-menu-button');
+            const mobileMenu = document.getElementById('mobile-menu');
+
+            mobileMenuButton.addEventListener('click', function() {
+                mobileMenu.classList.toggle('hidden');
+            });
+
+            // Close mobile menu when clicking outside
+            document.addEventListener('click', function(event) {
+                if (!mobileMenuButton.contains(event.target) && !mobileMenu.contains(event.target)) {
+                    mobileMenu.classList.add('hidden');
+                }
+            });
+
+            // Close mobile menu when clicking on a link
+            const mobileLinks = mobileMenu.querySelectorAll('a');
+            mobileLinks.forEach(link => {
+                link.addEventListener('click', function() {
+                    mobileMenu.classList.add('hidden');
+                });
+            });
+        });
+    </script>
 </body>
 </html>
