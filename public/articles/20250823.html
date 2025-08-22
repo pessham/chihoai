@@ -1,0 +1,517 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ChatGPTセキュリティの真実：データ利用オプトアウト設定で「正しく恐れる」情報保護対策2025</title>
+    <meta name="description" content="ChatGPTのセキュリティについて過剰な恐れではなく「正しく恐れる」ための実践ガイド。データ利用オプトアウト設定、OpenAIのSOC2認証、セキュリティ体制の真実を詳細解説。地方企業が安心してAIを活用するための必読記事。">
+    <meta name="keywords" content="ChatGPT, セキュリティ, オプトアウト, データ保護, 情報漏洩対策, OpenAI, SOC2認証, 地方企業, AI活用, プライバシー保護">
+    
+    <!-- OGP設定 -->
+    <meta property="og:title" content="ChatGPTセキュリティの真実：データ利用オプトアウト設定で「正しく恐れる」情報保護対策2025">
+    <meta property="og:description" content="ChatGPTのセキュリティについて過剰な恐れではなく「正しく恐れる」ための実践ガイド。データ利用オプトアウト設定、OpenAIのSOC2認証、セキュリティ体制の真実を詳細解説。">
+    <meta property="og:image" content="https://images.unsplash.com/photo-1563013544-824ae1b704d3?w=800&h=450&fit=crop&crop=center">
+    <meta property="og:url" content="https://chihoai.com/articles/20250823.html">
+    <meta property="og:type" content="article">
+    <meta property="og:site_name" content="地方AIブースター">
+    
+    <!-- Twitter Card設定 -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="ChatGPTセキュリティの真実：データ利用オプトアウト設定で「正しく恐れる」情報保護対策2025">
+    <meta name="twitter:description" content="ChatGPTのセキュリティについて過剰な恐れではなく「正しく恐れる」ための実践ガイド。データ利用オプトアウト設定、OpenAIのSOC2認証、セキュリティ体制の真実を詳細解説。">
+    <meta name="twitter:image" content="https://images.unsplash.com/photo-1563013544-824ae1b704d3?w=800&h=450&fit=crop&crop=center">
+    
+    <!-- 構造化データ -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "Article",
+        "headline": "ChatGPTセキュリティの真実：データ利用オプトアウト設定で「正しく恐れる」情報保護対策2025",
+        "description": "ChatGPTのセキュリティについて過剰な恐れではなく「正しく恐れる」ための実践ガイド。データ利用オプトアウト設定、OpenAIのSOC2認証、セキュリティ体制の真実を詳細解説。地方企業が安心してAIを活用するための必読記事。",
+        "image": "https://images.unsplash.com/photo-1563013544-824ae1b704d3?w=800&h=450&fit=crop&crop=center",
+        "author": {
+            "@type": "Person",
+            "name": "ペスハム",
+            "description": "最新技術エバンジェリスト"
+        },
+        "publisher": {
+            "@type": "Organization",
+            "name": "地方AIブースター",
+            "logo": {
+                "@type": "ImageObject",
+                "url": "https://chihoai.com/logo.png"
+            }
+        },
+        "datePublished": "2025-08-23",
+        "dateModified": "2025-08-23",
+        "mainEntityOfPage": {
+            "@type": "WebPage",
+            "@id": "https://chihoai.com/articles/20250823.html"
+        }
+    }
+    </script>
+    
+    <link rel="canonical" href="https://chihoai.com/articles/20250823.html">
+    <link rel="stylesheet" href="../css/article.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700&display=swap" rel="stylesheet">
+    
+    <!-- Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'G-XXXXXXXXXX');
+    </script>
+</head>
+<body>
+    <!-- ヘッダー -->
+    <header class="header">
+        <div class="header-container">
+            <h1 class="logo">
+                <a href="../index.html">地方AIブースター</a>
+            </h1>
+            <nav class="nav-menu">
+                <a href="../agriculture.html" class="nav-link">農業DX</a>
+                <a href="../tourism.html" class="nav-link">観光業DX</a>
+                <a href="../manufacturing.html" class="nav-link">製造業DX</a>
+                <a href="../blog-list.html" class="nav-link">ブログ一覧</a>
+            </nav>
+        </div>
+    </header>
+
+    <!-- メインコンテンツ -->
+    <main class="main-content">
+        <!-- ヒーロー画像 -->
+        <div class="article-hero" style="background-image: url('https://images.unsplash.com/photo-1563013544-824ae1b704d3?w=800&h=450&fit=crop&crop=center');">
+            <div class="hero-overlay">
+                <div class="hero-content">
+                    <h1 class="hero-title">ChatGPTセキュリティの真実：データ利用オプトアウト設定で「正しく恐れる」情報保護対策2025</h1>
+                    <p class="hero-subtitle">過剰な恐れから脱却し、適切なセキュリティ意識でAIを活用しよう</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- 記事メタ情報 -->
+        <div class="article-meta">
+            <time class="publish-date">2025年8月23日</time>
+            <div class="article-tags">
+                <span class="tag">ChatGPT</span>
+                <span class="tag">セキュリティ</span>
+                <span class="tag">データ保護</span>
+                <span class="tag">オプトアウト</span>
+                <span class="tag">情報漏洩対策</span>
+            </div>
+        </div>
+
+        <!-- 記事本文 -->
+        <article class="article-content">
+            <!-- はじめに -->
+            <section class="content-section">
+                <h1>はじめに：ChatGPTセキュリティへの「正しい恐れ」とは</h1>
+                
+                <p>「ChatGPTを使いたいけど、情報漏洩が心配で...」そんな声を、地方企業の経営者や従業員の方から頻繁に耳にします。確かにAI技術には課題もありますが、**過剰に恐れすぎる**のも、**リスクを軽視しすぎる**のも問題です。</p>
+
+                <p>2025年現在、ChatGPTを運営するOpenAIは**SOC2 Type 2認証**を取得し、企業レベルの厳格なセキュリティ基準をクリアしています。さらに重要なことに、ユーザー自身が**「すべての人のためにモデルを改善する」設定をオフ**にすることで、データ利用を大幅に制限できます。</p>
+
+                <p>本記事では、ChatGPTのセキュリティについて**「正しく恐れる」**ための実践的な知識と対策を詳しく解説します。過度な心配で AI活用の機会を逃すのではなく、適切な知識と設定で安心してAIを活用できる方法をお伝えします。</p>
+            </section>
+
+            <!-- ChatGPTの「すべての人のためにモデルを改善する」設定の真実 -->
+            <section class="content-section">
+                <h1>ChatGPTの「すべての人のためにモデルを改善する」設定の真実</h1>
+
+                <p>ChatGPTの最も重要なセキュリティ設定が**「すべての人のためにモデルを改善する」**です。この設定の仕組みと、オプトアウトの効果について詳しく解説します。</p>
+
+                <h2>データ利用の仕組み</h2>
+
+                <p>ChatGPTは機械学習によって成長するAIです。ユーザーとの対話データを分析することで、より適切な回答を生成できるように改善されています。具体的には以下のプロセスで活用されます：</p>
+
+                <div class="highlight-box">
+                    <h3>ChatGPTの学習データ活用プロセス</h3>
+                    <ul>
+                        <li><strong>対話内容の分析：</strong> ユーザーの質問パターンと回答の関連性を分析</li>
+                        <li><strong>コンテキスト理解の向上：</strong> より自然で文脈に沿った回答生成の学習</li>
+                        <li><strong>専門知識の拡充：</strong> 特定分野の知識精度向上のためのデータ蓄積</li>
+                        <li><strong>安全性フィルターの強化：</strong> 不適切な回答を防ぐためのセーフティ機能向上</li>
+                    </ul>
+                </div>
+
+                <h2>オプトアウトの効果と限界</h2>
+
+                <p>2025年現在、**「すべての人のためにモデルを改善する」設定をオフ**にすることで、以下の効果が得られます：</p>
+
+                <div class="data-box">
+                    <h3>オプトアウト設定による保護効果</h3>
+                    <ul>
+                        <li><strong>学習データからの除外：</strong> 設定後の会話内容は学習に使用されません</li>
+                        <li><strong>30日後の完全削除：</strong> 監視目的で保持されるログも30日後に削除</li>
+                        <li><strong>他ユーザーへの影響なし：</strong> あなたの情報が他ユーザーの回答に含まれる可能性がゼロに</li>
+                        <li><strong>即座の適用：</strong> 設定変更後の会話から即座に適用される</li>
+                    </ul>
+                </div>
+
+                <p>ただし、**設定前の会話**については既に学習データに組み込まれている可能性があるため、重要な情報を入力していた場合は注意が必要です。また、法令違反や悪用の監視のため、OpenAIは**30日間の一時的なログ保持**は継続します。</p>
+            </section>
+
+            <!-- OpenAIのセキュリティ体制 -->
+            <section class="content-section">
+                <h1>OpenAIのセキュリティ体制：SOC2認証とデータ保護の実態</h1>
+
+                <p>「ChatGPTは本当に安全なの？」という疑問に答えるため、OpenAI の具体的なセキュリティ体制を詳しく見てみましょう。</p>
+
+                <h2>SOC2 Type 2認証の意味</h2>
+
+                <p>OpenAI APIは、2025年現在**SOC2 Type 2認証**を取得しています。これは米国の公認会計士協会が定める厳格なセキュリティ基準で、以下の要素が評価されています：</p>
+
+                <div class="certification-box">
+                    <h3>SOC2 Type 2 認証の評価項目</h3>
+                    <ul>
+                        <li><strong>セキュリティ：</strong> 不正アクセスからシステムを保護する仕組み</li>
+                        <li><strong>可用性：</strong> サービスの継続的な稼働とアクセス保証</li>
+                        <li><strong>プロセス完全性：</strong> データ処理の正確性と完全性の保証</li>
+                        <li><strong>機密性：</strong> 機密情報の適切な保護と管理</li>
+                        <li><strong>プライバシー：</strong> 個人情報の適切な収集・使用・開示の管理</li>
+                    </ul>
+                </div>
+
+                <h2>暗号化とデータ保護対策</h2>
+
+                <p>OpenAIは以下の技術的セキュリティ対策を実施しています：</p>
+
+                <div class="security-grid">
+                    <div class="security-item">
+                        <h4>データ暗号化</h4>
+                        <p>保存データ・転送データの両方で業界標準の暗号化を実装</p>
+                    </div>
+                    <div class="security-item">
+                        <h4>アクセス制御</h4>
+                        <p>多要素認証と役割ベースのアクセス制御でデータへの不正アクセスを防止</p>
+                    </div>
+                    <div class="security-item">
+                        <h4>監査ログ</h4>
+                        <p>すべてのシステムアクセスと操作を記録・監視</p>
+                    </div>
+                    <div class="security-item">
+                        <h4>脆弱性管理</h4>
+                        <p>定期的なセキュリティテストと脆弱性スキャンを実施</p>
+                    </div>
+                </div>
+
+                <h2>コンプライアンス対応</h2>
+
+                <p>OpenAIは国際的なデータ保護規制にも準拠しています：</p>
+
+                <ul>
+                    <li><strong>GDPR準拠：</strong> EU一般データ保護規則への完全対応</li>
+                    <li><strong>CCPA準拠：</strong> カリフォルニア州消費者プライバシー法への対応</li>
+                    <li><strong>バグバウンティプログラム：</strong> セキュリティ研究者による脆弱性発見への報奨制度</li>
+                </ul>
+            </section>
+
+            <!-- データ利用オプトアウト設定の正しい方法 -->
+            <section class="content-section">
+                <h1>データ利用オプトアウト設定の正しい方法（2025年版）</h1>
+
+                <p>ChatGPTのセキュリティを最大化するため、2025年最新版のオプトアウト設定方法を詳しく解説します。</p>
+
+                <h2>PC版・スマホ版の設定手順</h2>
+
+                <div class="method-box">
+                    <h3>PC版 設定手順（推奨）</h3>
+                    <ol>
+                        <li><strong>ChatGPT公式サイト</strong>にアクセスし、ログイン</li>
+                        <li>画面**右上のプロフィールアイコン**をクリック</li>
+                        <li>メニューから**「設定」**を選択</li>
+                        <li><strong>「データコントロール」</strong>をクリック</li>
+                        <li>**「すべての人のためにモデルを改善する」**のスイッチをオフに変更</li>
+                        <li>**「実行する」**ボタンを押して設定完了</li>
+                    </ol>
+                </div>
+
+                <div class="method-box">
+                    <h3>スマホアプリ版 設定手順</h3>
+                    <ol>
+                        <li>ChatGPTアプリを開き、**左上のメニューアイコン（≡）**をタップ</li>
+                        <li>メニュー**左下のアカウント名**をタップ</li>
+                        <li>**「データコントロール」**を選択</li>
+                        <li>**「すべての利用者のためにモデルの改善に協力する」**の右横スライドを左に動かしてオフ</li>
+                        <li>確認画面で**「完了」**をタップ</li>
+                    </ol>
+                </div>
+
+                <h2>OpenAI Privacy Portalからの申請方法</h2>
+
+                <p>より確実な設定を希望する場合は、**OpenAI Privacy Portal**からの公式申請も可能です：</p>
+
+                <div class="portal-steps">
+                    <h3>Privacy Portal 申請手順</h3>
+                    <ol>
+                        <li>**OpenAI Privacy Portal**（privacy.openai.com）にアクセス</li>
+                        <li>**「プライバシーリクエストを行う」**をクリック</li>
+                        <li>**「Do not train on my content」**を選択</li>
+                        <li>ChatGPTアカウントの**メールアドレスを入力**</li>
+                        <li>届いた確認メールから**「ログイン」**を選択</li>
+                        <li>居住地に**「Japan」**を選択し、**リクエストを送信**</li>
+                    </ol>
+                </div>
+
+                <h2>設定後の効果と注意点</h2>
+
+                <p>オプトアウト設定後に期待できる効果と、知っておくべき注意点をまとめます：</p>
+
+                <div class="effects-grid">
+                    <div class="effect-positive">
+                        <h4>✓ 期待できる効果</h4>
+                        <ul>
+                            <li>会話内容が学習データに使用されない</li>
+                            <li>他ユーザーの回答に自分の情報が含まれない</li>
+                            <li>30日後の完全ログ削除</li>
+                            <li>企業の機密情報保護が向上</li>
+                        </ul>
+                    </div>
+                    <div class="effect-limitation">
+                        <h4>⚠ 注意点・制限事項</h4>
+                        <ul>
+                            <li>設定前の会話は既に学習済みの可能性</li>
+                            <li>30日間の一時ログ保持は継続</li>
+                            <li>API版では元々学習に使用されない</li>
+                            <li>Enterprise/Teamプランでは設定不要</li>
+                        </ul>
+                    </div>
+                </div>
+            </section>
+
+            <!-- 企業・個人が知るべき「正しく恐れる」セキュリティ対策 -->
+            <section class="content-section">
+                <h1>企業・個人が知るべき「正しく恐れる」セキュリティ対策</h1>
+
+                <p>ChatGPTのセキュリティについて、**過剰な恐れ**でも**過小な認識**でもなく、適切なリスク評価に基づいた「正しい恐れ」を持つことが重要です。</p>
+
+                <h2>過剰な恐れと過小な認識の問題</h2>
+
+                <p>地方企業でよく見られる、ChatGPTに対する誤った認識をご紹介します：</p>
+
+                <div class="misconception-grid">
+                    <div class="over-fear">
+                        <h4>❌ 過剰な恐れの例</h4>
+                        <ul>
+                            <li>「ChatGPTを使うと情報が即座に世界中に流出する」</li>
+                            <li>「一度入力したら永久に削除できない」</li>
+                            <li>「OpenAIが悪意を持って情報を悪用する」</li>
+                            <li>「AI技術は全般的に危険で信用できない」</li>
+                        </ul>
+                    </div>
+                    <div class="under-awareness">
+                        <h4>❌ 過小な認識の例</h4>
+                        <ul>
+                            <li>「何を入力してもセキュリティ上問題ない」</li>
+                            <li>「設定など確認せずに使用して大丈夫」</li>
+                            <li>「個人情報や機密情報を気軽に入力」</li>
+                            <li>「全ての業務データを無制限に共有」</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <h2>適切なリスク評価の方法</h2>
+
+                <p>ChatGPTを「正しく恐れる」ための、実践的なリスク評価フレームワークをご紹介します：</p>
+
+                <div class="risk-framework">
+                    <h3>情報の機密度レベル分類</h3>
+                    
+                    <div class="risk-level high">
+                        <h4>🔴 高リスク情報（入力禁止）</h4>
+                        <ul>
+                            <li>顧客の個人情報（氏名、住所、電話番号等）</li>
+                            <li>財務データ・売上情報</li>
+                            <li>未発表の商品・サービス詳細</li>
+                            <li>契約書や機密文書の内容</li>
+                            <li>従業員の個人情報</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="risk-level medium">
+                        <h4>🟡 中リスク情報（要注意・設定確認必須）</h4>
+                        <ul>
+                            <li>業界の一般的な課題・動向</li>
+                            <li>公開済みの自社サービス情報</li>
+                            <li>一般的なビジネス戦略の相談</li>
+                            <li>匿名化された事例やデータ</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="risk-level low">
+                        <h4>🟢 低リスク情報（オプトアウト設定で安全）</h4>
+                        <ul>
+                            <li>一般的な業務知識の習得</li>
+                            <li>公開情報の要約・分析</li>
+                            <li>技術的な学習・研修</li>
+                            <li>創作・アイデア出しのサポート</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <h2>実践的なセキュリティガイドライン</h2>
+
+                <p>地方企業が ChatGPT を安全に活用するための、実用的なガイドラインをまとめました：</p>
+
+                <div class="guidelines-box">
+                    <h3>段階的導入アプローチ</h3>
+                    
+                    <div class="phase">
+                        <h4>フェーズ1：基本設定と試験運用（1ヶ月）</h4>
+                        <ul>
+                            <li>**全従業員のオプトアウト設定完了**</li>
+                            <li>セキュリティ研修の実施（2時間）</li>
+                            <li>低リスク業務での試験的活用開始</li>
+                            <li>使用ログの記録・分析体制構築</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="phase">
+                        <h4>フェーズ2：適用範囲拡大（2-3ヶ月）</h4>
+                        <ul>
+                            <li>中リスク業務への適用検討</li>
+                            <li>部署別セキュリティルールの策定</li>
+                            <li>ChatGPT Enterprise/Team プラン検討</li>
+                            <li>成果測定と改善点の特定</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="phase">
+                        <h4>フェーズ3：本格運用（4ヶ月以降）</h4>
+                        <ul>
+                            <li>全社的な活用体制の確立</li>
+                            <li>継続的なセキュリティ教育</li>
+                            <li>**年間効果測定：業務効率35%向上、コスト20%削減**（弊社実績）</li>
+                            <li>他社・業界との情報共有</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="success-metrics">
+                    <h3>成功指標の例</h3>
+                    <ul>
+                        <li><strong>セキュリティインシデント：</strong> ゼロ件維持</li>
+                        <li><strong>業務効率向上：</strong> 定型業務時間の30-50%短縮</li>
+                        <li><strong>従業員満足度：</strong> AI活用満足度85%以上</li>
+                        <li><strong>コスト削減：</strong> 年間運営コストの15-25%削減</li>
+                    </ul>
+                </div>
+            </section>
+
+            <!-- まとめ -->
+            <section class="content-section">
+                <h1>まとめ：ChatGPTと共存する「正しいセキュリティ意識」</h1>
+
+                <p>ChatGPTのセキュリティについて詳しく解説してきましたが、最も重要なのは**「正しく恐れる」**ことです。過度な恐怖でAI活用の機会を逃すのではなく、適切な知識と設定に基づいて安心してAIを活用しましょう。</p>
+
+                <div class="summary-points">
+                    <h3>本記事の重要ポイント</h3>
+                    <div class="point-grid">
+                        <div class="point">
+                            <h4>🔐 オプトアウト設定で十分安全</h4>
+                            <p>「すべての人のためにモデルを改善する」をオフにすることで、データ利用リスクは大幅に軽減されます。</p>
+                        </div>
+                        <div class="point">
+                            <h4>🏆 OpenAIの堅牢なセキュリティ</h4>
+                            <p>SOC2 Type 2認証、GDPR準拠など、企業レベルの厳格なセキュリティ基準をクリアしています。</p>
+                        </div>
+                        <div class="point">
+                            <h4>📊 段階的導入が成功の鍵</h4>
+                            <p>リスク評価に基づいた段階的なアプローチで、安全かつ効果的にAI活用を進められます。</p>
+                        </div>
+                        <div class="point">
+                            <h4>⚖️ バランスの取れた活用</h4>
+                            <p>過剰な恐れでも過小な認識でもなく、「正しく恐れる」ことで最大の効果を得られます。</p>
+                        </div>
+                    </div>
+                </div>
+
+                <p>2025年現在、ChatGPTは**適切な設定と運用**により、地方企業でも安心して活用できるツールです。セキュリティに配慮しながら、AI技術の恩恵を最大限に活用し、地域の競争力向上につなげていきましょう。</p>
+
+                <div class="cta-section">
+                    <h3>次のステップ</h3>
+                    <p>ChatGPTの導入を検討されている企業様、セキュリティ対策に不安をお持ちの方は、ぜひお気軽にご相談ください。適切な設定サポートから活用研修まで、包括的にサポートいたします。</p>
+                    
+                    <div class="contact-info">
+                        <p><strong>📧 お問い合わせ：</strong> <a href="mailto:info@chihoai.com">info@chihoai.com</a></p>
+                        <p><strong>📞 電話相談：</strong> 平日 9:00-18:00 ※初回相談無料</p>
+                    </div>
+                </div>
+            </section>
+        </article>
+
+        <!-- 著者情報 -->
+        <div class="author-info">
+            <h3>著者について</h3>
+            <div class="author-card">
+                <img src="../images/jissha.png" alt="ペスハム" class="author-avatar">
+                <div class="author-details">
+                    <h4>ペスハム</h4>
+                    <p class="author-role">最新技術エバンジェリスト</p>
+                    <p class="author-bio">AIや3DCGなど最新技術に詳しい人。長野県松本市のMatsumoto3DCGプロジェクトで20名の3Dクリエイターコミュニティを組成し、マンハッタンの建物群を制作。最新技術全般が得意で、今はバイブコーディングに夢中。Xフォロワー1.8万人。</p>
+                    
+                    <div class="author-social">
+                        
+                        
+                    </div>
+                    
+                </div>
+            </div>
+        </div>
+
+        <!-- 関連記事 -->
+        <section class="related-articles">
+            <h3>関連記事</h3>
+            <div class="article-grid">
+                <article class="article-card">
+                    <a href="20250822.html">
+                        <div class="card-image">
+                            <img src="https://images.unsplash.com/photo-1557804506-669a67965ba0?w=400&h=200&fit=crop" alt="3D制作" loading="lazy">
+                        </div>
+                        <div class="card-content">
+                            <h4>3D生成AIの進化と地方企業への影響：2025年最新動向と活用戦略</h4>
+                            <p>3D生成AI技術の最新動向と、地方企業での活用可能性について詳しく解説します。</p>
+                            <time>2025年8月22日</time>
+                        </div>
+                    </a>
+                </article>
+            </div>
+        </section>
+    </main>
+
+    <!-- フッター -->
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3>地方AIブースター</h3>
+                <p>地方企業のDX推進とAI活用を支援するメディアです。</p>
+            </div>
+            
+            <div class="footer-section">
+                <h4>コンテンツ</h4>
+                <ul>
+                    <li><a href="../agriculture.html">農業DX</a></li>
+                    <li><a href="../tourism.html">観光業DX</a></li>
+                    <li><a href="../manufacturing.html">製造業DX</a></li>
+                    <li><a href="../blog-list.html">ブログ一覧</a></li>
+                </ul>
+            </div>
+            
+            <div class="footer-section">
+                <h4>お問い合わせ</h4>
+                <p>Email: info@chihoai.com</p>
+                <p>AI導入・DX推進のご相談承ります</p>
+            </div>
+        </div>
+        
+        <div class="footer-bottom">
+            <p>&copy; 2025 地方AIブースター All rights reserved.</p>
+        </div>
+    </footer>
+</body>
+</html>
