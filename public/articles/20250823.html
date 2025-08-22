@@ -58,83 +58,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700&display=swap" rel="stylesheet">
     
     <style>
-        /* Article-specific styles */
-        .article-hero {
-            height: 400px;
-            background-size: cover;
-            background-position: center;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            position: relative;
-        }
-        
-        .hero-overlay {
-            background: rgba(0, 0, 0, 0.6);
-            width: 100%;
-            height: 100%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-        }
-        
-        .hero-content {
-            text-align: center;
-            color: white;
-            max-width: 800px;
-            padding: 2rem;
-        }
-        
-        .hero-title {
-            font-size: 2.5rem;
-            font-weight: bold;
-            margin-bottom: 1rem;
-            line-height: 1.2;
-        }
-        
-        .hero-subtitle {
-            font-size: 1.2rem;
-            opacity: 0.9;
-        }
-        
-        .article-meta {
-            padding: 2rem 0;
-            text-align: center;
-            border-bottom: 1px solid #e5e7eb;
-        }
-        
-        .publish-date {
-            color: #6b7280;
-            font-size: 0.9rem;
-            margin-bottom: 1rem;
-            display: block;
-        }
-        
-        .article-tags {
-            display: flex;
-            gap: 0.5rem;
-            justify-content: center;
-            flex-wrap: wrap;
-        }
-        
-        .tag {
-            background: #18634B;
-            color: white;
-            padding: 0.25rem 0.75rem;
-            border-radius: 9999px;
-            font-size: 0.875rem;
-        }
-        
-        .article-content {
-            max-width: 800px;
-            margin: 0 auto;
-            padding: 2rem;
-        }
-        
-        .content-section {
-            margin-bottom: 3rem;
-        }
-        
+        /* Article-specific styles */        
         .content-section h1 {
             color: #18634B;
             font-size: 2rem;
@@ -149,12 +73,6 @@
             font-size: 1.5rem;
             font-weight: bold;
             margin: 2rem 0 1rem 0;
-        }
-        
-        .content-section p {
-            margin-bottom: 1.5rem;
-            line-height: 1.8;
-            color: #374151;
         }
         
         .highlight-box, .data-box, .method-box, .certification-box, .guidelines-box {
@@ -235,69 +153,6 @@
             border-radius: 0.5rem;
             box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
         }
-        
-        .cta-section {
-            background: #f8f9fa;
-            padding: 2rem;
-            border-radius: 0.5rem;
-            margin: 3rem 0;
-        }
-        
-        .contact-info p {
-            margin: 0.5rem 0;
-        }
-        
-        .author-info {
-            background: white;
-            padding: 2rem;
-            border-radius: 0.5rem;
-            margin: 3rem auto;
-            max-width: 800px;
-            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
-        }
-        
-        .author-card {
-            display: flex;
-            gap: 1rem;
-            align-items: flex-start;
-        }
-        
-        .author-avatar {
-            width: 80px;
-            height: 80px;
-            border-radius: 50%;
-        }
-        
-        .author-details h4 {
-            color: #18634B;
-            font-weight: bold;
-            margin-bottom: 0.5rem;
-        }
-        
-        .author-role {
-            color: #6b7280;
-            font-size: 0.9rem;
-            margin-bottom: 1rem;
-        }
-        
-        @media (max-width: 768px) {
-            .hero-title {
-                font-size: 1.8rem;
-            }
-            
-            .article-content {
-                padding: 1rem;
-            }
-            
-            .security-grid, .effects-grid, .point-grid {
-                grid-template-columns: 1fr;
-            }
-            
-            .author-card {
-                flex-direction: column;
-                text-align: center;
-            }
-        }
     </style>
     
     <!-- Google Analytics -->
@@ -309,33 +164,55 @@
         gtag('config', 'G-XXXXXXXXXX');
     </script>
 </head>
-<body>
-    <!-- ヘッダー -->
-    <header class="header">
-        <div class="header-container">
-            <h1 class="logo">
-                <a href="../index.html">地方AIブースター</a>
-            </h1>
-            <nav class="nav-menu">
-                <a href="../agriculture.html" class="nav-link">農業DX</a>
-                <a href="../tourism.html" class="nav-link">観光業DX</a>
-                <a href="../manufacturing.html" class="nav-link">製造業DX</a>
-                <a href="../blog-list.html" class="nav-link">ブログ一覧</a>
-            </nav>
+<body class="bg-gray-50 text-gray-900 font-sans leading-relaxed">
+    <!-- Header -->
+    <header class="bg-white shadow-sm border-b">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-16">
+                <div class="flex items-center">
+                    <a href="../index.html" class="text-xl font-bold text-primary hover:text-secondary transition-colors">
+                        地方AIブースター
+                    </a>
+                </div>
+                
+                <nav class="nav-menu">
+                    <a href="../agriculture.html" class="nav-link">農業DX</a>
+                    <a href="../tourism.html" class="nav-link">観光業DX</a>
+                    <a href="../manufacturing.html" class="nav-link">製造業DX</a>
+                    <a href="../blog-list.html" class="nav-link">ブログ一覧</a>
+                </nav>
+            </div>
         </div>
     </header>
 
-    <!-- メインコンテンツ -->
-    <main class="main-content">
-        <!-- ヒーロー画像 -->
-        <div class="article-hero" style="background-image: url('../images/chatgpt-settings-screen.png');"
-            <div class="hero-overlay">
-                <div class="hero-content">
-                    <h1 class="hero-title">ChatGPTセキュリティの真実：データ利用オプトアウト設定で「正しく恐れる」情報保護対策2025</h1>
-                    <p class="hero-subtitle">過剰な恐れから脱却し、適切なセキュリティ意識でAIを活用しよう</p>
-                </div>
+    <!-- Article Hero -->
+    <div class="article-hero relative h-64 md:h-80 bg-cover bg-center" style="background-image: url('https://images.unsplash.com/photo-1563013544-824ae1b704d3?w=800&h=450&fit=crop&crop=center');">
+        <div class="absolute inset-0 bg-black bg-opacity-50"></div>
+        <div class="absolute inset-0 flex items-center justify-center">
+            <div class="text-center text-white px-4">
+                <h1 class="text-2xl md:text-4xl font-bold mb-4 leading-tight">
+                    ChatGPTセキュリティの真実：データ利用オプトアウト設定で「正しく恐れる」情報保護対策2025
+                </h1>
+                <p class="text-lg md:text-xl opacity-90">
+                    過剰な恐れから脱却し、適切なセキュリティ意識でAIを活用しよう
+                </p>
             </div>
         </div>
+    </div>
+
+    <!-- Breadcrumb -->
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-4">
+        <nav class="text-sm">
+            <a href="../index.html" class="text-primary hover:underline">ホーム</a>
+            <span class="mx-2 text-gray-500">/</span>
+            <a href="../blog-list.html" class="text-primary hover:underline">ブログ</a>
+            <span class="mx-2 text-gray-500">/</span>
+            <span class="text-gray-600">ChatGPTセキュリティの真実</span>
+        </nav>
+    </div>
+
+    <!-- メインコンテンツ -->
+    <main class="main-content">
 
         <!-- 記事メタ情報 -->
         <div class="article-meta">
