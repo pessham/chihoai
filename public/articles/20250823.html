@@ -10,7 +10,7 @@
     <!-- OGP設定 -->
     <meta property="og:title" content="ChatGPTセキュリティの真実：データ利用オプトアウト設定で「正しく恐れる」情報保護対策2025">
     <meta property="og:description" content="ChatGPTのセキュリティについて過剰な恐れではなく「正しく恐れる」ための実践ガイド。データ利用オプトアウト設定、OpenAIのSOC2認証、セキュリティ体制の真実を詳細解説。">
-    <meta property="og:image" content="https://chihoai.com/images/Pasted image 20250816094719.png">
+    <meta property="og:image" content="https://chihoai.com/images/chatgpt-settings-screen.png">
     <meta property="og:url" content="https://chihoai.com/articles/20250823.html">
     <meta property="og:type" content="article">
     <meta property="og:site_name" content="地方AIブースター">
@@ -19,7 +19,7 @@
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:title" content="ChatGPTセキュリティの真実：データ利用オプトアウト設定で「正しく恐れる」情報保護対策2025">
     <meta name="twitter:description" content="ChatGPTのセキュリティについて過剰な恐れではなく「正しく恐れる」ための実践ガイド。データ利用オプトアウト設定、OpenAIのSOC2認証、セキュリティ体制の真実を詳細解説。">
-    <meta name="twitter:image" content="https://chihoai.com/images/Pasted image 20250816094719.png">
+    <meta name="twitter:image" content="https://chihoai.com/images/chatgpt-settings-screen.png">
     
     <!-- 構造化データ -->
     <script type="application/ld+json">
@@ -28,7 +28,7 @@
         "@type": "Article",
         "headline": "ChatGPTセキュリティの真実：データ利用オプトアウト設定で「正しく恐れる」情報保護対策2025",
         "description": "ChatGPTのセキュリティについて過剰な恐れではなく「正しく恐れる」ための実践ガイド。データ利用オプトアウト設定、OpenAIのSOC2認証、セキュリティ体制の真実を詳細解説。地方企業が安心してAIを活用するための必読記事。",
-        "image": "https://chihoai.com/images/Pasted image 20250816094719.png",
+        "image": "https://chihoai.com/images/chatgpt-settings-screen.png",
         "author": {
             "@type": "Person",
             "name": "ペスハム",
@@ -52,10 +52,253 @@
     </script>
     
     <link rel="canonical" href="https://chihoai.com/articles/20250823.html">
-    <link rel="stylesheet" href="../css/article.css">
+    <link rel="stylesheet" href="../css/styles.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700&display=swap" rel="stylesheet">
+    
+    <style>
+        /* Article-specific styles */
+        .article-hero {
+            height: 400px;
+            background-size: cover;
+            background-position: center;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: relative;
+        }
+        
+        .hero-overlay {
+            background: rgba(0, 0, 0, 0.6);
+            width: 100%;
+            height: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        
+        .hero-content {
+            text-align: center;
+            color: white;
+            max-width: 800px;
+            padding: 2rem;
+        }
+        
+        .hero-title {
+            font-size: 2.5rem;
+            font-weight: bold;
+            margin-bottom: 1rem;
+            line-height: 1.2;
+        }
+        
+        .hero-subtitle {
+            font-size: 1.2rem;
+            opacity: 0.9;
+        }
+        
+        .article-meta {
+            padding: 2rem 0;
+            text-align: center;
+            border-bottom: 1px solid #e5e7eb;
+        }
+        
+        .publish-date {
+            color: #6b7280;
+            font-size: 0.9rem;
+            margin-bottom: 1rem;
+            display: block;
+        }
+        
+        .article-tags {
+            display: flex;
+            gap: 0.5rem;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+        
+        .tag {
+            background: #18634B;
+            color: white;
+            padding: 0.25rem 0.75rem;
+            border-radius: 9999px;
+            font-size: 0.875rem;
+        }
+        
+        .article-content {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 2rem;
+        }
+        
+        .content-section {
+            margin-bottom: 3rem;
+        }
+        
+        .content-section h1 {
+            color: #18634B;
+            font-size: 2rem;
+            font-weight: bold;
+            margin-bottom: 1.5rem;
+            border-bottom: 3px solid #18634B;
+            padding-bottom: 0.5rem;
+        }
+        
+        .content-section h2 {
+            color: #2B8A64;
+            font-size: 1.5rem;
+            font-weight: bold;
+            margin: 2rem 0 1rem 0;
+        }
+        
+        .content-section p {
+            margin-bottom: 1.5rem;
+            line-height: 1.8;
+            color: #374151;
+        }
+        
+        .highlight-box, .data-box, .method-box, .certification-box, .guidelines-box {
+            background: #f0fdf4;
+            border-left: 4px solid #18634B;
+            padding: 1.5rem;
+            margin: 2rem 0;
+            border-radius: 0.5rem;
+        }
+        
+        .highlight-box h3, .data-box h3, .method-box h3, .certification-box h3, .guidelines-box h3 {
+            color: #18634B;
+            font-weight: bold;
+            margin-bottom: 1rem;
+        }
+        
+        .security-grid, .effects-grid, .point-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 1.5rem;
+            margin: 2rem 0;
+        }
+        
+        .security-item, .effect-positive, .effect-limitation, .point {
+            background: white;
+            padding: 1.5rem;
+            border-radius: 0.5rem;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+        }
+        
+        .effect-positive {
+            border-left: 4px solid #10b981;
+        }
+        
+        .effect-limitation {
+            border-left: 4px solid #f59e0b;
+        }
+        
+        .risk-level.high {
+            background: #fef2f2;
+            border-left: 4px solid #ef4444;
+            padding: 1rem;
+            margin: 1rem 0;
+            border-radius: 0.5rem;
+        }
+        
+        .risk-level.medium {
+            background: #fffbeb;
+            border-left: 4px solid #f59e0b;
+            padding: 1rem;
+            margin: 1rem 0;
+            border-radius: 0.5rem;
+        }
+        
+        .risk-level.low {
+            background: #f0fdf4;
+            border-left: 4px solid #10b981;
+            padding: 1rem;
+            margin: 1rem 0;
+            border-radius: 0.5rem;
+        }
+        
+        .phase {
+            background: white;
+            padding: 1.5rem;
+            margin: 1rem 0;
+            border-radius: 0.5rem;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+        
+        .setting-image {
+            margin: 2rem 0;
+            text-align: center;
+        }
+        
+        .setting-image img {
+            max-width: 100%;
+            border-radius: 0.5rem;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+        }
+        
+        .cta-section {
+            background: #f8f9fa;
+            padding: 2rem;
+            border-radius: 0.5rem;
+            margin: 3rem 0;
+        }
+        
+        .contact-info p {
+            margin: 0.5rem 0;
+        }
+        
+        .author-info {
+            background: white;
+            padding: 2rem;
+            border-radius: 0.5rem;
+            margin: 3rem auto;
+            max-width: 800px;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+        }
+        
+        .author-card {
+            display: flex;
+            gap: 1rem;
+            align-items: flex-start;
+        }
+        
+        .author-avatar {
+            width: 80px;
+            height: 80px;
+            border-radius: 50%;
+        }
+        
+        .author-details h4 {
+            color: #18634B;
+            font-weight: bold;
+            margin-bottom: 0.5rem;
+        }
+        
+        .author-role {
+            color: #6b7280;
+            font-size: 0.9rem;
+            margin-bottom: 1rem;
+        }
+        
+        @media (max-width: 768px) {
+            .hero-title {
+                font-size: 1.8rem;
+            }
+            
+            .article-content {
+                padding: 1rem;
+            }
+            
+            .security-grid, .effects-grid, .point-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .author-card {
+                flex-direction: column;
+                text-align: center;
+            }
+        }
+    </style>
     
     <!-- Google Analytics -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"></script>
@@ -85,7 +328,7 @@
     <!-- メインコンテンツ -->
     <main class="main-content">
         <!-- ヒーロー画像 -->
-        <div class="article-hero" style="background-image: url('../images/Pasted image 20250816094719.png');">
+        <div class="article-hero" style="background-image: url('../images/chatgpt-settings-screen.png');"
             <div class="hero-overlay">
                 <div class="hero-content">
                     <h1 class="hero-title">ChatGPTセキュリティの真実：データ利用オプトアウト設定で「正しく恐れる」情報保護対策2025</h1>
@@ -231,7 +474,7 @@
                     </ol>
                     
                     <div class="setting-image">
-                        <img src="../images/Pasted image 20250816094719.png" alt="ChatGPT データコントロール設定画面" class="w-full rounded-lg shadow-lg">
+                        <img src="../images/chatgpt-settings-screen.png" alt="ChatGPT データコントロール設定画面" class="w-full rounded-lg shadow-lg">
                         <p class="text-sm text-gray-600 mt-2 text-center">▲ ChatGPTの「すべての人のためにモデルを改善する」設定画面</p>
                     </div>
                 </div>
