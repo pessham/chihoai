@@ -1,83 +1,29 @@
-<!DOCTYPE html>
-<html lang="ja">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>メタマケについて｜地方AIブースター</title>
-    <meta name="description" content="このページは移転しました。メタマケ（metamake）について詳しい情報は新しいページでご覧いただけます。">
-    <meta name="robots" content="noindex, follow">
-    
-    <!-- 301リダイレクト -->
-    <meta http-equiv="refresh" content="0; url=../about.html">
-    <link rel="canonical" href="https://chihoai.com/about.html">
-    
-    <!-- Favicon -->
-    <link rel="icon" type="image/x-icon" href="../images/metamakeblack.jpg">
-    
-        <!-- CSS -->
-        <style>
-        /* Reset any conflicting styles */
-        .nav, .nav ul, .nav li, .nav a {
-            all: unset;
-        }
-        
-        /* Primary colors */
-        :root {
-            --primary: #22c55e;
-            --primary-dark: #16a34a;
-            --primary-light: #dcfce7;
-        }
-        
-        .text-primary {
-            color: var(--primary) !important;
-        }
-        
-        .hover\:text-primary:hover {
-            color: var(--primary) !important;
-        }
-        
-        /* Prose styles */
-        .prose h2 {
-            margin-top: 2rem;
-            margin-bottom: 1rem;
-        }
-        
-        .prose h3 {
-            margin-top: 1.5rem;
-            margin-bottom: 0.75rem;
-        }
-        
-        .prose p {
-            margin-bottom: 1rem;
-            line-height: 1.7;
-        }
-        
-        .prose ul, .prose ol {
-            margin-bottom: 1rem;
-        }
-        
-        .prose li {
-            margin-bottom: 0.5rem;
-        }
-        
-        .author-info {
-            border-top: 1px solid #e5e7eb;
-            padding-top: 2rem;
-        }
-        
-        .related-articles {
-            border-top: 1px solid #e5e7eb;
-            padding-top: 2rem;
-        }
-    </style>
-    
-    <script>
-        // JavaScript リダイレクト（バックアップ）
-        setTimeout(function() {
-            window.location.href = '../about.html';
-        }, 1000);
-    </script>
+#!/usr/bin/env python3
+"""
+Apply unified header structure to all articles based on 20250823.html template
+"""
 
+import os
+import re
+import glob
+
+def apply_unified_header(file_path):
+    """Apply unified header structure to a single article file"""
+    try:
+        with open(file_path, 'r', encoding='utf-8') as f:
+            content = f.read()
+        
+        # Skip if already has unified header (check for metamake logo)
+        if 'metamakeblack.jpg' in content and 'onclick="toggleMobileMenu()"' in content:
+            print(f"✓ Already unified: {os.path.basename(file_path)}")
+            return True
+        
+        # 1. Add Tailwind CDN if not present
+        if 'cdn.tailwindcss.com' not in content:
+            # Find head section and add Tailwind
+            head_end = content.find('</head>')
+            if head_end != -1:
+                tailwind_cdn = '''
     <!-- Tailwind CSS -->
     <script src="https://cdn.tailwindcss.com"></script>
     <script>
@@ -93,9 +39,12 @@
             }
         }
     </script>
-</head>
-<body>
-    <!-- Header -->
+'''
+                content = content[:head_end] + tailwind_cdn + content[head_end:]
+        
+        # 2. Replace entire header section with unified structure
+        header_pattern = r'<!-- Header -->\s*<header[^>]*>.*?</header>'
+        unified_header = '''<!-- Header -->
     <header class="shadow-lg border-b-4 sticky top-0 z-50" style="border-bottom-color: #18634B; background: rgba(255, 255, 255, 0.98); backdrop-filter: blur(15px);">
         <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="flex justify-between items-center h-16">
@@ -153,23 +102,94 @@
                 </div>
             </div>
         </div>
-    </header>
-    <div class="redirect-message">
-        <h1>ページが移転しました</h1>
-        <p>
-            運営者情報は「メタマケについて」ページに統合されました。<br>
-            自動的に新しいページにリダイレクトします。
-        </p>
-        <p>
-            自動的に移動しない場合は、下記リンクをクリックしてください。
-        </p>
-        <a href="../about.html" class="redirect-link">
-            メタマケについて → 新しいページへ
-        </a>
-    </div>
-
-    
-    <script>
+    </header>'''
+        
+        if re.search(header_pattern, content, flags=re.MULTILINE | re.DOTALL):
+            content = re.sub(header_pattern, unified_header, content, flags=re.MULTILINE | re.DOTALL)
+        else:
+            # If no header found, try to find body tag and insert after it
+            body_start = content.find('<body')
+            if body_start != -1:
+                body_end = content.find('>', body_start) + 1
+                content = content[:body_end] + '\n    ' + unified_header + content[body_end:]
+        
+        # 3. Clean up and add unified CSS
+        css_start = content.find('<style>')
+        css_end = content.find('</style>')
+        
+        if css_start != -1 and css_end != -1:
+            # Replace existing CSS with clean unified version
+            unified_css = '''    <style>
+        /* Reset any conflicting styles */
+        .nav, .nav ul, .nav li, .nav a {
+            all: unset;
+        }
+        
+        /* Primary colors */
+        :root {
+            --primary: #22c55e;
+            --primary-dark: #16a34a;
+            --primary-light: #dcfce7;
+        }
+        
+        .text-primary {
+            color: var(--primary) !important;
+        }
+        
+        .hover\\:text-primary:hover {
+            color: var(--primary) !important;
+        }
+        
+        /* Prose styles */
+        .prose h2 {
+            margin-top: 2rem;
+            margin-bottom: 1rem;
+        }
+        
+        .prose h3 {
+            margin-top: 1.5rem;
+            margin-bottom: 0.75rem;
+        }
+        
+        .prose p {
+            margin-bottom: 1rem;
+            line-height: 1.7;
+        }
+        
+        .prose ul, .prose ol {
+            margin-bottom: 1rem;
+        }
+        
+        .prose li {
+            margin-bottom: 0.5rem;
+        }
+        
+        .author-info {
+            border-top: 1px solid #e5e7eb;
+            padding-top: 2rem;
+        }
+        
+        .related-articles {
+            border-top: 1px solid #e5e7eb;
+            padding-top: 2rem;
+        }
+    </style>'''
+            
+            content = content[:css_start] + unified_css + content[css_end + 8:]
+        else:
+            # Add CSS before </head>
+            head_end = content.find('</head>')
+            if head_end != -1:
+                content = content[:head_end] + unified_css + '\n    ' + content[head_end:]
+        
+        # 4. Replace or add unified JavaScript
+        script_patterns = [
+            r'<script>\s*// Mobile menu toggle[\s\S]*?</script>',
+            r'<script>\s*document\.addEventListener\(\'DOMContentLoaded\'[\s\S]*?</script>',
+            r'<script>\s*function toggleMobileMenu\(\)[\s\S]*?</script>'
+        ]
+        
+        unified_js = '''    <script>
         // Mobile menu toggle function
         function toggleMobileMenu() {
             const mobileMenu = document.getElementById('mobile-menu');
@@ -200,6 +220,61 @@
                 });
             }
         });
-    </script>
-</body>
-</html>
+    </script>'''
+        
+        # Remove any existing mobile menu scripts
+        found_script = False
+        for pattern in script_patterns:
+            if re.search(pattern, content, flags=re.MULTILINE | re.DOTALL):
+                content = re.sub(pattern, '', content, flags=re.MULTILINE | re.DOTALL)
+                found_script = True
+        
+        # Add unified script before </body>
+        body_end = content.rfind('</body>')
+        if body_end != -1:
+            content = content[:body_end] + unified_js + '\n' + content[body_end:]
+        
+        # Write the updated content
+        with open(file_path, 'w', encoding='utf-8') as f:
+            f.write(content)
+        
+        print(f"✓ Updated: {os.path.basename(file_path)}")
+        return True
+        
+    except Exception as e:
+        print(f"✗ Error updating {os.path.basename(file_path)}: {e}")
+        return False
+
+def main():
+    """Apply unified header to all article files"""
+    articles_dir = "/Users/macbookpro/Claude/vive-blog/public/articles"
+    
+    # Get all HTML files except 20250823.html (our template)
+    html_files = [f for f in glob.glob(os.path.join(articles_dir, "*.html")) 
+                  if not f.endswith("20250823.html")]
+    
+    if not html_files:
+        print("No HTML files found to update")
+        return
+    
+    print(f"Found {len(html_files)} article files to update")
+    print("Applying unified header structure from 20250823.html template...")
+    print("-" * 60)
+    
+    success_count = 0
+    total_count = len(html_files)
+    
+    for file_path in sorted(html_files):
+        if apply_unified_header(file_path):
+            success_count += 1
+    
+    print("-" * 60)
+    print(f"Completed: {success_count}/{total_count} files successfully updated")
+    
+    if success_count == total_count:
+        print("🎉 All files updated successfully!")
+    else:
+        print(f"⚠️ {total_count - success_count} files had issues")
+
+if __name__ == "__main__":
+    main()

@@ -63,8 +63,13 @@
     <script src="https://cdn.tailwindcss.com"></script>
     
         <!-- CSS -->
-    <style>
-        /* Primary color variables */
+        <style>
+        /* Reset any conflicting styles */
+        .nav, .nav ul, .nav li, .nav a {
+            all: unset;
+        }
+        
+        /* Primary colors */
         :root {
             --primary: #22c55e;
             --primary-dark: #16a34a;
@@ -72,11 +77,11 @@
         }
         
         .text-primary {
-            color: var(--primary);
+            color: var(--primary) !important;
         }
         
         .hover\:text-primary:hover {
-            color: var(--primary);
+            color: var(--primary) !important;
         }
         
         /* Prose styles */
@@ -103,7 +108,6 @@
             margin-bottom: 0.5rem;
         }
         
-        /* Author and related articles */
         .author-info {
             border-top: 1px solid #e5e7eb;
             padding-top: 2rem;
@@ -116,6 +120,65 @@
     </style>
 </head>
 <body>
+    <!-- Header -->
+    <header class="shadow-lg border-b-4 sticky top-0 z-50" style="border-bottom-color: #18634B; background: rgba(255, 255, 255, 0.98); backdrop-filter: blur(15px);">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-16">
+                <a href="../index.html" class="flex items-center group">
+                    <div class="flex items-center gap-3">
+                        <img 
+                            src="../images/metamakeblack.jpg" 
+                            alt="メタマケロゴ" 
+                            class="w-10 h-10 rounded-lg object-cover shadow-md group-hover:scale-105 transition-transform"
+                        />
+                        <div class="flex flex-col">
+                            <div class="text-xs font-bold text-gray-600 leading-none">metamake</div>
+                            <h1 class="text-lg font-black group-hover:scale-105 transition-transform whitespace-nowrap leading-none mt-1" style="color: #000000;">
+                                地方<span style="color: #18634B;">AI</span><span style="color: #29D3C3;">ブースター</span>
+                            </h1>
+                        </div>
+                    </div>
+                </a>
+                
+                <!-- Desktop Navigation -->
+                <nav class="hidden md:flex space-x-6">
+                    <a href="../index.html" class="px-4 py-2 rounded-lg text-sm font-bold transition-all hover:scale-105" style="color: #333333;">ホーム</a>
+                    <a href="../manufacturing.html" class="px-4 py-2 rounded-lg text-sm font-bold transition-all hover:scale-105" style="color: #333333;">製造業DX</a>
+                    <a href="../tourism.html" class="px-4 py-2 rounded-lg text-sm font-bold transition-all hover:scale-105" style="color: #333333;">観光業DX</a>
+                    <a href="../agriculture.html" class="px-4 py-2 rounded-lg text-sm font-bold transition-all hover:scale-105" style="color: #333333;">農業DX</a>
+                    <a href="../blog-list.html" class="px-4 py-2 rounded-lg text-sm font-bold transition-all hover:scale-105" style="color: #333333;">ブログ一覧</a>
+                </nav>
+                
+                <!-- Mobile menu button -->
+                <div class="md:hidden">
+                    <button
+                        type="button"
+                        class="rounded-lg p-2 inline-flex items-center justify-center transition-all hover:scale-105"
+                        style="background: linear-gradient(135deg, #18634B 0%, #2B8A64 100%); color: #ffffff;"
+                        onclick="toggleMobileMenu()"
+                    >
+                        <span class="sr-only">メニューを開く</span>
+                        <svg class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/>
+                        </svg>
+                    </button>
+                </div>
+            </div>
+            
+            <!-- Mobile Navigation -->
+            <div class="md:hidden hidden bg-white border-t border-gray-200" id="mobile-menu">
+                <div class="px-2 pt-2 pb-3 space-y-1">
+                    <a href="../index.html" class="block px-3 py-2 text-gray-700 hover:text-primary hover:bg-gray-50 rounded-md font-medium transition-colors">ホーム</a>
+                    <a href="../manufacturing.html" class="block px-3 py-2 text-gray-700 hover:text-primary hover:bg-gray-50 rounded-md font-medium transition-colors">製造業DX</a>
+                    <a href="../tourism.html" class="block px-3 py-2 text-gray-700 hover:text-primary hover:bg-gray-50 rounded-md font-medium transition-colors">観光業DX</a>
+                    <a href="../agriculture.html" class="block px-3 py-2 text-gray-700 hover:text-primary hover:bg-gray-50 rounded-md font-medium transition-colors">農業DX</a>
+                    <a href="../blog-list.html" class="block px-3 py-2 text-gray-700 hover:text-primary hover:bg-gray-50 rounded-md font-medium transition-colors">ブログ一覧</a>
+                    <a href="../index.html#ai-diagnosis" class="block px-3 py-2 text-white rounded-md font-medium transition-colors" style="background: linear-gradient(135deg, #29D3C3 0%, #4DDDD1 100%);">🚀 AI導入診断</a>
+                    <a href="../about.html" class="block px-3 py-2 text-white rounded-md font-medium transition-colors" style="background: linear-gradient(135deg, #18634B 0%, #2B8A64 100%);">メタマケについて</a>
+                </div>
+            </div>
+        </div>
+    </header>
     <header class="header">
         <div class="nav-container">
             <a href="../index.html" class="logo">地方AIブースター</a>            <!-- Desktop Navigation -->
@@ -285,23 +348,25 @@
         <p>&copy; 2024 地方AIブースター. All rights reserved.</p>
     </footer>
 
-        <script>
-        // Mobile menu toggle
-        document.addEventListener('DOMContentLoaded', function() {
-            const mobileMenuButton = document.getElementById('mobile-menu-button');
+        
+    <script>
+        // Mobile menu toggle function
+        function toggleMobileMenu() {
             const mobileMenu = document.getElementById('mobile-menu');
-
-            if (mobileMenuButton && mobileMenu) {
-                // Toggle mobile menu
-                mobileMenuButton.addEventListener('click', function(e) {
-                    e.preventDefault();
-                    e.stopPropagation();
-                    mobileMenu.classList.toggle('hidden');
-                });
-
+            if (mobileMenu) {
+                mobileMenu.classList.toggle('hidden');
+            }
+        }
+        
+        // Initialize mobile menu functionality
+        document.addEventListener('DOMContentLoaded', function() {
+            const mobileMenu = document.getElementById('mobile-menu');
+            
+            if (mobileMenu) {
                 // Close mobile menu when clicking outside
                 document.addEventListener('click', function(event) {
-                    if (!mobileMenuButton.contains(event.target) && !mobileMenu.contains(event.target)) {
+                    const mobileButton = event.target.closest('button[onclick="toggleMobileMenu()"]');
+                    if (!mobileButton && !mobileMenu.contains(event.target)) {
                         mobileMenu.classList.add('hidden');
                     }
                 });
