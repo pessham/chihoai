@@ -14,47 +14,56 @@
     <!-- Favicon -->
     <link rel="icon" type="image/x-icon" href="../images/metamakeblack.jpg">
     
+        <!-- CSS -->
     <style>
-        body {
-            font-family: 'Noto Sans JP', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
-            background: #f7f8fa;
-            color: #333;
-            text-align: center;
-            padding: 50px 20px;
+        /* Primary color variables */
+        :root {
+            --primary: #22c55e;
+            --primary-dark: #16a34a;
+            --primary-light: #dcfce7;
         }
         
-        .redirect-message {
-            max-width: 600px;
-            margin: 0 auto;
-            background: white;
-            padding: 40px;
-            border-radius: 12px;
-            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+        .text-primary {
+            color: var(--primary);
         }
         
-        .redirect-message h1 {
-            color: #18634B;
-            margin-bottom: 20px;
+        .hover\:text-primary:hover {
+            color: var(--primary);
         }
         
-        .redirect-message p {
-            line-height: 1.6;
-            margin-bottom: 20px;
+        /* Prose styles */
+        .prose h2 {
+            margin-top: 2rem;
+            margin-bottom: 1rem;
         }
         
-        .redirect-link {
-            display: inline-block;
-            background: linear-gradient(135deg, #18634B 0%, #2B8A64 100%);
-            color: white;
-            padding: 12px 24px;
-            border-radius: 8px;
-            text-decoration: none;
-            font-weight: 600;
-            transition: transform 0.3s ease;
+        .prose h3 {
+            margin-top: 1.5rem;
+            margin-bottom: 0.75rem;
         }
         
-        .redirect-link:hover {
-            transform: translateY(-2px);
+        .prose p {
+            margin-bottom: 1rem;
+            line-height: 1.7;
+        }
+        
+        .prose ul, .prose ol {
+            margin-bottom: 1rem;
+        }
+        
+        .prose li {
+            margin-bottom: 0.5rem;
+        }
+        
+        /* Author and related articles */
+        .author-info {
+            border-top: 1px solid #e5e7eb;
+            padding-top: 2rem;
+        }
+        
+        .related-articles {
+            border-top: 1px solid #e5e7eb;
+            padding-top: 2rem;
         }
     </style>
     
@@ -79,5 +88,37 @@
             メタマケについて → 新しいページへ
         </a>
     </div>
+
+    <script>
+        // Mobile menu toggle
+        document.addEventListener('DOMContentLoaded', function() {
+            const mobileMenuButton = document.getElementById('mobile-menu-button');
+            const mobileMenu = document.getElementById('mobile-menu');
+
+            if (mobileMenuButton && mobileMenu) {
+                // Toggle mobile menu
+                mobileMenuButton.addEventListener('click', function(e) {
+                    e.preventDefault();
+                    e.stopPropagation();
+                    mobileMenu.classList.toggle('hidden');
+                });
+
+                // Close mobile menu when clicking outside
+                document.addEventListener('click', function(event) {
+                    if (!mobileMenuButton.contains(event.target) && !mobileMenu.contains(event.target)) {
+                        mobileMenu.classList.add('hidden');
+                    }
+                });
+
+                // Close mobile menu when clicking on a link
+                const mobileLinks = mobileMenu.querySelectorAll('a');
+                mobileLinks.forEach(link => {
+                    link.addEventListener('click', function() {
+                        mobileMenu.classList.add('hidden');
+                    });
+                });
+            }
+        });
+    </script>
 </body>
 </html>

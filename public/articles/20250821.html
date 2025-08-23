@@ -94,30 +94,30 @@
                         地方AIブースター
                     </a>
                 </div>            <!-- Desktop Navigation -->
-            <nav class="hidden md:flex nav-menu space-x-8">
-                <a href="../agriculture.html" class="nav-link text-gray-700 hover:text-primary transition-colors">農業DX</a>
-                <a href="../tourism.html" class="nav-link text-gray-700 hover:text-primary transition-colors">観光業DX</a>
-                <a href="../manufacturing.html" class="nav-link text-gray-700 hover:text-primary transition-colors">製造業DX</a>
-                <a href="../blog-list.html" class="nav-link text-gray-700 hover:text-primary transition-colors">ブログ一覧</a>
-            </nav>
+                <nav class="hidden md:flex space-x-8" id="desktop-nav">
+                    <a href="../agriculture.html" class="text-gray-700 hover:text-primary transition-colors px-3 py-2 rounded-md font-medium">農業DX</a>
+                    <a href="../tourism.html" class="text-gray-700 hover:text-primary transition-colors px-3 py-2 rounded-md font-medium">観光業DX</a>
+                    <a href="../manufacturing.html" class="text-gray-700 hover:text-primary transition-colors px-3 py-2 rounded-md font-medium">製造業DX</a>
+                    <a href="../blog-list.html" class="text-gray-700 hover:text-primary transition-colors px-3 py-2 rounded-md font-medium">ブログ一覧</a>
+                </nav>
 
             <!-- Mobile menu button -->
-            <button class="md:hidden p-2" id="mobile-menu-button">
-                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
-                </svg>
-            </button>
+                <button class="md:hidden p-2 text-gray-600 hover:text-primary" id="mobile-menu-button" aria-label="メニューを開く">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+                    </svg>
+                </button>
         </div>
 
         <!-- Mobile Navigation -->
-                <div class="mobile-nav" id="mobile-menu">
-                    <div class="mobile-nav-content">
-                        <a href="../agriculture.html" class="mobile-nav-link">農業DX</a>
-                        <a href="../tourism.html" class="mobile-nav-link">観光業DX</a>
-                        <a href="../manufacturing.html" class="mobile-nav-link">製造業DX</a>
-                        <a href="../blog-list.html" class="mobile-nav-link">ブログ一覧</a>
-                    </div>
+            <div class="md:hidden hidden bg-white border-t border-gray-200" id="mobile-menu">
+                <div class="px-2 pt-2 pb-3 space-y-1">
+                    <a href="../agriculture.html" class="block px-3 py-2 text-gray-700 hover:text-primary hover:bg-gray-50 rounded-md font-medium transition-colors">農業DX</a>
+                    <a href="../tourism.html" class="block px-3 py-2 text-gray-700 hover:text-primary hover:bg-gray-50 rounded-md font-medium transition-colors">観光業DX</a>
+                    <a href="../manufacturing.html" class="block px-3 py-2 text-gray-700 hover:text-primary hover:bg-gray-50 rounded-md font-medium transition-colors">製造業DX</a>
+                    <a href="../blog-list.html" class="block px-3 py-2 text-gray-700 hover:text-primary hover:bg-gray-50 rounded-md font-medium transition-colors">ブログ一覧</a>
                 </div>
+            </div>
             </div>
         </div>
     </header>
@@ -504,45 +504,24 @@
     </footer>
 
     <!-- CSS -->
+        <!-- CSS -->
     <style>
-        .nav-menu {
-            display: flex;
-            gap: 1.5rem;
-            align-items: center;
+        /* Primary color variables */
+        :root {
+            --primary: #22c55e;
+            --primary-dark: #16a34a;
+            --primary-light: #dcfce7;
         }
         
-        .nav-link {
-            color: #6b7280;
-            text-decoration: none;
-            padding: 0.5rem 1rem;
-            border-radius: 0.375rem;
-            transition: all 0.2s;
-            font-weight: 500;
+        .text-primary {
+            color: var(--primary);
         }
         
-        .nav-link:hover {
-            color: #22c55e;
-            background-color: #f0fdf4;
+        .hover\:text-primary:hover {
+            color: var(--primary);
         }
         
-        .nav-link.active {
-            color: #22c55e;
-            background-color: #f0fdf4;
-            font-weight: 600;
-        }
-        
-        @media (max-width: 768px) {
-            .nav-menu {
-                flex-direction: column;
-                gap: 0.5rem;
-            }
-            
-            .nav-link {
-                padding: 0.375rem 0.75rem;
-                font-size: 0.875rem;
-            }
-        }
-        
+        /* Prose styles */
         .prose h2 {
             margin-top: 2rem;
             margin-bottom: 1rem;
@@ -566,6 +545,7 @@
             margin-bottom: 0.5rem;
         }
         
+        /* Author and related articles */
         .author-info {
             border-top: 1px solid #e5e7eb;
             padding-top: 2rem;
@@ -574,149 +554,29 @@
         .related-articles {
             border-top: 1px solid #e5e7eb;
             padding-top: 2rem;
-        }        
-        /* Mobile hamburger menu styles */
-        #mobile-menu {
-            transition: all 0.3s ease;
         }
-
-        :root {
-            --text-primary: #5B47E0;
-        }
-        
-        .text-primary {
-            color: var(--text-primary);
-        }
-        
-        .hover\:text-primary:hover {
-            color: var(--text-primary);
-        }        
-        /* Force correct mobile navigation display */
-        @media (max-width: 767px) {
-            .nav-menu {
-                display: none !important;
-            }
-            
-            #mobile-menu-button {
-                display: block !important;
-            }
-        }
-        
-        @media (min-width: 768px) {
-            .nav-menu {
-                display: flex !important;
-            }
-            
-            #mobile-menu-button {
-                display: none !important;
-            }
-            
-            #mobile-menu {
-                display: none !important;
-            }
-        }
-        /* Complete navigation fix */
-        .desktop-nav {
-            display: flex;
-            gap: 2rem;
-            align-items: center;
-        }
-        
-        .mobile-menu-btn {
-            display: none;
-            padding: 0.5rem;
-            background: none;
-            border: none;
-            cursor: pointer;
-        }
-        
-        .mobile-nav {
-            display: none;
-            background: white;
-            border-top: 1px solid #e5e7eb;
-            padding: 0.5rem;
-        }
-        
-        .mobile-nav-content {
-            display: flex;
-            flex-direction: column;
-            gap: 0.25rem;
-        }
-        
-        .mobile-nav-link {
-            display: block;
-            padding: 0.75rem 1rem;
-            color: #374151;
-            text-decoration: none;
-            border-radius: 0.375rem;
-            transition: all 0.2s;
-        }
-        
-        .mobile-nav-link:hover {
-            background: #f9fafb;
-            color: #22c55e;
-        }
-        
-        .mobile-nav.show {
-            display: block !important;
-        }
-        
-        @media (max-width: 767px) {
-            .desktop-nav {
-                display: none !important;
-            }
-            
-            .mobile-menu-btn {
-                display: block !important;
-            }
-        }
-        
-        @media (min-width: 768px) {
-            .desktop-nav {
-                display: flex !important;
-            }
-            
-            .mobile-menu-btn {
-                display: none !important;
-            }
-            
-            .mobile-nav {
-                display: none !important;
-            }
-        }
-
-
-
     </style>
 
-    <script>
+        <script>
         // Mobile menu toggle
         document.addEventListener('DOMContentLoaded', function() {
             const mobileMenuButton = document.getElementById('mobile-menu-button');
             const mobileMenu = document.getElementById('mobile-menu');
 
             if (mobileMenuButton && mobileMenu) {
+                // Toggle mobile menu
                 mobileMenuButton.addEventListener('click', function(e) {
+                    e.preventDefault();
                     e.stopPropagation();
-                    mobileMenu.classList.toggle('show');
+                    mobileMenu.classList.toggle('hidden');
                 });
 
                 // Close mobile menu when clicking outside
                 document.addEventListener('click', function(event) {
                     if (!mobileMenuButton.contains(event.target) && !mobileMenu.contains(event.target)) {
-                        mobileMenu.classList.remove('show');
+                        mobileMenu.classList.add('hidden');
                     }
                 });
-
-                // Close mobile menu when clicking on a link
-                const mobileLinks = mobileMenu.querySelectorAll('a');
-                mobileLinks.forEach(link => {
-                    link.addEventListener('click', function() {
-                        mobileMenu.classList.remove('show');
-                    });
-                });
-            }
-        });
 
                 // Close mobile menu when clicking on a link
                 const mobileLinks = mobileMenu.querySelectorAll('a');

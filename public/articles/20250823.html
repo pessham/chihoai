@@ -57,221 +57,57 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700&display=swap" rel="stylesheet">
     
+        <!-- CSS -->
     <style>
-        /* Article-specific styles */        
-        .content-section h1 {
-            color: #18634B;
-            font-size: 2rem;
-            font-weight: bold;
-            margin-bottom: 1.5rem;
-            border-bottom: 3px solid #18634B;
-            padding-bottom: 0.5rem;
-        }
-        
-        .content-section h2 {
-            color: #2B8A64;
-            font-size: 1.5rem;
-            font-weight: bold;
-            margin: 2rem 0 1rem 0;
-        }
-        
-        .content-section p {
-            margin-bottom: 1.5rem;
-            line-height: 1.8;
-            color: #374151;
-        }
-        
-        .highlight-box, .data-box, .method-box, .certification-box, .guidelines-box {
-            background: #f0fdf4;
-            border-left: 4px solid #18634B;
-            padding: 1.5rem;
-            margin: 2rem 0;
-            border-radius: 0.5rem;
-        }
-        
-        .highlight-box h3, .data-box h3, .method-box h3, .certification-box h3, .guidelines-box h3 {
-            color: #18634B;
-            font-weight: bold;
-            margin-bottom: 1rem;
-        }
-        
-        .security-grid, .effects-grid, .point-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 1.5rem;
-            margin: 2rem 0;
-        }
-        
-        .security-item, .effect-positive, .effect-limitation, .point {
-            background: white;
-            padding: 1.5rem;
-            border-radius: 0.5rem;
-            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
-        }
-        
-        .effect-positive {
-            border-left: 4px solid #10b981;
-        }
-        
-        .effect-limitation {
-            border-left: 4px solid #f59e0b;
-        }
-        
-        .risk-level.high {
-            background: #fef2f2;
-            border-left: 4px solid #ef4444;
-            padding: 1rem;
-            margin: 1rem 0;
-            border-radius: 0.5rem;
-        }
-        
-        .risk-level.medium {
-            background: #fffbeb;
-            border-left: 4px solid #f59e0b;
-            padding: 1rem;
-            margin: 1rem 0;
-            border-radius: 0.5rem;
-        }
-        
-        .risk-level.low {
-            background: #f0fdf4;
-            border-left: 4px solid #10b981;
-            padding: 1rem;
-            margin: 1rem 0;
-            border-radius: 0.5rem;
-        }
-        
-        .phase {
-            background: white;
-            padding: 1.5rem;
-            margin: 1rem 0;
-            border-radius: 0.5rem;
-            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-        }
-        
-        .setting-image {
-            margin: 2rem 0;
-            text-align: center;
-        }
-        
-        .setting-image img {
-            max-width: 100%;
-            border-radius: 0.5rem;
-            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
-        }
-
-        /* Mobile hamburger menu animation */
-        #mobile-menu {
-            transition: all 0.3s ease;
-        }
-
-        /* Color variable definitions for consistency */
+        /* Primary color variables */
         :root {
-            --text-primary: #5B47E0;
+            --primary: #22c55e;
+            --primary-dark: #16a34a;
+            --primary-light: #dcfce7;
         }
         
         .text-primary {
-            color: var(--text-primary);
+            color: var(--primary);
         }
         
         .hover\:text-primary:hover {
-            color: var(--text-primary);
+            color: var(--primary);
         }
         
-        /* Force correct mobile navigation display */
-        @media (max-width: 767px) {
-            .nav-menu {
-                display: none !important;
-            }
-            
-            #mobile-menu-button {
-                display: block !important;
-            }
+        /* Prose styles */
+        .prose h2 {
+            margin-top: 2rem;
+            margin-bottom: 1rem;
         }
         
-        @media (min-width: 768px) {
-            .nav-menu {
-                display: flex !important;
-            }
-            
-            #mobile-menu-button {
-                display: none !important;
-            }
-            
-            #mobile-menu {
-                display: none !important;
-            }
-        }
-        /* Complete navigation fix */
-        .desktop-nav {
-            display: flex;
-            gap: 2rem;
-            align-items: center;
+        .prose h3 {
+            margin-top: 1.5rem;
+            margin-bottom: 0.75rem;
         }
         
-        .mobile-menu-btn {
-            display: none;
-            padding: 0.5rem;
-            background: none;
-            border: none;
-            cursor: pointer;
+        .prose p {
+            margin-bottom: 1rem;
+            line-height: 1.7;
         }
         
-        .mobile-nav {
-            display: none;
-            background: white;
+        .prose ul, .prose ol {
+            margin-bottom: 1rem;
+        }
+        
+        .prose li {
+            margin-bottom: 0.5rem;
+        }
+        
+        /* Author and related articles */
+        .author-info {
             border-top: 1px solid #e5e7eb;
-            padding: 0.5rem;
+            padding-top: 2rem;
         }
         
-        .mobile-nav-content {
-            display: flex;
-            flex-direction: column;
-            gap: 0.25rem;
+        .related-articles {
+            border-top: 1px solid #e5e7eb;
+            padding-top: 2rem;
         }
-        
-        .mobile-nav-link {
-            display: block;
-            padding: 0.75rem 1rem;
-            color: #374151;
-            text-decoration: none;
-            border-radius: 0.375rem;
-            transition: all 0.2s;
-        }
-        
-        .mobile-nav-link:hover {
-            background: #f9fafb;
-            color: #22c55e;
-        }
-        
-        .mobile-nav.show {
-            display: block !important;
-        }
-        
-        @media (max-width: 767px) {
-            .desktop-nav {
-                display: none !important;
-            }
-            
-            .mobile-menu-btn {
-                display: block !important;
-            }
-        }
-        
-        @media (min-width: 768px) {
-            .desktop-nav {
-                display: flex !important;
-            }
-            
-            .mobile-menu-btn {
-                display: none !important;
-            }
-            
-            .mobile-nav {
-                display: none !important;
-            }
-        }
-
     </style>
     
     <!-- Google Analytics -->
@@ -295,15 +131,15 @@
                 </div>
                 
                 <!-- Desktop Navigation -->
-                <nav class="hidden md:flex nav-menu space-x-8">
-                    <a href="../agriculture.html" class="nav-link text-gray-700 hover:text-primary transition-colors">農業DX</a>
-                    <a href="../tourism.html" class="nav-link text-gray-700 hover:text-primary transition-colors">観光業DX</a>
-                    <a href="../manufacturing.html" class="nav-link text-gray-700 hover:text-primary transition-colors">製造業DX</a>
-                    <a href="../blog-list.html" class="nav-link text-gray-700 hover:text-primary transition-colors">ブログ一覧</a>
+                <nav class="hidden md:flex space-x-8" id="desktop-nav">
+                    <a href="../agriculture.html" class="text-gray-700 hover:text-primary transition-colors px-3 py-2 rounded-md font-medium">農業DX</a>
+                    <a href="../tourism.html" class="text-gray-700 hover:text-primary transition-colors px-3 py-2 rounded-md font-medium">観光業DX</a>
+                    <a href="../manufacturing.html" class="text-gray-700 hover:text-primary transition-colors px-3 py-2 rounded-md font-medium">製造業DX</a>
+                    <a href="../blog-list.html" class="text-gray-700 hover:text-primary transition-colors px-3 py-2 rounded-md font-medium">ブログ一覧</a>
                 </nav>
 
                 <!-- Mobile menu button -->
-                <button class="md:hidden p-2" id="mobile-menu-button">
+                <button class="md:hidden p-2 text-gray-600 hover:text-primary" id="mobile-menu-button" aria-label="メニューを開く">
                     <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
                     </svg>
@@ -311,14 +147,14 @@
             </div>
 
             <!-- Mobile Navigation -->
-                <div class="mobile-nav" id="mobile-menu">
-                    <div class="mobile-nav-content">
-                        <a href="../agriculture.html" class="mobile-nav-link">農業DX</a>
-                        <a href="../tourism.html" class="mobile-nav-link">観光業DX</a>
-                        <a href="../manufacturing.html" class="mobile-nav-link">製造業DX</a>
-                        <a href="../blog-list.html" class="mobile-nav-link">ブログ一覧</a>
-                    </div>
+            <div class="md:hidden hidden bg-white border-t border-gray-200" id="mobile-menu">
+                <div class="px-2 pt-2 pb-3 space-y-1">
+                    <a href="../agriculture.html" class="block px-3 py-2 text-gray-700 hover:text-primary hover:bg-gray-50 rounded-md font-medium transition-colors">農業DX</a>
+                    <a href="../tourism.html" class="block px-3 py-2 text-gray-700 hover:text-primary hover:bg-gray-50 rounded-md font-medium transition-colors">観光業DX</a>
+                    <a href="../manufacturing.html" class="block px-3 py-2 text-gray-700 hover:text-primary hover:bg-gray-50 rounded-md font-medium transition-colors">製造業DX</a>
+                    <a href="../blog-list.html" class="block px-3 py-2 text-gray-700 hover:text-primary hover:bg-gray-50 rounded-md font-medium transition-colors">ブログ一覧</a>
                 </div>
+            </div>
         </div>
     </header>
 
@@ -780,22 +616,24 @@
         </div>
     </footer>
 
-    <script>
+        <script>
         // Mobile menu toggle
         document.addEventListener('DOMContentLoaded', function() {
             const mobileMenuButton = document.getElementById('mobile-menu-button');
             const mobileMenu = document.getElementById('mobile-menu');
 
             if (mobileMenuButton && mobileMenu) {
+                // Toggle mobile menu
                 mobileMenuButton.addEventListener('click', function(e) {
+                    e.preventDefault();
                     e.stopPropagation();
-                    mobileMenu.classList.toggle('show');
+                    mobileMenu.classList.toggle('hidden');
                 });
 
                 // Close mobile menu when clicking outside
                 document.addEventListener('click', function(event) {
                     if (!mobileMenuButton.contains(event.target) && !mobileMenu.contains(event.target)) {
-                        mobileMenu.classList.remove('show');
+                        mobileMenu.classList.add('hidden');
                     }
                 });
 
@@ -803,19 +641,10 @@
                 const mobileLinks = mobileMenu.querySelectorAll('a');
                 mobileLinks.forEach(link => {
                     link.addEventListener('click', function() {
-                        mobileMenu.classList.remove('show');
+                        mobileMenu.classList.add('hidden');
                     });
                 });
             }
-        });
-
-            // Close mobile menu when clicking on a link
-            const mobileLinks = mobileMenu.querySelectorAll('a');
-            mobileLinks.forEach(link => {
-                link.addEventListener('click', function() {
-                    mobileMenu.classList.add('hidden');
-                });
-            });
         });
     </script>
 </body>

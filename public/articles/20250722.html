@@ -62,342 +62,87 @@
     <!-- Tailwind CSS -->
     <script src="https://cdn.tailwindcss.com"></script>
     
+        <!-- CSS -->
     <style>
+        /* Primary color variables */
         :root {
-            /* 地方AIブースター color scheme */
-            --clr-primary: #18634B; /* ディープグリーン */
-            --clr-primary-light: #2B8A64;
-            --clr-primary-dark: #0F4A38;
-            --clr-accent: #29D3C3; /* エメラルドシアン */
-            --clr-accent-light: #4DDDD1;
-            --clr-secondary: #EADDC9; /* サンドベージュ */
-            --clr-black: #000000;
-            --clr-gray-dark: #333333;
-            --clr-gray: #666666;
-            --clr-gray-light: #f8f8f8;
-            --clr-white: #ffffff;
-            --clr-bg-1: #F7F8FA; /* やや灰がかったホワイト */
-            --clr-bg-2: #EADDC9; /* サンドベージュ */
-            --radius: 8px;
-            --shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
-            --transition: all 0.3s ease;
-            
-            /* Font families for 地方AIブースター */
-            font-family: 'Noto Sans JP', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
-            line-height: 1.6;
-            font-weight: 400;
-            
-            color: var(--clr-gray-dark);
-            
-            font-synthesis: none;
-            text-rendering: optimizeLegibility;
-            -webkit-font-smoothing: antialiased;
-            -moz-osx-font-smoothing: grayscale;
-        }
-
-        body {
-            margin: 0;
-            background: var(--clr-white);
-            color: var(--clr-gray-dark);
-        }
-
-        .header {
-            background: var(--clr-white);
-            border-bottom: 1px solid #e5e7eb;
-            position: sticky;
-            top: 0;
-            z-index: 50;
-        }
-
-        .nav-container {
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 0 1rem;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            height: 4rem;
-        }
-
-        .logo {
-            font-size: 1.5rem;
-            font-weight: 900;
-            color: var(--clr-primary);
-            text-decoration: none;
-        }
-
-        .nav-menu {
-
-
-            gap: 2rem;
-
-
-            align-items: center;
-
-
-        }
-
-
-        
-
-
-        /* Desktop navigation display */
-
-
-        .nav-menu.hidden {
-
-
-            display: none !important;
-
-
-        }
-
-
-        
-
-
-        @media (min-width: 768px) {
-
-
-            .nav-menu {
-
-
-                display: flex !important;
-
-
-            }
-
-
-        }
-
-        .nav-link {
-            color: var(--clr-gray-dark);
-            text-decoration: none;
-            font-weight: 500;
-            padding: 0.5rem 1rem;
-            border-radius: var(--radius);
-            transition: var(--transition);
-        }
-
-        .nav-link:hover {
-            background: rgba(24, 99, 75, 0.1);
-            color: var(--clr-primary);
-        }
-
-        .article-container {
-            max-width: 4xl;
-            margin: 0 auto;
-            padding: 2rem 1rem;
-        }
-
-        .back-link {
-            display: inline-flex;
-            align-items: center;
-            color: var(--clr-primary);
-            text-decoration: none;
-            margin-bottom: 2rem;
-            font-weight: 500;
-        }
-
-        .back-link:hover {
-            text-decoration: underline;
-        }
-
-        .article-hero {
-            width: 100%;
-            height: 20rem;
-            background-size: cover;
-            background-position: center;
-            border-radius: var(--radius);
-            margin-bottom: 2rem;
-        }
-
-        .article-meta {
-            display: flex;
-            gap: 1rem;
-            margin-bottom: 2rem;
-            font-size: 0.875rem;
-            color: var(--clr-gray);
-        }
-
-        .article-content {
-            line-height: 1.8;
-            color: var(--clr-gray-dark);
-        }
-
-        .article-content h1, .article-content h2, .article-content h3, .article-content h4, .article-content h5 {
-            color: var(--clr-primary);
-            margin-top: 2rem;
-            margin-bottom: 1rem;
-        }
-
-        .article-content h1 { font-size: 2rem; font-weight: 900; }
-        .article-content h2 { font-size: 1.5rem; font-weight: 700; }
-        .article-content h3 { font-size: 1.25rem; font-weight: 600; }
-        .article-content h4 { font-size: 1.125rem; font-weight: 600; }
-        .article-content h5 { font-size: 1rem; font-weight: 500; }
-
-        .article-content p {
-            margin-bottom: 1rem;
-        }
-
-        .article-content strong {
-            color: var(--clr-primary);
-        }
-
-        .article-content a {
-            text-decoration: underline;
-            color: var(--clr-primary);
-        }
-
-        .article-content a:hover {
-            color: var(--clr-primary-dark);
-        }
-
-        .author-info {
-            margin-top: 3rem;
-            padding: 2rem;
-            background: var(--clr-bg-1);
-            border-radius: var(--radius);
-        }
-
-        .author-card {
-            display: flex;
-            gap: 1rem;
-            align-items: flex-start;
-        }
-
-        .author-avatar {
-            width: 4rem;
-            height: 4rem;
-            border-radius: 50%;
-            object-fit: cover;
-        }
-
-        .footer {
-            background: var(--clr-primary);
-            color: var(--clr-white);
-            text-align: center;
-            padding: 2rem 1rem;
-            margin-top: 4rem;
-        }        
-        /* Mobile hamburger menu styles */
-        #mobile-menu {
-            transition: all 0.3s ease;
-        }
-
-        :root {
-            --text-primary: #5B47E0;
+            --primary: #22c55e;
+            --primary-dark: #16a34a;
+            --primary-light: #dcfce7;
         }
         
         .text-primary {
-            color: var(--text-primary);
+            color: var(--primary);
         }
         
         .hover\:text-primary:hover {
-            color: var(--text-primary);
-        }
-        /* Complete navigation fix */
-        .desktop-nav {
-            display: flex;
-            gap: 2rem;
-            align-items: center;
+            color: var(--primary);
         }
         
-        .mobile-menu-btn {
-            display: none;
-            padding: 0.5rem;
-            background: none;
-            border: none;
-            cursor: pointer;
+        /* Prose styles */
+        .prose h2 {
+            margin-top: 2rem;
+            margin-bottom: 1rem;
         }
         
-        .mobile-nav {
-            display: none;
-            background: white;
+        .prose h3 {
+            margin-top: 1.5rem;
+            margin-bottom: 0.75rem;
+        }
+        
+        .prose p {
+            margin-bottom: 1rem;
+            line-height: 1.7;
+        }
+        
+        .prose ul, .prose ol {
+            margin-bottom: 1rem;
+        }
+        
+        .prose li {
+            margin-bottom: 0.5rem;
+        }
+        
+        /* Author and related articles */
+        .author-info {
             border-top: 1px solid #e5e7eb;
-            padding: 0.5rem;
+            padding-top: 2rem;
         }
         
-        .mobile-nav-content {
-            display: flex;
-            flex-direction: column;
-            gap: 0.25rem;
+        .related-articles {
+            border-top: 1px solid #e5e7eb;
+            padding-top: 2rem;
         }
-        
-        .mobile-nav-link {
-            display: block;
-            padding: 0.75rem 1rem;
-            color: #374151;
-            text-decoration: none;
-            border-radius: 0.375rem;
-            transition: all 0.2s;
-        }
-        
-        .mobile-nav-link:hover {
-            background: #f9fafb;
-            color: #22c55e;
-        }
-        
-        .mobile-nav.show {
-            display: block !important;
-        }
-        
-        @media (max-width: 767px) {
-            .desktop-nav {
-                display: none !important;
-            }
-            
-            .mobile-menu-btn {
-                display: block !important;
-            }
-        }
-        
-        @media (min-width: 768px) {
-            .desktop-nav {
-                display: flex !important;
-            }
-            
-            .mobile-menu-btn {
-                display: none !important;
-            }
-            
-            .mobile-nav {
-                display: none !important;
-            }
-        }
-
-
     </style>
 </head>
 <body>
     <header class="header">
         <div class="nav-container">
             <a href="../index.html" class="logo">地方AIブースター</a>            <!-- Desktop Navigation -->
-            <nav class="hidden md:flex nav-menu space-x-8">
-                <a href="../agriculture.html" class="nav-link text-gray-700 hover:text-primary transition-colors">農業DX</a>
-                <a href="../tourism.html" class="nav-link text-gray-700 hover:text-primary transition-colors">観光業DX</a>
-                <a href="../manufacturing.html" class="nav-link text-gray-700 hover:text-primary transition-colors">製造業DX</a>
-                <a href="../blog-list.html" class="nav-link text-gray-700 hover:text-primary transition-colors">ブログ一覧</a>
-            </nav>
+                <nav class="hidden md:flex space-x-8" id="desktop-nav">
+                    <a href="../agriculture.html" class="text-gray-700 hover:text-primary transition-colors px-3 py-2 rounded-md font-medium">農業DX</a>
+                    <a href="../tourism.html" class="text-gray-700 hover:text-primary transition-colors px-3 py-2 rounded-md font-medium">観光業DX</a>
+                    <a href="../manufacturing.html" class="text-gray-700 hover:text-primary transition-colors px-3 py-2 rounded-md font-medium">製造業DX</a>
+                    <a href="../blog-list.html" class="text-gray-700 hover:text-primary transition-colors px-3 py-2 rounded-md font-medium">ブログ一覧</a>
+                </nav>
 
             <!-- Mobile menu button -->
-            <button class="md:hidden p-2" id="mobile-menu-button">
-                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
-                </svg>
-            </button>
+                <button class="md:hidden p-2 text-gray-600 hover:text-primary" id="mobile-menu-button" aria-label="メニューを開く">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+                    </svg>
+                </button>
         </div>
 
         <!-- Mobile Navigation -->
-                <div class="mobile-nav" id="mobile-menu">
-                    <div class="mobile-nav-content">
-                        <a href="../agriculture.html" class="mobile-nav-link">農業DX</a>
-                        <a href="../tourism.html" class="mobile-nav-link">観光業DX</a>
-                        <a href="../manufacturing.html" class="mobile-nav-link">製造業DX</a>
-                        <a href="../blog-list.html" class="mobile-nav-link">ブログ一覧</a>
-                    </div>
+            <div class="md:hidden hidden bg-white border-t border-gray-200" id="mobile-menu">
+                <div class="px-2 pt-2 pb-3 space-y-1">
+                    <a href="../agriculture.html" class="block px-3 py-2 text-gray-700 hover:text-primary hover:bg-gray-50 rounded-md font-medium transition-colors">農業DX</a>
+                    <a href="../tourism.html" class="block px-3 py-2 text-gray-700 hover:text-primary hover:bg-gray-50 rounded-md font-medium transition-colors">観光業DX</a>
+                    <a href="../manufacturing.html" class="block px-3 py-2 text-gray-700 hover:text-primary hover:bg-gray-50 rounded-md font-medium transition-colors">製造業DX</a>
+                    <a href="../blog-list.html" class="block px-3 py-2 text-gray-700 hover:text-primary hover:bg-gray-50 rounded-md font-medium transition-colors">ブログ一覧</a>
                 </div>
+            </div>
         </div>
     </header>
 
@@ -555,34 +300,26 @@
         <p>&copy; 2024 地方AIブースター. All rights reserved.</p>
     </footer>
 
-    <script>
+        <script>
         // Mobile menu toggle
         document.addEventListener('DOMContentLoaded', function() {
             const mobileMenuButton = document.getElementById('mobile-menu-button');
             const mobileMenu = document.getElementById('mobile-menu');
 
             if (mobileMenuButton && mobileMenu) {
+                // Toggle mobile menu
                 mobileMenuButton.addEventListener('click', function(e) {
+                    e.preventDefault();
                     e.stopPropagation();
-                    mobileMenu.classList.toggle('show');
+                    mobileMenu.classList.toggle('hidden');
                 });
 
                 // Close mobile menu when clicking outside
                 document.addEventListener('click', function(event) {
                     if (!mobileMenuButton.contains(event.target) && !mobileMenu.contains(event.target)) {
-                        mobileMenu.classList.remove('show');
+                        mobileMenu.classList.add('hidden');
                     }
                 });
-
-                // Close mobile menu when clicking on a link
-                const mobileLinks = mobileMenu.querySelectorAll('a');
-                mobileLinks.forEach(link => {
-                    link.addEventListener('click', function() {
-                        mobileMenu.classList.remove('show');
-                    });
-                });
-            }
-        });
 
                 // Close mobile menu when clicking on a link
                 const mobileLinks = mobileMenu.querySelectorAll('a');
