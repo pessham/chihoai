@@ -297,6 +297,76 @@
         .hover\:text-primary:hover {
             color: var(--text-primary);
         }
+        /* Complete navigation fix */
+        .desktop-nav {
+            display: flex;
+            gap: 2rem;
+            align-items: center;
+        }
+        
+        .mobile-menu-btn {
+            display: none;
+            padding: 0.5rem;
+            background: none;
+            border: none;
+            cursor: pointer;
+        }
+        
+        .mobile-nav {
+            display: none;
+            background: white;
+            border-top: 1px solid #e5e7eb;
+            padding: 0.5rem;
+        }
+        
+        .mobile-nav-content {
+            display: flex;
+            flex-direction: column;
+            gap: 0.25rem;
+        }
+        
+        .mobile-nav-link {
+            display: block;
+            padding: 0.75rem 1rem;
+            color: #374151;
+            text-decoration: none;
+            border-radius: 0.375rem;
+            transition: all 0.2s;
+        }
+        
+        .mobile-nav-link:hover {
+            background: #f9fafb;
+            color: #22c55e;
+        }
+        
+        .mobile-nav.show {
+            display: block !important;
+        }
+        
+        @media (max-width: 767px) {
+            .desktop-nav {
+                display: none !important;
+            }
+            
+            .mobile-menu-btn {
+                display: block !important;
+            }
+        }
+        
+        @media (min-width: 768px) {
+            .desktop-nav {
+                display: flex !important;
+            }
+            
+            .mobile-menu-btn {
+                display: none !important;
+            }
+            
+            .mobile-nav {
+                display: none !important;
+            }
+        }
+
 
     </style>
 </head>
@@ -320,14 +390,14 @@
         </div>
 
         <!-- Mobile Navigation -->
-        <div class="md:hidden hidden" id="mobile-menu">
-            <div class="px-2 pt-2 pb-3 space-y-1 bg-white border-t">
-                <a href="../agriculture.html" class="block px-3 py-2 text-gray-700 hover:bg-gray-50 hover:text-primary transition-colors">農業DX</a>
-                <a href="../tourism.html" class="block px-3 py-2 text-gray-700 hover:bg-gray-50 hover:text-primary transition-colors">観光業DX</a>
-                <a href="../manufacturing.html" class="block px-3 py-2 text-gray-700 hover:bg-gray-50 hover:text-primary transition-colors">製造業DX</a>
-                <a href="../blog-list.html" class="block px-3 py-2 text-gray-700 hover:bg-gray-50 hover:text-primary transition-colors">ブログ一覧</a>
-            </div>
-        </div>
+                <div class="mobile-nav" id="mobile-menu">
+                    <div class="mobile-nav-content">
+                        <a href="../agriculture.html" class="mobile-nav-link">農業DX</a>
+                        <a href="../tourism.html" class="mobile-nav-link">観光業DX</a>
+                        <a href="../manufacturing.html" class="mobile-nav-link">製造業DX</a>
+                        <a href="../blog-list.html" class="mobile-nav-link">ブログ一覧</a>
+                    </div>
+                </div>
         </div>
     </header>
 
@@ -608,16 +678,27 @@ A: 月次点検は以下の順序で実施します。1.外観確認 2....</code
             const mobileMenu = document.getElementById('mobile-menu');
 
             if (mobileMenuButton && mobileMenu) {
-                mobileMenuButton.addEventListener('click', function() {
-                    mobileMenu.classList.toggle('hidden');
+                mobileMenuButton.addEventListener('click', function(e) {
+                    e.stopPropagation();
+                    mobileMenu.classList.toggle('show');
                 });
 
                 // Close mobile menu when clicking outside
                 document.addEventListener('click', function(event) {
                     if (!mobileMenuButton.contains(event.target) && !mobileMenu.contains(event.target)) {
-                        mobileMenu.classList.add('hidden');
+                        mobileMenu.classList.remove('show');
                     }
                 });
+
+                // Close mobile menu when clicking on a link
+                const mobileLinks = mobileMenu.querySelectorAll('a');
+                mobileLinks.forEach(link => {
+                    link.addEventListener('click', function() {
+                        mobileMenu.classList.remove('show');
+                    });
+                });
+            }
+        });
 
                 // Close mobile menu when clicking on a link
                 const mobileLinks = mobileMenu.querySelectorAll('a');
