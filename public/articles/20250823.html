@@ -52,13 +52,30 @@
     </script>
     
     <link rel="canonical" href="https://chihoai.com/articles/20250823.html">
-    <link rel="stylesheet" href="../css/styles.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700&display=swap" rel="stylesheet">
+    
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#22c55e',
+                        secondary: '#16a34a',
+                        accent: '#dcfce7'
+                    }
+                }
+            }
+        }
+    </script>
     
         <!-- CSS -->
     <style>
+        /* Reset any conflicting styles from external CSS */
+        .nav, .nav ul, .nav li, .nav a {
+            all: unset;
+        }
+        
         /* Primary color variables */
         :root {
             --primary: #22c55e;
@@ -67,11 +84,48 @@
         }
         
         .text-primary {
-            color: var(--primary);
+            color: var(--primary) !important;
         }
         
         .hover\:text-primary:hover {
-            color: var(--primary);
+            color: var(--primary) !important;
+        }
+        
+        /* Force Tailwind navigation styles */
+        #desktop-nav {
+            display: none !important;
+        }
+        
+        @media (min-width: 768px) {
+            #desktop-nav {
+                display: flex !important;
+                gap: 2rem !important;
+                align-items: center !important;
+            }
+        }
+        
+        #mobile-menu-button {
+            display: block !important;
+        }
+        
+        @media (min-width: 768px) {
+            #mobile-menu-button {
+                display: none !important;
+            }
+        }
+        
+        #mobile-menu {
+            display: none !important;
+        }
+        
+        #mobile-menu:not(.hidden) {
+            display: block !important;
+        }
+        
+        @media (min-width: 768px) {
+            #mobile-menu {
+                display: none !important;
+            }
         }
         
         /* Prose styles */
