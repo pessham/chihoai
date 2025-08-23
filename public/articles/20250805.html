@@ -127,9 +127,47 @@
         }
 
         .nav-menu {
-            display: flex;
+
+
             gap: 2rem;
+
+
             align-items: center;
+
+
+        }
+
+
+        
+
+
+        /* Desktop navigation display */
+
+
+        .nav-menu.hidden {
+
+
+            display: none !important;
+
+
+        }
+
+
+        
+
+
+        @media (min-width: 768px) {
+
+
+            .nav-menu {
+
+
+                display: flex !important;
+
+
+            }
+
+
         }
 
         .nav-link {
