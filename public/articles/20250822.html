@@ -612,7 +612,32 @@
         
         .hover\:text-primary:hover {
             color: var(--text-primary);
+        }        
+        /* Force correct mobile navigation display */
+        @media (max-width: 767px) {
+            .nav-menu {
+                display: none !important;
+            }
+            
+            #mobile-menu-button {
+                display: block !important;
+            }
         }
+        
+        @media (min-width: 768px) {
+            .nav-menu {
+                display: flex !important;
+            }
+            
+            #mobile-menu-button {
+                display: none !important;
+            }
+            
+            #mobile-menu {
+                display: none !important;
+            }
+        }
+
     </style>
 
     <script>
