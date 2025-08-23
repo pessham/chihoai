@@ -242,20 +242,54 @@
             text-align: center;
             padding: 2rem 1rem;
             margin-top: 4rem;
+        }        
+        /* Mobile hamburger menu styles */
+        #mobile-menu {
+            transition: all 0.3s ease;
         }
+
+        :root {
+            --text-primary: #5B47E0;
+        }
+        
+        .text-primary {
+            color: var(--text-primary);
+        }
+        
+        .hover\:text-primary:hover {
+            color: var(--text-primary);
+        }
+
     </style>
 </head>
 <body>
     <header class="header">
         <div class="nav-container">
-            <a href="../index.html" class="logo">地方AIブースター</a>
-            <nav class="nav-menu">
-                <a href="../index.html#agriculture-dx" class="nav-link">農業DX</a>
-                <a href="../index.html#tourism-business" class="nav-link">観光業DX</a>
-                <a href="../index.html#manufacturing-dx" class="nav-link">製造業DX</a>
-                <a href="../index.html#about" class="nav-link">すべて</a>
-                <a href="about.html" class="nav-link">運営者</a>
+            <a href="../index.html" class="logo">地方AIブースター</a>            <!-- Desktop Navigation -->
+            <nav class="hidden md:flex nav-menu space-x-8">
+                <a href="../agriculture.html" class="nav-link text-gray-700 hover:text-primary transition-colors">農業DX</a>
+                <a href="../tourism.html" class="nav-link text-gray-700 hover:text-primary transition-colors">観光業DX</a>
+                <a href="../manufacturing.html" class="nav-link text-gray-700 hover:text-primary transition-colors">製造業DX</a>
+                <a href="../blog-list.html" class="nav-link text-gray-700 hover:text-primary transition-colors">ブログ一覧</a>
             </nav>
+
+            <!-- Mobile menu button -->
+            <button class="md:hidden p-2" id="mobile-menu-button">
+                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+                </svg>
+            </button>
+        </div>
+
+        <!-- Mobile Navigation -->
+        <div class="md:hidden hidden" id="mobile-menu">
+            <div class="px-2 pt-2 pb-3 space-y-1 bg-white border-t">
+                <a href="../agriculture.html" class="block px-3 py-2 text-gray-700 hover:bg-gray-50 hover:text-primary transition-colors">農業DX</a>
+                <a href="../tourism.html" class="block px-3 py-2 text-gray-700 hover:bg-gray-50 hover:text-primary transition-colors">観光業DX</a>
+                <a href="../manufacturing.html" class="block px-3 py-2 text-gray-700 hover:bg-gray-50 hover:text-primary transition-colors">製造業DX</a>
+                <a href="../blog-list.html" class="block px-3 py-2 text-gray-700 hover:bg-gray-50 hover:text-primary transition-colors">ブログ一覧</a>
+            </div>
+        </div>
         </div>
     </header>
 
@@ -580,5 +614,34 @@
     <footer class="footer">
         <p>&copy; 2024 地方AIブースター. All rights reserved.</p>
     </footer>
+
+    <script>
+        // Mobile menu toggle
+        document.addEventListener('DOMContentLoaded', function() {
+            const mobileMenuButton = document.getElementById('mobile-menu-button');
+            const mobileMenu = document.getElementById('mobile-menu');
+
+            if (mobileMenuButton && mobileMenu) {
+                mobileMenuButton.addEventListener('click', function() {
+                    mobileMenu.classList.toggle('hidden');
+                });
+
+                // Close mobile menu when clicking outside
+                document.addEventListener('click', function(event) {
+                    if (!mobileMenuButton.contains(event.target) && !mobileMenu.contains(event.target)) {
+                        mobileMenu.classList.add('hidden');
+                    }
+                });
+
+                // Close mobile menu when clicking on a link
+                const mobileLinks = mobileMenu.querySelectorAll('a');
+                mobileLinks.forEach(link => {
+                    link.addEventListener('click', function() {
+                        mobileMenu.classList.add('hidden');
+                    });
+                });
+            }
+        });
+    </script>
 </body>
 </html>
