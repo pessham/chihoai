@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="1200" height="675" viewBox="0 0 1200 675" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1200" y2="675" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#F7F8FA"/>
+      <stop offset="1" stop-color="#EADDC9"/>
+    </linearGradient>
+    <linearGradient id="accent" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#29D3C3"/>
+      <stop offset="1" stop-color="#2B8A64"/>
+    </linearGradient>
+    <filter id="shadow" x="-50%" y="-50%" width="200%" height="200%">
+      <feDropShadow dx="0" dy="8" stdDeviation="12" flood-color="#000" flood-opacity="0.12"/>
+    </filter>
+    <style>
+      .title { font: 700 44px 'Noto Sans JP', 'BIZ UDPGothic', system-ui, sans-serif; fill: #0F4A38; }
+      .subtitle { font: 500 22px 'Noto Sans JP', 'BIZ UDPGothic', system-ui, sans-serif; fill: #18634B; opacity: 0.9; }
+      .card-title { font: 700 22px 'Noto Sans JP', 'BIZ UDPGothic', system-ui, sans-serif; fill: #18634B; }
+      .card-text { font: 500 18px 'Noto Sans JP', 'BIZ UDPGothic', system-ui, sans-serif; fill: #333; }
+      .badge { font: 800 18px 'Noto Sans JP', 'BIZ UDPGothic', system-ui, sans-serif; fill: #fff; }
+    </style>
+  </defs>
+
+  <!-- Background -->
+  <rect x="0" y="0" width="1200" height="675" fill="url(#bg)"/>
+
+  <!-- Header -->
+  <g transform="translate(72, 70)">
+    <text class="title">Codex最新アップデート解説！</text>
+    <text class="subtitle" y="44" dy="28">ローカル × クラウド × GitHub でシームレス開発</text>
+  </g>
+
+  <!-- Cards container -->
+  <g transform="translate(72, 160)" filter="url(#shadow)">
+    <!-- Card 1 -->
+    <g transform="translate(0, 0)">
+      <rect x="0" y="0" rx="16" ry="16" width="340" height="390" fill="#fff"/>
+      <!-- Badge -->
+      <rect x="18" y="18" rx="12" ry="12" width="44" height="28" fill="#18634B"/>
+      <text class="badge" x="40" y="38" text-anchor="middle">①</text>
+      <!-- Icon: code window -->
+      <g transform="translate(24, 66)">
+        <rect x="0" y="0" width="64" height="48" rx="6" fill="url(#accent)" opacity="0.15"/>
+        <rect x="0" y="0" width="64" height="10" rx="6" fill="#29D3C3"/>
+        <circle cx="10" cy="5" r="3" fill="#EADDC9"/>
+        <circle cx="22" cy="5" r="3" fill="#EADDC9"/>
+        <circle cx="34" cy="5" r="3" fill="#EADDC9"/>
+        <path d="M16 28 L26 20 L26 36 Z" fill="#2B8A64" opacity="0.8"/>
+        <path d="M48 28 L38 20 L38 36 Z" fill="#2B8A64" opacity="0.8"/>
+      </g>
+      <text class="card-title" x="24" y="150">VS Code拡張機能で</text>
+      <text class="card-title" x="24" y="180">ChatGPTさながらにCodex</text>
+      <text class="card-text" x="24" y="216">・エディタ内で対話しながら実装</text>
+      <text class="card-text" x="24" y="246">・提案→適用→実行がワンクリック</text>
+      <text class="card-text" x="24" y="276">・集中を切らさない開発体験</text>
+    </g>
+
+    <!-- Card 2 -->
+    <g transform="translate(382, 0)">
+      <rect x="0" y="0" rx="16" ry="16" width="340" height="390" fill="#fff"/>
+      <!-- Badge -->
+      <rect x="18" y="18" rx="12" ry="12" width="44" height="28" fill="#18634B"/>
+      <text class="badge" x="40" y="38" text-anchor="middle">②</text>
+      <!-- Icon: cloud + nodes -->
+      <g transform="translate(24, 66)">
+        <!-- cloud -->
+        <ellipse cx="36" cy="28" rx="22" ry="14" fill="url(#accent)" opacity="0.18"/>
+        <circle cx="24" cy="24" r="10" fill="url(#accent)" opacity="0.18"/>
+        <circle cx="46" cy="22" r="12" fill="url(#accent)" opacity="0.18"/>
+        <!-- 4 nodes -->
+        <circle cx="84" cy="14" r="6" fill="#2B8A64"/>
+        <circle cx="94" cy="40" r="6" fill="#2B8A64"/>
+        <circle cx="70" cy="54" r="6" fill="#2B8A64"/>
+        <circle cx="58" cy="10" r="6" fill="#2B8A64"/>
+        <!-- lines -->
+        <line x1="50" y1="28" x2="78" y2="14" stroke="#2B8A64" stroke-width="2"/>
+        <line x1="52" y1="32" x2="88" y2="40" stroke="#2B8A64" stroke-width="2"/>
+        <line x1="44" y1="36" x2="66" y2="52" stroke="#2B8A64" stroke-width="2"/>
+        <line x1="44" y1="20" x2="56" y2="10" stroke="#2B8A64" stroke-width="2"/>
+      </g>
+      <text class="card-title" x="24" y="150">クラウド上でも開発可能！</text>
+      <text class="card-title" x="24" y="180">同時に4通りの開発が可能に</text>
+      <text class="card-text" x="24" y="216">・Local/Cloudを並列進行</text>
+      <text class="card-text" x="24" y="246">・複数アプローチから最適解を選択</text>
+      <text class="card-text" x="24" y="276">・デプロイまで自動化もOK</text>
+    </g>
+
+    <!-- Card 3 -->
+    <g transform="translate(764, 0)">
+      <rect x="0" y="0" rx="16" ry="16" width="340" height="390" fill="#fff"/>
+      <!-- Badge -->
+      <rect x="18" y="18" rx="12" ry="12" width="44" height="28" fill="#18634B"/>
+      <text class="badge" x="40" y="38" text-anchor="middle">③</text>
+      <!-- Icon: review checklist -->
+      <g transform="translate(24, 66)">
+        <rect x="0" y="0" width="64" height="80" rx="8" fill="url(#accent)" opacity="0.15"/>
+        <rect x="0" y="0" width="64" height="10" rx="6" fill="#29D3C3"/>
+        <circle cx="10" cy="5" r="3" fill="#EADDC9"/>
+        <!-- check lines -->
+        <rect x="14" y="22" width="34" height="4" rx="2" fill="#2B8A64"/>
+        <path d="M8 24 l4 4 l8 -10" stroke="#2B8A64" stroke-width="3" fill="none" stroke-linecap="round"/>
+        <rect x="14" y="38" width="34" height="4" rx="2" fill="#2B8A64" opacity="0.9"/>
+        <path d="M8 40 l4 4 l8 -10" stroke="#2B8A64" stroke-width="3" fill="none" stroke-linecap="round"/>
+        <rect x="14" y="54" width="34" height="4" rx="2" fill="#2B8A64" opacity="0.8"/>
+        <path d="M8 56 l4 4 l8 -10" stroke="#2B8A64" stroke-width="3" fill="none" stroke-linecap="round"/>
+      </g>
+      <text class="card-title" x="24" y="150">GitHub連携で自動コードレビュー</text>
+      <text class="card-title" x="24" y="180">@codex メンションにも対応</text>
+      <text class="card-text" x="24" y="216">・PR作成で自動レビュー</text>
+      <text class="card-text" x="24" y="246">・改善提案／セキュリティ観点を提示</text>
+      <text class="card-text" x="24" y="276">・品質向上と時短を両立</text>
+    </g>
+  </g>
+
+  <!-- Footer ribbon -->
+  <g transform="translate(72, 580)">
+    <rect x="0" y="0" width="1056" height="56" rx="12" fill="#18634B"/>
+    <text class="subtitle" x="24" y="36" fill="#fff">Codexで「考える→作る→出す」を一気通貫。あなたの開発フローを次の次元へ。</text>
+  </g>
+
+</svg>
+

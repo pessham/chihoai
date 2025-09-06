@@ -75,11 +75,16 @@ function loadArticlesFromDirectory() {
                 const id = filename.replace('.md', '');
                 
                 // メタデータから記事情報を構築
+                // 日付が無い場合はファイル名(YYYYMMDD)から算出（ローカル日付で固定。UTC変換しない）
+                const idDate = (/^\d{8}$/.test(id))
+                    ? `${id.slice(0,4)}-${id.slice(4,6)}-${id.slice(6,8)}`
+                    : normalizeToYmd(new Date());
                 const article = {
                     id: id,
                     filename: filename,
                     title: metadata.title || `記事 ${id}`,
-                    date: metadata.date ? new Date(metadata.date.replace(/年|月|日/g, '-').replace(/-$/, '')).toISOString().slice(0, 10) : new Date().toISOString().slice(0, 10),
+                    // NOTE: ここでtoISOString()を使うとJST→UTC変換で前日にズレるため禁止
+                    date: metadata.date ? normalizeDateString(metadata.date) : idDate,
                     author: metadata.author || (authorInfo ? authorInfo.name : 'Unknown'),
                     category: metadata.category || '未分類',
                     thumbnail: metadata.thumbnail || 'https://images.unsplash.com/photo-1516321318423-f06f85e504b3?w=800&h=450&fit=crop&crop=center',
@@ -92,12 +97,10 @@ function loadArticlesFromDirectory() {
             }
         });
         
-        // 日付で降順ソート（新しい記事が先）
-        articles.sort((a, b) => {
-            const dateA = new Date(a.date.replace(/年|月|日/g, '-').replace(/-$/, ''));
-            const dateB = new Date(b.date.replace(/年|月|日/g, '-').replace(/-$/, ''));
-            return dateB - dateA;
-        });
+        // ID(先頭8桁: YYYYMMDD)で降順ソート（新しい記事が先）
+        // サフィックス(例: -1)付きでも先頭8桁で比較する
+        const key = (x) => Number(String(x.id).slice(0, 8));
+        articles.sort((a, b) => key(b) - key(a));
     }
     
     return articles;
@@ -149,6 +152,33 @@ function parseFrontmatter(markdown) {
     });
     
     return { metadata, content };
+}
+
+// 入力がDateまたは文字列にかかわらず、YYYY-MM-DD（ローカル）に正規化
+function normalizeToYmd(input) {
+    const d = (input instanceof Date) ? input : new Date(input);
+    const y = d.getFullYear();
+    const m = String(d.getMonth() + 1).padStart(2, '0');
+    const day = String(d.getDate()).padStart(2, '0');
+    return `${y}-${m}-${day}`;
+}
+
+// 様々な形式の日付文字列（YYYY/MM/DD, YYYY-MM-DD, YYYY年M月D日 等）をYYYY-MM-DDに正規化
+function normalizeDateString(s) {
+    if (!s) return '';
+    // 日本語表記をスラッシュ区切りに変換
+    let t = String(s).trim().replace(/年|\//g, '-').replace(/月/g, '-').replace(/日/g, '');
+    // 複数の区切りに対応
+    t = t.replace(/[^0-9-]/g, '-').replace(/--+/g, '-').replace(/^-|-$/g, '');
+    const m = t.match(/^(\d{4})-(\d{1,2})-(\d{1,2})$/);
+    if (m) {
+        const y = m[1];
+        const mm = String(Number(m[2])).padStart(2, '0');
+        const dd = String(Number(m[3])).padStart(2, '0');
+        return `${y}-${mm}-${dd}`;
+    }
+    // フォールバック：Dateで解釈し、ローカル日付で整形
+    return normalizeToYmd(new Date(s));
 }
 
 // Markdownをパース（拡張版）
@@ -277,6 +307,9 @@ function generateArticleHTML(article, content) {
     <meta name="geo.placename" content="日本">
     <meta name="language" content="ja">
     
+    <!-- Domain guard: redirect vercel.app to chihoai.com -->
+    <script>(function(){try{var h=location.hostname;if(/\\.vercel\\.app$/.test(h)){var dest='https://chihoai.com'+location.pathname+location.search+location.hash;location.replace(dest);} }catch(e){}})();</script>
+    
     <!-- Favicon -->
     <link rel="icon" type="image/x-icon" href="../images/metamakeblack.jpg">
     <link rel="icon" type="image/png" href="../images/metamakeblack.jpg">
@@ -287,7 +320,7 @@ function generateArticleHTML(article, content) {
     <meta property="og:description" content="${article.excerpt}">
     <meta property="og:image" content="${article.thumbnail}">
     <meta property="og:type" content="article">
-    <meta property="og:url" content="https://chihoai.com/articles/${article.id}">
+    <meta property="og:url" content="https://chihoai.com/articles/${article.id}.html">
     
     <!-- Twitter Card -->
     <meta name="twitter:card" content="summary_large_image">
@@ -628,7 +661,8 @@ function updateScriptJS(articles) {
             ...article,
             date: new Date(article.date).toISOString().slice(0, 10)
         }));
-        const articlesJS = `window.articles = ${JSON.stringify(formattedArticles, null, 4)};`;
+        const redirectGuard = `;(function(){try{var h=location.hostname; if(/\\.vercel\\.app$/.test(h)){ var dest='https://chihoai.com'+location.pathname+location.search+location.hash; location.replace(dest);} }catch(e){}})();`;
+        const articlesJS = `${redirectGuard}\nwindow.articles = ${JSON.stringify(formattedArticles, null, 4)};`;
 
         // ファイルに書き戻し（常に上書き）
         fs.writeFileSync(scriptPath, articlesJS, 'utf-8');
@@ -653,7 +687,22 @@ function generateContents() {
     loadAuthorInfo();
     
     // articlesディレクトリから記事を読み込む
-    const articles = loadArticlesFromDirectory();
+    let articles = loadArticlesFromDirectory();
+
+    // Allow publishing a subset via env PUBLISH_IDS=YYYYMMDD,YYYYMMDD
+    const PUBLISH_IDS = (process.env.PUBLISH_IDS || '')
+        .split(',')
+        .map(s => s.trim())
+        .filter(Boolean);
+    if (PUBLISH_IDS.length > 0) {
+        articles = articles.filter(a => PUBLISH_IDS.includes(String(a.id)));
+    }
+    function jstTodayId(){ const now=new Date(); const jst=new Date(now.getTime()+9*60*60*1000); const y=jst.getUTCFullYear(); const m=String(jst.getUTCMonth()+1).padStart(2,'0'); const d=String(jst.getUTCDate()).padStart(2,'0'); return `${y}${m}${d}`; }
+    const FREEZE = (process.env.FREEZE_DATE_JST || '').trim();
+    const CUTOFF_ID = (process.env.CUTOFF_ID || '').trim() || (FREEZE ? FREEZE.replace(/-/g,'') : '') || (process.env.AUTO_CUTOFF_JST ? jstTodayId() : '');
+    if (CUTOFF_ID) {
+        articles = articles.filter(a => String(a.id) <= CUTOFF_ID);
+    }
     
     if (articles.length === 0) {
         console.warn('⚠ 記事が見つかりませんでした');

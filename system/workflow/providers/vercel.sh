@@ -52,10 +52,16 @@ check_vercel_cli() {
 
 # Vercel認証のチェック
 check_vercel_auth() {
+    if [ -n "$VERCEL_TOKEN" ]; then
+        print_info "環境変数 VERCEL_TOKEN が設定されています（非対話認証を使用）"
+        return 0
+    fi
     if ! vercel whoami &> /dev/null; then
         print_warning "Vercelにログインしていません"
-        echo "ログインを開始します..."
-        vercel login
+        echo "以下のいずれかで認証してください:"
+        echo "  1) vercel login を実行してブラウザで認証"
+        echo "  2) 環境変数 VERCEL_TOKEN を設定（非対話デプロイ向け）"
+        return 1
     fi
 }
 
@@ -64,6 +70,10 @@ deploy_to_vercel() {
     local deploy_output
     local deployment_url
     local inspect_url
+    local token_args=""
+    if [ -n "$VERCEL_TOKEN" ]; then
+        token_args=("--token" "$VERCEL_TOKEN")
+    fi
     
     # .vercelディレクトリが存在する場合は、リンクされたプロジェクトを使用
     if [ -f ".vercel/project.json" ]; then
@@ -77,7 +87,8 @@ deploy_to_vercel() {
         print_info "プロジェクト: $project_name"
         
         # デプロイ実行とログキャプチャ
-        deploy_output=$(vercel --prod --yes 2>&1)
+        # プロジェクトルートで実行し、vercel.json の buildCommand と outputDirectory を使用
+        deploy_output=$(vercel --prod --yes ${token_args[@]} 2>&1)
         local exit_code=$?
         
         if [ $exit_code -eq 0 ]; then
@@ -92,10 +103,10 @@ deploy_to_vercel() {
                 alias_url="$project_name.vercel.app"
                 
                 # エイリアスが実際に設定されているか確認
-                if ! vercel alias ls 2>/dev/null | grep -q "$alias_url"; then
+                if ! vercel alias ls ${token_args[@]} 2>/dev/null | grep -q "$alias_url"; then
                     # エイリアスが設定されていない場合は、設定を試みる
                     print_info "エイリアス $alias_url を設定中..."
-                    vercel alias set "$deployment_url" "$alias_url" &>/dev/null || true
+                    vercel alias set "$deployment_url" "$alias_url" ${token_args[@]} &>/dev/null || true
                 fi
             fi
             
@@ -129,7 +140,7 @@ deploy_to_vercel() {
         echo ""
         
         # デプロイ実行
-        vercel --prod --yes
+        vercel --prod --yes public ${token_args[@]}
         return $?
     fi
 }

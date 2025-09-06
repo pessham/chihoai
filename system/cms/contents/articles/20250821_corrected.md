@@ -1,3 +1,12 @@
+---
+title: "Google Flowで映像制作革命：地方企業が3万円で映画級動画を作れる時代の到来"
+excerpt: "Google Flowで映像制作革命：地方企業が3万円で映画級動画を作れる時代の到来"
+date: "2025/8/21"
+author: "ペスハム"
+thumbnail: "https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?w=800&h=450&fit=crop&crop=faces"
+category: "AI活用"
+---
+
 # Google Flowで映像制作革命：地方企業が3万円で映画級動画を作れる時代の到来
 
 動画制作にかかる膨大な時間と費用に悩んでいませんか...

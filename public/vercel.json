@@ -1,13 +1,28 @@
 {
+  "version": 2,
+  "cleanUrls": true,
+  "trailingSlash": false,
   "headers": [
     {
-      "source": "/articles/(.*)",
+      "source": "/**/*.html",
       "headers": [
-        {
-          "key": "Cache-Control",
-          "value": "public, max-age=0, must-revalidate"
-        }
+        { "key": "Cache-Control", "value": "max-age=0, must-revalidate" }
+      ]
+    },
+    {
+      "source": "/**/*.{js,css}",
+      "headers": [
+        { "key": "Cache-Control", "value": "public, max-age=86400" }
+      ]
+    },
+    {
+      "source": "/**/*.{jpg,jpeg,gif,png,svg,webp,ico}",
+      "headers": [
+        { "key": "Cache-Control", "value": "public, max-age=604800" }
       ]
     }
+  ],
+  "rewrites": [
+    { "source": "/articles/:id", "destination": "/articles/:id.html" }
   ]
 }

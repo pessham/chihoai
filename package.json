@@ -3,11 +3,24 @@
   "version": "1.0.0",
   "scripts": {
     "build": "node system/cms/tools/generate-contents.js",
-    "dev": "npm run build && npx serve public -p 4003",
-    "preview": "npm run build && open public/index.html",
-    "deploy": "npm run build && ./system/workflow/deploy.sh",
+    "migrate:drafts": "node system/cms/tools/migrate-drafts.js",
+    "pages": "node system/cms/tools/update-pages.js",
+    "sitemap": "node system/cms/tools/generate-sitemap.js",
+    "build:all": "npm run migrate:drafts && npm run build && npm run pages && npm run sitemap",
+    "dev": "npm run build:all && npx serve public -p 4003",
+    "preview": "npm run build:all && open public/index.html",
+    "deploy": "npm run build:all && ./system/workflow/deploy.sh",
     "clean": "rm -rf public/articles/*.html",
-    "deploy:firebase": "npm run build && DEPLOY_PROVIDER=firebase ./system/workflow/deploy.sh",
-    "deploy:vercel": "npm run build && DEPLOY_PROVIDER=vercel ./system/workflow/deploy.sh"
+    "deploy:firebase": "npm run build:all && DEPLOY_PROVIDER=firebase ./system/workflow/deploy.sh",
+    "deploy:vercel": "npm run build:all && DEPLOY_PROVIDER=vercel ./system/workflow/deploy.sh",
+    "svg2png": "node system/tools/svg-to-png.js",
+    "png:hero": "node system/tools/svg-to-png.js public/images/codex-update-hero.svg public/images/codex-update-hero.png 1200"
+    ,"thumbs": "node system/tools/generate-thumbnails.js"
+    ,"deploy:vercel:cutoff": "npm run clean && CUTOFF_ID=$CUTOFF_ID npm run build:all && DEPLOY_PROVIDER=vercel ./system/workflow/deploy.sh"
+    ,"deploy:vercel:ids": "npm run clean && PUBLISH_IDS=$PUBLISH_IDS npm run build:all && DEPLOY_PROVIDER=vercel ./system/workflow/deploy.sh"
+    ,"deploy:vercel:select": "npm run clean && CUTOFF_ID=$CUTOFF_ID PUBLISH_IDS=$PUBLISH_IDS npm run build:all && DEPLOY_PROVIDER=vercel ./system/workflow/deploy.sh"
+  },
+  "devDependencies": {
+    "@resvg/resvg-js": "^2.6.2"
   }
 }

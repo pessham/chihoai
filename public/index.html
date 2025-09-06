@@ -9,7 +9,7 @@
     
     <!-- SEO強化タグ -->
     <meta name="robots" content="index, follow">
-    <meta name="googlebot" content="index, follow">
+    <!-- googlebot specific meta削除（エラー対策） -->
     <link rel="canonical" href="https://chihoai.com/">
     <meta name="geo.region" content="JP">
     <meta name="geo.placename" content="日本">
@@ -58,8 +58,8 @@
     }
     </script>
 
-    <!-- Google Fonts -->
-    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700;900&family=BIZ+UDPGothic:wght@400;700&display=swap" rel="stylesheet">
+    <!-- Google Fonts を削除（エラー対策） -->
+    <!-- フォントはシステムフォントを使用 -->
     
     <!-- Tailwind CSS -->
     <script src="https://cdn.tailwindcss.com"></script>
@@ -84,8 +84,8 @@
             --shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
             --transition: all 0.3s ease;
             
-            /* Font families for 地方AIブースター */
-            font-family: 'Noto Sans JP', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            /* Font families for 地方AIブースター - システムフォント使用 */
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Hiragino Sans', 'Yu Gothic UI', sans-serif;
             line-height: 1.6;
             font-weight: 400;
             
@@ -107,12 +107,12 @@
             min-height: 100vh;
             background: linear-gradient(135deg, var(--clr-bg-1) 0%, var(--clr-bg-2) 100%);
             color: var(--clr-gray-dark);
-            font-family: 'Noto Sans JP', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Hiragino Sans', 'Yu Gothic UI', sans-serif;
         }
 
         /* Typography for 地方AIブースター */
         h1, h2, h3, h4, h5, h6 {
-            font-family: 'BIZ UDPGothic', 'Noto Sans JP', sans-serif;
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Hiragino Sans', 'Yu Gothic UI', sans-serif;
             font-weight: 700;
             line-height: 1.2;
             color: var(--clr-black);
@@ -131,7 +131,7 @@
         }
 
         .heading-accent {
-            font-family: 'BIZ UDPGothic', 'Noto Sans JP', sans-serif;
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Hiragino Sans', 'Yu Gothic UI', sans-serif;
         }
 
         /* Links styling */
@@ -154,7 +154,7 @@
             border-radius: 8px;
             padding: 12px 24px;
             font-weight: 700;
-            font-family: 'BIZ UDPGothic', 'Noto Sans JP', sans-serif;
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Hiragino Sans', 'Yu Gothic UI', sans-serif;
             cursor: pointer;
             transition: all 0.3s ease;
             box-shadow: 0 4px 15px rgba(24, 99, 75, 0.3);
@@ -177,7 +177,7 @@
             border-radius: 8px;
             padding: 10px 22px;
             font-weight: 700;
-            font-family: 'BIZ UDPGothic', 'Noto Sans JP', sans-serif;
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Hiragino Sans', 'Yu Gothic UI', sans-serif;
             cursor: pointer;
             transition: all 0.3s ease;
             text-decoration: none;
@@ -500,125 +500,136 @@
                 </h2>
                 
                 <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-
-                    <!-- Blog Card 1 - 最新記事 20250823 ChatGPTセキュリティ -->
-                    <article class="card overflow-hidden" data-date="2025-08-23">
-                        <a href="articles/20250823.html" class="block relative aspect-ratio-4-3 overflow-hidden">
+                    <!-- START: latest-grid -->
+                    <article class="card overflow-hidden" data-date="2025-09-02">
+                        <a href="articles/20250902.html" class="block relative aspect-ratio-4-3 overflow-hidden">
                             <img 
-                                src="https://images.unsplash.com/photo-1563013544-824ae1b704d3?w=800&h=450&fit=crop&crop=center" 
-                                alt="ChatGPTセキュリティの真実：データ利用オプトアウト設定で「正しく恐れる」情報保護対策2025" 
+                                src="https://images.unsplash.com/photo-1516321318423-f06f85e504b3?w=800&amp;h=450&amp;fit=crop&amp;crop=center" 
+                                alt="会議にAIを「同席」させる。議事録作成はもう古い概念" 
                                 class="w-full h-full object-cover hover:scale-105 transition-transform duration-300"
                             />
                             <div class="absolute inset-0 bg-gradient-to-t from-black/90 via-black/30 to-transparent">
                                 <div class="absolute bottom-4 left-4 right-4">
                                     <h2 class="text-white text-lg font-bold leading-tight line-clamp-2" style="text-shadow: 2px 2px 4px rgba(0,0,0,0.8);">
-                                        ChatGPTセキュリティの真実：データ利用オプトアウト設定で「正しく恐れる」情報保護対策2025
+                                        会議にAIを「同席」させる。議事録作成はもう古い概念
                                     </h2>
                                 </div>
                             </div>
                         </a>
                         <div class="p-6">
                             <div class="flex items-center mb-3">
-                                <time class="text-sm text-gray-500">2025年8月23日</time>
+                                <time class="text-sm text-gray-500">2025年9月2日</time>
                                 <span class="ml-2 px-2 py-1 bg-red-500 text-white text-xs rounded-full">NEW</span>
                             </div>
                             <p class="text-gray-600 mb-4 text-sm leading-relaxed line-clamp-3">
-ChatGPTのセキュリティについて過剰な恐れではなく「正しく恐れる」ための実践ガイド。オプトアウト設定、OpenAIのSOC2認証、セキュリティ体制の真実を詳細解説。地方企業が安心してAIを活用するための必読記事。
+                                あなたの会社でAI導入を検討中の方へ
                             </p>
-                            <div class="flex flex-wrap gap-2 mb-4">
-                                <span class="px-3 py-1 bg-green-100 text-green-800 text-sm rounded-full">ChatGPT</span>
-                                <span class="px-3 py-1 bg-green-100 text-green-800 text-sm rounded-full">セキュリティ</span>
-                                <span class="px-3 py-1 bg-green-100 text-green-800 text-sm rounded-full">データ保護</span>
-                                <span class="px-3 py-1 bg-green-100 text-green-800 text-sm rounded-full">オプトアウト</span>
-                            </div>
-                            <a href="articles/20250823.html" class="btn-primary text-sm">
-                                続きを読む
-                                <svg class="ml-2 w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/>
-                                </svg>
-                            </a>
                         </div>
                     </article>
-                    <!-- Blog Card 2 - 20250822 3D生成AI市場 -->
-                    <article class="card overflow-hidden" data-date="2025-08-22">
-                        <a href="articles/20250822.html" class="block relative aspect-ratio-4-3 overflow-hidden">
+                    <article class="card overflow-hidden" data-date="2025-09-01">
+                        <a href="articles/20250901.html" class="block relative aspect-ratio-4-3 overflow-hidden">
                             <img 
-                                src="https://images.unsplash.com/photo-nGoCBxiaRO0?w=800&h=450&fit=crop&crop=center" 
-                                alt="3D生成AI市場の進化：地方企業が月額3万円で3Dコンテンツを量産できる時代の到来" 
+                                src="https://images.unsplash.com/photo-1516321318423-f06f85e504b3?w=800&amp;h=450&amp;fit=crop&amp;crop=center" 
+                                alt="自学自習を「放棄」せよ。GPT-5が教える「教わらない学び方」" 
                                 class="w-full h-full object-cover hover:scale-105 transition-transform duration-300"
                             />
                             <div class="absolute inset-0 bg-gradient-to-t from-black/90 via-black/30 to-transparent">
                                 <div class="absolute bottom-4 left-4 right-4">
                                     <h2 class="text-white text-lg font-bold leading-tight line-clamp-2" style="text-shadow: 2px 2px 4px rgba(0,0,0,0.8);">
-                                        3D生成AI市場の進化：地方企業が月額3万円で3Dコンテンツを量産できる時代の到来
+                                        自学自習を「放棄」せよ。GPT-5が教える「教わらない学び方」
                                     </h2>
                                 </div>
                             </div>
                         </a>
                         <div class="p-6">
                             <div class="flex items-center mb-3">
-                                <time class="text-sm text-gray-500">2025年8月22日</time>
-                            </div>
-                            <p class="text-gray-600 mb-4 text-sm leading-relaxed line-clamp-3">
-2025年の3D生成AI市場は前年比480%の急成長を記録。Tripo、Meshy、HunyuanWorldなど革新プラットフォームで3Dコンテンツ制作が劇的に低コスト化。地方企業が月額3万円で高品質3Dモデルを量産できる新時代の活用事例を詳しく解説。
-                            </p>
-                            <div class="flex flex-wrap gap-2 mb-4">
-                                <span class="px-3 py-1 bg-green-100 text-green-800 text-sm rounded-full">3D生成AI</span>
-                                <span class="px-3 py-1 bg-green-100 text-green-800 text-sm rounded-full">3D制作</span>
-                                <span class="px-3 py-1 bg-green-100 text-green-800 text-sm rounded-full">AI技術</span>
-                            </div>
-                            <a href="articles/20250822.html" class="btn-primary text-sm">
-                                続きを読む
-                                <svg class="ml-2 w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/>
-                                </svg>
-                            </a>
-                        </div>
-                    </article>
-
-                    <!-- Blog Card 1 - 20250826 TINKER最新記事 -->
-                    <article class="card overflow-hidden" data-date="2025-08-26">
-                        <a href="articles/20250826.html" class="block relative aspect-ratio-4-3 overflow-hidden">
-                            <img 
-                                src="https://images.unsplash.com/photo-1633356122102-3fe601e05bd2?w=800&h=450&fit=crop&crop=center" 
-                                alt="【革命的ツール】TINKER｜1-2枚の写真で完璧な3Dモデル編集を実現する最新AI技術" 
-                                class="w-full h-full object-cover hover:scale-105 transition-transform duration-300"
-                            />
-                            <div class="absolute inset-0 bg-gradient-to-t from-black/90 via-black/30 to-transparent">
-                                <div class="absolute bottom-4 left-4 right-4">
-                                    <h2 class="text-white text-lg font-bold leading-tight line-clamp-2" style="text-shadow: 2px 2px 4px rgba(0,0,0,0.8);">
-                                        【革命的ツール】TINKER｜1-2枚の写真で完璧な3Dモデル編集を実現する最新AI技術
-                                    </h2>
-                                </div>
-                            </div>
-                        </a>
-                        <div class="p-6">
-                            <div class="flex items-center mb-3">
-                                <time class="text-sm text-gray-500">2025年8月26日</time>
+                                <time class="text-sm text-gray-500">2025年9月1日</time>
                                 <span class="ml-2 px-2 py-1 bg-red-500 text-white text-xs rounded-full">NEW</span>
                             </div>
                             <p class="text-gray-600 mb-4 text-sm leading-relaxed line-clamp-3">
-                                TINKERが3D制作の常識を変える！1-2枚の写真をアップロードするだけで、AIが完璧な3Dモデルを生成。どの角度からも一貫性を保つ驚異の技術を詳解。
+                                「勉強しなければいけないのはわかるけど、何から始めればいいかわからない...」
                             </p>
-                            <div class="flex flex-wrap gap-2 mb-4">
-                                <span class="px-3 py-1 bg-purple-100 text-purple-800 text-sm rounded-full">TINKER</span>
-                                <span class="px-3 py-1 bg-purple-100 text-purple-800 text-sm rounded-full">3Dモデル</span>
-                                <span class="px-3 py-1 bg-purple-100 text-purple-800 text-sm rounded-full">AI技術</span>
-                            </div>
-                            <a href="articles/20250826.html" class="btn-primary text-sm">
-                                続きを読む
-                                <svg class="ml-2 w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/>
-                                </svg>
-                            </a>
                         </div>
                     </article>
-
-                    <!-- Blog Card 1 - 最新記事 20250828 -->
+                    <article class="card overflow-hidden" data-date="2025-08-31">
+                        <a href="articles/20250831.html" class="block relative aspect-ratio-4-3 overflow-hidden">
+                            <img 
+                                src="https://images.unsplash.com/photo-1516321318423-f06f85e504b3?w=800&amp;h=450&amp;fit=crop&amp;crop=center" 
+                                alt="なぜあなたのAIは「間違ってばかり」なのか？その原因は「あなたの遠慮」にある" 
+                                class="w-full h-full object-cover hover:scale-105 transition-transform duration-300"
+                            />
+                            <div class="absolute inset-0 bg-gradient-to-t from-black/90 via-black/30 to-transparent">
+                                <div class="absolute bottom-4 left-4 right-4">
+                                    <h2 class="text-white text-lg font-bold leading-tight line-clamp-2" style="text-shadow: 2px 2px 4px rgba(0,0,0,0.8);">
+                                        なぜあなたのAIは「間違ってばかり」なのか？その原因は「あなたの遠慮」にある
+                                    </h2>
+                                </div>
+                            </div>
+                        </a>
+                        <div class="p-6">
+                            <div class="flex items-center mb-3">
+                                <time class="text-sm text-gray-500">2025年8月31日</time>
+                                <span class="ml-2 px-2 py-1 bg-red-500 text-white text-xs rounded-full">NEW</span>
+                            </div>
+                            <p class="text-gray-600 mb-4 text-sm leading-relaxed line-clamp-3">
+                                「何を聞いても、いつも期待した答えをくれない...」
+                            </p>
+                        </div>
+                    </article>
+                    <article class="card overflow-hidden" data-date="2025-08-30">
+                        <a href="articles/20250830.html" class="block relative aspect-ratio-4-3 overflow-hidden">
+                            <img 
+                                src="https://images.unsplash.com/photo-1516321318423-f06f85e504b3?w=800&amp;h=450&amp;fit=crop&amp;crop=center" 
+                                alt="Codex最新アップデートが我々の生活に与える影響" 
+                                class="w-full h-full object-cover hover:scale-105 transition-transform duration-300"
+                            />
+                            <div class="absolute inset-0 bg-gradient-to-t from-black/90 via-black/30 to-transparent">
+                                <div class="absolute bottom-4 left-4 right-4">
+                                    <h2 class="text-white text-lg font-bold leading-tight line-clamp-2" style="text-shadow: 2px 2px 4px rgba(0,0,0,0.8);">
+                                        Codex最新アップデートが我々の生活に与える影響
+                                    </h2>
+                                </div>
+                            </div>
+                        </a>
+                        <div class="p-6">
+                            <div class="flex items-center mb-3">
+                                <time class="text-sm text-gray-500">2025年8月30日</time>
+                                <span class="ml-2 px-2 py-1 bg-red-500 text-white text-xs rounded-full">NEW</span>
+                            </div>
+                            <p class="text-gray-600 mb-4 text-sm leading-relaxed line-clamp-3">
+                                2025年8月、OpenAIのAIコーディングエージェント「Codex」が大規模アップデート。ローカル・クラウド・GitHubを横断する連携とレビュー自動化で、開発効率とサービス創出の速度が飛躍的に向上します。
+                            </p>
+                        </div>
+                    </article>
+                    <article class="card overflow-hidden" data-date="2025-08-29">
+                        <a href="articles/20250829.html" class="block relative aspect-ratio-4-3 overflow-hidden">
+                            <img 
+                                src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?w=800&amp;h=450&amp;fit=crop&amp;crop=faces" 
+                                alt="「考えるな、AIに聞け」思考停止が加速する生産性の真実" 
+                                class="w-full h-full object-cover hover:scale-105 transition-transform duration-300"
+                            />
+                            <div class="absolute inset-0 bg-gradient-to-t from-black/90 via-black/30 to-transparent">
+                                <div class="absolute bottom-4 left-4 right-4">
+                                    <h2 class="text-white text-lg font-bold leading-tight line-clamp-2" style="text-shadow: 2px 2px 4px rgba(0,0,0,0.8);">
+                                        「考えるな、AIに聞け」思考停止が加速する生産性の真実
+                                    </h2>
+                                </div>
+                            </div>
+                        </a>
+                        <div class="p-6">
+                            <div class="flex items-center mb-3">
+                                <time class="text-sm text-gray-500">2025年8月29日</time>
+                                <span class="ml-2 px-2 py-1 bg-red-500 text-white text-xs rounded-full">NEW</span>
+                            </div>
+                            <p class="text-gray-600 mb-4 text-sm leading-relaxed line-clamp-3">
+                                「考えるな、AIに聞け」思考停止が加速する生産性の真実
+                            </p>
+                        </div>
+                    </article>
                     <article class="card overflow-hidden" data-date="2025-08-28">
                         <a href="articles/20250828.html" class="block relative aspect-ratio-4-3 overflow-hidden">
                             <img 
-                                src="https://images.unsplash.com/photo-1434030216411-0b793f4b4173?w=800&h=450&fit=crop&crop=faces" 
+                                src="https://images.unsplash.com/photo-1516321318423-f06f85e504b3?w=800&amp;h=450&amp;fit=crop&amp;crop=center" 
                                 alt="完璧な問いはAIを殺す。あなたが「愚か」になるほど賢くなる理由" 
                                 class="w-full h-full object-cover hover:scale-105 transition-transform duration-300"
                             />
@@ -636,97 +647,11 @@ ChatGPTのセキュリティについて過剰な恐れではなく「正しく�
                                 <span class="ml-2 px-2 py-1 bg-red-500 text-white text-xs rounded-full">NEW</span>
                             </div>
                             <p class="text-gray-600 mb-4 text-sm leading-relaxed line-clamp-3">
-                                完璧な問いがAIの可能性を殺し、愚かで曖昧な質問こそがAIの真価を引き出す理由。効果的なAI対話テクニックと実践的な質問術を詳しく解説します。
+                                「どう聞けば完璧な答えをもらえるのか分からない...」
                             </p>
-                            <div class="flex flex-wrap gap-2 mb-4">
-                                <span class="px-3 py-1 bg-green-100 text-green-800 text-sm rounded-full">AI対話</span>
-                                <span class="px-3 py-1 bg-green-100 text-green-800 text-sm rounded-full">プロンプト術</span>
-                                <span class="px-3 py-1 bg-green-100 text-green-800 text-sm rounded-full">質問技術</span>
-                            </div>
-                            <a href="articles/20250828.html" class="btn-primary text-sm">
-                                続きを読む
-                                <svg class="ml-2 w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/>
-                                </svg>
-                            </a>
                         </div>
                     </article>
-
-                    <!-- Blog Card 2 - 最新記事 20250827 -->
-                    <article class="card overflow-hidden" data-date="2025-08-27">
-                        <a href="articles/20250827.html" class="block relative aspect-ratio-4-3 overflow-hidden">
-                            <img 
-                                src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?w=800&h=450&fit=crop&crop=faces" 
-                                alt="Google検索はもう終わり。AIが奪う「情報探しの自由」" 
-                                class="w-full h-full object-cover hover:scale-105 transition-transform duration-300"
-                            />
-                            <div class="absolute inset-0 bg-gradient-to-t from-black/90 via-black/30 to-transparent">
-                                <div class="absolute bottom-4 left-4 right-4">
-                                    <h2 class="text-white text-lg font-bold leading-tight line-clamp-2" style="text-shadow: 2px 2px 4px rgba(0,0,0,0.8);">
-                                        Google検索はもう終わり。AIが奪う「情報探しの自由」
-                                    </h2>
-                                </div>
-                            </div>
-                        </a>
-                        <div class="p-6">
-                            <div class="flex items-center mb-3">
-                                <time class="text-sm text-gray-500">2025年8月27日</time>
-                                <span class="ml-2 px-2 py-1 bg-red-500 text-white text-xs rounded-full">NEW</span>
-                            </div>
-                            <p class="text-gray-600 mb-4 text-sm leading-relaxed line-clamp-3">
-                                Google検索の時代が終わり、AIとの対話による新しい情報取得の時代が到来。従来の検索から対話型AIへの変革が私たちの情報との向き合い方を根本から変える理由と実践法を解説。
-                            </p>
-                            <div class="flex flex-wrap gap-2 mb-4">
-                                <span class="px-3 py-1 bg-blue-100 text-blue-800 text-sm rounded-full">Google検索</span>
-                                <span class="px-3 py-1 bg-blue-100 text-blue-800 text-sm rounded-full">AI検索</span>
-                                <span class="px-3 py-1 bg-blue-100 text-blue-800 text-sm rounded-full">情報収集</span>
-                            </div>
-                            <a href="articles/20250827.html" class="btn-primary text-sm">
-                                続きを読む
-                                <svg class="ml-2 w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/>
-                                </svg>
-                            </a>
-                        </div>
-                    </article>
-
-                    <!-- Blog Card 3 - 20250824 AI失業最新記事 -->
-                    <article class="card overflow-hidden" data-date="2025-08-24">
-                        <a href="articles/20250824.html" class="block relative aspect-ratio-4-3 overflow-hidden">
-                            <img 
-                                src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?w=800&h=450&fit=crop&crop=faces" 
-                                alt="【2025年版】AIによる大量失業が現実に｜アメリカで13万人が職を失った衝撃の事実と対策" 
-                                class="w-full h-full object-cover hover:scale-105 transition-transform duration-300"
-                            />
-                            <div class="absolute inset-0 bg-gradient-to-t from-black/90 via-black/30 to-transparent">
-                                <div class="absolute bottom-4 left-4 right-4">
-                                    <h2 class="text-white text-lg font-bold leading-tight line-clamp-2" style="text-shadow: 2px 2px 4px rgba(0,0,0,0.8);">
-                                        【2025年版】AIによる大量失業が現実に｜アメリカで13万人が職を失った衝撃の事実と対策
-                                    </h2>
-                                </div>
-                            </div>
-                        </a>
-                        <div class="p-6">
-                            <div class="flex items-center mb-3">
-                                <time class="text-sm text-gray-500">2025年8月24日</time>
-                            </div>
-                            <p class="text-gray-600 mb-4 text-sm leading-relaxed line-clamp-3">
-                                2025年にアメリカのテック業界で13万人がAI導入により失業。日本企業も無関係ではない現実と今すぐ始めるべき対策を詳しく解説。
-                            </p>
-                            <div class="flex flex-wrap gap-2 mb-4">
-                                <span class="px-3 py-1 bg-red-100 text-red-800 text-sm rounded-full">AI失業</span>
-                                <span class="px-3 py-1 bg-red-100 text-red-800 text-sm rounded-full">対策</span>
-                                <span class="px-3 py-1 bg-red-100 text-red-800 text-sm rounded-full">2025年</span>
-                            </div>
-                            <a href="articles/20250824.html" class="btn-primary text-sm">
-                                続きを読む
-                                <svg class="ml-2 w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/>
-                                </svg>
-                            </a>
-                        </div>
-                    </article>
-
+                    <!-- END: latest-grid -->
                 </div>
                 
                 <div class="text-center mt-12">
@@ -737,1731 +662,8 @@ ChatGPTのセキュリティについて過剰な恐れではなく「正しく�
             </div>
         </section>
 
-        <!-- AI導入効果シミュレーター セクション -->
-                                    </h2>
-                                </div>
-                            </div>
-                        </a>
-                        <div class="p-6">
-                            <div class="flex items-center mb-3">
-                                <time class="text-sm text-gray-500">2025年8月21日</time>
-                            </div>
-                            <p class="text-gray-600 mb-4 text-sm leading-relaxed line-clamp-3">
-Google FlowのAI映像制作ツールで地方企業の動画制作コストが89%削減。月額3万円で映画級の動画を作成。製造業・観光業・農業での成功事例と年間1,000万円以上のコスト削減効果を詳しく解説します。
-                            </p>
-                            <div class="flex flex-wrap gap-2 mb-4">
-                                <span class="px-3 py-1 bg-green-100 text-green-800 text-sm rounded-full">Google Flow</span>
-                                <span class="px-3 py-1 bg-green-100 text-green-800 text-sm rounded-full">AI映像制作</span>
-                                <span class="px-3 py-1 bg-green-100 text-green-800 text-sm rounded-full">動画制作</span>
-                            </div>
-                            <a href="articles/20250821.html" class="btn-primary text-sm">
-                                続きを読む
-                                <svg class="ml-2 w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/>
-                                </svg>
-                            </a>
-                        </div>
-                    </article>
-
-                    <!-- Blog Card 2 - 20250819 Genie 3 -->
-                    <article class="card overflow-hidden" data-date="2025-08-19">
-                        <a href="articles/20250819.html" class="block relative aspect-ratio-4-3 overflow-hidden">
-                            <img 
-                                src="https://images.unsplash.com/photo-1617791160505-6f00504e3519?w=800&h=450&fit=crop&crop=center" 
-                                alt="【地方企業の革命】Google Genie 3で仮想世界を作る時代が到来！研修・シミュレーションが劇的に変わる未来予想図" 
-                                class="w-full h-full object-cover hover:scale-105 transition-transform duration-300"
-                            />
-                            <div class="absolute inset-0 bg-gradient-to-t from-black/90 via-black/30 to-transparent">
-                                <div class="absolute bottom-4 left-4 right-4">
-                                    <h2 class="text-white text-lg font-bold leading-tight line-clamp-2" style="text-shadow: 2px 2px 4px rgba(0,0,0,0.8);">
-                                        【地方企業の革命】Google Genie 3で仮想世界を作る時代が到来！研修・シミュレーションが劇的に変わる未来予想図
-                                    </h2>
-                                </div>
-                            </div>
-                        </a>
-                        <div class="p-6">
-                            <div class="flex items-center mb-3">
-                                <time class="text-sm text-gray-500">2025年8月19日</time>
-                                <span class="ml-2 px-2 py-1 bg-red-500 text-white text-xs rounded-full">NEW</span>
-                            </div>
-                            <p class="text-gray-600 mb-4 text-sm leading-relaxed line-clamp-3">
-                                Google Genie 3が地方企業の研修・教育を革命的に変える。テキストプロンプトで操作可能な仮想世界をリアルタイム生成し、年間数百万円の研修コスト削減を実現する具体的活用法を解説。
-                            </p>
-                            <div class="flex flex-wrap gap-2 mb-4">
-                                <span class="px-3 py-1 bg-blue-100 text-blue-800 text-sm rounded-full">Genie 3</span>
-                                <span class="px-3 py-1 bg-blue-100 text-blue-800 text-sm rounded-full">VR研修</span>
-                                <span class="px-3 py-1 bg-blue-100 text-blue-800 text-sm rounded-full">仮想世界</span>
-                            </div>
-                            <a href="articles/20250819.html" class="btn-primary text-sm">
-                                続きを読む
-                                <svg class="ml-2 w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/>
-                                </svg>
-                            </a>
-                        </div>
-                    </article>
-
-                    <!-- Blog Card 3 - 20250818 -->
-                    <article class="card overflow-hidden" data-date="2025-08-18">
-                        <a href="articles/20250818.html" class="block relative aspect-ratio-4-3 overflow-hidden">
-                            <img 
-                                src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?w=800&h=450&fit=crop&crop=faces" 
-                                alt="【2025年最新】GeminiとChatGPTの一時チャット機能比較：実際の使い分けで分かった3つの違い" 
-                                class="w-full h-full object-cover hover:scale-105 transition-transform duration-300"
-                            />
-                            <div class="absolute inset-0 bg-gradient-to-t from-black/90 via-black/30 to-transparent">
-                                <div class="absolute bottom-4 left-4 right-4">
-                                    <h2 class="text-white text-lg font-bold leading-tight line-clamp-2" style="text-shadow: 2px 2px 4px rgba(0,0,0,0.8);">
-                                        【2025年最新】GeminiとChatGPTの一時チャット機能比較：実際の使い分けで分かった3つの違い
-                                    </h2>
-                                </div>
-                            </div>
-                        </a>
-                        <div class="p-6">
-                            <div class="flex items-center mb-3">
-                                <time class="text-sm text-gray-500">2025年8月18日</time>
-                                <span class="ml-2 px-2 py-1 bg-red-500 text-white text-xs rounded-full">NEW</span>
-                            </div>
-                            <p class="text-gray-600 mb-4 text-sm leading-relaxed line-clamp-3">
-                                GeminiとChatGPTの一時チャット機能を実際に使い込んで分かった違いを詳しく解説。データ保持期間、記憶システム、プライバシー設定の違いと、地方企業向けの実践的な選択指針をお届けします。
-                            </p>
-                            <div class="flex flex-wrap gap-2 mb-4">
-                                <span class="px-3 py-1 bg-blue-100 text-blue-800 text-sm rounded-full">AI比較</span>
-                                <span class="px-3 py-1 bg-blue-100 text-blue-800 text-sm rounded-full">プライバシー</span>
-                                <span class="px-3 py-1 bg-blue-100 text-blue-800 text-sm rounded-full">選択指針</span>
-                            </div>
-                            <a href="articles/20250818.html" class="btn-primary text-sm">
-                                続きを読む
-                                <svg class="ml-2 w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/>
-                                </svg>
-                            </a>
-                        </div>
-                    </article>
-
-                    <!-- Blog Card 2 - 最新記事 20250817 -->
-                    <article class="card overflow-hidden" data-date="2025-08-17">
-                        <a href="articles/20250817.html" class="block relative aspect-ratio-4-3 overflow-hidden">
-                            <img 
-                                src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=800&h=450&fit=crop&crop=center" 
-                                alt="「AIが使えない」は思い込み？ あなたの心を縛る"5つの壁"とその壊し方" 
-                                class="w-full h-full object-cover hover:scale-105 transition-transform duration-300"
-                            />
-                            <div class="absolute inset-0 bg-gradient-to-t from-black/90 via-black/30 to-transparent">
-                                <div class="absolute bottom-4 left-4 right-4">
-                                    <h2 class="text-white text-lg font-bold leading-tight line-clamp-2" style="text-shadow: 2px 2px 4px rgba(0,0,0,0.8);">
-                                        「AIが使えない」は思い込み？ あなたの心を縛る"5つの壁"とその壊し方
-                                    </h2>
-                                </div>
-                            </div>
-                        </a>
-                        <div class="p-6">
-                            <div class="flex items-center mb-3">
-                                <time class="text-sm text-gray-500">2025年8月17日</time>
-                            </div>
-                            <p class="text-gray-600 mb-4 text-sm leading-relaxed line-clamp-3">
-                                AIを使えない本当の理由は能力不足ではなく心理的な壁。魔法視、監視不安、取り残され恐怖、言語化の負荷、回避学習の5つの壁を理解し、突破する方法を詳しく解説します。
-                            </p>
-                            <div class="flex flex-wrap gap-2 mb-4">
-                                <span class="px-3 py-1 bg-purple-100 text-purple-800 text-sm rounded-full">心理的障壁</span>
-                                <span class="px-3 py-1 bg-purple-100 text-purple-800 text-sm rounded-full">AI恐怖症</span>
-                                <span class="px-3 py-1 bg-purple-100 text-purple-800 text-sm rounded-full">克服法</span>
-                            </div>
-                            <a href="articles/20250817.html" class="btn-primary text-sm">
-                                続きを読む
-                                <svg class="ml-2 w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/>
-                                </svg>
-                            </a>
-                        </div>
-                    </article>
-
-                    <!-- Blog Card 3 - 最新記事 20250816 -->
-                    <article class="card overflow-hidden" data-date="2025-08-16">
-                        <a href="articles/20250816.html" class="block relative aspect-ratio-4-3 overflow-hidden">
-                            <img 
-                                src="https://images.unsplash.com/photo-1504805572947-34fad45aed93?w=800&h=450&fit=crop&crop=center" 
-                                alt="AI時代の思考法：AIが得意な「論理」と、人間に残された「関係性」の聖域" 
-                                class="w-full h-full object-cover hover:scale-105 transition-transform duration-300"
-                            />
-                            <div class="absolute inset-0 bg-gradient-to-t from-black/90 via-black/30 to-transparent">
-                                <div class="absolute bottom-4 left-4 right-4">
-                                    <h2 class="text-white text-lg font-bold leading-tight line-clamp-2" style="text-shadow: 2px 2px 4px rgba(0,0,0,0.8);">
-                                        AI時代の思考法：AIが得意な「論理」と、人間に残された「関係性」の聖域
-                                    </h2>
-                                </div>
-                            </div>
-                        </a>
-                        <div class="p-6">
-                            <div class="flex items-center mb-3">
-                                <time class="text-sm text-gray-500">2025年8月16日</time>
-                            </div>
-                            <p class="text-gray-600 mb-4 text-sm leading-relaxed line-clamp-3">
-                                AI時代に人間に求められる思考力とは？AIが圧倒的に得意な論理思考6つの領域と、人間にしかできない関係性思考の聖域を解説。デザイン思考で両者を融合させる方法も紹介。
-                            </p>
-                            <div class="flex flex-wrap gap-2 mb-4">
-                                <span class="px-3 py-1 bg-green-100 text-green-800 text-sm rounded-full">AI思考法</span>
-                                <span class="px-3 py-1 bg-green-100 text-green-800 text-sm rounded-full">人間らしさ</span>
-                                <span class="px-3 py-1 bg-green-100 text-green-800 text-sm rounded-full">デザイン思考</span>
-                            </div>
-                            <a href="articles/20250816.html" class="btn-primary text-sm">
-                                続きを読む
-                                <svg class="ml-2 w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/>
-                                </svg>
-                            </a>
-                        </div>
-                    </article>
-
-                    <!-- Blog Card 3 - 最新記事 20250815 -->
-                    <article class="card overflow-hidden" data-date="2025-08-15">
-                        <a href="articles/20250815.html" class="block relative aspect-ratio-4-3 overflow-hidden">
-                            <img 
-                                src="https://images.unsplash.com/photo-1556761175-b413da4baf72?w=800&h=450&fit=crop&crop=center" 
-                                alt="地方企業こそAIで勝てる理由：大手にない3つの強みを活かす戦略" 
-                                class="w-full h-full object-cover hover:scale-105 transition-transform duration-300"
-                            />
-                            <div class="absolute inset-0 bg-gradient-to-t from-black/90 via-black/30 to-transparent">
-                                <div class="absolute bottom-4 left-4 right-4">
-                                    <h2 class="text-white text-lg font-bold leading-tight line-clamp-2" style="text-shadow: 2px 2px 4px rgba(0,0,0,0.8);">
-                                        地方企業こそAIで勝てる理由：大手にない3つの強みを活かす戦略
-                                    </h2>
-                                </div>
-                            </div>
-                        </a>
-                        <div class="p-6">
-                            <div class="flex items-center mb-3">
-                                <time class="text-sm text-gray-500">2025年8月15日</time>
-                            </div>
-                            <p class="text-gray-600 mb-4 text-sm leading-relaxed line-clamp-3">
-                                地方企業の業績向上率32%（大手12%）の理由を徹底解析。決断スピード、現場との距離、地域密着データという3つの強みを活かしてAIで競争優位を築く具体的戦略を詳しく解説します。
-                            </p>
-                            <div class="flex flex-wrap gap-2 mb-4">
-                                <span class="px-3 py-1 bg-blue-100 text-blue-800 text-sm rounded-full">地方企業</span>
-                                <span class="px-3 py-1 bg-blue-100 text-blue-800 text-sm rounded-full">競争優位</span>
-                                <span class="px-3 py-1 bg-blue-100 text-blue-800 text-sm rounded-full">AI戦略</span>
-                            </div>
-                            <a href="articles/20250815.html" class="btn-primary text-sm">
-                                続きを読む
-                                <svg class="ml-2 w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/>
-                                </svg>
-                            </a>
-                        </div>
-                    </article>
-
-                    <!-- Blog Card 4 - 最新記事 20250814 -->
-                    <article class="card overflow-hidden" data-date="2025-08-14">
-                        <a href="articles/20250814.html" class="block relative aspect-ratio-4-3 overflow-hidden">
-                            <img 
-                                src="https://images.unsplash.com/photo-1560472354-b33ff0c44a43?w=800&h=450&fit=crop&crop=center" 
-                                alt="中小企業のAI導入で失敗する3つのパターンと成功への転換法" 
-                                class="w-full h-full object-cover hover:scale-105 transition-transform duration-300"
-                            />
-                            <div class="absolute inset-0 bg-gradient-to-t from-black/90 via-black/30 to-transparent">
-                                <div class="absolute bottom-4 left-4 right-4">
-                                    <h2 class="text-white text-lg font-bold leading-tight line-clamp-2" style="text-shadow: 2px 2px 4px rgba(0,0,0,0.8);">
-                                        中小企業のAI導入で失敗する3つのパターンと成功への転換法
-                                    </h2>
-                                </div>
-                            </div>
-                        </a>
-                        <div class="p-6">
-                            <div class="flex items-center mb-3">
-                                <time class="text-sm text-gray-500">2025年8月14日</time>
-                                <span class="ml-2 px-2 py-1 bg-red-500 text-white text-xs rounded-full">NEW</span>
-                            </div>
-                            <p class="text-gray-600 mb-4 text-sm leading-relaxed line-clamp-3">
-                                AI導入失敗率42%の原因を分析。大企業の真似・現場無視・データ軽視という3つの典型的失敗パターンと、成功率85%を実現する具体的な転換戦略を実例とともに解説します。
-                            </p>
-                            <div class="flex flex-wrap gap-2 mb-4">
-                                <span class="px-3 py-1 bg-blue-100 text-blue-800 text-sm rounded-full">AI導入</span>
-                                <span class="px-3 py-1 bg-blue-100 text-blue-800 text-sm rounded-full">中小企業</span>
-                                <span class="px-3 py-1 bg-blue-100 text-blue-800 text-sm rounded-full">失敗対策</span>
-                            </div>
-                            <a href="articles/20250814.html" class="btn-primary text-sm">
-                                続きを読む
-                                <svg class="ml-2 w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/>
-                                </svg>
-                            </a>
-                        </div>
-                    </article>
-
-                    <!-- Blog Card 3 - 最新記事 20250813 -->
-                    <article class="card overflow-hidden" data-date="2025-08-13">
-                        <a href="articles/20250813.html" class="block relative aspect-ratio-4-3 overflow-hidden">
-                            <img 
-                                src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?w=800&h=450&fit=crop&crop=faces" 
-                                alt="AI初心者が最初の30日で実感する5つの変化【2025年最新版】" 
-                                class="w-full h-full object-cover hover:scale-105 transition-transform duration-300"
-                            />
-                            <div class="absolute inset-0 bg-gradient-to-t from-black/90 via-black/30 to-transparent">
-                                <div class="absolute bottom-4 left-4 right-4">
-                                    <h2 class="text-white text-lg font-bold leading-tight line-clamp-2" style="text-shadow: 2px 2px 4px rgba(0,0,0,0.8);">
-                                        AI初心者が最初の30日で実感する5つの変化【2025年最新版】
-                                    </h2>
-                                </div>
-                            </div>
-                        </a>
-                        <div class="p-6">
-                            <div class="flex items-center mb-3">
-                                <time class="text-sm text-gray-500">2025年8月13日</time>
-                                <span class="ml-2 px-2 py-1 bg-red-500 text-white text-xs rounded-full">NEW</span>
-                            </div>
-                            <p class="text-gray-600 mb-4 text-sm leading-relaxed line-clamp-3">
-                                AI初心者の87%が30日以内に実感する具体的変化を徹底調査。文章作成時間60%短縮、情報収集効率3倍向上など、業界問わず体験できる5つの変化と実践方法を詳しく解説します。
-                            </p>
-                            <div class="flex flex-wrap gap-2 mb-4">
-                                <span class="px-3 py-1 bg-blue-100 text-blue-800 text-sm rounded-full">AI初心者</span>
-                                <span class="px-3 py-1 bg-blue-100 text-blue-800 text-sm rounded-full">30日</span>
-                                <span class="px-3 py-1 bg-blue-100 text-blue-800 text-sm rounded-full">効率化</span>
-                            </div>
-                            <a href="articles/20250813.html" class="btn-primary text-sm">
-                                続きを読む
-                                <svg class="ml-2 w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/>
-                                </svg>
-                            </a>
-                        </div>
-                    </article>
-
-                    <!-- Blog Card 4 - 20250812 -->
-                    <article class="card overflow-hidden" data-date="2025-08-12">
-                        <a href="articles/20250812.html" class="block relative aspect-ratio-4-3 overflow-hidden">
-                            <img 
-                                src="https://images.unsplash.com/photo-1582719478250-c89cae4dc85b?w=800&h=450&fit=crop&crop=center" 
-                                alt="【地方観光業向け】もうクレームは怖くない！ChatGPT音声会話で実践する、お客様の心を掴む応対術" 
-                                class="w-full h-full object-cover hover:scale-105 transition-transform duration-300"
-                            />
-                            <div class="absolute inset-0 bg-gradient-to-t from-black/90 via-black/30 to-transparent">
-                                <div class="absolute bottom-4 left-4 right-4">
-                                    <h2 class="text-white text-lg font-bold leading-tight line-clamp-2" style="text-shadow: 2px 2px 4px rgba(0,0,0,0.8);">
-                                        【地方観光業向け】もうクレームは怖くない！ChatGPT音声会話で実践する、お客様の心を掴む応対術
-                                    </h2>
-                                </div>
-                            </div>
-                        </a>
-                        <div class="p-6">
-                            <div class="flex items-center mb-3">
-                                <time class="text-sm text-gray-500">2025年8月12日</time>
-                            </div>
-                            <p class="text-gray-600 mb-4 text-sm leading-relaxed line-clamp-3">
-                                地方観光業のクレーム対応を劇的改善。ChatGPTの音声機能を活用した応対トレーニングで、お客様満足度を向上させる実践的な手法を詳しく解説します。
-                            </p>
-                            <div class="flex flex-wrap gap-2 mb-4">
-                                <span class="px-3 py-1 bg-green-100 text-green-800 text-sm rounded-full">観光業DX</span>
-                                <span class="px-3 py-1 bg-blue-100 text-blue-800 text-sm rounded-full">クレーム対応</span>
-                                <span class="px-3 py-1 bg-blue-100 text-blue-800 text-sm rounded-full">音声AI</span>
-                            </div>
-                            <a href="articles/20250812.html" class="btn-primary text-sm">
-                                続きを読む
-                                <svg class="ml-2 w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/>
-                                </svg>
-                            </a>
-                        </div>
-                    </article>
-
-                    <!-- Blog Card 5 - 20250811 -->
-                    <article class="card overflow-hidden" data-date="2025-08-11">
-                        <a href="articles/20250811.html" class="block relative aspect-ratio-4-3 overflow-hidden">
-                            <img 
-                                src="https://images.unsplash.com/photo-1581094794329-c8112a89af12?w=800&h=450&fit=crop&crop=center" 
-                                alt="【農業向け】もう勘に頼らない！ChatGPTで作る「最適収穫タイミング判断システム」の作り方" 
-                                class="w-full h-full object-cover hover:scale-105 transition-transform duration-300"
-                            />
-                            <div class="absolute inset-0 bg-gradient-to-t from-black/90 via-black/30 to-transparent">
-                                <div class="absolute bottom-4 left-4 right-4">
-                                    <h2 class="text-white text-lg font-bold leading-tight line-clamp-2" style="text-shadow: 2px 2px 4px rgba(0,0,0,0.8);">
-                                        【農業向け】もう勘に頼らない！ChatGPTで作る「最適収穫タイミング判断システム」の作り方
-                                    </h2>
-                                </div>
-                            </div>
-                        </a>
-                        <div class="p-6">
-                            <div class="flex items-center mb-3">
-                                <time class="text-sm text-gray-500">2025年8月11日</time>
-                            </div>
-                            <p class="text-gray-600 mb-4 text-sm leading-relaxed line-clamp-3">
-                                農業の収穫タイミングをAIで最適化。ChatGPTを活用して気象データと生育状況から最適な収穫時期を判断するシステムの構築方法を詳しく解説します。
-                            </p>
-                            <div class="flex flex-wrap gap-2 mb-4">
-                                <span class="px-3 py-1 bg-yellow-100 text-yellow-800 text-sm rounded-full">農業DX</span>
-                                <span class="px-3 py-1 bg-blue-100 text-blue-800 text-sm rounded-full">収穫最適化</span>
-                                <span class="px-3 py-1 bg-blue-100 text-blue-800 text-sm rounded-full">データ活用</span>
-                            </div>
-                            <a href="articles/20250811.html" class="btn-primary text-sm">
-                                続きを読む
-                                <svg class="ml-2 w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/>
-                                </svg>
-                            </a>
-                        </div>
-                    </article>
-
-                    <!-- Blog Card 6 - 20250810 -->
-                    <article class="card overflow-hidden" data-date="2025-08-10">
-                        <a href="articles/20250810.html" class="block relative aspect-ratio-4-3 overflow-hidden">
-                            <img 
-                                src="https://images.unsplash.com/photo-1567789884554-0b844b597180?w=800&h=450&fit=crop&crop=center" 
-                                alt="【製造業・観光業向け】言葉の壁を乗り越える！ChatGPTで作る、外国人従業員向け「やさしい日本語」トレーニング術" 
-                                class="w-full h-full object-cover hover:scale-105 transition-transform duration-300"
-                            />
-                            <div class="absolute inset-0 bg-gradient-to-t from-black/90 via-black/30 to-transparent">
-                                <div class="absolute bottom-4 left-4 right-4">
-                                    <h2 class="text-white text-lg font-bold leading-tight line-clamp-2" style="text-shadow: 2px 2px 4px rgba(0,0,0,0.8);">
-                                        【製造業・観光業向け】言葉の壁を乗り越える！ChatGPTで作る、外国人従業員向け「やさしい日本語」トレーニング術
-                                    </h2>
-                                </div>
-                            </div>
-                        </a>
-                        <div class="p-6">
-                            <div class="flex items-center mb-3">
-                                <time class="text-sm text-gray-500">2025年8月10日</time>
-                                <span class="ml-2 px-2 py-1 bg-red-500 text-white text-xs rounded-full">NEW</span>
-                            </div>
-                            <p class="text-gray-600 mb-4 text-sm leading-relaxed line-clamp-3">
-                                製造業・観光業の外国人従業員との円滑なコミュニケーションを実現。ChatGPTを使って現場に特化した「やさしい日本語」学習スクリプトを作成し、言葉の壁を効果的に解決する方法を詳しく解説します。
-                            </p>
-                            <div class="flex flex-wrap gap-2 mb-4">
-                                <span class="px-3 py-1 bg-blue-100 text-blue-800 text-sm rounded-full">やさしい日本語</span>
-                                <span class="px-3 py-1 bg-blue-100 text-blue-800 text-sm rounded-full">外国人従業員</span>
-                                <span class="px-3 py-1 bg-blue-100 text-blue-800 text-sm rounded-full">多文化共生</span>
-                            </div>
-                            <a href="articles/20250810.html" class="btn-primary text-sm">
-                                続きを読む
-                                <svg class="ml-2 w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/>
-                                </svg>
-                            </a>
-                        </div>
-                    </article>
-                    <!-- Blog Card 2 - 20250809 -->
-                    <article class="card overflow-hidden" data-date="2025-08-09">
-                        <a href="articles/20250809.html" class="block relative aspect-ratio-4-3 overflow-hidden">
-                            <img 
-                                src="https://images.unsplash.com/photo-1600880292203-757bb62b4baf?w=800&h=450&fit=crop&crop=center" 
-                                alt="【2025年AI革命】ChatGPTエージェントの登場で、地方企業の仕事はどう変わる？現場が知るべき「新時代の働き方」" 
-                                class="w-full h-full object-cover hover:scale-105 transition-transform duration-300"
-                            />
-                            <div class="absolute inset-0 bg-gradient-to-t from-black/90 via-black/30 to-transparent">
-                                <div class="absolute bottom-4 left-4 right-4">
-                                    <h2 class="text-white text-lg font-bold leading-tight line-clamp-2" style="text-shadow: 2px 2px 4px rgba(0,0,0,0.8);">
-                                        【2025年AI革命】ChatGPTエージェントの登場で、地方企業の仕事はどう変わる？現場が知るべき「新時代の働き方」
-                                    </h2>
-                                </div>
-                            </div>
-                        </a>
-                        <div class="p-6">
-                            <div class="flex items-center mb-3">
-                                <time class="text-sm text-gray-500">2025年8月9日</time>
-                                <span class="ml-2 px-2 py-1 bg-red-500 text-white text-xs rounded-full">NEW</span>
-                            </div>
-                            <p class="text-gray-600 mb-4 text-sm leading-relaxed line-clamp-3">
-                                ChatGPTエージェントが地方企業の仕事にもたらす変革を解説。現場が知っておくべき新時代の働き方と実践的な活用法を紹介します。
-                            </p>
-                            <div class="flex flex-wrap gap-2 mb-4">
-                                <span class="px-3 py-1 bg-blue-100 text-blue-800 text-sm rounded-full">ChatGPTエージェント</span>
-                                <span class="px-3 py-1 bg-blue-100 text-blue-800 text-sm rounded-full">AI革命</span>
-                            </div>
-                            <a href="articles/20250809.html" class="btn-primary text-sm">
-                                続きを読む
-                                <svg class="ml-2 w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/>
-                                </svg>
-                            </a>
-                        </div>
-                    </article>
-
-                    <!-- Blog Card 3 - 20250808 -->
-                    <article class="card overflow-hidden" data-date="2025-08-08">
-                        <a href="articles/20250808.html" class="block relative aspect-ratio-4-3 overflow-hidden">
-                            <img 
-                                src="https://images.unsplash.com/photo-1582719478250-c89cae4dc85b?w=800&h=450&fit=crop&crop=center" 
-                                alt="【地方観光業向け】もうクレームは怖くない！ChatGPT音声会話で実践する、お客様の心を掴む応対術" 
-                                class="w-full h-full object-cover hover:scale-105 transition-transform duration-300"
-                            />
-                            <div class="absolute inset-0 bg-gradient-to-t from-black/90 via-black/30 to-transparent">
-                                <div class="absolute bottom-4 left-4 right-4">
-                                    <h2 class="text-white text-lg font-bold leading-tight line-clamp-2" style="text-shadow: 2px 2px 4px rgba(0,0,0,0.8);">
-                                        【地方観光業向け】もうクレームは怖くない！ChatGPT音声会話で実践する、お客様の心を掴む応対術
-                                    </h2>
-                                </div>
-                            </div>
-                        </a>
-                        <div class="p-6">
-                            <div class="flex items-center mb-3">
-                                <time class="text-sm text-gray-500">2025年8月8日</time>
-                                <span class="ml-2 px-2 py-1 bg-red-500 text-white text-xs rounded-full">NEW</span>
-                            </div>
-                            <p class="text-gray-600 mb-4 text-sm leading-relaxed line-clamp-3">
-                                地方観光業のクレーム対応を革命的に改善するChatGPT音声会話の実践的活用法を詳しく解説。24時間365日いつでも練習できる環境で、お客様の心を掴む応対術を身につけましょう。
-                            </p>
-                            <div class="flex flex-wrap gap-2 mb-4">
-                                <span class="px-3 py-1 bg-blue-100 text-blue-800 text-sm rounded-full">観光業</span>
-                                <span class="px-3 py-1 bg-blue-100 text-blue-800 text-sm rounded-full">クレーム対応</span>
-                                <span class="px-3 py-1 bg-blue-100 text-blue-800 text-sm rounded-full">ChatGPT音声</span>
-                            </div>
-                            <a href="articles/20250808.html" class="btn-primary text-sm">
-                                続きを読む
-                                <svg class="ml-2 w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/>
-                                </svg>
-                            </a>
-                        </div>
-                    </article>
-
-                    <!-- Blog Card 4 - 20250807 -->
-                    <article class="card overflow-hidden" data-date="2025-08-07">
-                        <a href="articles/20250807.html" class="block relative aspect-ratio-4-3 overflow-hidden">
-                            <img 
-                                src="https://images.unsplash.com/photo-1567789884554-0b844b597180?w=800&h=450&fit=crop&crop=center" 
-                                alt="【地方製造業のDX】もう日報作成に時間はかけない！ChatGPTで実現する「技術が伝わる」作業日報の作り方" 
-                                class="w-full h-full object-cover hover:scale-105 transition-transform duration-300"
-                            />
-                            <div class="absolute inset-0 bg-gradient-to-t from-black/90 via-black/30 to-transparent">
-                                <div class="absolute bottom-4 left-4 right-4">
-                                    <h2 class="text-white text-lg font-bold leading-tight line-clamp-2" style="text-shadow: 2px 2px 4px rgba(0,0,0,0.8);">
-                                        【地方製造業のDX】もう日報作成に時間はかけない！ChatGPTで実現する「技術が伝わる」作業日報の作り方
-                                    </h2>
-                                </div>
-                            </div>
-                        </a>
-                        <div class="p-6">
-                            <div class="flex items-center mb-3">
-                                <time class="text-sm text-gray-500">2025年8月7日</time>
-                                <span class="ml-2 px-2 py-1 bg-red-500 text-white text-xs rounded-full">NEW</span>
-                            </div>
-                            <p class="text-gray-600 mb-4 text-sm leading-relaxed line-clamp-3">
-                                製造業の日報作成を革命的に効率化。ChatGPTの音声入力機能を活用して、技術継承に役立つ高品質な作業日報を簡単に作成する方法を詳しく解説します。
-                            </p>
-                            <div class="flex flex-wrap gap-2 mb-4">
-                                <span class="px-3 py-1 bg-blue-100 text-blue-800 text-sm rounded-full">製造業DX</span>
-                                <span class="px-3 py-1 bg-blue-100 text-blue-800 text-sm rounded-full">作業日報</span>
-                                <span class="px-3 py-1 bg-blue-100 text-blue-800 text-sm rounded-full">技術継承</span>
-                            </div>
-                            <a href="articles/20250807.html" class="btn-primary text-sm">
-                                続きを読む
-                                <svg class="ml-2 w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/>
-                                </svg>
-                            </a>
-                        </div>
-                    </article>
-                    <!-- Blog Card 5 - 20250806 -->
-                    <article class="card overflow-hidden" data-date="2025-08-06">
-                        <a href="articles/20250806.html" class="block relative aspect-ratio-4-3 overflow-hidden">
-                            <img 
-                                src="https://images.unsplash.com/photo-1600880292203-757bb62b4baf?w=800&h=450&fit=crop&crop=center" 
-                                alt="【製造業・観光業向け】言葉の壁を乗り越える！ChatGPTで作る、外国人従業員向け「やさしい日本語」トレーニング術" 
-                                class="w-full h-full object-cover hover:scale-105 transition-transform duration-300"
-                            />
-                            <div class="absolute inset-0 bg-gradient-to-t from-black/90 via-black/30 to-transparent">
-                                <div class="absolute bottom-4 left-4 right-4">
-                                    <h2 class="text-white text-lg font-bold leading-tight line-clamp-2" style="text-shadow: 2px 2px 4px rgba(0,0,0,0.8);">
-                                        言葉の壁を乗り越える！ChatGPTで作る「やさしい日本語」トレーニング術
-                                    </h2>
-                                </div>
-                            </div>
-                        </a>
-                        <div class="p-6">
-                            <div class="flex items-center mb-3">
-                                <time class="text-sm text-gray-500">2025年8月6日</time>
-                                <span class="ml-2 px-2 py-1 bg-red-500 text-white text-xs rounded-full">NEW</span>
-                            </div>
-                            <p class="text-gray-600 mb-4 text-sm leading-relaxed line-clamp-3">
-                                製造業・観光業の外国人従業員との円滑なコミュニケーションを実現。ChatGPTを使って現場に特化した「やさしい日本語」学習スクリプトを作成し、言葉の壁を効果的に解決する方法を詳しく解説します。
-                            </p>
-                            <div class="flex flex-wrap gap-2 mb-4">
-                                <span class="px-3 py-1 bg-blue-100 text-blue-800 text-sm rounded-full">やさしい日本語</span>
-                                <span class="px-3 py-1 bg-blue-100 text-blue-800 text-sm rounded-full">外国人従業員</span>
-                                <span class="px-3 py-1 bg-blue-100 text-blue-800 text-sm rounded-full">多文化共生</span>
-                            </div>
-                            <a href="articles/20250806.html" class="btn-primary text-sm">
-                                続きを読む
-                                <svg class="ml-2 w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/>
-                                </svg>
-                            </a>
-                        </div>
-                    </article>
-                    <!-- Blog Card 4 - 20250805 -->
-                    <article class="card overflow-hidden" data-date="2025-08-05">
-                        <a href="articles/20250805.html" class="block relative aspect-ratio-4-3 overflow-hidden">
-                            <img 
-                                src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?w=800&h=450&fit=crop&crop=faces" 
-                                alt="AIを使って紙のマニュアルをチャットボットにする方法" 
-                                class="w-full h-full object-cover hover:scale-105 transition-transform duration-300"
-                            />
-                            <div class="absolute inset-0 bg-gradient-to-t from-black/90 via-black/30 to-transparent">
-                                <div class="absolute bottom-4 left-4 right-4">
-                                    <h2 class="text-white text-lg font-bold leading-tight line-clamp-2" style="text-shadow: 2px 2px 4px rgba(0,0,0,0.8);">
-                                        AIを使って紙のマニュアルをチャットボットにする方法
-                                    </h2>
-                                </div>
-                            </div>
-                        </a>
-                        <div class="p-6">
-                            <div class="flex items-center mb-3">
-                                <time class="text-sm text-gray-500">2025年8月5日</time>
-                                <span class="ml-2 px-2 py-1 bg-red-500 text-white text-xs rounded-full">NEW</span>
-                            </div>
-                            <p class="text-gray-600 mb-4 text-sm leading-relaxed line-clamp-3">
-                                紙のマニュアルをAIチャットボット化する具体的な手順と効果を解説。地方の中小企業や工場でも簡単に導入でき、業務効率化と人材育成を同時に実現する方法を詳しく紹介します。
-                            </p>
-                            <div class="flex flex-wrap gap-2 mb-4">
-                                <span class="px-3 py-1 bg-blue-100 text-blue-800 text-sm rounded-full">チャットボット</span>
-                                <span class="px-3 py-1 bg-blue-100 text-blue-800 text-sm rounded-full">マニュアルDX</span>
-                                <span class="px-3 py-1 bg-blue-100 text-blue-800 text-sm rounded-full">業務効率化</span>
-                            </div>
-                            <a href="articles/20250805.html" class="btn-primary text-sm">
-                                続きを読む
-                                <svg class="ml-2 w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/>
-                                </svg>
-                            </a>
-                        </div>
-                    </article>
-                    <!-- Blog Card 5 - 20250804 -->
-                    <article class="card overflow-hidden" data-date="2025-08-04">
-                        <a href="articles/20250804.html" class="block relative aspect-ratio-4-3 overflow-hidden">
-                            <img 
-                                src="https://images.unsplash.com/photo-1600880292203-757bb62b4baf?w=800&h=450&fit=crop&crop=center" 
-                                alt="エージェント型AIの転換点：2025年8月第1週に見る市場変革の分析" 
-                                class="w-full h-full object-cover hover:scale-105 transition-transform duration-300"
-                            />
-                            <div class="absolute inset-0 bg-gradient-to-t from-black/90 via-black/30 to-transparent">
-                                <div class="absolute bottom-4 left-4 right-4">
-                                    <h2 class="text-white text-lg font-bold leading-tight line-clamp-2" style="text-shadow: 2px 2px 4px rgba(0,0,0,0.8);">
-                                        エージェント型AIの転換点：2025年8月第1週に見る市場変革の分析
-                                    </h2>
-                                </div>
-                            </div>
-                        </a>
-                        <div class="p-6">
-                            <div class="flex items-center mb-3">
-                                <time class="text-sm text-gray-500">2025年8月4日</time>
-                            </div>
-                            <p class="text-gray-700 mb-4 line-clamp-3">
-                                2025年8月第1週のAIエージェント市場を分析。複数の企業が発表した革新的なAIエージェントサービスの動向と、地方企業への影響を詳しく解説します。
-                            </p>
-                            <div class="flex flex-wrap gap-2 mb-4">
-                                <span class="px-3 py-1 bg-purple-100 text-purple-800 text-sm rounded-full">AIエージェント</span>
-                                <span class="px-3 py-1 bg-purple-100 text-purple-800 text-sm rounded-full">市場分析</span>
-                            </div>
-                            <a href="articles/20250804.html" class="btn-primary text-sm">
-                                続きを読む
-                                <svg class="ml-2 w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/>
-                                </svg>
-                            </a>
-                        </div>
-                    </article>
-
-                    <!-- Blog Card 3 - 20250803 -->
-                    <article class="card overflow-hidden" data-date="2025-08-03">
-                        <a href="articles/20250803.html" class="block relative aspect-ratio-4-3 overflow-hidden">
-                            <img 
-                                src="https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?w=800&h=450&fit=crop&crop=center" 
-                                alt="メールやFAXの受注処理はもう古い！AIエージェント「Comena」がもたらすB2B取引革命" 
-                                class="w-full h-full object-cover hover:scale-105 transition-transform duration-300"
-                            />
-                            <div class="absolute inset-0 bg-gradient-to-t from-black/90 via-black/30 to-transparent">
-                                <div class="absolute bottom-4 left-4 right-4">
-                                    <h2 class="text-white text-lg font-bold leading-tight line-clamp-2" style="text-shadow: 2px 2px 4px rgba(0,0,0,0.8);">
-                                        メールやFAXの受注処理はもう古い！AIエージェント「Comena」がもたらすB2B取引革命
-                                    </h2>
-                                </div>
-                            </div>
-                        </a>
-                        <div class="p-6">
-                            <div class="flex items-center mb-3">
-                                <time class="text-sm text-gray-500">2025年8月3日</time>
-                            </div>
-                            <p class="text-gray-700 mb-4 line-clamp-3">
-                                B2B取引の受注処理を自動化するAIエージェント「Comena」。メールやFAXによる非効率な業務プロセスを劇的に改善する革新的ソリューションを紹介します。
-                            </p>
-                            <div class="flex flex-wrap gap-2 mb-4">
-                                <span class="px-3 py-1 bg-green-100 text-green-800 text-sm rounded-full">B2B自動化</span>
-                                <span class="px-3 py-1 bg-green-100 text-green-800 text-sm rounded-full">受注管理</span>
-                            </div>
-                            <a href="articles/20250803.html" class="btn-primary text-sm">
-                                続きを読む
-                                <svg class="ml-2 w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/>
-                                </svg>
-                            </a>
-                        </div>
-                    </article>
-
-
-
-                    <!-- Blog Card 6 - 20250728 -->
-                    <article class="card overflow-hidden" data-date="2025-07-28">
-                        <a href="articles/20250728.html" class="block relative aspect-ratio-4-3 overflow-hidden">
-                            <img 
-                                src="https://images.unsplash.com/photo-1550751827-4bd374c3f58b?w=800&h=450&fit=crop&crop=center" 
-                                alt="【デザイン革命】LovertAIでデザイン業務もチャットベースで：AIが拓くデザインの未来" 
-                                class="w-full h-full object-cover hover:scale-105 transition-transform duration-300"
-                            />
-                            <div class="absolute inset-0 bg-gradient-to-t from-black/90 via-black/30 to-transparent">
-                                <div class="absolute bottom-4 left-4 right-4">
-                                    <h2 class="text-white text-lg font-bold leading-tight line-clamp-2" style="text-shadow: 2px 2px 4px rgba(0,0,0,0.8);">
-                                        【デザイン革命】LovertAIでデザイン業務もチャットベースで：AIが拓くデザインの未来
-                                    </h2>
-                                </div>
-                            </div>
-                        </a>
-                        <div class="p-6">
-                            <div class="flex items-center mb-3">
-                                <time class="text-sm text-gray-500">2025年7月28日</time>
-                            </div>
-                            <p class="text-gray-600 mb-4 text-sm leading-relaxed line-clamp-3">
-                                デザイン業務がチャットベースで大革命。LovertAIのようなAIツールで、専門スキルがなくても自然言語でデザインを生成。デザインプロセスの効率化と創造性向上を実現する方法を詳しく解説します。
-                            </p>
-                            <div class="flex flex-wrap gap-2 mb-4">
-                                <span class="px-3 py-1 bg-purple-100 text-purple-800 text-sm rounded-full">LovertAI</span>
-                                <span class="px-3 py-1 bg-purple-100 text-purple-800 text-sm rounded-full">デザインAI</span>
-                            </div>
-                            <a href="articles/20250728.html" class="btn-primary text-sm">
-                                続きを読む
-                                <svg class="ml-2 w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/>
-                                </svg>
-                            </a>
-                        </div>
-                    </article>
-
-                    <!-- Blog Card 2 - 20250727 -->
-                    <article class="card overflow-hidden" data-date="2025-07-27">
-                        <a href="articles/20250727.html" class="block relative aspect-ratio-4-3 overflow-hidden">
-                            <img 
-                                src="https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?w=800&h=450&fit=crop&crop=center" 
-                                alt="【次世代働き方】バイブコーディングとは何か？AIとの共振であらゆる業務に革命を与えよう" 
-                                class="w-full h-full object-cover hover:scale-105 transition-transform duration-300"
-                            />
-                            <div class="absolute inset-0 bg-gradient-to-t from-black/90 via-black/30 to-transparent">
-                                <div class="absolute bottom-4 left-4 right-4">
-                                    <h2 class="text-white text-lg font-bold leading-tight line-clamp-2" style="text-shadow: 2px 2px 4px rgba(0,0,0,0.8);">
-                                        【次世代働き方】バイブコーディングとは何か？AIとの共振であらゆる業務に革命を与えよう
-                                    </h2>
-                                </div>
-                            </div>
-                        </a>
-                        <div class="p-6">
-                            <div class="flex items-center mb-3">
-                                <time class="text-sm text-gray-500">2025年7月27日</time>
-                            </div>
-                            <p class="text-gray-600 mb-4 text-sm leading-relaxed line-clamp-3">
-                                バイブコーディングは単なるプログラミング手法ではありません。AIとの協調を通じて人間の創造性を最大限に引き出し、あらゆる業務プロセスに革新をもたらす新しい働き方・思考法を詳しく解説します。
-                            </p>
-                            <div class="flex flex-wrap gap-2 mb-4">
-                                <span class="px-3 py-1 bg-blue-100 text-blue-800 text-sm rounded-full">バイブコーディング</span>
-                                <span class="px-3 py-1 bg-blue-100 text-blue-800 text-sm rounded-full">業務革新</span>
-                            </div>
-                            <a href="articles/20250727.html" class="btn-primary text-sm">
-                                続きを読む
-                                <svg class="ml-2 w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/>
-                                </svg>
-                            </a>
-                        </div>
-                    </article>
-
-                    <!-- Blog Card 3 - 20250726-2 -->
-                    <article class="card overflow-hidden" data-date="2025-07-26">
-                        <a href="articles/20250726-2.html" class="block relative aspect-ratio-4-3 overflow-hidden">
-                            <img 
-                                src="https://images.unsplash.com/photo-1600880292203-757bb62b4baf?w=800&h=450&fit=crop&crop=center" 
-                                alt="【革新的採用術】AIアバターと動画生成AIで採用動画を作ろう：未来の採用ブランディング" 
-                                class="w-full h-full object-cover hover:scale-105 transition-transform duration-300"
-                            />
-                            <div class="absolute inset-0 bg-gradient-to-t from-black/90 via-black/30 to-transparent">
-                                <div class="absolute bottom-4 left-4 right-4">
-                                    <h2 class="text-white text-lg font-bold leading-tight line-clamp-2" style="text-shadow: 2px 2px 4px rgba(0,0,0,0.8);">
-                                        【革新的採用術】AIアバターと動画生成AIで採用動画を作ろう：未来の採用ブランディング
-                                    </h2>
-                                </div>
-                            </div>
-                        </a>
-                        <div class="p-6">
-                            <div class="flex items-center mb-3">
-                                <time class="text-sm text-gray-500">2025年7月26日</time>
-                                <span class="ml-2 px-2 py-1 bg-red-500 text-white text-xs rounded-full">NEW</span>
-                            </div>
-                            <p class="text-gray-600 mb-4 text-sm leading-relaxed line-clamp-3">
-                                高コスト・高難易度の採用動画制作が、AIアバターと動画生成AIで革命的に変化。時間・コスト・専門知識の制約を超えて、プロ級の採用動画を簡単に制作する方法を詳しく解説します。
-                            </p>
-                            <div class="flex flex-wrap gap-2 mb-4">
-                                <span class="px-3 py-1 bg-green-100 text-green-800 text-sm rounded-full">AIアバター</span>
-                                <span class="px-3 py-1 bg-green-100 text-green-800 text-sm rounded-full">採用動画</span>
-                            </div>
-                            <a href="articles/20250726-2.html" class="btn-primary text-sm">
-                                続きを読む
-                                <svg class="ml-2 w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/>
-                                </svg>
-                            </a>
-                        </div>
-                    </article>
-
-                    <!-- Blog Card 4 - 20250726-1 -->
-                    <article class="card overflow-hidden" data-date="2025-07-26">
-                        <a href="articles/20250726-1.html" class="block relative aspect-ratio-4-3 overflow-hidden">
-                            <img 
-                                src="https://images.unsplash.com/photo-1481627834876-b7833e8f5570?w=800&h=450&fit=crop&crop=center" 
-                                alt="【企業改革】社史をチャットボットにしてみよう！AIで歴史を語り継ぐ新時代の社員エンゲージメント術" 
-                                class="w-full h-full object-cover hover:scale-105 transition-transform duration-300"
-                            />
-                            <div class="absolute inset-0 bg-gradient-to-t from-black/90 via-black/30 to-transparent">
-                                <div class="absolute bottom-4 left-4 right-4">
-                                    <h2 class="text-white text-lg font-bold leading-tight line-clamp-2" style="text-shadow: 2px 2px 4px rgba(0,0,0,0.8);">
-                                        【企業改革】社史をチャットボットにしてみよう！AIで歴史を語り継ぐ新時代の社員エンゲージメント術
-                                    </h2>
-                                </div>
-                            </div>
-                        </a>
-                        <div class="p-6">
-                            <div class="flex items-center mb-3">
-                                <time class="text-sm text-gray-500">2025年7月26日</time>
-                                <span class="ml-2 px-2 py-1 bg-red-500 text-white text-xs rounded-full">NEW</span>
-                            </div>
-                            <p class="text-gray-600 mb-4 text-sm leading-relaxed line-clamp-3">
-                                分厚い社史はもう古い。AIチャットボットで企業の歴史をインタラクティブに語り継ぎ、社員のエンゲージメントを劇的に向上させる革新的手法を詳しく解説します。
-                            </p>
-                            <div class="flex flex-wrap gap-2 mb-4">
-                                <span class="px-3 py-1 bg-orange-100 text-orange-800 text-sm rounded-full">チャットボット</span>
-                                <span class="px-3 py-1 bg-orange-100 text-orange-800 text-sm rounded-full">社史</span>
-                            </div>
-                            <a href="articles/20250726-1.html" class="btn-primary text-sm">
-                                続きを読む
-                                <svg class="ml-2 w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/>
-                                </svg>
-                            </a>
-                        </div>
-                    </article>
-
-                    <!-- Blog Card 5 - 20250725 -->
-                    <article class="card overflow-hidden" data-date="2025-07-25">
-                        <a href="articles/20250725.html" class="block relative aspect-ratio-4-3 overflow-hidden">
-                            <img 
-                                src="https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?w=800&h=450&fit=crop&crop=center" 
-                                alt="【経営革命】社長のノウハウをNotebookLMで可視化する：AIが引き出す経営の知恵" 
-                                class="w-full h-full object-cover hover:scale-105 transition-transform duration-300"
-                            />
-                            <div class="absolute inset-0 bg-gradient-to-t from-black/90 via-black/30 to-transparent">
-                                <div class="absolute bottom-4 left-4 right-4">
-                                    <h2 class="text-white text-lg font-bold leading-tight line-clamp-2" style="text-shadow: 2px 2px 4px rgba(0,0,0,0.8);">
-                                        【経営革命】社長のノウハウをNotebookLMで可視化する：AIが引き出す経営の知恵
-                                    </h2>
-                                </div>
-                            </div>
-                        </a>
-                        <div class="p-6">
-                            <div class="flex items-center mb-3">
-                                <time class="text-sm text-gray-500">2025年7月25日</time>
-                                <span class="ml-2 px-2 py-1 bg-red-500 text-white text-xs rounded-full">NEW</span>
-                            </div>
-                            <p class="text-gray-600 mb-4 text-sm leading-relaxed line-clamp-3">
-                                長年の経験と直感に裏打ちされた社長のノウハウを、GoogleのAIツールNotebookLMで可視化・構造化し、組織全体の知恵として活用する革新的手法を詳しく解説します。
-                            </p>
-                            <div class="flex flex-wrap gap-2 mb-4">
-                                <span class="px-3 py-1 bg-indigo-100 text-indigo-800 text-sm rounded-full">NotebookLM</span>
-                                <span class="px-3 py-1 bg-indigo-100 text-indigo-800 text-sm rounded-full">経営ノウハウ</span>
-                            </div>
-                            <a href="articles/20250725.html" class="btn-primary text-sm">
-                                続きを読む
-                                <svg class="ml-2 w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/>
-                                </svg>
-                            </a>
-                        </div>
-                    </article>
-
-                    <!-- Blog Card 6 - 20250724 -->
-                    <article class="card overflow-hidden" data-date="2025-07-24">
-                        <a href="articles/20250724.html" class="block relative aspect-ratio-4-3 overflow-hidden">
-                            <img 
-                                src="https://images.unsplash.com/photo-1550751827-4bd374c3f58b?w=800&h=450&fit=crop&crop=center" 
-                                alt="【無料デザイン革命】もうパワポで苦労しない！MiriCanvasとChatGPTで作る、プロ級チラシ＆ポップ作成術" 
-                                class="w-full h-full object-cover hover:scale-105 transition-transform duration-300"
-                            />
-                            <div class="absolute inset-0 bg-gradient-to-t from-black/90 via-black/30 to-transparent">
-                                <div class="absolute bottom-4 left-4 right-4">
-                                    <h2 class="text-white text-lg font-bold leading-tight line-clamp-2" style="text-shadow: 2px 2px 4px rgba(0,0,0,0.8);">
-                                        【無料デザイン革命】もうパワポで苦労しない！MiriCanvasとChatGPTで作る、プロ級チラシ＆ポップ作成術
-                                    </h2>
-                                </div>
-                            </div>
-                        </a>
-                        <div class="p-6">
-                            <div class="flex items-center mb-3">
-                                <time class="text-sm text-gray-500">2025年7月24日</time>
-                            </div>
-                            <p class="text-gray-600 mb-4 text-sm leading-relaxed line-clamp-3">
-                                無料デザインツールMiriCanvasとChatGPTの組み合わせで、デザイナー不要のプロ級チラシ・ポップ作成が可能。地方企業の宣伝材料作成を劇的に効率化。
-                            </p>
-                            <div class="flex flex-wrap gap-2 mb-4">
-                                <span class="px-3 py-1 bg-purple-100 text-purple-800 text-sm rounded-full">デザイン</span>
-                                <span class="px-3 py-1 bg-purple-100 text-purple-800 text-sm rounded-full">マーケティング</span>
-                            </div>
-                            <a href="articles/20250724.html" class="btn-primary text-sm">
-                                続きを読む
-                                <svg class="ml-2 w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/>
-                                </svg>
-                            </a>
-                        </div>
-                    </article>
-
-                    <!-- Blog Card 2 - 20250723 -->
-                    <article class="card overflow-hidden" data-date="2025-07-23">
-                        <a href="articles/20250723.html" class="block relative aspect-ratio-4-3 overflow-hidden">
-                            <img 
-                                src="https://images.unsplash.com/photo-1507525428034-b723cf961d3e?w=800&h=450&fit=crop&crop=center" 
-                                alt="【観光案内の決定版】もう「近くの美味しいお店」に悩まない！ChatGPTと作る、最強の周辺施設まとめリスト術" 
-                                class="w-full h-full object-cover hover:scale-105 transition-transform duration-300"
-                            />
-                            <div class="absolute inset-0 bg-gradient-to-t from-black/90 via-black/30 to-transparent">
-                                <div class="absolute bottom-4 left-4 right-4">
-                                    <h2 class="text-white text-lg font-bold leading-tight line-clamp-2" style="text-shadow: 2px 2px 4px rgba(0,0,0,0.8);">
-                                        【観光案内の決定版】もう「近くの美味しいお店」に悩まない！ChatGPTと作る、最強の周辺施設まとめリスト術
-                                    </h2>
-                                </div>
-                            </div>
-                        </a>
-                        <div class="p-6">
-                            <div class="flex items-center mb-3">
-                                <time class="text-sm text-gray-500">2025年7月23日</time>
-                            </div>
-                            <p class="text-gray-600 mb-4 text-sm leading-relaxed line-clamp-3">
-                                観光案内で最も多い「近くの美味しいお店教えて」に完璧対応。ChatGPTで作る施設周辺の飲食店・観光スポット完全データベース構築術。
-                            </p>
-                            <div class="flex flex-wrap gap-2 mb-4">
-                                <span class="px-3 py-1 bg-green-100 text-green-800 text-sm rounded-full">観光DX</span>
-                                <span class="px-3 py-1 bg-green-100 text-green-800 text-sm rounded-full">情報管理</span>
-                            </div>
-                            <a href="articles/20250723.html" class="btn-primary text-sm">
-                                続きを読む
-                                <svg class="ml-2 w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/>
-                                </svg>
-                            </a>
-                        </div>
-                    </article>
-
-                    <!-- Blog Card 3 - 20250722 -->
-                    <article class="card overflow-hidden" data-date="2025-07-22">
-                        <a href="articles/20250722.html" class="block relative aspect-ratio-4-3 overflow-hidden">
-                            <img 
-                                src="https://images.unsplash.com/photo-1516321318423-f06f85e504b3?w=800&h=450&fit=crop&crop=center" 
-                                alt="【観光DXの文章術】「すごい」しか言えない紹介文は卒業！ChatGPTと作る、心に刺さる観光施設のキャッチコピー術" 
-                                class="w-full h-full object-cover hover:scale-105 transition-transform duration-300"
-                            />
-                            <div class="absolute inset-0 bg-gradient-to-t from-black/90 via-black/30 to-transparent">
-                                <div class="absolute bottom-4 left-4 right-4">
-                                    <h2 class="text-white text-lg font-bold leading-tight line-clamp-2" style="text-shadow: 2px 2px 4px rgba(0,0,0,0.8);">
-                                        【観光DXの文章術】「すごい」しか言えない紹介文は卒業！ChatGPTと作る、心に刺さる観光施設のキャッチコピー術
-                                    </h2>
-                                </div>
-                            </div>
-                        </a>
-                        <div class="p-6">
-                            <div class="flex items-center mb-3">
-                                <time class="text-sm text-gray-500">2025年7月22日</time>
-                            </div>
-                            <p class="text-gray-600 mb-4 text-sm leading-relaxed line-clamp-3">
-                                陳腐な観光施設紹介文から脱却。ChatGPTで作る、訪問者の心を掴む魅力的なキャッチコピー作成術を具体的な事例とプロンプトで解説。
-                            </p>
-                            <div class="flex flex-wrap gap-2 mb-4">
-                                <span class="px-3 py-1 bg-blue-100 text-blue-800 text-sm rounded-full">コピーライティング</span>
-                                <span class="px-3 py-1 bg-blue-100 text-blue-800 text-sm rounded-full">観光PR</span>
-                            </div>
-                            <a href="articles/20250722.html" class="btn-primary text-sm">
-                                続きを読む
-                                <svg class="ml-2 w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/>
-                                </svg>
-                            </a>
-                        </div>
-                    </article>
-
-                    <!-- Blog Card 4 - 20250721 -->
-                    <article class="card overflow-hidden" data-date="2025-07-21">
-                        <a href="articles/20250721.html" class="block relative aspect-ratio-4-3 overflow-hidden">
-                            <img 
-                                src="https://images.unsplash.com/photo-1507525428034-b723cf961d3e?w=800&h=450&fit=crop&crop=center" 
-                                alt="【観光DXの新常識】もうモデルコースに頼らない！ChatGPTと作る「お客様一人ひとり」に響く旅のプランニング術" 
-                                class="w-full h-full object-cover hover:scale-105 transition-transform duration-300"
-                            />
-                            <div class="absolute inset-0 bg-gradient-to-t from-black/90 via-black/30 to-transparent">
-                                <div class="absolute bottom-4 left-4 right-4">
-                                    <h2 class="text-white text-lg font-bold leading-tight line-clamp-2" style="text-shadow: 2px 2px 4px rgba(0,0,0,0.8);">
-                                        【観光DXの新常識】もうモデルコースに頼らない！ChatGPTと作る「お客様一人ひとり」に響く旅のプランニング術
-                                    </h2>
-                                </div>
-                            </div>
-                        </a>
-                        <div class="p-6">
-                            <div class="flex items-center mb-3">
-                                <time class="text-sm text-gray-500">2025年7月21日</time>
-                            </div>
-                            <p class="text-gray-600 mb-4 text-sm leading-relaxed line-clamp-3">
-                                画一的なモデルコースから脱却。ChatGPTをコンシェルジュとして活用し、お客様一人ひとりに最適化された感動の旅プランを作成する革新的手法。
-                            </p>
-                            <div class="flex flex-wrap gap-2 mb-4">
-                                <span class="px-3 py-1 bg-green-100 text-green-800 text-sm rounded-full">観光DX</span>
-                                <span class="px-3 py-1 bg-green-100 text-green-800 text-sm rounded-full">旅行プランニング</span>
-                            </div>
-                            <a href="articles/20250721.html" class="btn-primary text-sm">
-                                続きを読む
-                                <svg class="ml-2 w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/>
-                                </svg>
-                            </a>
-                        </div>
-                    </article>
-
-
-                    <!-- Blog Card 6 - 20250720 -->
-                    <!-- Blog Card 2 - 20250719 -->
-                    <article class="card overflow-hidden" data-date="2025-07-19">
-                        <a href="articles/20250719" class="block relative aspect-ratio-4-3 overflow-hidden">
-                            <img 
-                                src="https://images.unsplash.com/photo-1531482615713-2afd69097998?w=800&h=450&fit=crop&crop=center" 
-                                alt="なぜ君の指示は伝わらない？ChatGPTと作る、部下の心が動く「技術指導の喩え話」" 
-                                class="w-full h-full object-cover hover:scale-105 transition-transform duration-300"
-                            />
-                            <div class="absolute inset-0 bg-gradient-to-t from-black/90 via-black/30 to-transparent">
-                                <div class="absolute bottom-4 left-4 right-4">
-                                    <h2 class="text-white text-lg font-bold leading-tight line-clamp-2" style="text-shadow: 2px 2px 4px rgba(0,0,0,0.8);">
-                                        【若手指導の決定版】なぜ君の指示は伝わらない？ChatGPTと作る、部下の心が動く「技術指導の喩え話」
-                                    </h2>
-                                </div>
-                            </div>
-                        </a>
-                        <div class="p-6">
-                            <div class="flex items-center mb-3">
-                                <time class="text-sm text-gray-500">2025年7月19日</time>
-                            </div>
-                            <p class="text-gray-700 mb-4 line-clamp-3">
-                                若手指導に悩む現場リーダーへ。論理的な説明だけでは伝わらない技術の本質を、ChatGPTと共に「心に響くストーリー」に変換する新時代の指導法を解説します。
-                            </p>
-                            <div class="flex flex-wrap gap-2 mb-4">
-                                <span class="px-3 py-1 bg-blue-100 text-blue-800 text-sm rounded-full">横断的</span>
-                                <span class="px-3 py-1 bg-blue-100 text-blue-800 text-sm rounded-full">人材育成</span>
-                            </div>
-                            <a href="articles/20250719" class="btn-primary text-sm">
-                                続きを読む
-                                <svg class="ml-2 w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/>
-                                </svg>
-                            </a>
-                        </div>
-                    </article>
-
-                    <!-- Blog Card 2 - 2番目の記事 20250718 -->
-                    <article class="card overflow-hidden" data-date="2025-07-18">
-                        <a href="articles/20250718.html" class="block relative aspect-ratio-4-3 overflow-hidden">
-                            <img 
-                                src="https://images.unsplash.com/photo-1516062423079-7ca13cdc7f5a?w=800&h=450&fit=crop&crop=center" 
-                                alt="在庫のムダ・欠品ゼロへ！ChatGPTと考える最強の資材在庫管理表設計術" 
-                                class="w-full h-full object-cover hover:scale-105 transition-transform duration-300"
-                            />
-                            <div class="absolute inset-0 bg-gradient-to-t from-black/90 via-black/30 to-transparent">
-                                <div class="absolute bottom-4 left-4 right-4">
-                                    <h2 class="text-white text-lg font-bold leading-tight line-clamp-2" style="text-shadow: 2px 2px 4px rgba(0,0,0,0.8);">
-                                        【DX仕事術】在庫のムダ・欠品ゼロへ！ChatGPTと考える「最強の資材在庫管理表」設計術
-                                    </h2>
-                                </div>
-                            </div>
-                        </a>
-                        <div class="p-6">
-                            <div class="flex items-center mb-3">
-                                <time class="text-sm text-gray-500">2025年7月18日</time>
-                            </div>
-                            <p class="text-gray-700 mb-4 line-clamp-3">
-                                在庫管理の課題を解決するため、ChatGPTと共に戦略的な在庫管理表を3ステップで設計する方法を解説。業種別のカスタマイズから実践的な運用まで詳しく説明します。
-                            </p>
-                            <div class="flex flex-wrap gap-2 mb-4">
-                                <span class="px-3 py-1 bg-blue-100 text-blue-800 text-sm rounded-full">横断的</span>
-                                <span class="px-3 py-1 bg-blue-100 text-blue-800 text-sm rounded-full">在庫管理</span>
-                            </div>
-                            <a href="articles/20250718.html" class="btn-primary text-sm">
-                                続きを読む
-                                <svg class="ml-2 w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/>
-                                </svg>
-                            </a>
-                        </div>
-                    </article>
-
-                    <!-- Blog Card 3 - 3番目の記事 20250717 -->
-                    <article class="card overflow-hidden" data-date="2025-07-17">
-                        <a href="articles/20250717.html" class="block relative aspect-ratio-4-3 overflow-hidden">
-                            <img 
-                                src="https://images.unsplash.com/photo-1542744173-8e7e53415bb0?w=800&h=450&fit=crop&crop=center" 
-                                alt="チェックリスト作成術" 
-                                class="w-full h-full object-cover hover:scale-105 transition-transform duration-300"
-                            />
-                            <div class="absolute inset-0 bg-gradient-to-t from-black/90 via-black/30 to-transparent">
-                                <div class="absolute bottom-4 left-4 right-4">
-                                    <h2 class="text-white text-lg font-bold leading-tight line-clamp-2" style="text-shadow: 2px 2px 4px rgba(0,0,0,0.8);">
-                                        【ミスゼロ仕事術】ヒューマンエラーは仕組みで防ぐ！ChatGPTと作る「最強の作業チェックリスト」作成術
-                                    </h2>
-                                </div>
-                            </div>
-                        </a>
-                        <div class="p-6">
-                            <div class="flex items-center mb-3">
-                                <time class="text-sm text-gray-500">2025年7月17日</time>
-                            </div>
-                            <p class="text-gray-700 mb-4 line-clamp-3">
-                                ヒューマンエラーを劇的に減らす実用的なチェックリスト作成術。ChatGPTをパートナーに、現場のミスを防ぐ仕組み作りを3ステップで解説。
-                            </p>
-                            <div class="flex flex-wrap gap-2 mb-4">
-                                <span class="px-3 py-1 bg-blue-100 text-blue-800 text-sm rounded-full">品質管理</span>
-                                <span class="px-3 py-1 bg-blue-100 text-blue-800 text-sm rounded-full">ミス防止</span>
-                            </div>
-                            <a href="articles/20250717.html" class="btn-primary text-sm">
-                                続きを読む
-                                <svg class="ml-2 w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/>
-                                </svg>
-                            </a>
-                        </div>
-                    </article>
-
-                    <!-- Blog Card 4 - 地域おこし協力隊DAO -->
-                    <article class="card overflow-hidden" data-date="2025-07-15">
-                        <a href="articles/20250715.html" class="block relative aspect-ratio-4-3 overflow-hidden">
-                            <img 
-                                src="images/alyaumu_ijudao_boshu.jpg" 
-                                alt="地域おこし協力隊DAO" 
-                                class="w-full h-full object-cover hover:scale-105 transition-transform duration-300"
-                            />
-                            <div class="absolute inset-0 bg-gradient-to-t from-black/90 via-black/30 to-transparent">
-                                <div class="absolute bottom-4 left-4 right-4">
-                                    <h2 class="text-white text-lg font-bold leading-tight line-clamp-2" style="text-shadow: 2px 2px 4px rgba(0,0,0,0.8);">
-                                        Web3.0が拓く、地方創生の新たな地平：地域おこし協力隊DAOであなたのまちを活性化する
-                                    </h2>
-                                </div>
-                            </div>
-                        </a>
-                        <div class="p-6">
-                            <div class="flex items-center mb-3">
-                                <time class="text-sm text-gray-500">2025年7月15日</time>
-                            </div>
-                            <p class="text-gray-700 mb-4 line-clamp-3">
-                                株式会社あるやうむが提唱する「地域おこし協力隊DAO」モデルは、地方創生に革命をもたらす可能性を秘めています。本記事ではその全貌を徹底解説します。
-                            </p>
-                            <div class="flex flex-wrap gap-2 mb-4">
-                                <span class="px-3 py-1 bg-green-100 text-green-800 text-sm rounded-full">地方創生</span>
-                                <span class="px-3 py-1 bg-green-100 text-green-800 text-sm rounded-full">Web3</span>
-                                <span class="px-3 py-1 bg-green-100 text-green-800 text-sm rounded-full">DAO</span>
-                            </div>
-                            <a href="articles/20250715.html" class="btn-primary text-sm">
-                                続きを読む
-                                <svg class="ml-2 w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/>
-                                </svg>
-                            </a>
-                        </div>
-                    </article>
-
-                    <!-- Blog Card 5 - 5番目の記事 20250716 -->
-                    <article class="card overflow-hidden" data-date="2025-07-16">
-                        <a href="articles/20250716.html" class="block relative aspect-ratio-4-3 overflow-hidden">
-                            <img 
-                                src="https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?w=800&h=450&fit=crop&crop=center" 
-                                alt="なぜなぜ分析ボット" 
-                                class="w-full h-full object-cover hover:scale-105 transition-transform duration-300"
-                            />
-                            <div class="absolute inset-0 bg-gradient-to-t from-black/90 via-black/30 to-transparent">
-                                <div class="absolute bottom-4 left-4 right-4">
-                                    <h2 class="text-white text-lg font-bold leading-tight line-clamp-2" style="text-shadow: 2px 2px 4px rgba(0,0,0,0.8);">
-                                        【DX仕事術】なぜ？を5回繰り返すだけ！ChatGPTとNotebookLMで作る「最強のなぜなぜ分析」ボット
-                                    </h2>
-                                </div>
-                            </div>
-                        </a>
-                        <div class="p-6">
-                            <div class="flex items-center mb-3">
-                                <time class="text-sm text-gray-500">2025年7月16日</time>
-                            </div>
-                            <p class="text-gray-700 mb-4 line-clamp-3">
-                                問題の根本原因を見つけるなぜなぜ分析をAIで効率化。ChatGPTとNotebookLMを組み合わせた分析ボットで、製造業の品質改善を劇的にスピードアップ。
-                            </p>
-                            <div class="flex flex-wrap gap-2 mb-4">
-                                <span class="px-3 py-1 bg-orange-100 text-orange-800 text-sm rounded-full">品質改善</span>
-                                <span class="px-3 py-1 bg-orange-100 text-orange-800 text-sm rounded-full">なぜなぜ分析</span>
-                            </div>
-                            <a href="articles/20250716.html" class="btn-primary text-sm">
-                                続きを読む
-                                <svg class="ml-2 w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/>
-                                </svg>
-                            </a>
-                        </div>
-                    </article>
-
-
-
-
-                    <!-- Blog Card 7 - 7番目の記事 20250714 -->
-                    <article class="card overflow-hidden" data-date="2025-07-14">
-                        <a href="articles/20250714-1.html" class="block relative aspect-ratio-4-3 overflow-hidden">
-                            <img 
-                                src="https://images.unsplash.com/photo-1600880292203-757bb62b4baf?w=800&h=450&fit=crop&crop=faces" 
-                                alt="中小企業AI導入の現実的な進め方" 
-                                class="w-full h-full object-cover hover:scale-105 transition-transform duration-300"
-                            />
-                            <div class="absolute inset-0 bg-gradient-to-t from-black/90 via-black/30 to-transparent">
-                                <div class="absolute bottom-4 left-4 right-4">
-                                    <h2 class="text-white text-lg font-bold leading-tight line-clamp-2" style="text-shadow: 2px 2px 4px rgba(0,0,0,0.8);">
-                                        中小企業AI導入の現実的な進め方｜段階的アプローチで成功率を高める実践ガイド
-                                    </h2>
-                                </div>
-                            </div>
-                        </a>
-                        <div class="p-6">
-                            <div class="flex items-center mb-3">
-                                <time class="text-sm text-gray-500">2025年7月14日</time>
-                            </div>
-                            <p class="text-gray-700 mb-4 line-clamp-3">
-                                中小企業がAI導入で失敗しないための段階的アプローチを解説。コスト対効果を重視した現実的な導入プロセスと、実際の成功事例を基にした実践的なガイドライン。
-                            </p>
-                            <div class="flex flex-wrap gap-2 mb-4">
-                                <span class="px-3 py-1 bg-blue-100 text-blue-800 text-sm rounded-full">横断的</span>
-                                <span class="px-3 py-1 bg-blue-100 text-blue-800 text-sm rounded-full">AI導入ガイド</span>
-                            </div>
-                            <a href="articles/20250714-1.html" class="btn-primary text-sm">
-                                続きを読む
-                                <svg class="ml-2 w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/>
-                                </svg>
-                            </a>
-                        </div>
-                    </article>
-
-                    <!-- Blog Card 8 - 8番目の記事 20250713-2 -->
-                    <article class="card overflow-hidden" data-date="2025-07-13">
-                        <a href="articles/20250713-2.html" class="block relative aspect-ratio-4-3 overflow-hidden">
-                            <img 
-                                src="https://images.unsplash.com/photo-1556761175-4b46a572b786?w=800&h=450&fit=crop&crop=center" 
-                                alt="地方中小企業のAI導入完全ガイド｜失敗しない段階的導入プロセスと成功事例" 
-                                class="w-full h-full object-cover hover:scale-105 transition-transform duration-300"
-                            />
-                            <div class="absolute inset-0 bg-gradient-to-t from-black/90 via-black/30 to-transparent">
-                                <div class="absolute bottom-4 left-4 right-4">
-                                    <h2 class="text-white text-lg font-bold leading-tight line-clamp-2" style="text-shadow: 2px 2px 4px rgba(0,0,0,0.8);">
-                                        地方中小企業のAI導入完全ガイド｜失敗しない段階的導入プロセスと成功事例
-                                    </h2>
-                                </div>
-                            </div>
-                        </a>
-                        <div class="p-6">
-                            <div class="flex items-center mb-3">
-                                <time class="text-sm text-gray-500">2025年7月13日</time>
-                            </div>
-                            <p class="text-gray-700 mb-4 line-clamp-3">
-                                地方中小企業がAI導入で成功するための完全ガイド。導入計画から運用まで、失敗しない段階的プロセスと実際の成功事例を詳しく解説します。
-                            </p>
-                            <div class="flex flex-wrap gap-2 mb-4">
-                                <span class="px-3 py-1 bg-blue-100 text-blue-800 text-sm rounded-full">AI導入ガイド</span>
-                                <span class="px-3 py-1 bg-blue-100 text-blue-800 text-sm rounded-full">中小企業DX</span>
-                            </div>
-                            <a href="articles/20250713-2.html" class="btn-primary text-sm">
-                                続きを読む
-                                <svg class="ml-2 w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/>
-                                </svg>
-                            </a>
-                        </div>
-                    </article>
-
-                    <!-- Blog Card 9 - 9番目の記事 20250712 -->
-                    <article class="card overflow-hidden" data-date="2025-07-12">
-                        <a href="articles/20250712.html" class="block relative aspect-ratio-4-3 overflow-hidden">
-                            <img 
-                                src="https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?w=800&h=450&fit=crop&crop=center" 
-                                alt="製造業AI品質管理システム導入事例｜不良品率78%削減を実現した中小企業の成功ストーリー（※数値は仮想事例）" 
-                                class="w-full h-full object-cover hover:scale-105 transition-transform duration-300"
-                            />
-                            <div class="absolute inset-0 bg-gradient-to-t from-black/90 via-black/30 to-transparent">
-                                <div class="absolute bottom-4 left-4 right-4">
-                                    <h2 class="text-white text-lg font-bold leading-tight line-clamp-2" style="text-shadow: 2px 2px 4px rgba(0,0,0,0.8);">
-                                        製造業AI品質管理システム導入事例｜不良品率78%削減を実現した中小企業の成功ストーリー（※数値は仮想事例）
-                                    </h2>
-                                </div>
-                            </div>
-                        </a>
-                        <div class="p-6">
-                            <div class="flex items-center mb-3">
-                                <time class="text-sm text-gray-500">2025年7月12日</time>
-                            </div>
-                            <p class="text-gray-700 mb-4 line-clamp-3">
-                                地方の中小製造業がAI品質管理システムで不良品率78%削減、年間コスト1,800万円削減を実現。導入から運用まで、実際の数値データと共に詳しく解説します。（※数値は仮想事例）
-                            </p>
-                            <div class="flex flex-wrap gap-2 mb-4">
-                                <span class="px-3 py-1 bg-blue-100 text-blue-800 text-sm rounded-full">製造業DX</span>
-                                <span class="px-3 py-1 bg-blue-100 text-blue-800 text-sm rounded-full">品質管理</span>
-                            </div>
-                            <a href="articles/20250712.html" class="btn-primary text-sm">
-                                続きを読む
-                                <svg class="ml-2 w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/>
-                                </svg>
-                            </a>
-                        </div>
-                    </article>
-
-                    <!-- Blog Card 8 - 8番目の記事 20250711 -->
-                    <article class="card overflow-hidden" data-date="2025-07-11">
-                        <a href="articles/20250711.html" class="block relative aspect-ratio-4-3 overflow-hidden">
-                            <img 
-                                src="https://images.unsplash.com/photo-1500651230702-0e2d8a49d4ad?w=800&h=450&fit=crop&crop=center" 
-                                alt="地方創生×AI活用｜人口減少を食い止める革新的取り組み事例" 
-                                class="w-full h-full object-cover hover:scale-105 transition-transform duration-300"
-                            />
-                            <div class="absolute inset-0 bg-gradient-to-t from-black/90 via-black/30 to-transparent">
-                                <div class="absolute bottom-4 left-4 right-4">
-                                    <h2 class="text-white text-lg font-bold leading-tight line-clamp-2" style="text-shadow: 2px 2px 4px rgba(0,0,0,0.8);">
-                                        地方創生×AI活用｜人口減少を食い止める革新的取り組み事例
-                                    </h2>
-                                </div>
-                            </div>
-                        </a>
-                        <div class="p-6">
-                            <div class="flex items-center mb-3">
-                                <time class="text-sm text-gray-500">2025年7月11日</time>
-                            </div>
-                            <p class="text-gray-700 mb-4 line-clamp-3">
-                                AI技術を駆使して人口減少に歯止めをかける地方自治体の革新的な取り組み。移住促進から定住支援まで、データ活用で成果を上げる実例を詳しく解説。
-                            </p>
-                            <div class="flex flex-wrap gap-2 mb-4">
-                                <span class="px-3 py-1 bg-blue-100 text-blue-800 text-sm rounded-full">地方創生</span>
-                                <span class="px-3 py-1 bg-blue-100 text-blue-800 text-sm rounded-full">AI活用</span>
-                            </div>
-                            <a href="articles/20250711.html" class="btn-primary text-sm">
-                                続きを読む
-                                <svg class="ml-2 w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/>
-                                </svg>
-                            </a>
-                        </div>
-                    </article>
-
-                    <!-- Blog Card 9 - 9番目の記事 20250709 -->
-                    <article class="card overflow-hidden" data-date="2025-07-09">
-                        <a href="articles/20250709.html" class="block relative aspect-ratio-4-3 overflow-hidden">
-                            <img 
-                                src="https://images.unsplash.com/photo-1567789884554-0b844b597180?w=800&h=450&fit=crop&crop=center" 
-                                alt="中小企業AI導入で生産性30%向上｜地方企業が成功した5つのステップ完全版" 
-                                class="w-full h-full object-cover hover:scale-105 transition-transform duration-300"
-                            />
-                            <div class="absolute inset-0 bg-gradient-to-t from-black/90 via-black/30 to-transparent">
-                                <div class="absolute bottom-4 left-4 right-4">
-                                    <h2 class="text-white text-lg font-bold leading-tight line-clamp-2" style="text-shadow: 2px 2px 4px rgba(0,0,0,0.8);">
-                                        中小企業AI導入で生産性30%向上｜地方企業が成功した5つのステップ完全版
-                                    </h2>
-                                </div>
-                            </div>
-                        </a>
-                        <div class="p-6">
-                            <div class="flex items-center mb-3">
-                                <time class="text-sm text-gray-500">2025年7月9日</time>
-                            </div>
-                            <p class="text-gray-700 mb-4 line-clamp-3">
-                                地方中小企業がAI導入で確実に生産性30%向上を実現するための具体的な5ステップを、成功事例と共に詳しく解説します。
-                            </p>
-                            <div class="flex flex-wrap gap-2 mb-4">
-                                <span class="px-3 py-1 bg-blue-100 text-blue-800 text-sm rounded-full">生産性向上</span>
-                                <span class="px-3 py-1 bg-blue-100 text-blue-800 text-sm rounded-full">AI導入</span>
-                            </div>
-                            <a href="articles/20250709.html" class="btn-primary text-sm">
-                                続きを読む
-                                <svg class="ml-2 w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/>
-                                </svg>
-                            </a>
-                        </div>
-                    </article>
-
-                    <!-- Blog Card 10 - 10番目の記事 20250708 -->
-                    <article class="card overflow-hidden" data-date="2025-07-08">
-                        <a href="articles/20250708.html" class="block relative aspect-ratio-4-3 overflow-hidden">
-                            <img 
-                                src="https://images.unsplash.com/photo-1600880292203-757bb62b4baf?w=800&h=450&fit=crop&crop=center" 
-                                alt="AI導入助成金完全ガイド2025｜中小企業が最大1250万円獲得する申請方法" 
-                                class="w-full h-full object-cover hover:scale-105 transition-transform duration-300"
-                            />
-                            <div class="absolute inset-0 bg-gradient-to-t from-black/90 via-black/30 to-transparent">
-                                <div class="absolute bottom-4 left-4 right-4">
-                                    <h2 class="text-white text-lg font-bold leading-tight line-clamp-2" style="text-shadow: 2px 2px 4px rgba(0,0,0,0.8);">
-                                        AI導入助成金完全ガイド2025｜中小企業が最大1250万円獲得する申請方法
-                                    </h2>
-                                </div>
-                            </div>
-                        </a>
-                        <div class="p-6">
-                            <div class="flex items-center mb-3">
-                                <time class="text-sm text-gray-500">2025年7月8日</time>
-                            </div>
-                            <p class="text-gray-700 mb-4 line-clamp-3">
-                                中小企業のAI導入を支援する助成金・補助金を完全網羅。IT導入助成金、ものづくり助成金など、最大1,250万円の支援制度の申請方法を詳しく解説します。
-                            </p>
-                            <div class="flex flex-wrap gap-2 mb-4">
-                                <span class="px-3 py-1 bg-blue-100 text-blue-800 text-sm rounded-full">AI導入</span>
-                                <span class="px-3 py-1 bg-blue-100 text-blue-800 text-sm rounded-full">助成金</span>
-                            </div>
-                            <a href="articles/20250708.html" class="btn-primary text-sm">
-                                続きを読む
-                                <svg class="ml-2 w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/>
-                                </svg>
-                            </a>
-                        </div>
-                    </article>
-
-                    <!-- Blog Card 11 - 11番目の記事 20250704 -->
-                    <article class="card overflow-hidden" data-date="2025-07-04">
-                        <a href="articles/20250704.html" class="block relative aspect-ratio-4-3 overflow-hidden">
-                            <img 
-                                src="https://images.unsplash.com/photo-1600880292203-757bb62b4baf?w=800&h=450&fit=crop&crop=center" 
-                                alt="中小企業AI導入の課題とメリット｜成功事例で見る11兆円経済効果の実現法" 
-                                class="w-full h-full object-cover hover:scale-105 transition-transform duration-300"
-                            />
-                            <div class="absolute inset-0 bg-gradient-to-t from-black/90 via-black/30 to-transparent">
-                                <div class="absolute bottom-4 left-4 right-4">
-                                    <h2 class="text-white text-lg font-bold leading-tight line-clamp-2" style="text-shadow: 2px 2px 4px rgba(0,0,0,0.8);">
-                                        中小企業AI導入の課題とメリット｜成功事例で見る11兆円経済効果の実現法
-                                    </h2>
-                                </div>
-                            </div>
-                        </a>
-                        <div class="p-6">
-                            <div class="flex items-center mb-3">
-                                <time class="text-sm text-gray-500">2025年7月4日</time>
-                            </div>
-                            <p class="text-gray-700 mb-4 line-clamp-3">
-                                中小企業のAI導入における課題と、それを乗り越えることで得られる驚くべきメリットを具体的な事例とともに解説します。
-                            </p>
-                            <div class="flex flex-wrap gap-2 mb-4">
-                                <span class="px-3 py-1 bg-blue-100 text-blue-800 text-sm rounded-full">AI導入ガイド</span>
-                                <span class="px-3 py-1 bg-blue-100 text-blue-800 text-sm rounded-full">中小企業DX</span>
-                            </div>
-                            <a href="articles/20250704.html" class="btn-primary text-sm">
-                                続きを読む
-                                <svg class="ml-2 w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/>
-                                </svg>
-                            </a>
-                        </div>
-                    </article>
-
-                    <!-- Blog Card 14 - 14番目の記事 20250802 -->
-                    <article class="card overflow-hidden" data-date="2025-08-02">
-                        <a href="articles/20250802.html" class="block relative aspect-ratio-4-3 overflow-hidden">
-                            <img 
-                                src="https://images.unsplash.com/photo-1586528116311-ad8dd3c8310d?w=800&h=450&fit=crop&crop=center" 
-                                alt="「90210から10001まで、トラック一台の見積もりを」- 音声AI「Lanesurf」が変える貨物予約の未来" 
-                                class="w-full h-full object-cover hover:scale-105 transition-transform duration-300"
-                            />
-                            <div class="absolute inset-0 bg-gradient-to-t from-black/90 via-black/30 to-transparent">
-                                <div class="absolute bottom-4 left-4 right-4">
-                                    <h2 class="text-white text-lg font-bold leading-tight line-clamp-2" style="text-shadow: 2px 2px 4px rgba(0,0,0,0.8);">
-                                        「90210から10001まで、トラック一台の見積もりを」- 音声AI「Lanesurf」が変える貨物予約の未来
-                                    </h2>
-                                </div>
-                            </div>
-                        </a>
-                        <div class="p-6">
-                            <div class="flex items-center mb-3">
-                                <time class="text-sm text-gray-500">2025年8月2日</time>
-                            </div>
-                            <p class="text-gray-700 mb-4 line-clamp-3">
-                                音声AIで貨物輸送の見積もりを瞬時に取得。「Lanesurf」が実現する物流業界の革新と、地方運送業者への影響を詳しく解説します。
-                            </p>
-                            <div class="flex flex-wrap gap-2 mb-4">
-                                <span class="px-3 py-1 bg-orange-100 text-orange-800 text-sm rounded-full">物流DX</span>
-                                <span class="px-3 py-1 bg-orange-100 text-orange-800 text-sm rounded-full">音声AI</span>
-                            </div>
-                            <a href="articles/20250802.html" class="btn-primary text-sm">
-                                続きを読む
-                                <svg class="ml-2 w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/>
-                                </svg>
-                            </a>
-                        </div>
-                    </article>
-
-                    <!-- Blog Card 15 - 15番目の記事 20250801 -->
-                    <article class="card overflow-hidden" data-date="2025-08-01">
-                        <a href="articles/20250801.html" class="block relative aspect-ratio-4-3 overflow-hidden">
-                            <img 
-                                src="https://images.unsplash.com/photo-1414235077428-338989a2e8c0?w=800&h=450&fit=crop&crop=center" 
-                                alt="もう電話は鳴りっぱなしにさせない！レストランの救世主、音声AI「Certus AI」とは？" 
-                                class="w-full h-full object-cover hover:scale-105 transition-transform duration-300"
-                            />
-                            <div class="absolute inset-0 bg-gradient-to-t from-black/90 via-black/30 to-transparent">
-                                <div class="absolute bottom-4 left-4 right-4">
-                                    <h2 class="text-white text-lg font-bold leading-tight line-clamp-2" style="text-shadow: 2px 2px 4px rgba(0,0,0,0.8);">
-                                        もう電話は鳴りっぱなしにさせない！レストランの救世主、音声AI「Certus AI」とは？
-                                    </h2>
-                                </div>
-                            </div>
-                        </a>
-                        <div class="p-6">
-                            <div class="flex items-center mb-3">
-                                <time class="text-sm text-gray-500">2025年8月1日</time>
-                            </div>
-                            <p class="text-gray-700 mb-4 line-clamp-3">
-                                レストランの電話応対を自動化する音声AI「Certus AI」。人手不足に悩む飲食店の強い味方となる革新的サービスの詳細と導入効果を解説します。
-                            </p>
-                            <div class="flex flex-wrap gap-2 mb-4">
-                                <span class="px-3 py-1 bg-red-100 text-red-800 text-sm rounded-full">飲食店DX</span>
-                                <span class="px-3 py-1 bg-red-100 text-red-800 text-sm rounded-full">音声AI</span>
-                            </div>
-                            <a href="articles/20250801.html" class="btn-primary text-sm">
-                                続きを読む
-                                <svg class="ml-2 w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/>
-                                </svg>
-                            </a>
-                        </div>
-                    </article>
-
-                    <!-- Blog Card 16 - 16番目の記事 20250731 -->
-                    <article class="card overflow-hidden" data-date="2025-07-31">
-                        <a href="articles/20250731.html" class="block relative aspect-ratio-4-3 overflow-hidden">
-                            <img 
-                                src="https://images.unsplash.com/photo-1600880292203-757bb62b4baf?w=800&h=450&fit=crop&crop=center" 
-                                alt="AIエージェントの"神経系"、Apache Kafkaがリアルタイム知能化を加速する" 
-                                class="w-full h-full object-cover hover:scale-105 transition-transform duration-300"
-                            />
-                            <div class="absolute inset-0 bg-gradient-to-t from-black/90 via-black/30 to-transparent">
-                                <div class="absolute bottom-4 left-4 right-4">
-                                    <h2 class="text-white text-lg font-bold leading-tight line-clamp-2" style="text-shadow: 2px 2px 4px rgba(0,0,0,0.8);">
-                                        AIエージェントの"神経系"、Apache Kafkaがリアルタイム知能化を加速する
-                                    </h2>
-                                </div>
-                            </div>
-                        </a>
-                        <div class="p-6">
-                            <div class="flex items-center mb-3">
-                                <time class="text-sm text-gray-500">2025年7月31日</time>
-                            </div>
-                            <p class="text-gray-700 mb-4 line-clamp-3">
-                                Apache KafkaがAIエージェントのリアルタイム処理を支える基盤技術として注目。企業システムの知能化を加速する技術的背景を分析します。
-                            </p>
-                            <div class="flex flex-wrap gap-2 mb-4">
-                                <span class="px-3 py-1 bg-indigo-100 text-indigo-800 text-sm rounded-full">Apache Kafka</span>
-                                <span class="px-3 py-1 bg-indigo-100 text-indigo-800 text-sm rounded-full">リアルタイム処理</span>
-                            </div>
-                            <a href="articles/20250731.html" class="btn-primary text-sm">
-                                続きを読む
-                                <svg class="ml-2 w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/>
-                                </svg>
-                            </a>
-                        </div>
-                    </article>
-
-                    <!-- Blog Card 17 - 17番目の記事 20250729 -->
-                    <article class="card overflow-hidden" data-date="2025-07-29">
-                        <a href="articles/20250729.html" class="block relative aspect-ratio-4-3 overflow-hidden">
-                            <img 
-                                src="https://images.unsplash.com/photo-1550751827-4bd374c3f58b?w=800&h=450&fit=crop&crop=center" 
-                                alt="AIエージェント「Manus」が拓く、自律型ビジネスオートメーションの夜明け" 
-                                class="w-full h-full object-cover hover:scale-105 transition-transform duration-300"
-                            />
-                            <div class="absolute inset-0 bg-gradient-to-t from-black/90 via-black/30 to-transparent">
-                                <div class="absolute bottom-4 left-4 right-4">
-                                    <h2 class="text-white text-lg font-bold leading-tight line-clamp-2" style="text-shadow: 2px 2px 4px rgba(0,0,0,0.8);">
-                                        AIエージェント「Manus」が拓く、自律型ビジネスオートメーションの夜明け
-                                    </h2>
-                                </div>
-                            </div>
-                        </a>
-                        <div class="p-6">
-                            <div class="flex items-center mb-3">
-                                <time class="text-sm text-gray-500">2025年7月29日</time>
-                            </div>
-                            <p class="text-gray-600 mb-4 text-sm leading-relaxed line-clamp-3">
-                                2025年3月に発表された自律型AIエージェント「Manus」は、複雑な目標を理解し、自ら計画を立て、複数のステップにわたる業務を最後までやり遂げる、真に自律的な働き手です。
-                            </p>
-                            <div class="flex flex-wrap gap-2 mb-4">
-                                <span class="px-3 py-1 bg-purple-100 text-purple-800 text-sm rounded-full">AIエージェント</span>
-                                <span class="px-3 py-1 bg-purple-100 text-purple-800 text-sm rounded-full">自律型</span>
-                            </div>
-                            <a href="articles/20250729.html" class="btn-primary text-sm">
-                                続きを読む
-                                <svg class="ml-2 w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/>
-                                </svg>
-                            </a>
-                        </div>
-                    </article>
-
-                    <!-- Blog Card 18 - 18番目の記事 20250730 -->
-                    <article class="card overflow-hidden" data-date="2025-07-30">
-                        <a href="articles/20250730.html" class="block relative aspect-ratio-4-3 overflow-hidden">
-                            <img 
-                                src="https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?w=800&h=450&fit=crop&crop=center" 
-                                alt="「AIへの聖戦」か、それとも冷徹な経営判断か-マイクロソフト9000人リストラの深層" 
-                                class="w-full h-full object-cover hover:scale-105 transition-transform duration-300"
-                            />
-                            <div class="absolute inset-0 bg-gradient-to-t from-black/90 via-black/30 to-transparent">
-                                <div class="absolute bottom-4 left-4 right-4">
-                                    <h2 class="text-white text-lg font-bold leading-tight line-clamp-2" style="text-shadow: 2px 2px 4px rgba(0,0,0,0.8);">
-                                        「AIへの聖戦」か、それとも冷徹な経営判断か-マイクロソフト9000人リストラの深層
-                                    </h2>
-                                </div>
-                            </div>
-                        </a>
-                        <div class="p-6">
-                            <div class="flex items-center mb-3">
-                                <time class="text-sm text-gray-500">2025年7月30日</time>
-                            </div>
-                            <p class="text-gray-700 mb-4 line-clamp-3">
-                                マイクロソフトは2025年7月、約9000人、全従業員の4%に及ぶ大規模な人員削減を発表しました。この記事では、今回のリストラの背景にある戦略的な意図と、巨大テック企業が直面する構造的な課題を深掘りします。
-                            </p>
-                            <div class="flex flex-wrap gap-2 mb-4">
-                                <span class="px-3 py-1 bg-gray-100 text-gray-800 text-sm rounded-full">マイクロソフト</span>
-                                <span class="px-3 py-1 bg-gray-100 text-gray-800 text-sm rounded-full">AI戦略</span>
-                            </div>
-                            <a href="articles/20250730.html" class="btn-primary text-sm">
-                                続きを読む
-                                <svg class="ml-2 w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/>
-                                </svg>
-                            </a>
-                        </div>
-                    </article>
-
-                </div>
-                
-                <div class="text-center mt-12">
-                    <a href="blog-list.html" class="btn-primary px-8 py-4 text-lg font-bold">
-                        すべての記事を見る
-                    </a>
-                </div>
-            </div>
-        </section>
-
-        <div class="py-12 bg-[var(--clr-bg-1)]">
-            <div class="max-w-3xl mx-auto">
-                <hr class="border-t-2 border-gray-200">
-            </div>
-        </div>
-
-        <!-- Why / 課題共感 Section -->
-
-        <!-- AI導入効果シミュレーター セクション -->
-        <section id="ai-diagnosis-simulator" class="py-20 bg-[var(--clr-bg-1)]">
-            <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
-                <h2 class="text-3xl md:text-4xl font-bold text-center mb-8 text-[var(--clr-primary)]">
-                    あなたの会社のAI導入効果を診断
-                </h2>
-                <p class="text-center text-[var(--clr-gray)] mb-12 text-lg">
-                    業種・規模・課題に応じた削減効果を3分で算出
-                </p>
-
-                <!-- 特徴説明 -->
-                <div class="grid grid-cols-1 md:grid-cols-3 gap-6 mb-12">
-                    <div class="text-center">
-                        <div class="text-3xl mb-3">⚡</div>
-                        <h4 class="font-bold text-[var(--clr-primary)] mb-2">3分で完了</h4>
-                        <p class="text-[var(--clr-gray)] text-sm">簡単な質問に答えるだけで、具体的な削減効果を算出</p>
-                    </div>
-                    <div class="text-center">
-                        <div class="text-3xl mb-3">🎯</div>
-                        <h4 class="font-bold text-[var(--clr-primary)] mb-2">業種別対応</h4>
-                        <p class="text-[var(--clr-gray)] text-sm">製造業・観光業・農業・その他の業種に特化した診断</p>
-                    </div>
-                    <div class="text-center">
-                        <div class="text-3xl mb-3">📊</div>
-                        <h4 class="font-bold text-[var(--clr-primary)] mb-2">詳細レポート</h4>
-                        <p class="text-[var(--clr-gray)] text-sm">投資回収期間・推奨AI・改善項目まで詳しく表示</p>
-                    </div>
-                </div>
-                
-                <!-- シミュレーター プレビューカード -->
-                <div class="max-w-4xl mx-auto">
-                    
-                    <div class="relative">
-                        <!-- 枠線とシャドウで「画面感」を演出 -->
-                        <div class="bg-white rounded-2xl shadow-2xl overflow-hidden hover:shadow-3xl transition-all duration-300 hover:scale-105 cursor-pointer border-4 border-orange-200 hover:border-orange-300" onclick="window.open('simulator.html', '_blank')">
-                            <!-- 擬似的なブラウザヘッダー -->
-                            <div class="bg-gray-100 px-4 py-2 flex items-center space-x-2 border-b-2 border-orange-200">
-                                <div class="w-3 h-3 bg-red-400 rounded-full"></div>
-                                <div class="w-3 h-3 bg-yellow-400 rounded-full"></div>
-                                <div class="w-3 h-3 bg-green-400 rounded-full"></div>
-                                <div class="flex-1 bg-white rounded px-3 py-1 ml-4">
-                                    <span class="text-xs text-gray-500">🔗 simulator.html</span>
-                                </div>
-                            </div>
-                            
-                            <!-- シミュレーター画面内容 -->
-                            <div class="bg-gradient-to-br from-blue-50 to-indigo-50">
-                                <!-- ヘッダー部分（少し色を変更） -->
-                                <div class="bg-gradient-to-r from-indigo-600 to-purple-600 text-white p-6 text-center">
-                                    <h3 class="text-2xl font-bold mb-2">AI導入効果シミュレーター</h3>
-                                    <p class="opacity-90">あなたの会社のAI導入効果を3分で診断</p>
-                                </div>
-                                
-                                <!-- プログレスバー -->
-                                <div class="px-6 pt-4">
-                                    <div class="bg-gray-200 h-2 rounded-full overflow-hidden">
-                                        <div class="bg-gradient-to-r from-blue-400 to-purple-500 h-full rounded-full animate-pulse" style="width: 80%"></div>
-                                    </div>
-                                </div>
-                                
-                                <!-- 診断結果プレビュー -->
-                                <div class="p-6">
-                                    <div class="text-center mb-6">
-                                        <h4 class="text-xl font-bold text-indigo-700 mb-2">🎯 AI導入効果</h4>
-                                        <p class="text-gray-600">あなたの会社の予想される効果です</p>
-                                    </div>
-                                    
-                                    <!-- 結果サマリー（色を変更してプレビュー感を強調） -->
-                                    <div class="bg-gradient-to-br from-indigo-600 to-purple-600 text-white p-6 rounded-xl text-center border-2 border-purple-300 shadow-lg">
-                                        <div class="text-sm opacity-90 mb-2">年間人件費削減効果</div>
-                                        <div class="text-4xl font-bold mb-4 animate-pulse">840万円</div>
-                                        <div class="grid grid-cols-2 gap-4">
-                                            <div class="bg-white bg-opacity-20 rounded-lg p-3">
-                                                <div class="text-sm opacity-90">月間削減額</div>
-                                                <div class="text-2xl font-bold">70万円</div>
-                                            </div>
-                                            <div class="bg-white bg-opacity-20 rounded-lg p-3">
-                                                <div class="text-sm opacity-90">削減率</div>
-                                                <div class="text-2xl font-bold">23%</div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    
-                                    <!-- CTA部分 -->
-                                    <div class="mt-6 text-center">
-                                        <div class="bg-gradient-to-r from-orange-500 to-red-500 text-white px-8 py-4 rounded-xl font-bold text-lg inline-block hover:from-orange-600 hover:to-red-600 transition-all shadow-lg transform hover:scale-105">
-                                            🚀 無料で診断を開始する
-                                        </div>
-                                        <p class="text-sm text-gray-600 mt-3">※所要時間約3分・登録不要</p>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        
-                        <!-- 角にプレビューバッジ -->
-                        <div class="absolute -top-2 -right-2 bg-orange-500 text-white px-3 py-1 rounded-full text-xs font-bold shadow-lg rotate-12">
-                            PREVIEW
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
+        
+        <!-- AI導入効果シミュレーターセクション（前半）を削除 -->
 
         <!-- 導入ステップ & テンプレート -->
         <!-- 企業向けAI研修プロモーション -->
@@ -2479,21 +681,7 @@ Google FlowのAI映像制作ツールで地方企業の動画制作コストが8
                     </p>
                 </div>
 
-                <!-- YouTube Shorts 埋め込み -->
-                <div class="text-center mb-8">
-                    <div class="max-w-md mx-auto">
-                        <iframe 
-                            width="360" 
-                            height="640" 
-                            src="https://www.youtube.com/embed/PoceCeaBwXM" 
-                            title="AI活用研修プログラム紹介" 
-                            frameborder="0" 
-                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
-                            allowfullscreen
-                            style="border-radius: 12px; box-shadow: 0 8px 32px rgba(0, 0, 0, 0.2);">
-                        </iframe>
-                    </div>
-                </div>
+                <!-- YouTube埋め込みを削除（エラー対策） -->
                 
                 <!-- 研修プログラム案内（追加） -->
                 <div class="text-center mb-12">
