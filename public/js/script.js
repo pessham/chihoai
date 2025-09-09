@@ -1,6 +1,436 @@
 ;(function(){try{var h=location.hostname; if(/\.vercel\.app$/.test(h)){ var dest='https://chihoai.com'+location.pathname+location.search+location.hash; location.replace(dest);} }catch(e){}})();
 window.articles = [
     {
+        "id": "20251015",
+        "filename": "20251015.md",
+        "title": "「学習させない設定」はAIの義務ではない。企業が守るべき「情報倫理」",
+        "date": "2025-10-15",
+        "author": "ペスハム",
+        "category": "AI活用術",
+        "thumbnail": "https://images.unsplash.com/photo-1552664730-d307ca884978?w=800&h=450&fit=crop&crop=center",
+        "excerpt": "あなたの会社でAI導入を検討中の方へ"
+    },
+    {
+        "id": "20251014",
+        "filename": "20251014.md",
+        "title": "AIは「競合分析」を自動化する。あなたがすべきは「戦略的思考」",
+        "date": "2025-10-14",
+        "author": "ペスハム",
+        "category": "AI活用術",
+        "thumbnail": "https://images.unsplash.com/photo-1556157382-97eda2d62296?w=800&h=450&fit=crop&crop=center",
+        "excerpt": "あなたの会社でAI導入を検討中の方へ"
+    },
+    {
+        "id": "20251013",
+        "filename": "20251013.md",
+        "title": "「社内AIロードマップ」は作らない。まず「使わせて」から考える未来",
+        "date": "2025-10-13",
+        "author": "ペスハム",
+        "category": "AI活用術",
+        "thumbnail": "https://images.unsplash.com/photo-1521737604893-d14cc237f11d?w=800&h=450&fit=crop&crop=faces",
+        "excerpt": "あなたの会社でAI導入を検討中の方へ"
+    },
+    {
+        "id": "20251012",
+        "filename": "20251012.md",
+        "title": "AIに「感情」を語れ。あなたの「モヤモヤ」が最適な提案を生む",
+        "date": "2025-10-12",
+        "author": "ペスハム",
+        "category": "AI活用術",
+        "thumbnail": "https://images.unsplash.com/photo-1542621334-a254cf47733d?w=800&h=450&fit=crop&crop=center",
+        "excerpt": "あなたの会社でAI導入を検討中の方へ"
+    },
+    {
+        "id": "20251011",
+        "filename": "20251011.md",
+        "title": "「成果が出ない」AI活用は「あなたの学び方」に問題がある",
+        "date": "2025-10-11",
+        "author": "ペスハム",
+        "category": "AI活用術",
+        "thumbnail": "https://images.unsplash.com/photo-1485827404703-89b55fcc595e?w=800&h=450&fit=crop&crop=center",
+        "excerpt": "あなたの会社でAI導入を検討中の方へ"
+    },
+    {
+        "id": "20251010",
+        "filename": "20251010.md",
+        "title": "「AIが怖い」は古い。「取り残される恐怖」と戦うための行動習慣",
+        "date": "2025-10-10",
+        "author": "ペスハム",
+        "category": "AI活用術",
+        "thumbnail": "https://images.unsplash.com/photo-1498050108023-c5249f4df085?w=800&h=450&fit=crop&crop=center",
+        "excerpt": "あなたの会社でAI導入を検討中の方へ"
+    },
+    {
+        "id": "20251009",
+        "filename": "20251009.md",
+        "title": "AIに「遠慮」するな。どんなに長いプロンプトでも「精度が上がる」理由",
+        "date": "2025-10-09",
+        "author": "ペスハム",
+        "category": "AI活用術",
+        "thumbnail": "https://images.unsplash.com/photo-1551836022-d5d88e9218df?w=800&h=450&fit=crop&crop=center",
+        "excerpt": "あなたの会社でAI導入を検討中の方へ"
+    },
+    {
+        "id": "20251008",
+        "filename": "20251008.md",
+        "title": "「会議の録音」はAIに食わせろ。議事録作成ではなく「次の一手」を生み出す",
+        "date": "2025-10-08",
+        "author": "ペスハム",
+        "category": "AI活用術",
+        "thumbnail": "https://images.unsplash.com/photo-1517245386807-bb43f82c33c4?w=800&h=450&fit=crop&crop=faces",
+        "excerpt": "あなたの会社でAI導入を検討中の方へ"
+    },
+    {
+        "id": "20251007",
+        "filename": "20251007.md",
+        "title": "AIに「今日の気づき」を「そのまま」投げろ。情報の鮮度を活かす思考習慣",
+        "date": "2025-10-07",
+        "author": "ペスハム",
+        "category": "AI活用術",
+        "thumbnail": "https://images.unsplash.com/photo-1553877522-43269d4ea984?w=800&h=450&fit=crop&crop=center",
+        "excerpt": "あなたの会社でAI導入を検討中の方へ"
+    },
+    {
+        "id": "20251006",
+        "filename": "20251006.md",
+        "title": "「KPI設定」はAIの仕事。あなたがすべきは「本質的な課題発見」",
+        "date": "2025-10-06",
+        "author": "ペスハム",
+        "category": "AI活用術",
+        "thumbnail": "https://images.unsplash.com/photo-1551836022-3b11d3dcb3a7?w=800&h=450&fit=crop&crop=center",
+        "excerpt": "あなたの会社でAI導入を検討中の方へ"
+    },
+    {
+        "id": "20251005",
+        "filename": "20251005.md",
+        "title": "AIは「あなたの思考を代行しない」。拡張する「もう一つの脳」の操り方",
+        "date": "2025-10-05",
+        "author": "ペスハム",
+        "category": "AI活用術",
+        "thumbnail": "https://images.unsplash.com/photo-1522071820081-009f0129c71c?w=800&h=450&fit=crop&crop=faces",
+        "excerpt": "あなたの会社でAI導入を検討中の方へ"
+    },
+    {
+        "id": "20251004",
+        "filename": "20251004.md",
+        "title": "「研修は不要」！？AI時代の自己成長は「自ら問いを立てる」こと",
+        "date": "2025-10-04",
+        "author": "ペスハム",
+        "category": "AI活用術",
+        "thumbnail": "https://images.unsplash.com/photo-1552581234-26160f608093?w=800&h=450&fit=crop&crop=center",
+        "excerpt": "あなたの会社でAI導入を検討中の方へ"
+    },
+    {
+        "id": "20251003",
+        "filename": "20251003.md",
+        "title": "AIに「悩みのプロセス」を晒せ。それが最高の「問い」になる瞬間",
+        "date": "2025-10-03",
+        "author": "ペスハム",
+        "category": "AI活用術",
+        "thumbnail": "https://images.unsplash.com/photo-1529101091764-c3526daf38fe?w=800&h=450&fit=crop&crop=center",
+        "excerpt": "あなたの会社でAI導入を検討中の方へ"
+    },
+    {
+        "id": "20251002",
+        "filename": "20251002.md",
+        "title": "「検索結果を読み込むな」AIが選ぶ「本当に必要な情報」の精度",
+        "date": "2025-10-02",
+        "author": "ペスハム",
+        "category": "AI活用術",
+        "thumbnail": "https://images.unsplash.com/photo-1492724441997-5dc865305da7?w=800&h=450&fit=crop&crop=center",
+        "excerpt": "あなたの会社でAI導入を検討中の方へ"
+    },
+    {
+        "id": "20251001",
+        "filename": "20251001.md",
+        "title": "AI活用は「やらない」痛みから始まる。損しないための「恐怖マーケティング」",
+        "date": "2025-10-01",
+        "author": "ペスハム",
+        "category": "AI活用術",
+        "thumbnail": "https://images.unsplash.com/photo-1520975764746-56c35f2320a5?w=800&h=450&fit=crop&crop=center",
+        "excerpt": "あなたの会社でAI導入を検討中の方へ"
+    },
+    {
+        "id": "20250930",
+        "filename": "20250930.md",
+        "title": "なぜAIは「速く、正確」なのに使わないのか？その答えは「あなたの学習バイアス」",
+        "date": "2025-09-30",
+        "author": "ペスハム",
+        "category": "AI活用術",
+        "thumbnail": "https://images.unsplash.com/photo-1516321318423-f06f85e504b3?w=800&h=450&fit=crop&crop=center",
+        "excerpt": "あなたの会社でAI導入を検討中の方へ"
+    },
+    {
+        "id": "20250929",
+        "filename": "20250929.md",
+        "title": "「失敗談」こそAIに語れ。AIがあなたの経験から「学び直す」",
+        "date": "2025-09-29",
+        "author": "ペスハム",
+        "category": "AI活用術",
+        "thumbnail": "https://images.unsplash.com/photo-1516321318423-f06f85e504b3?w=800&h=450&fit=crop&crop=center",
+        "excerpt": "あなたの会社でAI導入を検討中の方へ"
+    },
+    {
+        "id": "20250928",
+        "filename": "20250928.md",
+        "title": "AIに「社内マニュアル」を食わせろ。FAQボットがあなたの代わりに答える",
+        "date": "2025-09-28",
+        "author": "ペスハム",
+        "category": "AI活用術",
+        "thumbnail": "https://images.unsplash.com/photo-1516321318423-f06f85e504b3?w=800&h=450&fit=crop&crop=center",
+        "excerpt": "あなたの会社でAI導入を検討中の方へ"
+    },
+    {
+        "id": "20250927",
+        "filename": "20250927.md",
+        "title": "「無料AI」で成果を出す時代。GPT-4oが変えるビジネスの常識",
+        "date": "2025-09-27",
+        "author": "ペスハム",
+        "category": "AI活用術",
+        "thumbnail": "https://images.unsplash.com/photo-1516321318423-f06f85e504b3?w=800&h=450&fit=crop&crop=center",
+        "excerpt": "あなたの会社でAI導入を検討中の方へ"
+    },
+    {
+        "id": "20250926",
+        "filename": "20250926.md",
+        "title": "AIは「育てる」もの。一問一答では辿り着けない「思考の深化」",
+        "date": "2025-09-26",
+        "author": "ペスハム",
+        "category": "AI活用術",
+        "thumbnail": "https://images.unsplash.com/photo-1516321318423-f06f85e504b3?w=800&h=450&fit=crop&crop=center",
+        "excerpt": "あなたの会社でAI導入を検討中の方へ"
+    },
+    {
+        "id": "20250925",
+        "filename": "20250925.md",
+        "title": "「この作業、AIで避けられたかも」に気づけ。あなたの「無駄」がAIの燃料",
+        "date": "2025-09-25",
+        "author": "ペスハム",
+        "category": "AI活用術",
+        "thumbnail": "https://images.unsplash.com/photo-1516321318423-f06f85e504b3?w=800&h=450&fit=crop&crop=center",
+        "excerpt": "あなたの会社でAI導入を検討中の方へ"
+    },
+    {
+        "id": "20250924",
+        "filename": "20250924.md",
+        "title": "中小企業がAIで「大企業」を超える。時間と人手を補う「秘密兵器」",
+        "date": "2025-09-24",
+        "author": "ペスハム",
+        "category": "AI活用術",
+        "thumbnail": "https://images.unsplash.com/photo-1516321318423-f06f85e504b3?w=800&h=450&fit=crop&crop=center",
+        "excerpt": "あなたの会社でAI導入を検討中の方へ"
+    },
+    {
+        "id": "20250923",
+        "filename": "20250923.md",
+        "title": "「完璧な資料」はAIに任せろ。あなたが磨くのは「物語」だけ",
+        "date": "2025-09-23",
+        "author": "ペスハム",
+        "category": "AI活用術",
+        "thumbnail": "https://images.unsplash.com/photo-1516321318423-f06f85e504b3?w=800&h=450&fit=crop&crop=center",
+        "excerpt": "あなたの会社でAI導入を検討中の方へ"
+    },
+    {
+        "id": "20250922",
+        "filename": "20250922.md",
+        "title": "AIに「朝のモヤモヤ」を話す習慣。思考の断片がイノベーションの種に",
+        "date": "2025-09-22",
+        "author": "ペスハム",
+        "category": "AI活用術",
+        "thumbnail": "https://images.unsplash.com/photo-1516321318423-f06f85e504b3?w=800&h=450&fit=crop&crop=center",
+        "excerpt": "あなたの会社でAI導入を検討中の方へ"
+    },
+    {
+        "id": "20250921",
+        "filename": "20250921.md",
+        "title": "「答え」を求めるな。AIとの対話で「見つけるプロセス」こそ価値",
+        "date": "2025-09-21",
+        "author": "ペスハム",
+        "category": "AI活用術",
+        "thumbnail": "https://images.unsplash.com/photo-1516321318423-f06f85e504b3?w=800&h=450&fit=crop&crop=center",
+        "excerpt": "あなたの会社でAI導入を検討中の方へ"
+    },
+    {
+        "id": "20250920",
+        "filename": "20250920.md",
+        "title": "AIが「企画書」を30分で作る。あなたがすべきは「人間だけの仕事」",
+        "date": "2025-09-20",
+        "author": "ペスハム",
+        "category": "AI活用術",
+        "thumbnail": "https://images.unsplash.com/photo-1516321318423-f06f85e504b3?w=800&h=450&fit=crop&crop=center",
+        "excerpt": "あなたの会社でAI導入を検討中の方へ"
+    },
+    {
+        "id": "20250919",
+        "filename": "20250919.md",
+        "title": "もう「教えられない」。AI時代に必要な「自己成長」の唯一解",
+        "date": "2025-09-19",
+        "author": "ペスハム",
+        "category": "AI活用術",
+        "thumbnail": "https://images.unsplash.com/photo-1516321318423-f06f85e504b3?w=800&h=450&fit=crop&crop=center",
+        "excerpt": "あなたの会社でAI導入を検討中の方へ"
+    },
+    {
+        "id": "20250918",
+        "filename": "20250918.md",
+        "title": "「アイデア枯渇」は過去の遺物。AIが「あなたの代わりに」発想する未来",
+        "date": "2025-09-18",
+        "author": "ペスハム",
+        "category": "AI活用術",
+        "thumbnail": "https://images.unsplash.com/photo-1516321318423-f06f85e504b3?w=800&h=450&fit=crop&crop=center",
+        "excerpt": "あなたの会社でAI導入を検討中の方へ"
+    },
+    {
+        "id": "20250917",
+        "filename": "20250917.md",
+        "title": "AIは「壁打ちパートナー」ではない。もう一人の「自分」として使う思考術",
+        "date": "2025-09-17",
+        "author": "ペスハム",
+        "category": "AI活用術",
+        "thumbnail": "https://images.unsplash.com/photo-1516321318423-f06f85e504b3?w=800&h=450&fit=crop&crop=center",
+        "excerpt": "あなたの会社でAI導入を検討中の方へ"
+    },
+    {
+        "id": "20250916",
+        "filename": "20250916.md",
+        "title": "あなたの思考は「短すぎる」。AIを賢くする「長文入力」の秘訣",
+        "date": "2025-09-16",
+        "author": "ペスハム",
+        "category": "AI活用術",
+        "thumbnail": "https://images.unsplash.com/photo-1516321318423-f06f85e504b3?w=800&h=450&fit=crop&crop=center",
+        "excerpt": "あなたの会社でAI導入を検討中の方へ"
+    },
+    {
+        "id": "20250915",
+        "filename": "20250915.md",
+        "title": "「学習させない」AI活用術。企業がAIで機密を守る新常識",
+        "date": "2025-09-15",
+        "author": "ペスハム",
+        "category": "AI活用術",
+        "thumbnail": "https://images.unsplash.com/photo-1516321318423-f06f85e504b3?w=800&h=450&fit=crop&crop=center",
+        "excerpt": "あなたの会社でAI導入を検討中の方へ"
+    },
+    {
+        "id": "20250914",
+        "filename": "20250914.md",
+        "title": "検索をやめても仕事は回る。AIが教えてくれる「情報との付き合い方」",
+        "date": "2025-09-14",
+        "author": "ペスハム",
+        "category": "AI活用術",
+        "thumbnail": "https://images.unsplash.com/photo-1516321318423-f06f85e504b3?w=800&h=450&fit=crop&crop=center",
+        "excerpt": "あなたの会社でAI導入を検討中の方へ"
+    },
+    {
+        "id": "20250913",
+        "filename": "20250913.md",
+        "title": "AIを「飼いならす」な。あなたの脳を「AIに拡張させる」覚悟",
+        "date": "2025-09-13",
+        "author": "ペスハム",
+        "category": "AI活用術",
+        "thumbnail": "https://images.unsplash.com/photo-1516321318423-f06f85e504b3?w=800&h=450&fit=crop&crop=center",
+        "excerpt": "あなたの会社でAI導入を検討中の方へ"
+    },
+    {
+        "id": "20250912",
+        "filename": "20250912.md",
+        "title": "「業務棚卸し」はするな。AI導入は「作業改善」から始まる",
+        "date": "2025-09-12",
+        "author": "ペスハム",
+        "category": "AI活用術",
+        "thumbnail": "https://images.unsplash.com/photo-1516321318423-f06f85e504b3?w=800&h=450&fit=crop&crop=center",
+        "excerpt": "あなたの会社でAI導入を検討中の方へ"
+    },
+    {
+        "id": "20250911",
+        "filename": "20250911.md",
+        "title": "AI研修で「快感」と「痛み」を。やらないと「取り残される」未来",
+        "date": "2025-09-11",
+        "author": "ペスハム",
+        "category": "AI活用術",
+        "thumbnail": "https://images.unsplash.com/photo-1516321318423-f06f85e504b3?w=800&h=450&fit=crop&crop=center",
+        "excerpt": "あなたの会社でAI導入を検討中の方へ"
+    },
+    {
+        "id": "20250910",
+        "filename": "20250910.md",
+        "title": "もう「使ってみる」は遅い。AIを「自社の仕組み」に変えるDeNA式評価",
+        "date": "2025-09-10",
+        "author": "ペスハム",
+        "category": "AI活用術",
+        "thumbnail": "https://images.unsplash.com/photo-1516321318423-f06f85e504b3?w=800&h=450&fit=crop&crop=center",
+        "excerpt": "あなたの会社でAI導入を検討中の方へ"
+    },
+    {
+        "id": "20250909",
+        "filename": "20250909.md",
+        "title": "「AIの性能はあなたが決める」最悪の使い方は「完璧な問い」",
+        "date": "2025-09-09",
+        "author": "ペスハム",
+        "category": "AI活用術",
+        "thumbnail": "https://images.unsplash.com/photo-1516321318423-f06f85e504b3?w=800&h=450&fit=crop&crop=center",
+        "excerpt": "あなたの会社でAI導入を検討中の方へ"
+    },
+    {
+        "id": "20250908",
+        "filename": "20250908.md",
+        "title": "AIに「悩み」を語りかけろ。言語化できないモヤモヤが最高の問いになる",
+        "date": "2025-09-08",
+        "author": "ペスハム",
+        "category": "AI活用術",
+        "thumbnail": "https://images.unsplash.com/photo-1516321318423-f06f85e504b3?w=800&h=450&fit=crop&crop=center",
+        "excerpt": "あなたの会社でAI導入を検討中の方へ"
+    },
+    {
+        "id": "20250907",
+        "filename": "20250907.md",
+        "title": "今日から「メモ帳」を捨てなさい。ChatGPTがあなたの思考を整理する",
+        "date": "2025-09-07",
+        "author": "ペスハム",
+        "category": "AI活用術",
+        "thumbnail": "https://images.unsplash.com/photo-1516321318423-f06f85e504b3?w=800&h=450&fit=crop&crop=center",
+        "excerpt": "あなたの会社でAI導入を検討中の方へ"
+    },
+    {
+        "id": "20250906",
+        "filename": "20250906.md",
+        "title": "AIは「間違える」からこそ価値がある。そのミスを活かす思考法",
+        "date": "2025-09-06",
+        "author": "ペスハム",
+        "category": "AI活用術",
+        "thumbnail": "https://images.unsplash.com/photo-1516321318423-f06f85e504b3?w=800&h=450&fit=crop&crop=center",
+        "excerpt": "あなたの会社でAI導入を検討中の方へ"
+    },
+    {
+        "id": "20250905",
+        "filename": "20250905.md",
+        "title": "Google検索で「一次情報」を探す愚行。AIが示す「真の効率」",
+        "date": "2025-09-05",
+        "author": "ペスハム",
+        "category": "AI活用術",
+        "thumbnail": "https://images.unsplash.com/photo-1516321318423-f06f85e504b3?w=800&h=450&fit=crop&crop=center",
+        "excerpt": "あなたの会社でAI導入を検討中の方へ"
+    },
+    {
+        "id": "20250904",
+        "filename": "20250904.md",
+        "title": "「AIに優しい人」ほど損をする。雑な思考こそ最高の餌だ",
+        "date": "2025-09-04",
+        "author": "ペスハム",
+        "category": "AI活用術",
+        "thumbnail": "https://images.unsplash.com/photo-1516321318423-f06f85e504b3?w=800&h=450&fit=crop&crop=center",
+        "excerpt": "あなたの会社でAI導入を検討中の方へ"
+    },
+    {
+        "id": "20250903",
+        "filename": "20250903.md",
+        "title": "AIに「時間」を食わせろ。あなたの思考プロセス丸ごと渡す「超入力術」",
+        "date": "2025-09-03",
+        "author": "ペスハム",
+        "category": "AI活用術",
+        "thumbnail": "https://images.unsplash.com/photo-1516321318423-f06f85e504b3?w=800&h=450&fit=crop&crop=center",
+        "excerpt": "あなたの会社でAI導入を検討中の方へ"
+    },
+    {
         "id": "20250902",
         "filename": "20250902.md",
         "title": "会議にAIを「同席」させる。議事録作成はもう古い概念",
@@ -549,5 +979,15 @@ window.articles = [
         "category": "AI活用",
         "thumbnail": "https://images.unsplash.com/photo-1517077304055-6e89abbf09b0?w=800&h=450&fit=crop&crop=center",
         "excerpt": "エンジニアリングの知識がなくても、アイデアさえあれば素晴らしいものを作れる時代がついに到来しました。ただし、現段階ではまだ完璧ではない部分もありますが、その現実も含めて正直にお伝えしていきます。"
+    },
+    {
+        "id": "author",
+        "filename": "author.md",
+        "title": "運営者情報",
+        "date": "2025-08-06",
+        "author": "ペスハム",
+        "category": "未分類",
+        "thumbnail": "https://images.unsplash.com/photo-1516321318423-f06f85e504b3?w=800&h=450&fit=crop&crop=center",
+        "excerpt": "地方AIブースター運営者ペスハムの詳細プロフィール"
     }
 ];
