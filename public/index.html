@@ -3,1067 +3,1066 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>メタマケ｜地方AIブースター - 生成AIで地方の現場を働く未来形へ</title>
+    <title>metamake｜地方AIブースター - 生成AIで地方の現場を働く未来形へ</title>
     <meta name="description" content="メタマケが運営する地方AIブースター。製造業・観光業・農業の現場を生成AIで変革する実践ガイド。地方企業が一番早くAIを導入・活用するためのノウハウとケーススタディを提供します。">
     <meta name="keywords" content="メタマケ,metamake,地方AIブースター,地方AI,生成AI,製造業DX,観光業DX,農業DX,AI導入,ローカルAI,現場改善,AI活用,スマート農業,中小企業AI,地域DX,デジタル変革">
-    
-    <!-- SEO強化タグ -->
+
     <meta name="robots" content="index, follow">
-    <!-- googlebot specific meta削除（エラー対策） -->
     <link rel="canonical" href="https://chihoai.com/">
     <meta name="geo.region" content="JP">
-    <meta name="geo.placename" content="日本">
     <meta name="language" content="ja">
-    
-    <!-- Favicon -->
+
     <link rel="icon" type="image/x-icon" href="images/metamakeblack.jpg">
-    <link rel="icon" type="image/png" href="images/metamakeblack.jpg">
     <link rel="apple-touch-icon" href="images/metamakeblack.jpg">
-    
-    <!-- Open Graph -->
-    <meta property="og:title" content="メタマケ｜地方AIブースター - 生成AIで地方の現場を労く未来形へ">
-    <meta property="og:description" content="メタマケが運営する地方AIブースター。製造業・観光業・農業の現場を生成AIで変革する実践ガイド。地方企業が一番早くAIを導入・活用するためのノウハウとケーススタディを提供します。">
+
+    <meta property="og:title" content="metamake｜地方AIブースター">
+    <meta property="og:description" content="製造業・観光業・農業の現場を生成AIで変革する実践ガイド。">
     <meta property="og:image" content="/images/chihoaitop.png">
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://chihoai.com/">
-    
-    <!-- Twitter Card -->
+
     <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="メタマケ｜地方AIブースター - 生成AIで地方の現場を労く未来形へ">
-    <meta name="twitter:description" content="メタマケが運営する地方AIブースター。製造業・観光業・農業の現場を生成AIで変革する実践ガイド。地方企業が一番早くAIを導入・活用するためのノウハウとケーススタディを提供します。">
+    <meta name="twitter:title" content="metamake｜地方AIブースター">
+    <meta name="twitter:description" content="製造業・観光業・農業の現場を生成AIで変革する実践ガイド。">
     <meta name="twitter:image" content="/images/chihoaitop.png">
-    
-    <!-- 構造化データ（JSON-LD） -->
+
     <script type="application/ld+json">
     {
         "@context": "https://schema.org",
         "@type": "WebSite",
-        "name": "メタマケ｜地方AIブースター",
-        "alternateName": "地方AIブースター - 生成AIで地方の現場を労く未来形へ",
+        "name": "metamake｜地方AIブースター",
         "url": "https://chihoai.com/",
-        "description": "メタマケが運営する地方AIブースター。製造業・観光業・農業の現場を生成AIで変革する実践ガイド。地方企業が一番早くAIを導入・活用するためのノウハウとケーススタディを提供します。",
+        "description": "製造業・観光業・農業の現場を生成AIで変革する実践ガイド。",
         "inLanguage": "ja",
-        "publisher": {
-            "@type": "Organization",
-            "name": "メタマケ",
-            "alternateName": "metamake",
-            "url": "https://chihoai.com/"
-        },
-        "potentialAction": {
-            "@type": "SearchAction",
-            "target": "https://chihoai.com/?s={search_term_string}",
-            "query-input": "required name=search_term_string"
-        },
-        "keywords": ["メタマケ", "metamake", "地方AIブースター", "地方AI", "生成AI", "製造業DX", "観光業DX", "農業DX", "AI導入", "中小企業AI", "地域DX"]
+        "publisher": { "@type": "Organization", "name": "metamake", "url": "https://chihoai.com/" }
     }
     </script>
 
-    <!-- Google Fonts を削除（エラー対策） -->
-    <!-- フォントはシステムフォントを使用 -->
-    
-    <!-- Tailwind CSS -->
-    <script src="https://cdn.tailwindcss.com"></script>
-    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300;400;700&family=Noto+Serif+JP:wght@300;400&display=swap" rel="stylesheet">
+
     <style>
         :root {
-            /* 地方AIブースター color scheme */
-            --clr-primary: #18634B; /* ディープグリーン */
-            --clr-primary-light: #2B8A64;
-            --clr-primary-dark: #0F4A38;
-            --clr-accent: #29D3C3; /* エメラルドシアン */
-            --clr-accent-light: #4DDDD1;
-            --clr-secondary: #EADDC9; /* サンドベージュ */
-            --clr-black: #000000;
-            --clr-gray-dark: #333333;
-            --clr-gray: #666666;
-            --clr-gray-light: #f8f8f8;
-            --clr-white: #ffffff;
-            --clr-bg-1: #F7F8FA; /* やや灰がかったホワイト */
-            --clr-bg-2: #EADDC9; /* サンドベージュ */
-            --radius: 8px;
-            --shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
-            --transition: all 0.3s ease;
-            
-            /* Font families for 地方AIブースター - システムフォント使用 */
-            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Hiragino Sans', 'Yu Gothic UI', sans-serif;
-            line-height: 1.6;
-            font-weight: 400;
-            
-            color: var(--clr-gray-dark);
-            
-            font-synthesis: none;
-            text-rendering: optimizeLegibility;
-            -webkit-font-smoothing: antialiased;
-            -moz-osx-font-smoothing: grayscale;
+            --clr-primary:    #0A0A0A;
+            --clr-gold:       #C4A882;
+            --clr-accent:     #7B9BAD;
+            --clr-neutral:    #F5F2EE;
+            --clr-muted:      #6B7280;
+            --clr-white:      #FFFFFF;
+            --radius-sm:      2px;
+            --radius-md:      4px;
+            --radius-lg:      8px;
+            --shadow-sm:      0 1px 4px rgba(0,0,0,0.08);
+            --shadow-md:      0 4px 16px rgba(0,0,0,0.10);
+            --transition:     all 0.25s ease;
         }
 
-        html {
-            scroll-behavior: smooth;
-        }
+        *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+        html { scroll-behavior: smooth; }
 
         body {
-            margin: 0;
-            min-width: 320px;
-            min-height: 100vh;
-            background: linear-gradient(135deg, var(--clr-bg-1) 0%, var(--clr-bg-2) 100%);
-            color: var(--clr-gray-dark);
-            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Hiragino Sans', 'Yu Gothic UI', sans-serif;
-        }
-
-        /* Typography for 地方AIブースター */
-        h1, h2, h3, h4, h5, h6 {
-            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Hiragino Sans', 'Yu Gothic UI', sans-serif;
-            font-weight: 700;
-            line-height: 1.2;
-            color: var(--clr-black);
-        }
-
-        h1 {
-            font-size: clamp(2rem, 5vw, 4rem);
-        }
-
-        h2 {
-            font-size: clamp(1.5rem, 4vw, 2.5rem);
-        }
-
-        h3 {
-            font-size: clamp(1.2rem, 3vw, 1.8rem);
-        }
-
-        .heading-accent {
-            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Hiragino Sans', 'Yu Gothic UI', sans-serif;
-        }
-
-        /* Links styling */
-        a {
+            font-family: 'Noto Sans JP', -apple-system, sans-serif;
+            font-weight: 400;
+            font-size: 1rem;
+            line-height: 1.8;
             color: var(--clr-primary);
-            text-decoration: none;
-            transition: all 0.3s ease;
+            background: var(--clr-neutral);
+            -webkit-font-smoothing: antialiased;
+            overflow-x: hidden;
         }
 
-        a:hover {
-            color: var(--clr-accent);
-            transform: translateY(-1px);
+        h1, h2, h3, h4 {
+            font-family: 'Noto Serif JP', Georgia, serif;
+            font-weight: 300;
+            line-height: 1.3;
         }
 
-        /* Buttons styling */
-        .btn-primary {
-            background: linear-gradient(135deg, var(--clr-primary) 0%, var(--clr-primary-light) 100%);
-            color: white;
+        a { color: inherit; text-decoration: none; }
+
+        img { display: block; max-width: 100%; }
+
+        /* ── Layout ── */
+        .container {
+            max-width: 1100px;
+            margin: 0 auto;
+            padding: 0 24px;
+        }
+
+        /* ── Buttons ── */
+        .btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            padding: 12px 28px;
+            font-family: 'Noto Sans JP', sans-serif;
+            font-size: 0.9rem;
+            font-weight: 700;
+            border-radius: var(--radius-md);
+            cursor: pointer;
+            transition: var(--transition);
             border: none;
-            border-radius: 8px;
-            padding: 12px 24px;
-            font-weight: 700;
-            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Hiragino Sans', 'Yu Gothic UI', sans-serif;
-            cursor: pointer;
-            transition: all 0.3s ease;
-            box-shadow: 0 4px 15px rgba(24, 99, 75, 0.3);
             text-decoration: none;
-            display: inline-flex;
-            align-items: center;
-            justify-content: center;
+            white-space: nowrap;
         }
 
-        .btn-primary:hover {
-            transform: translateY(-2px);
-            box-shadow: 0 6px 20px rgba(24, 99, 75, 0.4);
-            color: white;
+        .btn-primary {
+            background: var(--clr-accent);
+            color: var(--clr-white);
         }
+        .btn-primary:hover { background: var(--clr-gold); color: var(--clr-primary); }
 
-        .btn-secondary {
+        .btn-outline {
             background: transparent;
-            color: var(--clr-black);
-            border: 2px solid var(--clr-black);
-            border-radius: 8px;
-            padding: 10px 22px;
-            font-weight: 700;
-            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Hiragino Sans', 'Yu Gothic UI', sans-serif;
-            cursor: pointer;
-            transition: all 0.3s ease;
-            text-decoration: none;
-            display: inline-flex;
+            color: var(--clr-primary);
+            border: 1px solid rgba(196,168,130,0.6);
+        }
+        .btn-outline:hover { border-color: var(--clr-gold); background: rgba(196,168,130,0.08); }
+
+        .btn-dark {
+            background: var(--clr-primary);
+            color: var(--clr-neutral);
+        }
+        .btn-dark:hover { background: #222; }
+
+        /* ── Header ── */
+        header {
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            background: rgba(245,242,238,0.95);
+            backdrop-filter: blur(12px);
+            border-bottom: 1px solid rgba(196,168,130,0.3);
+        }
+
+        .header-inner {
+            display: flex;
             align-items: center;
-            justify-content: center;
+            justify-content: space-between;
+            height: 64px;
         }
 
-        .btn-secondary:hover {
-            background: var(--clr-black);
-            color: white;
-            transform: translateY(-1px);
+        .logo {
+            display: flex;
+            align-items: center;
+            gap: 12px;
         }
 
-        /* Card styles */
-        .card {
-            background: rgba(255, 255, 255, 0.9);
-            border-radius: 8px;
-            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
-            transition: all 0.3s ease;
-            backdrop-filter: blur(10px);
+        .logo img {
+            width: 36px;
+            height: 36px;
+            border-radius: var(--radius-sm);
+            object-fit: cover;
         }
 
-        .card:hover {
-            transform: translateY(-2px);
-            box-shadow: 0 8px 30px rgba(0, 0, 0, 0.15);
+        .logo-text {
+            display: flex;
+            flex-direction: column;
+            line-height: 1;
         }
 
-        /* Navigation links */
-        .nav-link:hover {
-            background: rgba(24, 99, 75, 0.1);
-            color: var(--clr-primary) !important;
-            transform: translateY(-1px);
-        }
-
-        /* Enhanced emphasis styles */
-        .text-accent {
+        .logo-name {
+            font-family: 'Noto Serif JP', serif;
+            font-size: 1.1rem;
+            font-weight: 300;
+            letter-spacing: 0.05em;
             color: var(--clr-primary);
         }
 
-        .bg-accent {
+        .logo-tagline {
+            font-size: 0.65rem;
+            color: var(--clr-muted);
+            letter-spacing: 0.08em;
+            margin-top: 2px;
+        }
+
+        nav {
+            display: flex;
+            align-items: center;
+            gap: 4px;
+        }
+
+        .nav-link {
+            padding: 8px 14px;
+            font-size: 0.85rem;
+            color: var(--clr-muted);
+            border-radius: var(--radius-md);
+            transition: var(--transition);
+            font-weight: 400;
+        }
+        .nav-link:hover { color: var(--clr-primary); background: rgba(0,0,0,0.04); }
+
+        .nav-cta {
+            margin-left: 8px;
+        }
+
+        .hamburger {
+            display: none;
+            flex-direction: column;
+            gap: 5px;
+            cursor: pointer;
+            padding: 8px;
+            background: none;
+            border: none;
+        }
+        .hamburger span {
+            display: block;
+            width: 22px;
+            height: 1.5px;
             background: var(--clr-primary);
-        }
-
-        .bg-accent-gradient {
-            background: linear-gradient(135deg, var(--clr-primary) 0%, var(--clr-primary-light) 100%);
-        }
-
-        .border-accent {
-            border-color: var(--clr-primary);
-        }
-
-        .shadow-accent {
-            box-shadow: 0 4px 20px rgba(24, 99, 75, 0.3);
-        }
-
-        /* Vibe coding specific styles */
-        .vibe-highlight {
-            background: linear-gradient(135deg, var(--clr-primary) 0%, var(--clr-primary-light) 100%);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            background-clip: text;
-            font-weight: 900;
-        }
-
-        .vibe-card {
-            background: rgba(255, 255, 255, 0.95);
-            border: 2px solid transparent;
-            border-image: linear-gradient(135deg, var(--clr-primary) 0%, var(--clr-primary-light) 100%) 1;
-            border-radius: var(--radius);
             transition: var(--transition);
         }
 
-        .vibe-card:hover {
-            transform: translateY(-4px);
-            box-shadow: 0 12px 40px rgba(24, 99, 75, 0.2);
+        .mobile-menu {
+            display: none;
+            padding: 12px 0 16px;
+            border-top: 1px solid rgba(196,168,130,0.2);
         }
 
-        .animate-pulse {
-            animation: pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+        .mobile-menu a {
+            display: block;
+            padding: 10px 0;
+            font-size: 0.9rem;
+            color: var(--clr-primary);
+            border-bottom: 1px solid rgba(0,0,0,0.06);
         }
 
-        @keyframes pulse {
-            0%, 100% {
-                opacity: 1;
-            }
-            50% {
-                opacity: .5;
-            }
+        .mobile-menu a:last-child { border-bottom: none; }
+
+        /* ── Hero ── */
+        .hero {
+            background: var(--clr-primary);
+            color: var(--clr-neutral);
+            padding: 100px 0 80px;
+            position: relative;
+            overflow: hidden;
         }
 
-        .line-clamp-2 {
+        .hero::before {
+            content: '';
+            position: absolute;
+            inset: 0;
+            background: radial-gradient(ellipse at 70% 50%, rgba(123,155,173,0.12) 0%, transparent 60%);
+            pointer-events: none;
+        }
+
+        .hero-inner {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 64px;
+            align-items: center;
+        }
+
+        .hero-eyebrow {
+            font-size: 0.75rem;
+            letter-spacing: 0.15em;
+            color: var(--clr-gold);
+            text-transform: uppercase;
+            margin-bottom: 20px;
+        }
+
+        .hero h1 {
+            font-size: clamp(2rem, 4vw, 3.2rem);
+            color: var(--clr-neutral);
+            margin-bottom: 24px;
+            letter-spacing: -0.01em;
+        }
+
+        .hero h1 em {
+            font-style: normal;
+            color: var(--clr-gold);
+        }
+
+        .hero-sub {
+            font-size: 1rem;
+            color: rgba(245,242,238,0.65);
+            line-height: 1.9;
+            margin-bottom: 40px;
+            max-width: 440px;
+        }
+
+        .hero-actions {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 12px;
+        }
+
+        .hero-image {
+            border-radius: var(--radius-lg);
+            overflow: hidden;
+            aspect-ratio: 4/3;
+        }
+
+        .hero-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            opacity: 0.85;
+        }
+
+        /* ── Section base ── */
+        .section { padding: 80px 0; }
+        .section-white { background: var(--clr-white); }
+        .section-neutral { background: var(--clr-neutral); }
+        .section-dark { background: var(--clr-primary); color: var(--clr-neutral); }
+
+        .section-header {
+            text-align: center;
+            margin-bottom: 56px;
+        }
+
+        .section-eyebrow {
+            font-size: 0.72rem;
+            letter-spacing: 0.15em;
+            color: var(--clr-accent);
+            text-transform: uppercase;
+            margin-bottom: 12px;
+        }
+
+        .section-title {
+            font-size: clamp(1.6rem, 3vw, 2.2rem);
+            color: var(--clr-primary);
+        }
+
+        .section-dark .section-title { color: var(--clr-neutral); }
+        .section-dark .section-eyebrow { color: var(--clr-gold); }
+
+        /* ── Article grid ── */
+        .articles-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 28px;
+        }
+
+        .article-card {
+            background: var(--clr-white);
+            border: 1px solid rgba(196,168,130,0.2);
+            border-radius: var(--radius-lg);
+            overflow: hidden;
+            transition: var(--transition);
+        }
+
+        .article-card:hover {
+            transform: translateY(-3px);
+            box-shadow: var(--shadow-md);
+            border-color: rgba(196,168,130,0.5);
+        }
+
+        .article-thumb {
+            position: relative;
+            aspect-ratio: 16/9;
+            overflow: hidden;
+        }
+
+        .article-thumb img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.4s ease;
+        }
+
+        .article-card:hover .article-thumb img { transform: scale(1.04); }
+
+        .article-body {
+            padding: 20px;
+        }
+
+        .article-meta {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            margin-bottom: 10px;
+        }
+
+        .article-date {
+            font-size: 0.75rem;
+            color: var(--clr-muted);
+        }
+
+        .badge-new {
+            font-size: 0.65rem;
+            font-weight: 700;
+            padding: 2px 7px;
+            background: var(--clr-accent);
+            color: var(--clr-white);
+            border-radius: 99px;
+            letter-spacing: 0.05em;
+        }
+
+        .article-title {
+            font-family: 'Noto Sans JP', sans-serif;
+            font-size: 0.9rem;
+            font-weight: 700;
+            line-height: 1.5;
+            color: var(--clr-primary);
+            margin-bottom: 12px;
             display: -webkit-box;
             -webkit-line-clamp: 2;
             -webkit-box-orient: vertical;
             overflow: hidden;
         }
 
-        .line-clamp-3 {
-            display: -webkit-box;
-            -webkit-line-clamp: 3;
-            -webkit-box-orient: vertical;
-            overflow: hidden;
+        .article-link {
+            font-size: 0.8rem;
+            color: var(--clr-accent);
+            font-weight: 700;
+            display: inline-flex;
+            align-items: center;
+            gap: 4px;
+            transition: var(--transition);
+        }
+        .article-link:hover { color: var(--clr-gold); }
+        .article-link svg { width: 14px; height: 14px; }
+
+        /* ── Training section ── */
+        .training-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 24px;
+            margin-bottom: 48px;
         }
 
-        .aspect-ratio-4-3 {
-            aspect-ratio: 4/3;
+        .training-card {
+            background: var(--clr-white);
+            border: 1px solid rgba(196,168,130,0.2);
+            border-radius: var(--radius-lg);
+            padding: 32px 24px;
+            text-align: center;
         }
 
-        /* Custom scrollbar */
-        ::-webkit-scrollbar {
-            width: 8px;
+        .training-icon {
+            font-size: 2rem;
+            margin-bottom: 16px;
         }
 
-        ::-webkit-scrollbar-track {
-            background: var(--clr-bg-2);
-        }
-
-        ::-webkit-scrollbar-thumb {
-            background: var(--clr-primary);
-            border-radius: 4px;
-        }
-
-        ::-webkit-scrollbar-thumb:hover {
-            background: var(--clr-primary-light);
-        }
-
-        /* Button border styles */
-        .btn-manufacturing {
-            border: 2px solid var(--clr-primary);
+        .training-card h3 {
+            font-family: 'Noto Sans JP', sans-serif;
+            font-size: 1rem;
+            font-weight: 700;
+            margin-bottom: 16px;
             color: var(--clr-primary);
         }
 
-        .btn-manufacturing:hover {
-            background: var(--clr-primary);
-            color: white;
+        .training-card ul {
+            list-style: none;
+            text-align: left;
+            font-size: 0.85rem;
+            color: var(--clr-muted);
+            line-height: 2;
         }
 
-        .btn-tourism {
-            border: 2px solid var(--clr-accent);
+        .training-card li::before {
+            content: '—';
+            margin-right: 8px;
+            color: var(--clr-gold);
+        }
+
+        /* ── Before/After ── */
+        .ba-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 32px;
+            margin-bottom: 48px;
+        }
+
+        .ba-box {
+            background: var(--clr-white);
+            border: 1px solid rgba(196,168,130,0.2);
+            border-radius: var(--radius-lg);
+            padding: 28px;
+        }
+
+        .ba-label {
+            font-size: 0.75rem;
+            font-weight: 700;
+            letter-spacing: 0.1em;
+            margin-bottom: 16px;
+            text-transform: uppercase;
+        }
+
+        .ba-label.before { color: #B0524A; }
+        .ba-label.after  { color: var(--clr-accent); }
+
+        .ba-box ul {
+            list-style: none;
+            font-size: 0.9rem;
+            color: var(--clr-muted);
+            line-height: 2.2;
+        }
+
+        .ba-box li { display: flex; align-items: flex-start; gap: 8px; }
+        .ba-box li span.dot { margin-top: 10px; width: 5px; height: 5px; border-radius: 50%; flex-shrink: 0; }
+        .ba-box.before-box li span.dot { background: #B0524A; }
+        .ba-box.after-box  li span.dot { background: var(--clr-accent); }
+
+        /* ── Case studies ── */
+        .cases-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 24px;
+        }
+
+        .case-card {
+            background: var(--clr-white);
+            border: 1px solid rgba(196,168,130,0.2);
+            border-radius: var(--radius-lg);
+            padding: 28px;
+        }
+
+        .case-stats {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 12px;
+            margin: 16px 0;
+        }
+
+        .stat {
+            text-align: center;
+            padding: 12px;
+            background: var(--clr-neutral);
+            border-radius: var(--radius-md);
+        }
+
+        .stat-value {
+            font-family: 'Noto Serif JP', serif;
+            font-size: 1.6rem;
+            font-weight: 300;
             color: var(--clr-accent);
         }
 
-        .btn-tourism:hover {
-            background: var(--clr-accent);
-            color: white;
+        .stat-label {
+            font-size: 0.7rem;
+            color: var(--clr-muted);
+            margin-top: 2px;
         }
 
-        /* Link styles */
-        .content a, .author-bio a, .article-content a {
-            text-decoration: underline;
+        .case-card h3 {
+            font-family: 'Noto Sans JP', sans-serif;
+            font-size: 0.95rem;
+            font-weight: 700;
             color: var(--clr-primary);
+            margin-bottom: 8px;
         }
 
-        .content a:hover, .author-bio a:hover, .article-content a:hover {
-            color: var(--clr-primary-dark);
+        .case-card p {
+            font-size: 0.85rem;
+            color: var(--clr-muted);
+            line-height: 1.8;
         }
 
-        /* Mobile responsiveness */
-        @media (max-width: 768px) {
-            .mobile-menu {
-                display: none;
-            }
-            
-            .mobile-menu.active {
-                display: block;
-            }
+        /* ── LINE CTA ── */
+        .line-cta {
+            background: var(--clr-primary);
+            color: var(--clr-neutral);
+            padding: 80px 0;
+            text-align: center;
+        }
+
+        .line-cta h2 {
+            font-size: clamp(1.4rem, 2.5vw, 1.9rem);
+            color: var(--clr-neutral);
+            max-width: 600px;
+            margin: 0 auto 16px;
+        }
+
+        .line-cta p {
+            color: rgba(245,242,238,0.65);
+            margin-bottom: 36px;
+            font-size: 0.95rem;
+        }
+
+        .line-btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            padding: 14px 32px;
+            background: #06C755;
+            color: var(--clr-white);
+            font-family: 'Noto Sans JP', sans-serif;
+            font-weight: 700;
+            font-size: 0.95rem;
+            border-radius: var(--radius-md);
+            transition: var(--transition);
+        }
+        .line-btn:hover { background: #05a847; }
+        .line-btn svg { width: 20px; height: 20px; }
+
+        /* ── CTA banner ── */
+        .cta-banner {
+            text-align: center;
+            padding: 16px;
+            background: rgba(123,155,173,0.08);
+            border: 1px solid rgba(123,155,173,0.2);
+            border-radius: var(--radius-md);
+            font-size: 0.8rem;
+            color: var(--clr-muted);
+            margin-bottom: 40px;
+        }
+
+        .consult-btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            padding: 16px 40px;
+            background: var(--clr-accent);
+            color: var(--clr-white);
+            font-family: 'Noto Sans JP', sans-serif;
+            font-weight: 700;
+            font-size: 1rem;
+            border-radius: var(--radius-md);
+            transition: var(--transition);
+        }
+        .consult-btn:hover { background: var(--clr-gold); color: var(--clr-primary); }
+
+        .consult-note {
+            font-size: 0.8rem;
+            color: var(--clr-muted);
+            margin-top: 12px;
+        }
+
+        /* ── Footer ── */
+        footer {
+            background: var(--clr-primary);
+            color: var(--clr-neutral);
+            padding: 64px 0 32px;
+        }
+
+        .footer-grid {
+            display: grid;
+            grid-template-columns: 1.5fr 1fr 1fr;
+            gap: 48px;
+            margin-bottom: 48px;
+        }
+
+        .footer-brand {
+            font-family: 'Noto Serif JP', serif;
+            font-size: 1.1rem;
+            font-weight: 300;
+            letter-spacing: 0.05em;
+            color: var(--clr-gold);
+            margin-bottom: 12px;
+        }
+
+        .footer-desc {
+            font-size: 0.85rem;
+            color: rgba(245,242,238,0.5);
+            line-height: 1.8;
+        }
+
+        footer h4 {
+            font-family: 'Noto Sans JP', sans-serif;
+            font-size: 0.8rem;
+            font-weight: 700;
+            letter-spacing: 0.1em;
+            text-transform: uppercase;
+            color: var(--clr-gold);
+            margin-bottom: 16px;
+        }
+
+        footer ul { list-style: none; }
+        footer li { margin-bottom: 10px; }
+        footer a {
+            font-size: 0.85rem;
+            color: rgba(245,242,238,0.6);
+            transition: var(--transition);
+        }
+        footer a:hover { color: var(--clr-neutral); }
+
+        .footer-bottom {
+            border-top: 1px solid rgba(245,242,238,0.1);
+            padding-top: 24px;
+            text-align: center;
+            font-size: 0.75rem;
+            color: rgba(245,242,238,0.35);
+        }
+
+        /* ── Center helper ── */
+        .text-center { text-align: center; }
+        .mt-12 { margin-top: 48px; }
+
+        /* ── Responsive ── */
+        @media (max-width: 900px) {
+            .hero-inner { grid-template-columns: 1fr; gap: 40px; }
+            .hero-image { max-width: 480px; margin: 0 auto; }
+            .articles-grid { grid-template-columns: repeat(2, 1fr); }
+            .training-grid { grid-template-columns: 1fr 1fr; }
+            .cases-grid { grid-template-columns: 1fr; }
+            .footer-grid { grid-template-columns: 1fr 1fr; }
+        }
+
+        @media (max-width: 640px) {
+            nav { display: none; }
+            .hamburger { display: flex; }
+            .articles-grid { grid-template-columns: 1fr; }
+            .training-grid { grid-template-columns: 1fr; }
+            .ba-grid { grid-template-columns: 1fr; }
+            .footer-grid { grid-template-columns: 1fr; }
+            .hero { padding: 64px 0 56px; }
         }
     </style>
 </head>
-<body class="min-h-screen flex flex-col">
-    <!-- Header -->
-    <header class="shadow-lg border-b-4 sticky top-0 z-50" style="border-bottom-color: var(--clr-primary); background: rgba(255, 255, 255, 0.98); backdrop-filter: blur(15px);">
-        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="flex justify-between items-center h-16">
-                <a href="#" class="flex items-center group">
-                    <div class="flex items-center gap-3">
-                        <img 
-                            src="images/metamakeblack.jpg" 
-                            alt="メタマケロゴ" 
-                            class="w-10 h-10 rounded-lg object-cover shadow-md group-hover:scale-105 transition-transform"
-                        />
-                        <div class="flex flex-col">
-                            <div class="text-xs font-bold text-gray-600 leading-none">metamake</div>
-                            <h1 class="heading-accent text-lg font-black group-hover:scale-105 transition-transform whitespace-nowrap leading-none mt-1" style="color: var(--clr-black);">
-                                地方<span style="color: var(--clr-primary);">AI</span><span style="color: var(--clr-accent);">ブースター</span>
-                            </h1>
-                        </div>
-                    </div>
+
+<body>
+
+<!-- ── Header ── -->
+<header>
+    <div class="container">
+        <div class="header-inner">
+            <a href="/" class="logo">
+                <img src="images/metamakeblack.jpg" alt="metamake">
+                <div class="logo-text">
+                    <span class="logo-name">metamake</span>
+                    <span class="logo-tagline">最新技術でwell-beingを</span>
+                </div>
+            </a>
+
+            <nav>
+                <a href="manufacturing.html" class="nav-link">製造業DX</a>
+                <a href="tourism.html" class="nav-link">観光業DX</a>
+                <a href="agriculture.html" class="nav-link">農業DX</a>
+                <a href="blog-list.html" class="nav-link">記事一覧</a>
+                <a href="about.html" class="btn btn-outline nav-cta">メタマケについて</a>
+                <a href="#ai-training" class="btn btn-primary nav-cta">AI研修を相談する</a>
+            </nav>
+
+            <button class="hamburger" onclick="toggleMobileMenu()" aria-label="メニュー">
+                <span></span><span></span><span></span>
+            </button>
+        </div>
+
+        <div class="mobile-menu" id="mobile-menu">
+            <a href="manufacturing.html">製造業DX</a>
+            <a href="tourism.html">観光業DX</a>
+            <a href="agriculture.html">農業DX</a>
+            <a href="blog-list.html">記事一覧</a>
+            <a href="about.html">メタマケについて</a>
+            <a href="#ai-training">AI研修を相談する</a>
+        </div>
+    </div>
+</header>
+
+<!-- ── Hero ── -->
+<section class="hero">
+    <div class="container">
+        <div class="hero-inner">
+            <div>
+                <p class="hero-eyebrow">metamake / 地方AIブースター</p>
+                <h1>大企業が10年かけて<br>やることを、<br><em>地方の現場が</em><br>今年やる。</h1>
+                <p class="hero-sub">
+                    元東京ガスのマーケターが長野に移住して気づいたこと。
+                    地方の現場には、AIが一番刺さる。<br>
+                    製造・観光・農業の「あなたらしさ」を、AIで増幅する実践ガイド。
+                </p>
+                <div class="hero-actions">
+                    <a href="#ai-training" class="btn btn-primary">AI研修について聞く</a>
+                    <a href="#blog" class="btn btn-outline" style="color:var(--clr-neutral); border-color:rgba(196,168,130,0.4);">実践ガイドを読む</a>
+                </div>
+            </div>
+            <div class="hero-image">
+                <img src="images/chihoaitop.png" alt="地方の現場をAIで変革">
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ── Articles ── -->
+<section class="section section-neutral" id="blog">
+    <div class="container">
+        <div class="section-header">
+            <p class="section-eyebrow">Latest Articles</p>
+            <h2 class="section-title">最新の実践ガイド</h2>
+        </div>
+
+        <div class="articles-grid" id="articles-container">
+            <!-- START: latest-grid -->
+            <article class="article-card" data-date="2025-10-15">
+                <a href="articles/20251015.html" class="article-thumb">
+                    <img src="https://images.unsplash.com/photo-1552664730-d307ca884978?w=800&h=450&fit=crop&crop=center" alt="">
                 </a>
-                
-                <nav class="hidden md:flex space-x-6">
-                    <a href="#" class="nav-link px-4 py-2 rounded-lg text-sm font-bold transition-all hover:scale-105" style="color: var(--clr-gray-dark);">
-                        ホーム
-                    </a>
-                    <a href="manufacturing.html" class="nav-link px-4 py-2 rounded-lg text-sm font-bold transition-all hover:scale-105" style="color: var(--clr-gray-dark);">
-                        製造業DX
-                    </a>
-                    <a href="tourism.html" class="nav-link px-4 py-2 rounded-lg text-sm font-bold transition-all hover:scale-105" style="color: var(--clr-gray-dark);">
-                        観光業DX
-                    </a>
-                    <a href="agriculture.html" class="nav-link px-4 py-2 rounded-lg text-sm font-bold transition-all hover:scale-105" style="color: var(--clr-gray-dark);">
-                        農業DX
-                    </a>
-                    <a href="blog-list.html" class="nav-link px-4 py-2 rounded-lg text-sm font-bold transition-all hover:scale-105" style="color: var(--clr-gray-dark);">
-                        すべて
-                    </a>
-                    <a href="#ai-diagnosis" class="btn-primary text-sm px-4 py-2" style="background: linear-gradient(135deg, var(--clr-accent) 0%, var(--clr-accent-light) 100%); border: none;">
-                        AI導入診断
-                    </a>
-                    <a href="about.html" class="btn-primary text-sm px-4 py-2">
-                        メタマケについて
-                    </a>
-                </nav>
-                
-                <!-- Mobile menu button -->
-                <div class="md:hidden">
-                    <button
-                        type="button"
-                        class="rounded-lg p-2 inline-flex items-center justify-center transition-all hover:scale-105"
-                        style="background: linear-gradient(135deg, var(--clr-primary) 0%, var(--clr-primary-light) 100%); color: var(--clr-white);"
-                        onclick="toggleMobileMenu()"
-                    >
-                        <span class="sr-only">メニューを開く</span>
-                        <svg class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/>
-                        </svg>
-                    </button>
+                <div class="article-body">
+                    <div class="article-meta">
+                        <time class="article-date">2025年10月15日</time>
+                        <span class="badge-new">NEW</span>
+                    </div>
+                    <h2 class="article-title">「学習させない設定」はAIの義務ではない。企業が守るべき「情報倫理」</h2>
+                    <a href="articles/20251015.html" class="article-link">続きを読む <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 5l7 7-7 7"/></svg></a>
                 </div>
+            </article>
+            <article class="article-card" data-date="2025-10-14">
+                <a href="articles/20251014.html" class="article-thumb">
+                    <img src="https://images.unsplash.com/photo-1556157382-97eda2d62296?w=800&h=450&fit=crop&crop=center" alt="">
+                </a>
+                <div class="article-body">
+                    <div class="article-meta">
+                        <time class="article-date">2025年10月14日</time>
+                        <span class="badge-new">NEW</span>
+                    </div>
+                    <h2 class="article-title">AIは「競合分析」を自動化する。あなたがすべきは「戦略的思考」</h2>
+                    <a href="articles/20251014.html" class="article-link">続きを読む <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 5l7 7-7 7"/></svg></a>
+                </div>
+            </article>
+            <article class="article-card" data-date="2025-10-13">
+                <a href="articles/20251013.html" class="article-thumb">
+                    <img src="https://images.unsplash.com/photo-1521737604893-d14cc237f11d?w=800&h=450&fit=crop&crop=faces" alt="">
+                </a>
+                <div class="article-body">
+                    <div class="article-meta">
+                        <time class="article-date">2025年10月13日</time>
+                        <span class="badge-new">NEW</span>
+                    </div>
+                    <h2 class="article-title">「社内AIロードマップ」は作らない。まず「使わせて」から考える未来</h2>
+                    <a href="articles/20251013.html" class="article-link">続きを読む <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 5l7 7-7 7"/></svg></a>
+                </div>
+            </article>
+            <article class="article-card" data-date="2025-10-12">
+                <a href="articles/20251012.html" class="article-thumb">
+                    <img src="https://images.unsplash.com/photo-1542621334-a254cf47733d?w=800&h=450&fit=crop&crop=center" alt="">
+                </a>
+                <div class="article-body">
+                    <div class="article-meta">
+                        <time class="article-date">2025年10月12日</time>
+                    </div>
+                    <h2 class="article-title">AIに「感情」を語れ。あなたの「モヤモヤ」が最適な提案を生む</h2>
+                    <a href="articles/20251012.html" class="article-link">続きを読む <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 5l7 7-7 7"/></svg></a>
+                </div>
+            </article>
+            <article class="article-card" data-date="2025-10-11">
+                <a href="articles/20251011.html" class="article-thumb">
+                    <img src="https://images.unsplash.com/photo-1485827404703-89b55fcc595e?w=800&h=450&fit=crop&crop=center" alt="">
+                </a>
+                <div class="article-body">
+                    <div class="article-meta">
+                        <time class="article-date">2025年10月11日</time>
+                    </div>
+                    <h2 class="article-title">「成果が出ない」AI活用は「あなたの学び方」に問題がある</h2>
+                    <a href="articles/20251011.html" class="article-link">続きを読む <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 5l7 7-7 7"/></svg></a>
+                </div>
+            </article>
+            <article class="article-card" data-date="2025-10-10">
+                <a href="articles/20251010.html" class="article-thumb">
+                    <img src="https://images.unsplash.com/photo-1498050108023-c5249f4df085?w=800&h=450&fit=crop&crop=center" alt="">
+                </a>
+                <div class="article-body">
+                    <div class="article-meta">
+                        <time class="article-date">2025年10月10日</time>
+                    </div>
+                    <h2 class="article-title">「AIが怖い」は古い。「取り残される恐怖」と戦うための行動習慣</h2>
+                    <a href="articles/20251010.html" class="article-link">続きを読む <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 5l7 7-7 7"/></svg></a>
+                </div>
+            </article>
+            <!-- END: latest-grid -->
+        </div>
+
+        <div class="text-center mt-12">
+            <a href="blog-list.html" class="btn btn-dark">すべての記事を見る</a>
+        </div>
+    </div>
+</section>
+
+<!-- ── AI Training ── -->
+<section class="section section-white" id="ai-training">
+    <div class="container">
+        <div class="section-header">
+            <p class="section-eyebrow">AI Training Program</p>
+            <h2 class="section-title">「AIは怖い」と言っていた現場が、<br>半年後に一番使いこなしていた。</h2>
+        </div>
+
+        <div class="ba-grid">
+            <div class="ba-box before-box">
+                <p class="ba-label before">Before — AI研修前</p>
+                <ul>
+                    <li><span class="dot"></span><span>残業月100時間で家族との時間がない</span></li>
+                    <li><span class="dot"></span><span>AIは怖くて一度も触ったことがない</span></li>
+                    <li><span class="dot"></span><span>Excel作業の繰り返しで疲弊している</span></li>
+                    <li><span class="dot"></span><span>同じミスを繰り返し、信頼を失いかけている</span></li>
+                </ul>
             </div>
-            
-            <!-- Mobile Navigation -->
-            <div class="md:hidden hidden bg-white border-t border-gray-200" id="mobile-menu">
-                <div class="px-2 pt-2 pb-3 space-y-1">
-                    <a href="#" class="block px-3 py-2 text-gray-700 hover:text-primary hover:bg-gray-50 rounded-md font-medium transition-colors">ホーム</a>
-                    <a href="manufacturing.html" class="block px-3 py-2 text-gray-700 hover:text-primary hover:bg-gray-50 rounded-md font-medium transition-colors">製造業DX</a>
-                    <a href="tourism.html" class="block px-3 py-2 text-gray-700 hover:text-primary hover:bg-gray-50 rounded-md font-medium transition-colors">観光業DX</a>
-                    <a href="agriculture.html" class="block px-3 py-2 text-gray-700 hover:text-primary hover:bg-gray-50 rounded-md font-medium transition-colors">農業DX</a>
-                    <a href="blog-list.html" class="block px-3 py-2 text-gray-700 hover:text-primary hover:bg-gray-50 rounded-md font-medium transition-colors">ブログ一覧</a>
-                    <a href="#ai-diagnosis" class="block px-3 py-2 text-white rounded-md font-medium transition-colors" style="background: linear-gradient(135deg, #29D3C3 0%, #4DDDD1 100%);">🚀 AI導入診断</a>
-                    <a href="about.html" class="block px-3 py-2 text-white rounded-md font-medium transition-colors" style="background: linear-gradient(135deg, #18634B 0%, #2B8A64 100%);">メタマケについて</a>
-                </div>
+            <div class="ba-box after-box">
+                <p class="ba-label after">After — AI研修後</p>
+                <ul>
+                    <li><span class="dot"></span><span>残業75時間減で家族と過ごす時間が戻った</span></li>
+                    <li><span class="dot"></span><span>AIが最高の相棒になった</span></li>
+                    <li><span class="dot"></span><span>3時間の作業が10分で完了するようになった</span></li>
+                    <li><span class="dot"></span><span>部署で一番頼られる存在に変わった</span></li>
+                </ul>
             </div>
         </div>
-    </header>
 
-    <!-- Main Content -->
-    <main class="flex-grow">
-        <!-- Hero Section -->
-        <section class="relative overflow-hidden min-h-screen bg-gradient-to-br from-[var(--clr-bg-1)] to-[var(--clr-bg-2)]">
-            <!-- Background Pattern -->
-            <div class="absolute inset-0 opacity-10">
-                <svg class="w-full h-full" viewBox="0 0 100 100" preserveAspectRatio="xMidYMid slice">
-                    <defs>
-                        <pattern id="mountainPattern" x="0" y="0" width="20" height="20" patternUnits="userSpaceOnUse">
-                            <polygon points="10,5 15,15 5,15" fill="var(--clr-primary)" opacity="0.3"/>
-                            <line x1="0" y1="10" x2="20" y2="10" stroke="var(--clr-accent)" stroke-width="0.5" opacity="0.5"/>
-                        </pattern>
-                    </defs>
-                    <rect width="100%" height="100%" fill="url(#mountainPattern)"/>
-                </svg>
+        <div class="training-grid">
+            <div class="training-card">
+                <div class="training-icon">📚</div>
+                <h3>約20時間集中研修</h3>
+                <ul>
+                    <li>ChatGPT / Claude業務活用</li>
+                    <li>データ分析自動化</li>
+                    <li>資料作成効率化</li>
+                    <li>顧客対応AI化</li>
+                    <li>業務プロセス最適化</li>
+                </ul>
             </div>
-
-            <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-24 relative z-10 min-h-screen flex items-center">
-                <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center w-full">
-                    <!-- Left: Main Copy -->
-                    <div class="text-left">
-                        <h1 class="text-4xl md:text-6xl font-bold mb-6 leading-tight">
-                            <span class="text-[var(--clr-primary)]">地方の現場</span>を、<br/>
-                            <span class="text-[var(--clr-accent)]">生成AI</span>で<br/>
-                            <span class="text-[var(--clr-gray-dark)]">"働く未来形"へ</span>
-                        </h1>
-                        <p class="text-xl text-[var(--clr-gray)] mb-8 leading-relaxed">
-                            地方の現場の「あなたらしさ」は何ですか？AIで増幅しよう！
-                        </p>
-                        
-                        <!-- CTA Buttons -->
-                        <div class="flex flex-col sm:flex-row gap-4 mb-8">
-                            <a href="#ai-diagnosis-simulator" class="btn-primary text-center px-8 py-4 text-lg font-bold" style="background: linear-gradient(135deg, var(--clr-accent) 0%, var(--clr-accent-light) 100%); transform: scale(1.1); box-shadow: 0 8px 25px rgba(41, 211, 195, 0.3);">
-                                🚀 AI導入診断を開始する
-                            </a>
-                            <a href="#ai-native-transformation" class="btn-primary text-center px-8 py-4 text-lg font-bold" style="background: linear-gradient(135deg, var(--clr-primary) 0%, var(--clr-primary-light) 100%); transform: scale(1.05); box-shadow: 0 6px 20px rgba(24, 99, 75, 0.3);">
-                                💰 助成金活用AI研修
-                            </a>
-                        </div>
-                        
-                        <div class="flex flex-col sm:flex-row gap-4 mb-12">
-                            <a href="manufacturing.html" class="btn-primary text-center px-6 py-3 text-base font-bold">
-                                製造業DXを読む
-                            </a>
-                            <a href="tourism.html" class="btn-secondary text-center px-6 py-3 text-base font-bold btn-manufacturing">
-                                観光ビジネスを読む
-                            </a>
-                            <a href="agriculture.html" class="btn-secondary text-center px-6 py-3 text-base font-bold btn-tourism">
-                                農業DXを読む
-                            </a>
-                            <a href="blog-list.html" class="btn-secondary text-center px-6 py-3 text-base font-bold btn-all-articles">
-                                全ての記事を読む
-                            </a>
-                        </div>
-                    </div>
-
-                    <!-- Right: Hero Image -->
-                    <div class="flex justify-center lg:justify-end">
-                        <img 
-                            src="images/chihoaitop.png" 
-                            alt="地方の現場をAIで変革するイメージ" 
-                            class="w-full max-w-md h-auto rounded-2xl shadow-2xl object-cover"
-                        />
-                    </div>
-                </div>
+            <div class="training-card">
+                <div class="training-icon">🎯</div>
+                <h3>6ヶ月実践サポート</h3>
+                <ul>
+                    <li>月2回のオンライン相談</li>
+                    <li>社内実装の個別サポート</li>
+                    <li>効果測定・改善提案</li>
+                    <li>追加ツール導入支援</li>
+                    <li>成果発表会の開催</li>
+                </ul>
             </div>
-        </section>
-
-        <!-- 最新記事グリッド -->
-        <section class="py-20 bg-[var(--clr-bg-1)]" id="blog">
-            <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
-                <h2 class="text-3xl md:text-4xl font-bold text-center mb-16 text-[var(--clr-primary)]">
-                    最新の実践ガイド
-                </h2>
-                
-                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-                    <!-- START: latest-grid -->
-                    <article class="card overflow-hidden" data-date="2025-10-15">
-                        <a href="articles/20251015.html" class="block relative aspect-ratio-4-3 overflow-hidden">
-                            <img 
-                                src="https://images.unsplash.com/photo-1552664730-d307ca884978?w=800&amp;h=450&amp;fit=crop&amp;crop=center" 
-                                alt="「学習させない設定」はAIの義務ではない。企業が守るべき「情報倫理」" 
-                                class="w-full h-full object-cover hover:scale-105 transition-transform duration-300"
-                            />
-                            <div class="absolute inset-0 bg-gradient-to-t from-black/90 via-black/30 to-transparent">
-                                <div class="absolute bottom-4 left-4 right-4">
-                                    <h2 class="text-white text-lg font-bold leading-tight line-clamp-2" style="text-shadow: 2px 2px 4px rgba(0,0,0,0.8);">
-                                        「学習させない設定」はAIの義務ではない。企業が守るべき「情報倫理」
-                                    </h2>
-                                </div>
-                            </div>
-                        </a>
-                        <div class="p-6">
-                            <div class="flex items-center mb-3">
-                                <time class="text-sm text-gray-500">2025年10月15日</time>
-                                <span class="ml-2 px-2 py-1 bg-red-500 text-white text-xs rounded-full">NEW</span>
-                            </div>
-                            <p class="text-gray-600 mb-4 text-sm leading-relaxed line-clamp-3">
-                                あなたの会社でAI導入を検討中の方へ
-                            </p>
-                            <a href="articles/20251015.html" class="btn-primary text-sm">
-                                続きを読む
-                                <svg class="ml-2 w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/>
-                                </svg>
-                            </a>
-                        </div>
-                    </article>
-                    <article class="card overflow-hidden" data-date="2025-10-14">
-                        <a href="articles/20251014.html" class="block relative aspect-ratio-4-3 overflow-hidden">
-                            <img 
-                                src="https://images.unsplash.com/photo-1556157382-97eda2d62296?w=800&amp;h=450&amp;fit=crop&amp;crop=center" 
-                                alt="AIは「競合分析」を自動化する。あなたがすべきは「戦略的思考」" 
-                                class="w-full h-full object-cover hover:scale-105 transition-transform duration-300"
-                            />
-                            <div class="absolute inset-0 bg-gradient-to-t from-black/90 via-black/30 to-transparent">
-                                <div class="absolute bottom-4 left-4 right-4">
-                                    <h2 class="text-white text-lg font-bold leading-tight line-clamp-2" style="text-shadow: 2px 2px 4px rgba(0,0,0,0.8);">
-                                        AIは「競合分析」を自動化する。あなたがすべきは「戦略的思考」
-                                    </h2>
-                                </div>
-                            </div>
-                        </a>
-                        <div class="p-6">
-                            <div class="flex items-center mb-3">
-                                <time class="text-sm text-gray-500">2025年10月14日</time>
-                                <span class="ml-2 px-2 py-1 bg-red-500 text-white text-xs rounded-full">NEW</span>
-                            </div>
-                            <p class="text-gray-600 mb-4 text-sm leading-relaxed line-clamp-3">
-                                あなたの会社でAI導入を検討中の方へ
-                            </p>
-                            <a href="articles/20251014.html" class="btn-primary text-sm">
-                                続きを読む
-                                <svg class="ml-2 w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/>
-                                </svg>
-                            </a>
-                        </div>
-                    </article>
-                    <article class="card overflow-hidden" data-date="2025-10-13">
-                        <a href="articles/20251013.html" class="block relative aspect-ratio-4-3 overflow-hidden">
-                            <img 
-                                src="https://images.unsplash.com/photo-1521737604893-d14cc237f11d?w=800&amp;h=450&amp;fit=crop&amp;crop=faces" 
-                                alt="「社内AIロードマップ」は作らない。まず「使わせて」から考える未来" 
-                                class="w-full h-full object-cover hover:scale-105 transition-transform duration-300"
-                            />
-                            <div class="absolute inset-0 bg-gradient-to-t from-black/90 via-black/30 to-transparent">
-                                <div class="absolute bottom-4 left-4 right-4">
-                                    <h2 class="text-white text-lg font-bold leading-tight line-clamp-2" style="text-shadow: 2px 2px 4px rgba(0,0,0,0.8);">
-                                        「社内AIロードマップ」は作らない。まず「使わせて」から考える未来
-                                    </h2>
-                                </div>
-                            </div>
-                        </a>
-                        <div class="p-6">
-                            <div class="flex items-center mb-3">
-                                <time class="text-sm text-gray-500">2025年10月13日</time>
-                                <span class="ml-2 px-2 py-1 bg-red-500 text-white text-xs rounded-full">NEW</span>
-                            </div>
-                            <p class="text-gray-600 mb-4 text-sm leading-relaxed line-clamp-3">
-                                あなたの会社でAI導入を検討中の方へ
-                            </p>
-                            <a href="articles/20251013.html" class="btn-primary text-sm">
-                                続きを読む
-                                <svg class="ml-2 w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/>
-                                </svg>
-                            </a>
-                        </div>
-                    </article>
-                    <article class="card overflow-hidden" data-date="2025-10-12">
-                        <a href="articles/20251012.html" class="block relative aspect-ratio-4-3 overflow-hidden">
-                            <img 
-                                src="https://images.unsplash.com/photo-1542621334-a254cf47733d?w=800&amp;h=450&amp;fit=crop&amp;crop=center" 
-                                alt="AIに「感情」を語れ。あなたの「モヤモヤ」が最適な提案を生む" 
-                                class="w-full h-full object-cover hover:scale-105 transition-transform duration-300"
-                            />
-                            <div class="absolute inset-0 bg-gradient-to-t from-black/90 via-black/30 to-transparent">
-                                <div class="absolute bottom-4 left-4 right-4">
-                                    <h2 class="text-white text-lg font-bold leading-tight line-clamp-2" style="text-shadow: 2px 2px 4px rgba(0,0,0,0.8);">
-                                        AIに「感情」を語れ。あなたの「モヤモヤ」が最適な提案を生む
-                                    </h2>
-                                </div>
-                            </div>
-                        </a>
-                        <div class="p-6">
-                            <div class="flex items-center mb-3">
-                                <time class="text-sm text-gray-500">2025年10月12日</time>
-                                <span class="ml-2 px-2 py-1 bg-red-500 text-white text-xs rounded-full">NEW</span>
-                            </div>
-                            <p class="text-gray-600 mb-4 text-sm leading-relaxed line-clamp-3">
-                                あなたの会社でAI導入を検討中の方へ
-                            </p>
-                            <a href="articles/20251012.html" class="btn-primary text-sm">
-                                続きを読む
-                                <svg class="ml-2 w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/>
-                                </svg>
-                            </a>
-                        </div>
-                    </article>
-                    <article class="card overflow-hidden" data-date="2025-10-11">
-                        <a href="articles/20251011.html" class="block relative aspect-ratio-4-3 overflow-hidden">
-                            <img 
-                                src="https://images.unsplash.com/photo-1485827404703-89b55fcc595e?w=800&amp;h=450&amp;fit=crop&amp;crop=center" 
-                                alt="「成果が出ない」AI活用は「あなたの学び方」に問題がある" 
-                                class="w-full h-full object-cover hover:scale-105 transition-transform duration-300"
-                            />
-                            <div class="absolute inset-0 bg-gradient-to-t from-black/90 via-black/30 to-transparent">
-                                <div class="absolute bottom-4 left-4 right-4">
-                                    <h2 class="text-white text-lg font-bold leading-tight line-clamp-2" style="text-shadow: 2px 2px 4px rgba(0,0,0,0.8);">
-                                        「成果が出ない」AI活用は「あなたの学び方」に問題がある
-                                    </h2>
-                                </div>
-                            </div>
-                        </a>
-                        <div class="p-6">
-                            <div class="flex items-center mb-3">
-                                <time class="text-sm text-gray-500">2025年10月11日</time>
-                                <span class="ml-2 px-2 py-1 bg-red-500 text-white text-xs rounded-full">NEW</span>
-                            </div>
-                            <p class="text-gray-600 mb-4 text-sm leading-relaxed line-clamp-3">
-                                あなたの会社でAI導入を検討中の方へ
-                            </p>
-                            <a href="articles/20251011.html" class="btn-primary text-sm">
-                                続きを読む
-                                <svg class="ml-2 w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/>
-                                </svg>
-                            </a>
-                        </div>
-                    </article>
-                    <article class="card overflow-hidden" data-date="2025-10-10">
-                        <a href="articles/20251010.html" class="block relative aspect-ratio-4-3 overflow-hidden">
-                            <img 
-                                src="https://images.unsplash.com/photo-1498050108023-c5249f4df085?w=800&amp;h=450&amp;fit=crop&amp;crop=center" 
-                                alt="「AIが怖い」は古い。「取り残される恐怖」と戦うための行動習慣" 
-                                class="w-full h-full object-cover hover:scale-105 transition-transform duration-300"
-                            />
-                            <div class="absolute inset-0 bg-gradient-to-t from-black/90 via-black/30 to-transparent">
-                                <div class="absolute bottom-4 left-4 right-4">
-                                    <h2 class="text-white text-lg font-bold leading-tight line-clamp-2" style="text-shadow: 2px 2px 4px rgba(0,0,0,0.8);">
-                                        「AIが怖い」は古い。「取り残される恐怖」と戦うための行動習慣
-                                    </h2>
-                                </div>
-                            </div>
-                        </a>
-                        <div class="p-6">
-                            <div class="flex items-center mb-3">
-                                <time class="text-sm text-gray-500">2025年10月10日</time>
-                                <span class="ml-2 px-2 py-1 bg-red-500 text-white text-xs rounded-full">NEW</span>
-                            </div>
-                            <p class="text-gray-600 mb-4 text-sm leading-relaxed line-clamp-3">
-                                あなたの会社でAI導入を検討中の方へ
-                            </p>
-                            <a href="articles/20251010.html" class="btn-primary text-sm">
-                                続きを読む
-                                <svg class="ml-2 w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/>
-                                </svg>
-                            </a>
-                        </div>
-                    </article>
-                    <!-- END: latest-grid -->
-                </div>
-                
-                <div class="text-center mt-12">
-                    <a href="blog-list.html" class="btn-primary px-8 py-4 text-lg font-bold">
-                        すべての記事を見る
-                    </a>
-                </div>
-            </div>
-        </section>
-
-        
-        <!-- AI導入効果シミュレーターセクション（前半）を削除 -->
-
-        <!-- 導入ステップ & テンプレート -->
-        <!-- 企業向けAI研修プロモーション -->
-        <section id="ai-native-transformation" class="py-20 bg-[var(--clr-bg-1)]">
-            <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
-                <div class="text-center mb-16">
-                    <div class="inline-flex items-center bg-[var(--clr-accent-light)] text-[var(--clr-primary-dark)] px-4 py-2 rounded-full text-sm font-semibold mb-4">
-                        🎯 助成金75%OFF + 申請まるごと代行
-                    </div>
-                    <h2 class="text-4xl md:text-5xl font-bold mb-6 text-[var(--clr-primary)]">
-                        AIで手を解き放ち、頭を広げ、心を育てる
-                    </h2>
-                    <p class="text-xl text-[var(--clr-gray)] max-w-3xl mx-auto">
-                        AIが"あなたらしさ"を支えてくれるとしたら、あなたは何に集中しますか？
-                    </p>
-                </div>
-
-                <!-- YouTube埋め込みを削除（エラー対策） -->
-                
-                <!-- 研修プログラム案内（追加） -->
-                <div class="text-center mb-12">
-                    <a href="program.html" class="inline-block bg-gradient-to-r from-[var(--clr-primary)] to-[var(--clr-primary-light)] hover:from-[var(--clr-primary-dark)] hover:to-[var(--clr-primary)] text-white font-bold py-4 px-8 rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 transform hover:scale-105">
-                        📚 詳細な研修プログラムはこちら
-                        <svg class="inline-block ml-2 w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/>
-                        </svg>
-                    </a>
-                </div>
-
-                <!-- 問題解決マッピング -->
-                <div class="bg-white rounded-2xl shadow-xl p-8 mb-12">
-                    <h3 class="text-2xl font-bold text-center mb-8 text-[var(--clr-primary)]">こんな課題、抱えていませんか？</h3>
-                    <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
-                        <div class="space-y-4">
-                            <h4 class="text-lg font-bold text-red-600 mb-4">❌ AI研修前</h4>
-                            <div class="space-y-3">
-                                <div class="flex items-start space-x-3">
-                                    <span class="text-red-500 mt-1">•</span>
-                                    <span class="text-[var(--clr-gray)]">残業月100時間で家族との時間ゼロ</span>
-                                </div>
-                                <div class="flex items-start space-x-3">
-                                    <span class="text-red-500 mt-1">•</span>
-                                    <span class="text-[var(--clr-gray)]">AIは怖くて一度も触ったことがない</span>
-                                </div>
-                                <div class="flex items-start space-x-3">
-                                    <span class="text-red-500 mt-1">•</span>
-                                    <span class="text-[var(--clr-gray)]">Excel地獄でマウス連打の日々</span>
-                                </div>
-                                <div class="flex items-start space-x-3">
-                                    <span class="text-red-500 mt-1">•</span>
-                                    <span class="text-[var(--clr-gray)]">同じミスを繰り返し信頼失墜</span>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="space-y-4">
-                            <h4 class="text-lg font-bold text-[var(--clr-primary)] mb-4">✅ AI研修後</h4>
-                            <div class="space-y-3">
-                                <div class="flex items-start space-x-3">
-                                    <span class="text-[var(--clr-primary)] mt-1">•</span>
-                                    <span class="text-[var(--clr-gray)]">残業75時間減で家族と過ごす夜</span>
-                                </div>
-                                <div class="flex items-start space-x-3">
-                                    <span class="text-[var(--clr-primary)] mt-1">•</span>
-                                    <span class="text-[var(--clr-gray)]">AIが最高の相棒になった</span>
-                                </div>
-                                <div class="flex items-start space-x-3">
-                                    <span class="text-[var(--clr-primary)] mt-1">•</span>
-                                    <span class="text-[var(--clr-gray)]">3時間作業が10分で完了する爽快感</span>
-                                </div>
-                                <div class="flex items-start space-x-3">
-                                    <span class="text-[var(--clr-primary)] mt-1">•</span>
-                                    <span class="text-[var(--clr-gray)]">部署で一番頼られる存在に昇格</span>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- 研修内容・効果 -->
-                <div class="grid grid-cols-1 lg:grid-cols-3 gap-8 mb-12">
-                    <div class="bg-white rounded-xl shadow-lg p-6 hover:shadow-xl transition-all duration-300">
-                        <div class="text-4xl mb-4 text-center">📚</div>
-                        <h3 class="text-xl font-bold mb-4 text-center text-[var(--clr-primary)]">約20時間集中研修</h3>
-                        <ul class="space-y-2 text-gray-700">
-                            <li>• ChatGPT/Claude業務活用</li>
-                            <li>• データ分析自動化</li>
-                            <li>• 資料作成効率化</li>
-                            <li>• 顧客対応AI化</li>
-                            <li>• 社内業務プロセス最適化</li>
-                        </ul>
-                    </div>
-                    
-                    <div class="bg-white rounded-xl shadow-lg p-6 hover:shadow-xl transition-all duration-300">
-                        <div class="text-4xl mb-4 text-center">🎯</div>
-                        <h3 class="text-xl font-bold mb-4 text-center text-[var(--clr-primary)]">6ヶ月実践サポート</h3>
-                        <ul class="space-y-2 text-gray-700">
-                            <li>• 月2回のオンライン相談</li>
-                            <li>• 社内実装の個別サポート</li>
-                            <li>• 効果測定・改善提案</li>
-                            <li>• 追加ツール導入支援</li>
-                            <li>• 成果発表会の開催</li>
-                        </ul>
-                    </div>
-                    
-                    <div class="bg-white rounded-xl shadow-lg p-6 hover:shadow-xl transition-all duration-300">
-                        <div class="text-4xl mb-4 text-center">💰</div>
-                        <h3 class="text-xl font-bold mb-4 text-center text-[var(--clr-primary)]">助成金活用で75%戻ってくる</h3>
-                        <ul class="space-y-2 text-gray-700">
-                            <li>• 通常価格：<span class="line-through">400万円</span></li>
-                            <li>• <strong class="text-blue-600">助成金適用後：100万円</strong></li>
-                            <li>• 申請書類作成代行</li>
-                            <li>• 助成金申請サポート</li>
-                            <li>• 成果報告書作成支援</li>
-                        </ul>
-                    </div>
-                </div>
-
-                <!-- 研修プログラム案内 -->
-                <div class="text-center mb-12">
-                    <a href="program.html" class="inline-block bg-gradient-to-r from-[var(--clr-primary)] to-[var(--clr-primary-light)] hover:from-[var(--clr-primary-dark)] hover:to-[var(--clr-primary)] text-white font-bold py-4 px-8 rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 transform hover:scale-105">
-                        📚 詳細な研修プログラムはこちら
-                        <svg class="inline-block ml-2 w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/>
-                        </svg>
-                    </a>
-                </div>
-
-
-                <!-- 緊急性訴求 + CTA -->
-                <div class="text-center">
-                    <div class="bg-yellow-100 border-l-4 border-yellow-500 p-4 mb-8 inline-block rounded">
-                        <p class="text-yellow-700 text-sm">申請から研修開始まで通常2ヶ月。今すぐ行動を開始しましょう。</p>
-                    </div>
-                    
-                    <a href="https://app.spirinc.com/patterns/availability-sharing/CuveLAwUnplEYK7KBzUsv/confirm" target="_blank" rel="noopener noreferrer" 
-                       class="inline-flex items-center justify-center px-12 py-4 bg-gradient-to-r from-blue-600 to-blue-700 hover:from-blue-700 hover:to-blue-800 text-white font-bold rounded-lg text-xl transition-all duration-200 shadow-lg hover:shadow-xl transform hover:-translate-y-1">
-                        🚀 無料相談で助成金活用プランを確認する
-                    </a>
-                    
-                    <p class="text-gray-600 mt-4 text-sm">
-                        ※30分の無料相談で御社の課題に合わせた具体的な削減効果をシミュレーションします
-                    </p>
-                </div>
-            </div>
-        </section>
-
-        <!-- LINE登録 CTA -->
-        <section class="py-20 bg-[var(--clr-secondary)]">
-            <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-                <h2 class="text-3xl md:text-4xl font-bold mb-6 text-[var(--clr-primary)]">
-                    "社内で一番早くAIを動かす人"になるヒントをLINEで毎日お届け
-                </h2>
-                <p class="text-xl text-[var(--clr-gray-dark)] mb-8">
-                    最新のAI活用事例、導入ノウハウ、業界別の成功パターンをLINEで気軽に受け取れます。
-                </p>
-                
-                <div class="max-w-md mx-auto">
-                    <a href="https://lin.ee/qFBSHNoX" target="_blank" rel="noopener noreferrer" class="inline-flex items-center justify-center px-8 py-4 bg-[#00B900] hover:bg-[#009600] text-white font-bold rounded-lg text-lg transition-colors duration-200 shadow-lg hover:shadow-xl">
-                        <svg class="w-6 h-6 mr-3" fill="currentColor" viewBox="0 0 24 24">
-                            <path d="M19.365 9.863c.349 0 .63.285.63.631 0 .345-.281.63-.63.63H17.61v1.125h1.755c.349 0 .63.283.63.63 0 .344-.281.629-.63.629h-2.386c-.345 0-.627-.285-.627-.629V8.108c0-.345.282-.63.63-.63h2.386c.346 0 .627.285.627.63 0 .349-.281.63-.63.63H17.61v1.125h1.755zm-3.855 3.016c0 .27-.174.51-.432.596-.064.021-.133.031-.199.031-.211 0-.391-.09-.51-.25l-2.443-3.317v2.94c0 .344-.279.629-.631.629-.346 0-.626-.285-.626-.629V8.108c0-.27.173-.51.43-.595.06-.023.136-.033.194-.033.195 0 .375.104.495.254l2.462 3.33V8.108c0-.345.282-.63.63-.63.345 0 .63.285.63.63v4.771zm-5.741 0c0 .344-.282.629-.631.629-.345 0-.627-.285-.627-.629V8.108c0-.345.282-.63.63-.63.346 0 .628.285.628.63v4.771zm-2.466.629H4.917c-.345 0-.63-.285-.63-.629V8.108c0-.345.285-.63.63-.63.348 0 .63.285.63.63v4.141h1.756c.348 0 .629.283.629.63 0 .344-.282.629-.629.629M24 10.314C24 4.943 18.615.572 12.017.572S0 4.943 0 10.314c0 4.811 4.27 8.842 10.035 9.608.391.082.923.258 1.058.59.12.301.079.766.038 1.08l-.164 1.02c-.045.301-.24 1.186 1.049.645 1.291-.539 6.916-4.078 9.436-6.975C23.176 14.393 24 12.458 24 10.314"/>
-                        </svg>
-                        LINE友だち追加で今すぐ受け取る
-                    </a>
-                </div>
-                <p class="text-sm text-[var(--clr-gray)] mt-4">
-                    ※ブロックはいつでもできます
-                </p>
-            </div>
-        </section>
-
-        <!-- 実践ストーリー（ケーススタディ） -->
-        <section class="py-20 bg-white">
-            <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
-                <h2 class="text-3xl md:text-4xl font-bold text-center mb-16 text-[var(--clr-primary)]">
-                    実践ストーリー
-                </h2>
-                
-                <div class="grid grid-cols-1 lg:grid-cols-3 gap-8">
-                    <!-- 製造業事例 -->
-                    <div class="bg-gradient-to-br from-[var(--clr-bg-1)] to-white p-6 rounded-2xl shadow-lg">
-                        <h3 class="text-xl font-bold mb-4 text-[var(--clr-primary)]">中堅製造業A社の場合</h3>
-                        <div class="mb-4">
-                            <div class="grid grid-cols-2 gap-2 text-center">
-                                <div>
-                                    <div class="text-2xl font-bold text-[var(--clr-accent)]">35%</div>
-                                    <div class="text-xs text-[var(--clr-gray)]">不良品率減少</div>
-                                </div>
-                                <div>
-                                    <div class="text-2xl font-bold text-[var(--clr-accent)]">2.5h</div>
-                                    <div class="text-xs text-[var(--clr-gray)]">分析時間短縮/日</div>
-                                </div>
-                            </div>
-                        </div>
-                        <p class="text-[var(--clr-gray-dark)] leading-relaxed text-sm">
-                            品質管理データの分析にChatGPTを活用。過去3年間の不良品データから傾向を発見し、
-                            予防策を立案。結果として不良品率35%減少、分析作業も大幅に効率化。
-                        </p>
-                    </div>
-
-                    <!-- 観光業事例 -->
-                    <div class="bg-gradient-to-br from-white to-[var(--clr-secondary)] p-6 rounded-2xl shadow-lg">
-                        <h3 class="text-xl font-bold mb-4 text-[var(--clr-primary)]">地域観光協会B団体の場合</h3>
-                        <div class="mb-4">
-                            <div class="grid grid-cols-2 gap-2 text-center">
-                                <div>
-                                    <div class="text-2xl font-bold text-[var(--clr-accent)]">150%</div>
-                                    <div class="text-xs text-[var(--clr-gray)]">SNSエンゲージ増</div>
-                                </div>
-                                <div>
-                                    <div class="text-2xl font-bold text-[var(--clr-accent)]">40%</div>
-                                    <div class="text-xs text-[var(--clr-gray)]">観光客増加</div>
-                                </div>
-                            </div>
-                        </div>
-                        <p class="text-[var(--clr-gray-dark)] leading-relaxed text-sm">
-                            AIを活用した観光コンテンツ作成とSNS戦略の最適化。地域の魅力を効果的に発信し、
-                            SNSエンゲージメント150%向上、実際の観光客数も40%増加を実現。
-                        </p>
-                    </div>
-
-                    <!-- 農業事例 -->
-                    <div class="bg-gradient-to-br from-[var(--clr-accent)] to-white p-6 rounded-2xl shadow-lg">
-                        <h3 class="text-xl font-bold mb-4 text-[var(--clr-primary)]">スマート農園C農場の場合</h3>
-                        <div class="mb-4">
-                            <div class="grid grid-cols-2 gap-2 text-center">
-                                <div>
-                                    <div class="text-2xl font-bold text-[var(--clr-primary)]">25%</div>
-                                    <div class="text-xs text-[var(--clr-gray)]">収穫量向上</div>
-                                </div>
-                                <div>
-                                    <div class="text-2xl font-bold text-[var(--clr-primary)]">30%</div>
-                                    <div class="text-xs text-[var(--clr-gray)]">病害虫被害削減</div>
-                                </div>
-                            </div>
-                        </div>
-                        <p class="text-[var(--clr-gray-dark)] leading-relaxed text-sm">
-                            気象データと栽培履歴をAIで分析し、最適な収穫時期を予測。病害虫発生リスクの早期警告により、
-                            収穫量25%向上、病害虫被害30%削減を達成。
-                        </p>
-                    </div>
-                </div>
-            </div>
-        </section>
-    </main>
-
-    <!-- Footer -->
-    <footer class="bg-gray-900 text-white">
-        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
-            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-                <div>
-                    <h3 class="text-lg font-semibold mb-4">メタマケ｜地方AIブースター</h3>
-                    <p class="text-gray-300">
-                        地方の現場の「あなたらしさ」は何ですか？AIで増幅しよう！
-                    </p>
-                    <p class="text-sm text-gray-400 mt-2">
-                        メタマケが運営する地方企業向けAI活用メディア
-                    </p>
-                </div>
-                
-                <div>
-                    <h3 class="text-lg font-semibold mb-4">リンク</h3>
-                    <ul class="space-y-2">
-                        <li>
-                            <a href="#" class="text-gray-300 hover:text-white transition-colors">
-                                ホーム
-                            </a>
-                        </li>
-                        <li>
-                            <a href="#blog" class="text-gray-300 hover:text-white transition-colors">
-                                ブログ
-                            </a>
-                        </li>
-                        <li>
-                            <a href="about.html" class="text-gray-300 hover:text-white transition-colors">
-                                メタマケについて
-                            </a>
-                        </li>
-                    </ul>
-                </div>
-                
-                <div>
-                    <h3 class="text-lg font-semibold mb-4">お問い合わせ</h3>
-                    <p class="text-gray-300">
-                        Email: metamake0601@pessham.com
-                    </p>
-                    <div class="flex space-x-4 mt-4">
-                        <a
-                            href="#"
-                            class="text-gray-300 hover:text-white transition-colors"
-                            aria-label="Twitter"
-                        >
-                            <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
-                                <path d="M23.953 4.57a10 10 0 01-2.825.775 4.958 4.958 0 002.163-2.723c-.951.555-2.005.959-3.127 1.184a4.92 4.92 0 00-8.384 4.482C7.69 8.095 4.067 6.13 1.64 3.162a4.822 4.822 0 00-.666 2.475c0 1.71.87 3.213 2.188 4.096a4.904 4.904 0 01-2.228-.616v.06a4.923 4.923 0 003.946 4.827 4.996 4.996 0 01-2.212.085 4.936 4.936 0 004.604 3.417 9.867 9.867 0 01-6.102 2.105c-.39 0-.779-.023-1.17-.067a13.995 13.995 0 007.557 2.209c9.053 0 13.998-7.496 13.998-13.985 0-.21 0-.42-.015-.63A9.935 9.935 0 0024 4.59z"/>
-                            </svg>
-                        </a>
-                        <a
-                            href="#"
-                            class="text-gray-300 hover:text-white transition-colors"
-                            aria-label="GitHub"
-                        >
-                            <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
-                                <path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/>
-                            </svg>
-                        </a>
-                    </div>
-                </div>
-            </div>
-            
-            <div class="border-t border-gray-800 pt-8 mt-8">
-                <p class="text-center text-gray-300">
-                    © 2025 メタマケ｜地方AIブースター. All rights reserved.
-                </p>
+            <div class="training-card">
+                <div class="training-icon">💰</div>
+                <h3>助成金活用で75%戻ってくる</h3>
+                <ul>
+                    <li>通常価格：400万円</li>
+                    <li>助成金適用後：100万円</li>
+                    <li>申請書類作成代行</li>
+                    <li>助成金申請サポート</li>
+                    <li>成果報告書作成支援</li>
+                </ul>
             </div>
         </div>
-    </footer>
 
-    
-    <script>
-        console.log('Inline script has loaded!');
-        function sortArticlesByDate() {
-            console.log('sortArticlesByDate関数が実行されました。');
-            const container = document.querySelector('#blog .grid');
-            if (!container) {
-                console.warn('記事コンテナが見つかりません。ソート処理をスキップします。');
-                return;
-            }
-            console.log('記事コンテナが見つかりました:', container);
+        <div class="cta-banner">
+            申請から研修開始まで通常2ヶ月。今すぐ行動を開始しましょう。
+        </div>
 
-            const articles = Array.from(container.querySelectorAll('article[data-date]'));
-            console.log('取得した記事の数:', articles.length);
-            if (articles.length === 0) {
-                console.warn('ソート対象の記事が見つかりません。');
-                return;
-            }
+        <div class="text-center">
+            <a href="https://app.spirinc.com/patterns/availability-sharing/CuveLAwUnplEYK7KBzUsv/confirm"
+               target="_blank" rel="noopener noreferrer" class="consult-btn">
+                無料相談で助成金活用プランを確認する
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 5l7 7-7 7"/></svg>
+            </a>
+            <p class="consult-note">30分の無料相談で御社の課題に合わせた具体的な削減効果をシミュレーションします</p>
+        </div>
+    </div>
+</section>
 
-            // ソート前の順序をログに出力
-            console.log('ソート前の記事の順序:', articles.map(a => a.dataset.date));
+<!-- ── LINE CTA ── -->
+<section class="line-cta">
+    <div class="container">
+        <h2>「うちの会社には関係ない」<br>と思っているあなたへ。</h2>
+        <p>農家も、旅館も、町工場も——使い始めたら止まらなかった。<br>AIの最新事例とノウハウをLINEで毎日お届けします。</p>
+        <a href="https://lin.ee/qFBSHNoX" target="_blank" rel="noopener noreferrer" class="line-btn">
+            <svg viewBox="0 0 24 24" fill="currentColor">
+                <path d="M19.365 9.863c.349 0 .63.285.63.631 0 .345-.281.63-.63.63H17.61v1.125h1.755c.349 0 .63.283.63.63 0 .344-.281.629-.63.629h-2.386c-.345 0-.627-.285-.627-.629V8.108c0-.345.282-.63.63-.63h2.386c.346 0 .627.285.627.63 0 .349-.281.63-.63.63H17.61v1.125h1.755zm-3.855 3.016c0 .27-.174.51-.432.596-.064.021-.133.031-.199.031-.211 0-.391-.09-.51-.25l-2.443-3.317v2.94c0 .344-.279.629-.631.629-.346 0-.626-.285-.626-.629V8.108c0-.27.173-.51.43-.595.06-.023.136-.033.194-.033.195 0 .375.104.495.254l2.462 3.33V8.108c0-.345.282-.63.63-.63.345 0 .63.285.63.63v4.771zm-5.741 0c0 .344-.282.629-.631.629-.345 0-.627-.285-.627-.629V8.108c0-.345.282-.63.63-.63.346 0 .628.285.628.63v4.771zm-2.466.629H4.917c-.345 0-.63-.285-.63-.629V8.108c0-.345.285-.63.63-.63.348 0 .63.285.63.63v4.141h1.756c.348 0 .629.283.629.63 0 .344-.282.629-.629.629M24 10.314C24 4.943 18.615.572 12.017.572S0 4.943 0 10.314c0 4.811 4.27 8.842 10.035 9.608.391.082.923.258 1.058.59.12.301.079.766.038 1.08l-.164 1.02c-.045.301-.24 1.186 1.049.645 1.291-.539 6.916-4.078 9.436-6.975C23.176 14.393 24 12.458 24 10.314"/>
+            </svg>
+            LINE友だち追加
+        </a>
+        <p style="font-size:0.75rem; color:rgba(245,242,238,0.4); margin-top:12px;">ブロックはいつでもできます</p>
+    </div>
+</section>
 
-            articles.sort((a, b) => {
-                const dateA = new Date(a.dataset.date);
-                const dateB = new Date(b.dataset.date);
-                // 日付オブジェクトが不正な場合はNaNになるため、数値に変換して比較
-                return dateB.getTime() - dateA.getTime();
-            });
+<!-- ── Case Studies ── -->
+<section class="section section-neutral">
+    <div class="container">
+        <div class="section-header">
+            <p class="section-eyebrow">Case Studies</p>
+            <h2 class="section-title">数字が証明する、<br>地方 × AI の現実</h2>
+        </div>
 
-            // ソート後の順序をログに出力
-            console.log('ソート後の記事の順序:', articles.map(a => a.dataset.date));
+        <div class="cases-grid">
+            <div class="case-card">
+                <h3>中堅製造業 A社</h3>
+                <div class="case-stats">
+                    <div class="stat">
+                        <div class="stat-value">35%</div>
+                        <div class="stat-label">不良品率減少</div>
+                    </div>
+                    <div class="stat">
+                        <div class="stat-value">2.5h</div>
+                        <div class="stat-label">分析時間短縮/日</div>
+                    </div>
+                </div>
+                <p>品質管理データの分析にChatGPTを活用。過去3年間の不良品データから傾向を発見し、予防策を立案。不良品率35%減少、分析作業も大幅に効率化。</p>
+            </div>
 
-            // コンテナの中身を一度クリアしてから、ソート済みの記事を再追加
-            container.innerHTML = '';
-            articles.forEach(article => container.appendChild(article));
-            console.log('記事がDOMに再配置されました。');
-        }
+            <div class="case-card">
+                <h3>地域観光協会 B団体</h3>
+                <div class="case-stats">
+                    <div class="stat">
+                        <div class="stat-value">150%</div>
+                        <div class="stat-label">SNSエンゲージ増</div>
+                    </div>
+                    <div class="stat">
+                        <div class="stat-value">40%</div>
+                        <div class="stat-label">観光客増加</div>
+                    </div>
+                </div>
+                <p>AIを活用した観光コンテンツ作成とSNS戦略の最適化。地域の魅力を効果的に発信し、SNSエンゲージメント150%向上、観光客数も40%増加を実現。</p>
+            </div>
 
-        // ページ読み込み時にソート関数を実行
-        document.addEventListener('DOMContentLoaded', sortArticlesByDate);
+            <div class="case-card">
+                <h3>スマート農園 C農場</h3>
+                <div class="case-stats">
+                    <div class="stat">
+                        <div class="stat-value">25%</div>
+                        <div class="stat-label">収穫量向上</div>
+                    </div>
+                    <div class="stat">
+                        <div class="stat-value">30%</div>
+                        <div class="stat-label">病害虫被害削減</div>
+                    </div>
+                </div>
+                <p>気象データと栽培履歴をAIで分析し、最適な収穫時期を予測。病害虫発生リスクの早期警告により、収穫量25%向上、病害虫被害30%削減を達成。</p>
+            </div>
+        </div>
+    </div>
+</section>
 
-        // モバイルメニューのトグル機能 (既存の関数があれば残す)
-        function toggleMobileMenu() {
-            const mobileMenu = document.getElementById('mobile-menu');
-            if (mobileMenu) {
-                mobileMenu.classList.toggle('hidden');
-            }
-        }
-    </script>
+<!-- ── Footer ── -->
+<footer>
+    <div class="container">
+        <div class="footer-grid">
+            <div>
+                <p class="footer-brand">metamake</p>
+                <p class="footer-desc">
+                    最新技術でwell-beingを。<br>
+                    地方の現場の「あなたらしさ」をAIで増幅するメディア。
+                </p>
+            </div>
+            <div>
+                <h4>コンテンツ</h4>
+                <ul>
+                    <li><a href="manufacturing.html">製造業DX</a></li>
+                    <li><a href="tourism.html">観光業DX</a></li>
+                    <li><a href="agriculture.html">農業DX</a></li>
+                    <li><a href="blog-list.html">記事一覧</a></li>
+                </ul>
+            </div>
+            <div>
+                <h4>About</h4>
+                <ul>
+                    <li><a href="about.html">メタマケについて</a></li>
+                    <li><a href="program.html">研修プログラム</a></li>
+                    <li><a href="mailto:metamake0601@pessham.com">お問い合わせ</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            © 2025 metamake. All rights reserved.
+        </div>
+    </div>
+</footer>
+
+<script>
+    function sortArticlesByDate() {
+        const container = document.getElementById('articles-container');
+        if (!container) return;
+        const articles = Array.from(container.querySelectorAll('article[data-date]'));
+        articles.sort((a, b) => new Date(b.dataset.date) - new Date(a.dataset.date));
+        articles.forEach(a => container.appendChild(a));
+    }
+
+    function toggleMobileMenu() {
+        const menu = document.getElementById('mobile-menu');
+        if (menu) menu.style.display = menu.style.display === 'block' ? 'none' : 'block';
+    }
+
+    document.addEventListener('DOMContentLoaded', sortArticlesByDate);
+</script>
+
 </body>
-</html><!-- Updated at Sat Aug  2 15:16:28 JST 2025 -->
+</html>
