@@ -677,6 +677,92 @@
             color: rgba(245,242,238,0.35);
         }
 
+        /* ── Note section ── */
+        .note-feature {
+            max-width: 760px;
+            margin: 0 auto;
+        }
+
+        .note-profile {
+            display: flex;
+            gap: 24px;
+            align-items: flex-start;
+            background: var(--clr-white);
+            border: 1px solid rgba(196,168,130,0.25);
+            border-radius: var(--radius-lg);
+            padding: 32px;
+            margin-bottom: 32px;
+        }
+
+        .note-avatar {
+            width: 72px;
+            height: 72px;
+            border-radius: 50%;
+            object-fit: cover;
+            flex-shrink: 0;
+            border: 2px solid rgba(196,168,130,0.3);
+        }
+
+        .note-author-name {
+            font-weight: 700;
+            font-size: 1rem;
+            color: var(--clr-primary);
+            margin-bottom: 2px;
+        }
+
+        .note-author-role {
+            font-size: 0.75rem;
+            color: var(--clr-muted);
+            margin-bottom: 10px;
+        }
+
+        .note-author-bio {
+            font-size: 0.88rem;
+            color: #555;
+            line-height: 1.8;
+        }
+
+        .note-themes {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 12px;
+            margin-bottom: 8px;
+        }
+
+        .note-theme-item {
+            display: flex;
+            align-items: flex-start;
+            gap: 12px;
+            background: var(--clr-white);
+            border: 1px solid rgba(196,168,130,0.2);
+            border-radius: var(--radius-md);
+            padding: 16px;
+        }
+
+        .note-theme-num {
+            font-family: 'Noto Serif JP', serif;
+            font-size: 1rem;
+            font-weight: 300;
+            color: var(--clr-gold);
+            flex-shrink: 0;
+        }
+
+        .note-theme-item p {
+            font-size: 0.85rem;
+            color: #444;
+            line-height: 1.6;
+        }
+
+        .note-cta-btn {
+            padding: 14px 40px;
+            font-size: 1rem;
+        }
+
+        @media (max-width: 640px) {
+            .note-profile { flex-direction: column; }
+            .note-themes { grid-template-columns: 1fr; }
+        }
+
         /* ── Center helper ── */
         .text-center { text-align: center; }
         .mt-12 { margin-top: 48px; }
@@ -721,7 +807,7 @@
                 <a href="manufacturing.html" class="nav-link">製造業DX</a>
                 <a href="tourism.html" class="nav-link">観光業DX</a>
                 <a href="agriculture.html" class="nav-link">農業DX</a>
-                <a href="blog-list.html" class="nav-link">記事一覧</a>
+                <a href="https://note.com/ham6344" target="_blank" rel="noopener noreferrer" class="nav-link">note</a>
                 <a href="about.html" class="btn btn-outline nav-cta">メタマケについて</a>
                 <a href="#ai-training" class="btn btn-primary nav-cta">AI研修を相談する</a>
             </nav>
@@ -770,92 +856,50 @@
 <section class="section section-neutral" id="blog">
     <div class="container">
         <div class="section-header">
-            <p class="section-eyebrow">Latest Articles</p>
-            <h2 class="section-title">最新の実践ガイド</h2>
+            <p class="section-eyebrow">Note</p>
+            <h2 class="section-title">40代会社員が、<br>AI時代を生き抜くために。</h2>
         </div>
 
-        <div class="articles-grid" id="articles-container">
-            <!-- START: latest-grid -->
-            <article class="article-card" data-date="2025-10-15">
-                <a href="articles/20251015.html" class="article-thumb">
-                    <img src="https://images.unsplash.com/photo-1552664730-d307ca884978?w=800&h=450&fit=crop&crop=center" alt="">
-                </a>
-                <div class="article-body">
-                    <div class="article-meta">
-                        <time class="article-date">2025年10月15日</time>
-                        <span class="badge-new">NEW</span>
-                    </div>
-                    <h2 class="article-title">「学習させない設定」はAIの義務ではない。企業が守るべき「情報倫理」</h2>
-                    <a href="articles/20251015.html" class="article-link">続きを読む <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 5l7 7-7 7"/></svg></a>
+        <div class="note-feature">
+            <div class="note-profile">
+                <img src="images/pessham.png" alt="ペスハム" class="note-avatar">
+                <div>
+                    <p class="note-author-name">ペスハム（石澤亮輔）</p>
+                    <p class="note-author-role">合同会社メタマケ 代表 / AIコンサルタント</p>
+                    <p class="note-author-bio">
+                        元東京ガスで10年マーケターをやり、2023年に長野へ移住。
+                        大企業にいたからこそわかる、「普通の会社員がAIをどう使えばいいか」を
+                        40代の視点で書いています。
+                    </p>
                 </div>
-            </article>
-            <article class="article-card" data-date="2025-10-14">
-                <a href="articles/20251014.html" class="article-thumb">
-                    <img src="https://images.unsplash.com/photo-1556157382-97eda2d62296?w=800&h=450&fit=crop&crop=center" alt="">
-                </a>
-                <div class="article-body">
-                    <div class="article-meta">
-                        <time class="article-date">2025年10月14日</time>
-                        <span class="badge-new">NEW</span>
-                    </div>
-                    <h2 class="article-title">AIは「競合分析」を自動化する。あなたがすべきは「戦略的思考」</h2>
-                    <a href="articles/20251014.html" class="article-link">続きを読む <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 5l7 7-7 7"/></svg></a>
-                </div>
-            </article>
-            <article class="article-card" data-date="2025-10-13">
-                <a href="articles/20251013.html" class="article-thumb">
-                    <img src="https://images.unsplash.com/photo-1521737604893-d14cc237f11d?w=800&h=450&fit=crop&crop=faces" alt="">
-                </a>
-                <div class="article-body">
-                    <div class="article-meta">
-                        <time class="article-date">2025年10月13日</time>
-                        <span class="badge-new">NEW</span>
-                    </div>
-                    <h2 class="article-title">「社内AIロードマップ」は作らない。まず「使わせて」から考える未来</h2>
-                    <a href="articles/20251013.html" class="article-link">続きを読む <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 5l7 7-7 7"/></svg></a>
-                </div>
-            </article>
-            <article class="article-card" data-date="2025-10-12">
-                <a href="articles/20251012.html" class="article-thumb">
-                    <img src="https://images.unsplash.com/photo-1542621334-a254cf47733d?w=800&h=450&fit=crop&crop=center" alt="">
-                </a>
-                <div class="article-body">
-                    <div class="article-meta">
-                        <time class="article-date">2025年10月12日</time>
-                    </div>
-                    <h2 class="article-title">AIに「感情」を語れ。あなたの「モヤモヤ」が最適な提案を生む</h2>
-                    <a href="articles/20251012.html" class="article-link">続きを読む <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 5l7 7-7 7"/></svg></a>
-                </div>
-            </article>
-            <article class="article-card" data-date="2025-10-11">
-                <a href="articles/20251011.html" class="article-thumb">
-                    <img src="https://images.unsplash.com/photo-1485827404703-89b55fcc595e?w=800&h=450&fit=crop&crop=center" alt="">
-                </a>
-                <div class="article-body">
-                    <div class="article-meta">
-                        <time class="article-date">2025年10月11日</time>
-                    </div>
-                    <h2 class="article-title">「成果が出ない」AI活用は「あなたの学び方」に問題がある</h2>
-                    <a href="articles/20251011.html" class="article-link">続きを読む <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 5l7 7-7 7"/></svg></a>
-                </div>
-            </article>
-            <article class="article-card" data-date="2025-10-10">
-                <a href="articles/20251010.html" class="article-thumb">
-                    <img src="https://images.unsplash.com/photo-1498050108023-c5249f4df085?w=800&h=450&fit=crop&crop=center" alt="">
-                </a>
-                <div class="article-body">
-                    <div class="article-meta">
-                        <time class="article-date">2025年10月10日</time>
-                    </div>
-                    <h2 class="article-title">「AIが怖い」は古い。「取り残される恐怖」と戦うための行動習慣</h2>
-                    <a href="articles/20251010.html" class="article-link">続きを読む <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 5l7 7-7 7"/></svg></a>
-                </div>
-            </article>
-            <!-- END: latest-grid -->
-        </div>
+            </div>
 
-        <div class="text-center mt-12">
-            <a href="blog-list.html" class="btn btn-dark">すべての記事を見る</a>
+            <div class="note-themes">
+                <div class="note-theme-item">
+                    <span class="note-theme-num">01</span>
+                    <p>ChatGPT・Claudeを仕事で使いこなす具体的な方法</p>
+                </div>
+                <div class="note-theme-item">
+                    <span class="note-theme-num">02</span>
+                    <p>AI時代に「替えの利かない人材」になるキャリア戦略</p>
+                </div>
+                <div class="note-theme-item">
+                    <span class="note-theme-num">03</span>
+                    <p>大企業・中小企業でのAI導入リアルな現場レポート</p>
+                </div>
+                <div class="note-theme-item">
+                    <span class="note-theme-num">04</span>
+                    <p>「副業・独立」を視野に入れた40代のAI活用術</p>
+                </div>
+            </div>
+
+            <div class="text-center" style="margin-top: 40px;">
+                <a href="https://note.com/ham6344" target="_blank" rel="noopener noreferrer" class="btn btn-dark note-cta-btn">
+                    noteで読む
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 13v6a2 2 0 01-2 2H5a2 2 0 01-2-2V8a2 2 0 012-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
+                </a>
+                <p style="font-size:0.78rem; color:var(--clr-muted); margin-top:10px;">note.com/ham6344</p>
+            </div>
         </div>
     </div>
 </section>
@@ -1029,7 +1073,7 @@
                     <li><a href="manufacturing.html">製造業DX</a></li>
                     <li><a href="tourism.html">観光業DX</a></li>
                     <li><a href="agriculture.html">農業DX</a></li>
-                    <li><a href="blog-list.html">記事一覧</a></li>
+                    <li><a href="https://note.com/ham6344" target="_blank" rel="noopener noreferrer">note</a></li>
                 </ul>
             </div>
             <div>
