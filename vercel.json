@@ -52,6 +52,30 @@
       ]
     }
   ],
+  "redirects": [
+    {
+      "source": "/",
+      "has": [
+        {
+          "type": "host",
+          "value": "chihoai.vercel.app"
+        }
+      ],
+      "destination": "https://chihoai.com/",
+      "permanent": true
+    },
+    {
+      "source": "/:path*",
+      "has": [
+        {
+          "type": "host",
+          "value": "chihoai.vercel.app"
+        }
+      ],
+      "destination": "https://chihoai.com/:path*",
+      "permanent": true
+    }
+  ],
   "rewrites": [
     { "source": "/articles/:id", "destination": "/articles/:id.html" }
   ]

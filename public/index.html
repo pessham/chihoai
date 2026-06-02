@@ -1,1112 +1,364 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="ja">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>metamake｜地方AIブースター - 生成AIで地方の現場を働く未来形へ</title>
-    <meta name="description" content="メタマケが運営する地方AIブースター。製造業・観光業・農業の現場を生成AIで変革する実践ガイド。地方企業が一番早くAIを導入・活用するためのノウハウとケーススタディを提供します。">
-    <meta name="keywords" content="メタマケ,metamake,地方AIブースター,地方AI,生成AI,製造業DX,観光業DX,農業DX,AI導入,ローカルAI,現場改善,AI活用,スマート農業,中小企業AI,地域DX,デジタル変革">
-
-    <meta name="robots" content="index, follow">
-    <link rel="canonical" href="https://chihoai.com/">
-    <meta name="geo.region" content="JP">
-    <meta name="language" content="ja">
-
-    <link rel="icon" type="image/x-icon" href="images/metamakeblack.jpg">
-    <link rel="apple-touch-icon" href="images/metamakeblack.jpg">
-
-    <meta property="og:title" content="metamake｜地方AIブースター">
-    <meta property="og:description" content="製造業・観光業・農業の現場を生成AIで変革する実践ガイド。">
-    <meta property="og:image" content="/images/chihoaitop.png">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>ChihoAI | AIで"別ルート"を作る現場業務支援</title>
+    <meta
+      name="description"
+      content="今のやり方を壊さず、まずは1つの仕事からAIを使った進め方を一緒に作る現場業務支援。日報、新人教育、不具合対応から始めます。"
+    >
+    <meta property="og:title" content="ChihoAI | AIで&quot;別ルート&quot;を作る現場業務支援">
+    <meta property="og:description" content="今のやり方を壊さず、まずは1つの仕事からAIを使った進め方を一緒に作ります。">
     <meta property="og:type" content="website">
-    <meta property="og:url" content="https://chihoai.com/">
-
+    <meta property="og:image" content="assets/images/hero-ai-route.png">
     <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="metamake｜地方AIブースター">
-    <meta name="twitter:description" content="製造業・観光業・農業の現場を生成AIで変革する実践ガイド。">
-    <meta name="twitter:image" content="/images/chihoaitop.png">
-
-    <script type="application/ld+json">
-    {
-        "@context": "https://schema.org",
-        "@type": "WebSite",
-        "name": "metamake｜地方AIブースター",
-        "url": "https://chihoai.com/",
-        "description": "製造業・観光業・農業の現場を生成AIで変革する実践ガイド。",
-        "inLanguage": "ja",
-        "publisher": { "@type": "Organization", "name": "metamake", "url": "https://chihoai.com/" }
-    }
-    </script>
-
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300;400;700&family=Noto+Serif+JP:wght@300;400&display=swap" rel="stylesheet">
-
-    <style>
-        :root {
-            --clr-primary:    #0A0A0A;
-            --clr-gold:       #C4A882;
-            --clr-accent:     #7B9BAD;
-            --clr-neutral:    #F5F2EE;
-            --clr-muted:      #6B7280;
-            --clr-white:      #FFFFFF;
-            --radius-sm:      2px;
-            --radius-md:      4px;
-            --radius-lg:      8px;
-            --shadow-sm:      0 1px 4px rgba(0,0,0,0.08);
-            --shadow-md:      0 4px 16px rgba(0,0,0,0.10);
-            --transition:     all 0.25s ease;
-        }
-
-        *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
-
-        html { scroll-behavior: smooth; }
-
-        body {
-            font-family: 'Noto Sans JP', -apple-system, sans-serif;
-            font-weight: 400;
-            font-size: 1rem;
-            line-height: 1.8;
-            color: var(--clr-primary);
-            background: var(--clr-neutral);
-            -webkit-font-smoothing: antialiased;
-            overflow-x: hidden;
-        }
-
-        h1, h2, h3, h4 {
-            font-family: 'Noto Serif JP', Georgia, serif;
-            font-weight: 300;
-            line-height: 1.3;
-        }
-
-        a { color: inherit; text-decoration: none; }
-
-        img { display: block; max-width: 100%; }
-
-        /* ── Layout ── */
-        .container {
-            max-width: 1100px;
-            margin: 0 auto;
-            padding: 0 24px;
-        }
-
-        /* ── Buttons ── */
-        .btn {
-            display: inline-flex;
-            align-items: center;
-            gap: 8px;
-            padding: 12px 28px;
-            font-family: 'Noto Sans JP', sans-serif;
-            font-size: 0.9rem;
-            font-weight: 700;
-            border-radius: var(--radius-md);
-            cursor: pointer;
-            transition: var(--transition);
-            border: none;
-            text-decoration: none;
-            white-space: nowrap;
-        }
-
-        .btn-primary {
-            background: var(--clr-accent);
-            color: var(--clr-white);
-        }
-        .btn-primary:hover { background: var(--clr-gold); color: var(--clr-primary); }
-
-        .btn-outline {
-            background: transparent;
-            color: var(--clr-primary);
-            border: 1px solid rgba(196,168,130,0.6);
-        }
-        .btn-outline:hover { border-color: var(--clr-gold); background: rgba(196,168,130,0.08); }
-
-        .btn-dark {
-            background: var(--clr-primary);
-            color: var(--clr-neutral);
-        }
-        .btn-dark:hover { background: #222; }
-
-        /* ── Header ── */
-        header {
-            position: sticky;
-            top: 0;
-            z-index: 100;
-            background: rgba(245,242,238,0.95);
-            backdrop-filter: blur(12px);
-            border-bottom: 1px solid rgba(196,168,130,0.3);
-        }
-
-        .header-inner {
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-            height: 64px;
-        }
-
-        .logo {
-            display: flex;
-            align-items: center;
-            gap: 12px;
-        }
-
-        .logo img {
-            width: 36px;
-            height: 36px;
-            border-radius: var(--radius-sm);
-            object-fit: cover;
-        }
-
-        .logo-text {
-            display: flex;
-            flex-direction: column;
-            line-height: 1;
-        }
-
-        .logo-name {
-            font-family: 'Noto Serif JP', serif;
-            font-size: 1.1rem;
-            font-weight: 300;
-            letter-spacing: 0.05em;
-            color: var(--clr-primary);
-        }
-
-        .logo-tagline {
-            font-size: 0.65rem;
-            color: var(--clr-muted);
-            letter-spacing: 0.08em;
-            margin-top: 2px;
-        }
-
-        nav {
-            display: flex;
-            align-items: center;
-            gap: 4px;
-        }
-
-        .nav-link {
-            padding: 8px 14px;
-            font-size: 0.85rem;
-            color: var(--clr-muted);
-            border-radius: var(--radius-md);
-            transition: var(--transition);
-            font-weight: 400;
-        }
-        .nav-link:hover { color: var(--clr-primary); background: rgba(0,0,0,0.04); }
-
-        .nav-cta {
-            margin-left: 8px;
-        }
-
-        .hamburger {
-            display: none;
-            flex-direction: column;
-            gap: 5px;
-            cursor: pointer;
-            padding: 8px;
-            background: none;
-            border: none;
-        }
-        .hamburger span {
-            display: block;
-            width: 22px;
-            height: 1.5px;
-            background: var(--clr-primary);
-            transition: var(--transition);
-        }
-
-        .mobile-menu {
-            display: none;
-            padding: 12px 0 16px;
-            border-top: 1px solid rgba(196,168,130,0.2);
-        }
-
-        .mobile-menu a {
-            display: block;
-            padding: 10px 0;
-            font-size: 0.9rem;
-            color: var(--clr-primary);
-            border-bottom: 1px solid rgba(0,0,0,0.06);
-        }
-
-        .mobile-menu a:last-child { border-bottom: none; }
-
-        /* ── Hero ── */
-        .hero {
-            background: var(--clr-primary);
-            color: var(--clr-neutral);
-            padding: 100px 0 80px;
-            position: relative;
-            overflow: hidden;
-        }
-
-        .hero::before {
-            content: '';
-            position: absolute;
-            inset: 0;
-            background: radial-gradient(ellipse at 70% 50%, rgba(123,155,173,0.12) 0%, transparent 60%);
-            pointer-events: none;
-        }
-
-        .hero-inner {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 64px;
-            align-items: center;
-        }
-
-        .hero-eyebrow {
-            font-size: 0.75rem;
-            letter-spacing: 0.15em;
-            color: var(--clr-gold);
-            text-transform: uppercase;
-            margin-bottom: 20px;
-        }
-
-        .hero h1 {
-            font-size: clamp(2rem, 4vw, 3.2rem);
-            color: var(--clr-neutral);
-            margin-bottom: 24px;
-            letter-spacing: -0.01em;
-        }
-
-        .hero h1 em {
-            font-style: normal;
-            color: var(--clr-gold);
-        }
-
-        .hero-sub {
-            font-size: 1rem;
-            color: rgba(245,242,238,0.65);
-            line-height: 1.9;
-            margin-bottom: 40px;
-            max-width: 440px;
-        }
-
-        .hero-actions {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 12px;
-        }
-
-        .hero-image {
-            border-radius: var(--radius-lg);
-            overflow: hidden;
-            aspect-ratio: 4/3;
-        }
-
-        .hero-image img {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-            opacity: 0.85;
-        }
-
-        /* ── Section base ── */
-        .section { padding: 80px 0; }
-        .section-white { background: var(--clr-white); }
-        .section-neutral { background: var(--clr-neutral); }
-        .section-dark { background: var(--clr-primary); color: var(--clr-neutral); }
-
-        .section-header {
-            text-align: center;
-            margin-bottom: 56px;
-        }
-
-        .section-eyebrow {
-            font-size: 0.72rem;
-            letter-spacing: 0.15em;
-            color: var(--clr-accent);
-            text-transform: uppercase;
-            margin-bottom: 12px;
-        }
-
-        .section-title {
-            font-size: clamp(1.6rem, 3vw, 2.2rem);
-            color: var(--clr-primary);
-        }
-
-        .section-dark .section-title { color: var(--clr-neutral); }
-        .section-dark .section-eyebrow { color: var(--clr-gold); }
-
-        /* ── Article grid ── */
-        .articles-grid {
-            display: grid;
-            grid-template-columns: repeat(3, 1fr);
-            gap: 28px;
-        }
-
-        .article-card {
-            background: var(--clr-white);
-            border: 1px solid rgba(196,168,130,0.2);
-            border-radius: var(--radius-lg);
-            overflow: hidden;
-            transition: var(--transition);
-        }
-
-        .article-card:hover {
-            transform: translateY(-3px);
-            box-shadow: var(--shadow-md);
-            border-color: rgba(196,168,130,0.5);
-        }
-
-        .article-thumb {
-            position: relative;
-            aspect-ratio: 16/9;
-            overflow: hidden;
-        }
-
-        .article-thumb img {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-            transition: transform 0.4s ease;
-        }
-
-        .article-card:hover .article-thumb img { transform: scale(1.04); }
-
-        .article-body {
-            padding: 20px;
-        }
-
-        .article-meta {
-            display: flex;
-            align-items: center;
-            gap: 8px;
-            margin-bottom: 10px;
-        }
-
-        .article-date {
-            font-size: 0.75rem;
-            color: var(--clr-muted);
-        }
-
-        .badge-new {
-            font-size: 0.65rem;
-            font-weight: 700;
-            padding: 2px 7px;
-            background: var(--clr-accent);
-            color: var(--clr-white);
-            border-radius: 99px;
-            letter-spacing: 0.05em;
-        }
-
-        .article-title {
-            font-family: 'Noto Sans JP', sans-serif;
-            font-size: 0.9rem;
-            font-weight: 700;
-            line-height: 1.5;
-            color: var(--clr-primary);
-            margin-bottom: 12px;
-            display: -webkit-box;
-            -webkit-line-clamp: 2;
-            -webkit-box-orient: vertical;
-            overflow: hidden;
-        }
-
-        .article-link {
-            font-size: 0.8rem;
-            color: var(--clr-accent);
-            font-weight: 700;
-            display: inline-flex;
-            align-items: center;
-            gap: 4px;
-            transition: var(--transition);
-        }
-        .article-link:hover { color: var(--clr-gold); }
-        .article-link svg { width: 14px; height: 14px; }
-
-        /* ── Training section ── */
-        .training-grid {
-            display: grid;
-            grid-template-columns: repeat(3, 1fr);
-            gap: 24px;
-            margin-bottom: 48px;
-        }
-
-        .training-card {
-            background: var(--clr-white);
-            border: 1px solid rgba(196,168,130,0.2);
-            border-radius: var(--radius-lg);
-            padding: 32px 24px;
-            text-align: center;
-        }
-
-        .training-icon {
-            font-size: 2rem;
-            margin-bottom: 16px;
-        }
-
-        .training-card h3 {
-            font-family: 'Noto Sans JP', sans-serif;
-            font-size: 1rem;
-            font-weight: 700;
-            margin-bottom: 16px;
-            color: var(--clr-primary);
-        }
-
-        .training-card ul {
-            list-style: none;
-            text-align: left;
-            font-size: 0.85rem;
-            color: var(--clr-muted);
-            line-height: 2;
-        }
-
-        .training-card li::before {
-            content: '—';
-            margin-right: 8px;
-            color: var(--clr-gold);
-        }
-
-        /* ── Before/After ── */
-        .ba-grid {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 32px;
-            margin-bottom: 48px;
-        }
-
-        .ba-box {
-            background: var(--clr-white);
-            border: 1px solid rgba(196,168,130,0.2);
-            border-radius: var(--radius-lg);
-            padding: 28px;
-        }
-
-        .ba-label {
-            font-size: 0.75rem;
-            font-weight: 700;
-            letter-spacing: 0.1em;
-            margin-bottom: 16px;
-            text-transform: uppercase;
-        }
-
-        .ba-label.before { color: #B0524A; }
-        .ba-label.after  { color: var(--clr-accent); }
-
-        .ba-box ul {
-            list-style: none;
-            font-size: 0.9rem;
-            color: var(--clr-muted);
-            line-height: 2.2;
-        }
-
-        .ba-box li { display: flex; align-items: flex-start; gap: 8px; }
-        .ba-box li span.dot { margin-top: 10px; width: 5px; height: 5px; border-radius: 50%; flex-shrink: 0; }
-        .ba-box.before-box li span.dot { background: #B0524A; }
-        .ba-box.after-box  li span.dot { background: var(--clr-accent); }
-
-        /* ── Case studies ── */
-        .cases-grid {
-            display: grid;
-            grid-template-columns: repeat(3, 1fr);
-            gap: 24px;
-        }
-
-        .case-card {
-            background: var(--clr-white);
-            border: 1px solid rgba(196,168,130,0.2);
-            border-radius: var(--radius-lg);
-            padding: 28px;
-        }
-
-        .case-stats {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 12px;
-            margin: 16px 0;
-        }
-
-        .stat {
-            text-align: center;
-            padding: 12px;
-            background: var(--clr-neutral);
-            border-radius: var(--radius-md);
-        }
-
-        .stat-value {
-            font-family: 'Noto Serif JP', serif;
-            font-size: 1.6rem;
-            font-weight: 300;
-            color: var(--clr-accent);
-        }
-
-        .stat-label {
-            font-size: 0.7rem;
-            color: var(--clr-muted);
-            margin-top: 2px;
-        }
-
-        .case-card h3 {
-            font-family: 'Noto Sans JP', sans-serif;
-            font-size: 0.95rem;
-            font-weight: 700;
-            color: var(--clr-primary);
-            margin-bottom: 8px;
-        }
-
-        .case-card p {
-            font-size: 0.85rem;
-            color: var(--clr-muted);
-            line-height: 1.8;
-        }
-
-        /* ── LINE CTA ── */
-        .line-cta {
-            background: var(--clr-primary);
-            color: var(--clr-neutral);
-            padding: 80px 0;
-            text-align: center;
-        }
-
-        .line-cta h2 {
-            font-size: clamp(1.4rem, 2.5vw, 1.9rem);
-            color: var(--clr-neutral);
-            max-width: 600px;
-            margin: 0 auto 16px;
-        }
-
-        .line-cta p {
-            color: rgba(245,242,238,0.65);
-            margin-bottom: 36px;
-            font-size: 0.95rem;
-        }
-
-        .line-btn {
-            display: inline-flex;
-            align-items: center;
-            gap: 10px;
-            padding: 14px 32px;
-            background: #06C755;
-            color: var(--clr-white);
-            font-family: 'Noto Sans JP', sans-serif;
-            font-weight: 700;
-            font-size: 0.95rem;
-            border-radius: var(--radius-md);
-            transition: var(--transition);
-        }
-        .line-btn:hover { background: #05a847; }
-        .line-btn svg { width: 20px; height: 20px; }
-
-        /* ── CTA banner ── */
-        .cta-banner {
-            text-align: center;
-            padding: 16px;
-            background: rgba(123,155,173,0.08);
-            border: 1px solid rgba(123,155,173,0.2);
-            border-radius: var(--radius-md);
-            font-size: 0.8rem;
-            color: var(--clr-muted);
-            margin-bottom: 40px;
-        }
-
-        .consult-btn {
-            display: inline-flex;
-            align-items: center;
-            gap: 8px;
-            padding: 16px 40px;
-            background: var(--clr-accent);
-            color: var(--clr-white);
-            font-family: 'Noto Sans JP', sans-serif;
-            font-weight: 700;
-            font-size: 1rem;
-            border-radius: var(--radius-md);
-            transition: var(--transition);
-        }
-        .consult-btn:hover { background: var(--clr-gold); color: var(--clr-primary); }
-
-        .consult-note {
-            font-size: 0.8rem;
-            color: var(--clr-muted);
-            margin-top: 12px;
-        }
-
-        /* ── Footer ── */
-        footer {
-            background: var(--clr-primary);
-            color: var(--clr-neutral);
-            padding: 64px 0 32px;
-        }
-
-        .footer-grid {
-            display: grid;
-            grid-template-columns: 1.5fr 1fr 1fr;
-            gap: 48px;
-            margin-bottom: 48px;
-        }
-
-        .footer-brand {
-            font-family: 'Noto Serif JP', serif;
-            font-size: 1.1rem;
-            font-weight: 300;
-            letter-spacing: 0.05em;
-            color: var(--clr-gold);
-            margin-bottom: 12px;
-        }
-
-        .footer-desc {
-            font-size: 0.85rem;
-            color: rgba(245,242,238,0.5);
-            line-height: 1.8;
-        }
-
-        footer h4 {
-            font-family: 'Noto Sans JP', sans-serif;
-            font-size: 0.8rem;
-            font-weight: 700;
-            letter-spacing: 0.1em;
-            text-transform: uppercase;
-            color: var(--clr-gold);
-            margin-bottom: 16px;
-        }
-
-        footer ul { list-style: none; }
-        footer li { margin-bottom: 10px; }
-        footer a {
-            font-size: 0.85rem;
-            color: rgba(245,242,238,0.6);
-            transition: var(--transition);
-        }
-        footer a:hover { color: var(--clr-neutral); }
-
-        .footer-bottom {
-            border-top: 1px solid rgba(245,242,238,0.1);
-            padding-top: 24px;
-            text-align: center;
-            font-size: 0.75rem;
-            color: rgba(245,242,238,0.35);
-        }
-
-        /* ── Note section ── */
-        .note-feature {
-            max-width: 760px;
-            margin: 0 auto;
-        }
-
-        .note-profile {
-            display: flex;
-            gap: 24px;
-            align-items: flex-start;
-            background: var(--clr-white);
-            border: 1px solid rgba(196,168,130,0.25);
-            border-radius: var(--radius-lg);
-            padding: 32px;
-            margin-bottom: 32px;
-        }
-
-        .note-avatar {
-            width: 72px;
-            height: 72px;
-            border-radius: 50%;
-            object-fit: cover;
-            flex-shrink: 0;
-            border: 2px solid rgba(196,168,130,0.3);
-        }
-
-        .note-author-name {
-            font-weight: 700;
-            font-size: 1rem;
-            color: var(--clr-primary);
-            margin-bottom: 2px;
-        }
-
-        .note-author-role {
-            font-size: 0.75rem;
-            color: var(--clr-muted);
-            margin-bottom: 10px;
-        }
-
-        .note-author-bio {
-            font-size: 0.88rem;
-            color: #555;
-            line-height: 1.8;
-        }
-
-        .note-themes {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 12px;
-            margin-bottom: 8px;
-        }
-
-        .note-theme-item {
-            display: flex;
-            align-items: flex-start;
-            gap: 12px;
-            background: var(--clr-white);
-            border: 1px solid rgba(196,168,130,0.2);
-            border-radius: var(--radius-md);
-            padding: 16px;
-        }
-
-        .note-theme-num {
-            font-family: 'Noto Serif JP', serif;
-            font-size: 1rem;
-            font-weight: 300;
-            color: var(--clr-gold);
-            flex-shrink: 0;
-        }
-
-        .note-theme-item p {
-            font-size: 0.85rem;
-            color: #444;
-            line-height: 1.6;
-        }
-
-        .note-cta-btn {
-            padding: 14px 40px;
-            font-size: 1rem;
-        }
-
-        @media (max-width: 640px) {
-            .note-profile { flex-direction: column; }
-            .note-themes { grid-template-columns: 1fr; }
-        }
-
-        /* ── Center helper ── */
-        .text-center { text-align: center; }
-        .mt-12 { margin-top: 48px; }
-
-        /* ── Responsive ── */
-        @media (max-width: 900px) {
-            .hero-inner { grid-template-columns: 1fr; gap: 40px; }
-            .hero-image { max-width: 480px; margin: 0 auto; }
-            .articles-grid { grid-template-columns: repeat(2, 1fr); }
-            .training-grid { grid-template-columns: 1fr 1fr; }
-            .cases-grid { grid-template-columns: 1fr; }
-            .footer-grid { grid-template-columns: 1fr 1fr; }
-        }
-
-        @media (max-width: 640px) {
-            nav { display: none; }
-            .hamburger { display: flex; }
-            .articles-grid { grid-template-columns: 1fr; }
-            .training-grid { grid-template-columns: 1fr; }
-            .ba-grid { grid-template-columns: 1fr; }
-            .footer-grid { grid-template-columns: 1fr; }
-            .hero { padding: 64px 0 56px; }
-        }
-    </style>
-</head>
-
-<body>
-
-<!-- ── Header ── -->
-<header>
-    <div class="container">
-        <div class="header-inner">
-            <a href="/" class="logo">
-                <img src="images/metamakeblack.jpg" alt="metamake">
-                <div class="logo-text">
-                    <span class="logo-name">metamake</span>
-                    <span class="logo-tagline">最新技術でwell-beingを</span>
+    <meta name="twitter:title" content="ChihoAI | AIで&quot;別ルート&quot;を作る現場業務支援">
+    <meta name="twitter:description" content="日報・新人教育・不具合対応。AIで、今の仕事にもう1つの進め方を。">
+    <meta name="twitter:image" content="assets/images/hero-ai-route.png">
+    <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+    <link rel="stylesheet" href="styles.css">
+  </head>
+  <body>
+    <header class="site-header" aria-label="サイトヘッダー">
+      <a class="brand" href="#top" aria-label="ChihoAI トップへ">
+        <span class="brand-mark" aria-hidden="true"></span>
+        <span>ChihoAI</span>
+      </a>
+      <nav class="header-nav" aria-label="ページ内ナビゲーション">
+        <a href="#routes">できること</a>
+        <a href="#flow">進め方</a>
+        <a href="#fit">向いている会社</a>
+      </nav>
+      <a class="header-cta" href="https://lin.ee/81gsp4m" target="_blank" rel="noopener noreferrer">LINEで相談</a>
+    </header>
+
+    <main id="top">
+      <section class="hero" aria-labelledby="hero-title">
+        <div class="hero-overlay"></div>
+        <div class="hero-content">
+          <p class="eyebrow">地方製造業のためのAI業務改善</p>
+          <h1 id="hero-title">今までどおりのその仕事、<br>AIで"別ルート"を<br>作りませんか？</h1>
+          <p class="hero-service">日報・新人教育・不具合対応。</p>
+          <p class="hero-lead">今のやり方を壊さず、まずは1つの仕事から、AIを使った進め方を一緒に作ります。</p>
+          <p class="hero-sub">何かを変えたい。でも、何から変えればいいかわからない社長へ。</p>
+          <p class="route-definition">"別ルート"とは、今のやり方を壊さず、もう1つの進め方を作ること。</p>
+          <div class="hero-actions">
+            <a class="button button-primary" href="https://lin.ee/81gsp4m" target="_blank" rel="noopener noreferrer">LINEで相談</a>
+            <a class="button button-secondary" href="#examples">"別ルート"の例を見る</a>
+          </div>
+        </div>
+      </section>
+
+      <section class="section section-checks">
+        <div class="section-inner check-layout">
+          <div>
+            <p class="section-kicker">こんなこと、ありませんか？</p>
+            <h2>1つでも当てはまるなら、その仕事には"別ルート"を作れるかもしれません。</h2>
+          </div>
+          <ul class="check-panel" aria-label="よくある現場の課題">
+            <li>日報が終業後の思い出し作業になっている</li>
+            <li>新人教育がベテラン頼みになっている</li>
+            <li>不具合対応で、結局いつもの人に聞いている</li>
+            <li>改善案が出ても、次の日には元に戻っている</li>
+          </ul>
+        </div>
+      </section>
+
+      <section class="section section-intro">
+        <div class="section-inner two-column">
+          <div>
+            <p class="section-kicker">一緒にやること</p>
+            <h2>まず、現場でよくある仕事を1つ選びます。</h2>
+          </div>
+          <div class="body-copy">
+            <p>日報。新人教育。不具合対応。会議後の整理。問い合わせ対応。</p>
+            <p>その仕事について、今どう進めているかを聞きます。そのうえで、AIを使った“もう1つの進め方”を一緒に作ります。</p>
+            <p>AIに判断を任せるのではありません。人が判断しやすいように、情報の整理、記録、説明をラクにするために使います。</p>
+          </div>
+        </div>
+      </section>
+
+      <section class="section section-pain" aria-labelledby="pain-title">
+        <div class="section-inner">
+          <div class="section-heading">
+            <p class="section-kicker">まず見直す3つの詰まり</p>
+            <h2 id="pain-title">毎日の仕事に、AIで"別ルート"を足します。</h2>
+          </div>
+          <figure class="wide-figure">
+            <img src="assets/images/three-common-scenes.png" alt="日報、新人教育、不具合対応の困りごとと、整理されたAIルートの図解">
+          </figure>
+          <div class="pain-grid">
+            <article class="plain-card">
+              <h3>その日報、まだ終業後に思い出しながら書いてますか？</h3>
+              <p>作業中の短いメモや音声をもとに、AIが日報のたたき台を作ります。人が最後に確認して、必要なところだけ直します。</p>
+            </article>
+            <article class="plain-card">
+              <h3>その新人教育、まだ「見て覚えて」になってますか？</h3>
+              <p>ベテランの説明を整理し、最初に見ること、間違えやすいところ、必ず人に聞くところを新人向けメモにします。</p>
+            </article>
+            <article class="plain-card">
+              <h3>その不具合対応、まだベテランの記憶に頼ってますか？</h3>
+              <p>発生状況、確認すること、対応手順を整理し、一度起きたことを誰でもわかる社内資産にしていきます。</p>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="section section-service" id="routes" aria-labelledby="service-title">
+        <div class="section-inner">
+          <div class="section-heading compact">
+            <p class="section-kicker">このサービスでやること</p>
+            <h2 id="service-title">AIを「勉強」しません。いつもの仕事の"別ルート"を作るために使います。</h2>
+          </div>
+          <div class="route-grid">
+            <article class="route-card">
+              <span class="route-icon report" aria-hidden="true"></span>
+              <h3>報告書ルート</h3>
+              <p>現場メモを、日報のたたき台に。</p>
+            </article>
+            <article class="route-card">
+              <span class="route-icon training" aria-hidden="true"></span>
+              <h3>新人教育ルート</h3>
+              <p>口頭説明を、最初に読むメモに。</p>
+            </article>
+            <article class="route-card">
+              <span class="route-icon trouble" aria-hidden="true"></span>
+              <h3>不具合対応ルート</h3>
+              <p>迷う前に、まず見る場所を整理。</p>
+            </article>
+            <article class="route-card">
+              <span class="route-icon meeting" aria-hidden="true"></span>
+              <h3>会議後ルート</h3>
+              <p>「やった方がいいね」を、次の一手に。</p>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="section section-examples" id="examples" aria-labelledby="examples-title">
+        <div class="section-inner">
+          <div class="section-heading">
+            <p class="section-kicker">たとえば</p>
+            <h2 id="examples-title">今のやり方を壊さず、もう1本の進め方を足す。</h2>
+          </div>
+
+          <div class="example-list">
+            <article class="example-row">
+              <div class="example-title">
+                <span>01</span>
+                <h3>日報なら</h3>
+              </div>
+              <div class="comparison">
+                <div class="comparison-block before">
+                  <p class="comparison-label">これまで</p>
+                  <p>終業後に、今日あったことを思い出しながら書く。</p>
                 </div>
-            </a>
-
-            <nav>
-                <a href="manufacturing.html" class="nav-link">製造業DX</a>
-                <a href="tourism.html" class="nav-link">観光業DX</a>
-                <a href="agriculture.html" class="nav-link">農業DX</a>
-                <a href="https://note.com/ham6344" target="_blank" rel="noopener noreferrer" class="nav-link">note</a>
-                <a href="about.html" class="btn btn-outline nav-cta">メタマケについて</a>
-                <a href="#ai-training" class="btn btn-primary nav-cta">AI研修を相談する</a>
-            </nav>
-
-            <button class="hamburger" onclick="toggleMobileMenu()" aria-label="メニュー">
-                <span></span><span></span><span></span>
-            </button>
-        </div>
-
-        <div class="mobile-menu" id="mobile-menu">
-            <a href="manufacturing.html">製造業DX</a>
-            <a href="tourism.html">観光業DX</a>
-            <a href="agriculture.html">農業DX</a>
-            <a href="blog-list.html">記事一覧</a>
-            <a href="about.html">メタマケについて</a>
-            <a href="#ai-training">AI研修を相談する</a>
-        </div>
-    </div>
-</header>
-
-<!-- ── Hero ── -->
-<section class="hero">
-    <div class="container">
-        <div class="hero-inner">
-            <div>
-                <p class="hero-eyebrow">metamake / 地方AIブースター</p>
-                <h1>大企業が10年かけて<br>やることを、<br><em>地方の現場が</em><br>今年やる。</h1>
-                <p class="hero-sub">
-                    元東京ガスのマーケターが長野に移住して気づいたこと。
-                    地方の現場には、AIが一番刺さる。<br>
-                    製造・観光・農業の「あなたらしさ」を、AIで増幅する実践ガイド。
-                </p>
-                <div class="hero-actions">
-                    <a href="#ai-training" class="btn btn-primary">AI研修について聞く</a>
-                    <a href="#blog" class="btn btn-outline" style="color:var(--clr-neutral); border-color:rgba(196,168,130,0.4);">実践ガイドを読む</a>
+                <div class="comparison-block after">
+                  <p class="comparison-label">"別ルート"</p>
+                  <p>作業中の短いメモや音声をもとに、AIが日報のたたき台を作る。</p>
                 </div>
-            </div>
-            <div class="hero-image">
-                <img src="images/chihoaitop.png" alt="地方の現場をAIで変革">
-            </div>
-        </div>
-    </div>
-</section>
+              </div>
+              <p class="example-note">ゼロから書く時間を減らし、記録の抜け漏れも減らします。</p>
+            </article>
 
-<!-- ── Articles ── -->
-<section class="section section-neutral" id="blog">
-    <div class="container">
-        <div class="section-header">
-            <p class="section-eyebrow">Note</p>
-            <h2 class="section-title">40代会社員が、<br>AI時代を生き抜くために。</h2>
-        </div>
-
-        <div class="note-feature">
-            <div class="note-profile">
-                <img src="images/pessham.png" alt="ペスハム" class="note-avatar">
-                <div>
-                    <p class="note-author-name">ペスハム（石澤亮輔）</p>
-                    <p class="note-author-role">合同会社メタマケ 代表 / AIコンサルタント</p>
-                    <p class="note-author-bio">
-                        元東京ガスで10年マーケターをやり、2023年に長野へ移住。
-                        大企業にいたからこそわかる、「普通の会社員がAIをどう使えばいいか」を
-                        40代の視点で書いています。
-                    </p>
+            <article class="example-row">
+              <div class="example-title">
+                <span>02</span>
+                <h3>新人教育なら</h3>
+              </div>
+              <div class="comparison">
+                <div class="comparison-block before">
+                  <p class="comparison-label">これまで</p>
+                  <p>ベテランが毎回、口で説明する。忙しい時は「とりあえず見て覚えて」になりがち。</p>
                 </div>
-            </div>
-
-            <div class="note-themes">
-                <div class="note-theme-item">
-                    <span class="note-theme-num">01</span>
-                    <p>ChatGPT・Claudeを仕事で使いこなす具体的な方法</p>
+                <div class="comparison-block after">
+                  <p class="comparison-label">"別ルート"</p>
+                  <p>ベテランに作業の流れを話してもらい、AIで整理する。</p>
                 </div>
-                <div class="note-theme-item">
-                    <span class="note-theme-num">02</span>
-                    <p>AI時代に「替えの利かない人材」になるキャリア戦略</p>
+              </div>
+              <p class="example-note">最初に見ること、間違えやすいところ、必ず人に聞くところ、やってはいけないことを新人が読める形にします。</p>
+            </article>
+
+            <article class="example-row">
+              <div class="example-title">
+                <span>03</span>
+                <h3>不具合対応なら</h3>
+              </div>
+              <div class="comparison">
+                <div class="comparison-block before">
+                  <p class="comparison-label">これまで</p>
+                  <p>何か起きるたびに、誰に聞けばいいか迷う。過去に似たことがあっても、記録を探すのに時間がかかる。</p>
                 </div>
-                <div class="note-theme-item">
-                    <span class="note-theme-num">03</span>
-                    <p>大企業・中小企業でのAI導入リアルな現場レポート</p>
+                <div class="comparison-block after">
+                  <p class="comparison-label">"別ルート"</p>
+                  <p>発生したことをAIで整理し、確認することを出します。</p>
                 </div>
-                <div class="note-theme-item">
-                    <span class="note-theme-num">04</span>
-                    <p>「副業・独立」を視野に入れた40代のAI活用術</p>
-                </div>
-            </div>
-
-            <div class="text-center" style="margin-top: 40px;">
-                <a href="https://note.com/ham6344" target="_blank" rel="noopener noreferrer" class="btn btn-dark note-cta-btn">
-                    noteで読む
-                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 13v6a2 2 0 01-2 2H5a2 2 0 01-2-2V8a2 2 0 012-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
-                </a>
-                <p style="font-size:0.78rem; color:var(--clr-muted); margin-top:10px;">note.com/ham6344</p>
-            </div>
+              </div>
+              <p class="example-note">いつ起きたか、どの設備か、どんな状態か、すぐ見るべき場所はどこか、誰に確認すべきかを整理します。</p>
+            </article>
+          </div>
         </div>
-    </div>
-</section>
+      </section>
 
-<!-- ── AI Training ── -->
-<section class="section section-white" id="ai-training">
-    <div class="container">
-        <div class="section-header">
-            <p class="section-eyebrow">AI Training Program</p>
-            <h2 class="section-title">「AIは怖い」と言っていた現場が、<br>半年後に一番使いこなしていた。</h2>
+      <section class="section section-decision" aria-labelledby="decision-title">
+        <div class="section-inner decision-layout">
+          <figure class="decision-figure">
+            <img src="assets/images/human-decision-support.png" alt="現場責任者が整理された資料を見ながら判断する様子">
+          </figure>
+          <div class="decision-copy">
+            <p class="section-kicker">安全・品質・設備判断をAI任せにしない</p>
+            <h2 id="decision-title">AIが判断するのではありません。人が判断しやすいように、材料をそろえます。</h2>
+            <ul class="check-list">
+              <li>状況整理</li>
+              <li>確認点</li>
+              <li>過去メモ</li>
+              <li>報告書たたき台</li>
+            </ul>
+          </div>
         </div>
+      </section>
 
-        <div class="ba-grid">
-            <div class="ba-box before-box">
-                <p class="ba-label before">Before — AI研修前</p>
-                <ul>
-                    <li><span class="dot"></span><span>残業月100時間で家族との時間がない</span></li>
-                    <li><span class="dot"></span><span>AIは怖くて一度も触ったことがない</span></li>
-                    <li><span class="dot"></span><span>Excel作業の繰り返しで疲弊している</span></li>
-                    <li><span class="dot"></span><span>同じミスを繰り返し、信頼を失いかけている</span></li>
-                </ul>
-            </div>
-            <div class="ba-box after-box">
-                <p class="ba-label after">After — AI研修後</p>
-                <ul>
-                    <li><span class="dot"></span><span>残業75時間減で家族と過ごす時間が戻った</span></li>
-                    <li><span class="dot"></span><span>AIが最高の相棒になった</span></li>
-                    <li><span class="dot"></span><span>3時間の作業が10分で完了するようになった</span></li>
-                    <li><span class="dot"></span><span>部署で一番頼られる存在に変わった</span></li>
-                </ul>
-            </div>
+      <section class="section section-flow" id="flow" aria-labelledby="flow-title">
+        <div class="section-inner">
+          <div class="section-heading">
+            <p class="section-kicker">進め方</p>
+            <h2 id="flow-title">今のやり方を残したまま、小さく試します。</h2>
+          </div>
+          <ol class="flow-list">
+            <li>
+              <span>1</span>
+              <h3>現場でよくある仕事を1つ選ぶ</h3>
+              <p>日報、新人教育、不具合対応、会議後の整理など。</p>
+            </li>
+            <li>
+              <span>2</span>
+              <h3>今のやり方を聞く</h3>
+              <p>誰が、いつ、何を見て、どこで迷うのかを確認します。</p>
+            </li>
+            <li>
+              <span>3</span>
+              <h3>AIで"別ルート"を作る</h3>
+              <p>メモ、説明、過去の流れをもとに、たたき台や確認リストを作ります。</p>
+            </li>
+            <li>
+              <span>4</span>
+              <h3>実際の仕事で使ってみる</h3>
+              <p>今のやり方を残したまま、AIを使った進め方も試します。</p>
+            </li>
+            <li>
+              <span>5</span>
+              <h3>必要なら次の業務に広げる</h3>
+              <p>最初の1業務で手応えを見てから、次の候補を一緒に選びます。</p>
+            </li>
+          </ol>
         </div>
+      </section>
 
-        <div class="training-grid">
-            <div class="training-card">
-                <div class="training-icon">📚</div>
-                <h3>約20時間集中研修</h3>
-                <ul>
-                    <li>ChatGPT / Claude業務活用</li>
-                    <li>データ分析自動化</li>
-                    <li>資料作成効率化</li>
-                    <li>顧客対応AI化</li>
-                    <li>業務プロセス最適化</li>
-                </ul>
-            </div>
-            <div class="training-card">
-                <div class="training-icon">🎯</div>
-                <h3>6ヶ月実践サポート</h3>
-                <ul>
-                    <li>月2回のオンライン相談</li>
-                    <li>社内実装の個別サポート</li>
-                    <li>効果測定・改善提案</li>
-                    <li>追加ツール導入支援</li>
-                    <li>成果発表会の開催</li>
-                </ul>
-            </div>
-            <div class="training-card">
-                <div class="training-icon">💰</div>
-                <h3>助成金活用で75%戻ってくる</h3>
-                <ul>
-                    <li>通常価格：400万円</li>
-                    <li>助成金適用後：100万円</li>
-                    <li>申請書類作成代行</li>
-                    <li>助成金申請サポート</li>
-                    <li>成果報告書作成支援</li>
-                </ul>
-            </div>
+      <section class="section section-price" aria-labelledby="price-title">
+        <div class="section-inner price-band">
+          <div>
+            <p class="section-kicker">費用の目安</p>
+            <h2 id="price-title">まずは1業務から試せる小規模支援です。</h2>
+            <p>大きなシステム導入ではありません。今の仕事を残したまま、AIを使った進め方を一緒に作ります。</p>
+          </div>
+          <div class="price-box">
+            <p>費用目安</p>
+            <strong>10万〜30万円</strong>
+          </div>
         </div>
+      </section>
 
-        <div class="cta-banner">
-            申請から研修開始まで通常2ヶ月。今すぐ行動を開始しましょう。
+      <section class="section section-fit" id="fit" aria-labelledby="fit-title">
+        <div class="section-inner fit-layout">
+          <div>
+            <p class="section-kicker">こんな会社に向いています</p>
+            <h2 id="fit-title">製造業・食品製造業・加工業など、現場業務がある会社。</h2>
+            <p class="body-copy">AIに興味はある。でも、何から始めればいいかわからない。そんな会社に向いています。</p>
+          </div>
+          <ul class="fit-list">
+            <li>日報や報告書が後回しになりがち。</li>
+            <li>新人教育がベテラン頼みになっている。</li>
+            <li>不具合対応が特定の人の経験に寄っている。</li>
+            <li>会議や朝礼で出た改善案が流れやすい。</li>
+            <li>AIに興味はあるが、何から始めればいいかわからない。</li>
+          </ul>
         </div>
+      </section>
 
-        <div class="text-center">
-            <a href="https://app.spirinc.com/patterns/availability-sharing/CuveLAwUnplEYK7KBzUsv/confirm"
-               target="_blank" rel="noopener noreferrer" class="consult-btn">
-                無料相談で助成金活用プランを確認する
-                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 5l7 7-7 7"/></svg>
-            </a>
-            <p class="consult-note">30分の無料相談で御社の課題に合わせた具体的な削減効果をシミュレーションします</p>
+      <section class="section section-subsidy" aria-labelledby="subsidy-title">
+        <div class="section-inner subsidy-band">
+          <div>
+            <p class="section-kicker">補助金の活用も相談できます</p>
+            <h2 id="subsidy-title">条件が合う場合は、人材開発支援助成金などの活用も相談できます。</h2>
+          </div>
+          <p>ただし、助成金ありきではなく、まずは御社の現場で役に立つ形を一緒に考えます。</p>
         </div>
-    </div>
-</section>
+      </section>
 
-<!-- ── LINE CTA ── -->
-<section class="line-cta">
-    <div class="container">
-        <h2>「うちの会社には関係ない」<br>と思っているあなたへ。</h2>
-        <p>農家も、旅館も、町工場も——使い始めたら止まらなかった。<br>AIの最新事例とノウハウをLINEで毎日お届けします。</p>
-        <a href="https://lin.ee/qFBSHNoX" target="_blank" rel="noopener noreferrer" class="line-btn">
-            <svg viewBox="0 0 24 24" fill="currentColor">
-                <path d="M19.365 9.863c.349 0 .63.285.63.631 0 .345-.281.63-.63.63H17.61v1.125h1.755c.349 0 .63.283.63.63 0 .344-.281.629-.63.629h-2.386c-.345 0-.627-.285-.627-.629V8.108c0-.345.282-.63.63-.63h2.386c.346 0 .627.285.627.63 0 .349-.281.63-.63.63H17.61v1.125h1.755zm-3.855 3.016c0 .27-.174.51-.432.596-.064.021-.133.031-.199.031-.211 0-.391-.09-.51-.25l-2.443-3.317v2.94c0 .344-.279.629-.631.629-.346 0-.626-.285-.626-.629V8.108c0-.27.173-.51.43-.595.06-.023.136-.033.194-.033.195 0 .375.104.495.254l2.462 3.33V8.108c0-.345.282-.63.63-.63.345 0 .63.285.63.63v4.771zm-5.741 0c0 .344-.282.629-.631.629-.345 0-.627-.285-.627-.629V8.108c0-.345.282-.63.63-.63.346 0 .628.285.628.63v4.771zm-2.466.629H4.917c-.345 0-.63-.285-.63-.629V8.108c0-.345.285-.63.63-.63.348 0 .63.285.63.63v4.141h1.756c.348 0 .629.283.629.63 0 .344-.282.629-.629.629M24 10.314C24 4.943 18.615.572 12.017.572S0 4.943 0 10.314c0 4.811 4.27 8.842 10.035 9.608.391.082.923.258 1.058.59.12.301.079.766.038 1.08l-.164 1.02c-.045.301-.24 1.186 1.049.645 1.291-.539 6.916-4.078 9.436-6.975C23.176 14.393 24 12.458 24 10.314"/>
-            </svg>
-            LINE友だち追加
-        </a>
-        <p style="font-size:0.75rem; color:rgba(245,242,238,0.4); margin-top:12px;">ブロックはいつでもできます</p>
-    </div>
-</section>
-
-<!-- ── Case Studies ── -->
-<section class="section section-neutral">
-    <div class="container">
-        <div class="section-header">
-            <p class="section-eyebrow">Case Studies</p>
-            <h2 class="section-title">数字が証明する、<br>地方 × AI の現実</h2>
+      <section class="section section-profile" aria-labelledby="profile-title">
+        <div class="section-inner">
+          <div class="profile-head">
+            <img src="assets/images/pessham-ishizawa.jpg" alt="石澤亮輔（ペスハム）" class="profile-avatar">
+            <div class="profile-copy">
+              <p class="section-kicker">石澤の実績</p>
+              <h2 id="profile-title">大企業の業務設計と、地方現場でのAI活用をつなぎます。</h2>
+              <p class="profile-name">石澤 亮輔（ペスハム） / 株式会社メタマケ 代表</p>
+              <p>東京ガスで約11年、営業現場、マーケティング、機械学習プロジェクト、人事領域を経験。現在は長野を拠点に、中小企業のAI活用、属人化した業務の整理、現場ヒアリングを支援しています。</p>
+              <div class="profile-links" aria-label="石澤亮輔の外部発信">
+                <a href="https://note.com/ham6344" target="_blank" rel="noopener noreferrer">noteで読む</a>
+                <span>SNSでもAI活用・地方企業の業務整理について発信中</span>
+              </div>
+            </div>
+          </div>
+          <div class="achievement-grid" aria-label="石澤亮輔の主な実績">
+            <article class="achievement-card">
+              <p class="achievement-label">Machine Learning PM</p>
+              <h3>東京ガスで故障予測モデル開発を推進</h3>
+              <p>ガス機器の故障予測モデル開発で、外部パートナー選定、データ収集戦略、エンジニア・顧客サービス部門との調整を担当。</p>
+            </article>
+            <article class="achievement-card">
+              <p class="achievement-label">Public Writing</p>
+              <h3>note・SNSでAI活用の実践知を発信</h3>
+              <p>ChatGPT・Claudeの使い方、AI時代のキャリア、中小企業のAI導入リアル、属人化の話まで、地に足のついた使い方を継続して発信。</p>
+            </article>
+            <article class="achievement-card">
+              <p class="achievement-label">Local AI Practice</p>
+              <h3>長野県内の企業・地域でAI活用を支援</h3>
+              <p>長野県内の企業約50社へ営業し、松本市の企業、地域公民館、上田市ICT施設などでAI活用講座・ワークショップを実施。</p>
+            </article>
+            <article class="achievement-card">
+              <p class="achievement-label">Automation</p>
+              <h3>AIエージェントをフル活用して業務を自動化</h3>
+              <p>地方事業者向けの募集案件作成ツールをAIエージェントを使って独自開発し、実業務で運用。参画3ヶ月で月間目標15件も達成。</p>
+            </article>
+            <article class="achievement-card">
+              <p class="achievement-label">Learning Contents</p>
+              <h3>「ブラウザ操作自動化の教科書」をリリース</h3>
+              <p>メール、フォーム入力、管理画面、SNS投稿など、くり返しブラウザ作業を自動化したい非エンジニア向けの実践教材を制作。2026年6月リリース予定。</p>
+            </article>
+          </div>
         </div>
+      </section>
 
-        <div class="cases-grid">
-            <div class="case-card">
-                <h3>中堅製造業 A社</h3>
-                <div class="case-stats">
-                    <div class="stat">
-                        <div class="stat-value">35%</div>
-                        <div class="stat-label">不良品率減少</div>
-                    </div>
-                    <div class="stat">
-                        <div class="stat-value">2.5h</div>
-                        <div class="stat-label">分析時間短縮/日</div>
-                    </div>
-                </div>
-                <p>品質管理データの分析にChatGPTを活用。過去3年間の不良品データから傾向を発見し、予防策を立案。不良品率35%減少、分析作業も大幅に効率化。</p>
-            </div>
-
-            <div class="case-card">
-                <h3>地域観光協会 B団体</h3>
-                <div class="case-stats">
-                    <div class="stat">
-                        <div class="stat-value">150%</div>
-                        <div class="stat-label">SNSエンゲージ増</div>
-                    </div>
-                    <div class="stat">
-                        <div class="stat-value">40%</div>
-                        <div class="stat-label">観光客増加</div>
-                    </div>
-                </div>
-                <p>AIを活用した観光コンテンツ作成とSNS戦略の最適化。地域の魅力を効果的に発信し、SNSエンゲージメント150%向上、観光客数も40%増加を実現。</p>
-            </div>
-
-            <div class="case-card">
-                <h3>スマート農園 C農場</h3>
-                <div class="case-stats">
-                    <div class="stat">
-                        <div class="stat-value">25%</div>
-                        <div class="stat-label">収穫量向上</div>
-                    </div>
-                    <div class="stat">
-                        <div class="stat-value">30%</div>
-                        <div class="stat-label">病害虫被害削減</div>
-                    </div>
-                </div>
-                <p>気象データと栽培履歴をAIで分析し、最適な収穫時期を予測。病害虫発生リスクの早期警告により、収穫量25%向上、病害虫被害30%削減を達成。</p>
-            </div>
+      <section class="section section-contact" id="contact" aria-labelledby="contact-title">
+        <div class="section-inner contact-layout">
+          <div>
+            <p class="section-kicker">まずは、御社の「今までどおりの仕事」を1つ聞かせてください。</p>
+            <h2 id="contact-title">AIで"別ルート"を作れそうな仕事を、一緒に探しましょう。</h2>
+          </div>
+          <div class="contact-box">
+            <ul class="contact-tags" aria-label="相談テーマ例">
+              <li>日報</li>
+              <li>新人教育</li>
+              <li>不具合対応</li>
+              <li>会議後の整理</li>
+              <li>問い合わせ対応</li>
+            </ul>
+            <a class="button button-primary contact-button" href="https://lin.ee/81gsp4m" target="_blank" rel="noopener noreferrer">LINEで相談</a>
+          </div>
         </div>
-    </div>
-</section>
-
-<!-- ── Footer ── -->
-<footer>
-    <div class="container">
-        <div class="footer-grid">
-            <div>
-                <p class="footer-brand">metamake</p>
-                <p class="footer-desc">
-                    最新技術でwell-beingを。<br>
-                    地方の現場の「あなたらしさ」をAIで増幅するメディア。
-                </p>
-            </div>
-            <div>
-                <h4>コンテンツ</h4>
-                <ul>
-                    <li><a href="manufacturing.html">製造業DX</a></li>
-                    <li><a href="tourism.html">観光業DX</a></li>
-                    <li><a href="agriculture.html">農業DX</a></li>
-                    <li><a href="https://note.com/ham6344" target="_blank" rel="noopener noreferrer">note</a></li>
-                </ul>
-            </div>
-            <div>
-                <h4>About</h4>
-                <ul>
-                    <li><a href="about.html">メタマケについて</a></li>
-                    <li><a href="program.html">研修プログラム</a></li>
-                    <li><a href="mailto:metamake0601@pessham.com">お問い合わせ</a></li>
-                </ul>
-            </div>
-        </div>
-        <div class="footer-bottom">
-            © 2025 metamake. All rights reserved.
-        </div>
-    </div>
-</footer>
-
-<script>
-    function sortArticlesByDate() {
-        const container = document.getElementById('articles-container');
-        if (!container) return;
-        const articles = Array.from(container.querySelectorAll('article[data-date]'));
-        articles.sort((a, b) => new Date(b.dataset.date) - new Date(a.dataset.date));
-        articles.forEach(a => container.appendChild(a));
-    }
-
-    function toggleMobileMenu() {
-        const menu = document.getElementById('mobile-menu');
-        if (menu) menu.style.display = menu.style.display === 'block' ? 'none' : 'block';
-    }
-
-    document.addEventListener('DOMContentLoaded', sortArticlesByDate);
-</script>
-
-</body>
+      </section>
+    </main>
+  </body>
 </html>
