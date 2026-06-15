@@ -679,7 +679,7 @@ h3 {
 
 .price-band {
   display: grid;
-  grid-template-columns: minmax(0, 1fr) 300px;
+  grid-template-columns: minmax(0, 0.78fr) minmax(360px, 1fr);
   gap: clamp(28px, 5vw, 54px);
   align-items: center;
   padding: clamp(30px, 5vw, 54px);
@@ -694,26 +694,46 @@ h3 {
   color: var(--ink-soft);
 }
 
-.price-box {
-  padding: 28px;
-  text-align: center;
-  background: var(--ink);
-  border: 1px solid rgba(196, 168, 130, 0.52);
+.price-options {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 12px;
+}
+
+.price-option {
+  min-height: 160px;
+  padding: 22px;
+  background: var(--white);
+  border: 1px solid var(--line);
   border-radius: 4px;
 }
 
-.price-box p {
-  margin: 0 0 8px;
-  color: var(--orange-soft);
-  font-size: 14px;
-  font-weight: 800;
+.price-option.featured {
+  color: var(--white);
+  background: var(--ink);
+  border-color: rgba(196, 168, 130, 0.52);
 }
 
-.price-box strong {
+.price-option p {
+  margin: 0 0 14px;
+  color: var(--muted);
+  font-size: 14px;
+  font-weight: 900;
+}
+
+.price-option.featured p {
+  color: var(--orange-soft);
+}
+
+.price-option strong {
   display: block;
-  color: var(--white);
-  font-size: clamp(30px, 4vw, 42px);
+  color: var(--ink);
+  font-size: clamp(24px, 2.8vw, 34px);
   line-height: 1.2;
+}
+
+.price-option.featured strong {
+  color: var(--white);
 }
 
 .section-subsidy {
@@ -884,6 +904,38 @@ h3 {
 
 .contact-button {
   width: 100%;
+}
+
+.contact-methods {
+  display: grid;
+  gap: 10px;
+  margin: 0 0 24px;
+}
+
+.contact-methods p {
+  display: grid;
+  grid-template-columns: 82px minmax(0, 1fr);
+  gap: 12px;
+  align-items: center;
+  min-height: 42px;
+  padding: 10px 12px;
+  margin: 0;
+  color: var(--white);
+  font-weight: 800;
+  background: rgba(255, 255, 255, 0.1);
+  border: 1px solid rgba(255, 255, 255, 0.16);
+  border-radius: 4px;
+}
+
+.contact-methods span {
+  color: var(--orange-soft);
+  font-size: 13px;
+  font-weight: 900;
+}
+
+.contact-methods a {
+  text-decoration: underline;
+  text-underline-offset: 3px;
 }
 
 @media (max-width: 980px) {
@@ -1062,9 +1114,18 @@ h3 {
   .flow-list li,
   .fit-list,
   .price-band,
-  .price-box,
+  .price-option,
   .contact-box {
     padding: 22px;
+  }
+
+  .price-options {
+    grid-template-columns: 1fr;
+  }
+
+  .contact-methods p {
+    grid-template-columns: 1fr;
+    gap: 2px;
   }
 
   .flow-list li {
