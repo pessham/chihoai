@@ -3,9 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>metamakeについて｜合同会社メタマケ 代表 石澤亮輔</title>
-    <meta name="description" content="metamake（合同会社メタマケ）は、長野県松本市を拠点に地方企業へのAI導入支援を行う会社です。代表・石澤亮輔のプロフィールとミッションをご紹介します。">
-    <meta name="keywords" content="metamake,メタマケ,石澤亮輔,ペスハム,AI導入,地方DX,松本市,合同会社メタマケ">
+    <title>metamakeについて｜株式会社メタマケ 代表 石澤亮輔</title>
+    <meta name="description" content="metamake（株式会社メタマケ）は、長野県松本市を拠点に地方企業へのAI導入支援を行う会社です。代表・石澤亮輔のプロフィールとミッションをご紹介します。">
+    <meta name="keywords" content="metamake,メタマケ,石澤亮輔,ペスハム,AI導入,地方DX,松本市,株式会社メタマケ">
 
     <meta name="robots" content="index, follow">
     <link rel="canonical" href="https://chihoai.com/about.html">
@@ -15,16 +15,16 @@
     <link rel="apple-touch-icon" href="images/metamakeblack.jpg">
 
     <!-- Open Graph -->
-    <meta property="og:title" content="metamakeについて｜合同会社メタマケ 代表 石澤亮輔">
-    <meta property="og:description" content="metamake（合同会社メタマケ）は、長野県松本市を拠点に地方企業へのAI導入支援を行う会社です。">
+    <meta property="og:title" content="metamakeについて｜株式会社メタマケ 代表 石澤亮輔">
+    <meta property="og:description" content="metamake（株式会社メタマケ）は、長野県松本市を拠点に地方企業へのAI導入支援を行う会社です。">
     <meta property="og:image" content="/images/metamakeblack.jpg">
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://chihoai.com/about.html">
 
     <!-- Twitter Card -->
     <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="metamakeについて｜合同会社メタマケ 代表 石澤亮輔">
-    <meta name="twitter:description" content="metamake（合同会社メタマケ）は、長野県松本市を拠点に地方企業へのAI導入支援を行う会社です。">
+    <meta name="twitter:title" content="metamakeについて｜株式会社メタマケ 代表 石澤亮輔">
+    <meta name="twitter:description" content="metamake（株式会社メタマケ）は、長野県松本市を拠点に地方企業へのAI導入支援を行う会社です。">
     <meta name="twitter:image" content="/images/metamakeblack.jpg">
 
     <!-- 構造化データ -->
@@ -32,7 +32,7 @@
     {
         "@context": "https://schema.org",
         "@type": "Organization",
-        "name": "合同会社メタマケ",
+        "name": "株式会社メタマケ",
         "alternateName": "metamake",
         "url": "https://chihoai.com/",
         "description": "最新技術でwell-beingを。地方の現場の「あなたらしさ」をAIで増幅するメディア・コンサルティング会社。",
@@ -597,6 +597,89 @@
         }
 
         /* ============================================================
+           Achievements
+        ============================================================ */
+        .achievements-intro {
+            max-width: 720px;
+            margin-bottom: 48px;
+        }
+
+        .achievements-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 20px;
+        }
+
+        .achievement-card {
+            background: var(--color-white);
+            border: 1px solid var(--color-border);
+            border-radius: var(--radius);
+            padding: 32px;
+        }
+
+        .achievement-card-wide {
+            grid-column: 1 / -1;
+        }
+
+        .achievement-kicker {
+            font-size: 0.72rem;
+            letter-spacing: 0.14em;
+            text-transform: uppercase;
+            color: var(--color-gold);
+            margin-bottom: 10px;
+        }
+
+        .achievement-title {
+            font-size: 1rem;
+            font-weight: 700;
+            color: var(--color-primary);
+            margin-bottom: 16px;
+        }
+
+        .achievement-list {
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+        }
+
+        .achievement-list li {
+            position: relative;
+            padding-left: 16px;
+            font-size: 0.87rem;
+            color: var(--color-muted);
+            line-height: 1.75;
+        }
+
+        .achievement-list li::before {
+            content: '';
+            position: absolute;
+            top: 0.85em;
+            left: 0;
+            width: 6px;
+            height: 1px;
+            background: var(--color-gold);
+        }
+
+        .achievement-tags {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px;
+        }
+
+        .achievement-tag {
+            display: inline-flex;
+            align-items: center;
+            min-height: 32px;
+            padding: 6px 12px;
+            border: 1px solid var(--color-border);
+            border-radius: 999px;
+            background: var(--color-neutral);
+            font-size: 0.8rem;
+            color: var(--color-primary);
+            line-height: 1.4;
+        }
+
+        /* ============================================================
            Reasons
         ============================================================ */
         .reasons-grid {
@@ -771,6 +854,10 @@
                 gap: 40px;
             }
 
+            .achievements-grid {
+                grid-template-columns: 1fr;
+            }
+
             .profile-image-wrap {
                 max-width: 280px;
             }
@@ -859,10 +946,10 @@
         <section class="hero">
             <div class="container">
                 <div class="hero-inner">
-                    <p class="hero-label">About metamake</p>
-                    <h1>最新技術でwell-beingを。<br>地方の現場に、<br>AIの力を届ける。</h1>
+                    <p class="hero-label">Company</p>
+                    <h1>地域の現場力を、<br>AIで次の成長力へ。</h1>
                     <p class="hero-desc">
-                        metamake（合同会社メタマケ）は、長野県松本市を拠点に、地方の農家・旅館・製造業・工務店へAIを届けるコンサルティング会社です。「テクノロジーが人間らしさを増幅する」という信念のもと、現場に根ざした支援を行っています。
+                        metamake（株式会社メタマケ）は、長野県松本市を拠点に、地方の農家・旅館・製造業・工務店へAIを届けるコンサルティング会社です。「テクノロジーが人間らしさを増幅する」という信念のもと、現場に根ざした支援を行っています。
                     </p>
                 </div>
             </div>
@@ -914,26 +1001,26 @@
                     <div class="profile-info">
                         <p class="section-label">Representative</p>
                         <p class="profile-name">石澤 亮輔</p>
-                        <p class="profile-role">合同会社メタマケ 代表 / ペスハム</p>
+                        <p class="profile-role">株式会社メタマケ 代表 / ペスハム</p>
 
                         <div class="profile-bio">
                             <p>長野県松本市在住。東京ガス（2012-2023）でマーケティング・データ活用に携わった後、2021年にWeb3の世界へ飛び込む。</p>
-                            <p>NinjaDAO参画後、10,000体のNFTプロジェクトに取り組み初期販売約160万円を達成。メタバース音楽ライブを50回以上運営し、ライブ配信とコミュニティ運営の知見を積む。</p>
-                            <p>生成AI普及とともにAI講師・コンサルタントへ転向。地方企業への飛び込み営業でリアルな課題に向き合い続け、2023年4月に合同会社メタマケを設立。X（旧Twitter）フォロワー1.5万人のインフルエンサーとしても活動中。</p>
+                            <p>NinjaDAO参画後、ジェネラティブNFT「めたばっち」などWeb3領域に取り組み、NFT総流通額4000万円以上を経験。メタバース音楽ライブを50回以上運営し、ライブ配信とコミュニティ運営の知見を積む。</p>
+                            <p>生成AI普及とともにAI講師・コンサルタントへ転向。法人向けAI研修の設計・実施、AI自動化ツール開発、地方企業への飛び込み営業を通じてリアルな課題に向き合い続け、2023年4月に株式会社メタマケを設立。X（旧Twitter）フォロワー1.5万人のインフルエンサーとしても活動中。</p>
                         </div>
 
                         <div class="profile-stats">
                             <div class="stat-item">
-                                <p class="stat-value">11年</p>
-                                <p class="stat-label">東京ガスでの経験</p>
+                                <p class="stat-value">5本</p>
+                                <p class="stat-label">Udemy講座制作</p>
                             </div>
                             <div class="stat-item">
-                                <p class="stat-value">50回+</p>
-                                <p class="stat-label">メタバースライブ運営</p>
+                                <p class="stat-value">79名</p>
+                                <p class="stat-label">有料セミナー参加</p>
                             </div>
                             <div class="stat-item">
-                                <p class="stat-value">1.5万</p>
-                                <p class="stat-label">X フォロワー</p>
+                                <p class="stat-value">4000万+</p>
+                                <p class="stat-label">NFT総流通額</p>
                             </div>
                         </div>
 
@@ -958,7 +1045,7 @@
                                 <span class="career-year">2023</span>
                                 <div class="career-dot"></div>
                                 <div class="career-content">
-                                    <p class="career-title">合同会社メタマケ 設立（松本市）</p>
+                                    <p class="career-title">株式会社メタマケ 設立（松本市）</p>
                                     <p class="career-desc">地方企業へのAI導入コンサルティング・Udemy講師・メディア運営を開始</p>
                                 </div>
                             </div>
@@ -968,8 +1055,107 @@
             </div>
         </section>
 
+        <!-- Achievements -->
+        <section class="section section-alt" id="achievements">
+            <div class="container">
+                <div class="achievements-intro">
+                    <p class="section-label">Achievements</p>
+                    <h2 class="section-title">研修、開発、地域現場。<br>机上のAIではなく、使われるAIを届ける。</h2>
+                    <p class="section-lead">
+                        metamakeは、法人研修の設計・実施、AI自動化ツール開発、Web3・NFT・メタバースの実践、長野県内での現地営業を横断して活動しています。AIの知識だけでなく、現場の人手不足・採用・業務の属人化まで踏まえて提案します。
+                    </p>
+                </div>
+
+                <div class="achievements-grid">
+                    <div class="achievement-card">
+                        <p class="achievement-kicker">AI Training</p>
+                        <h3 class="achievement-title">法人・地域向けAI研修</h3>
+                        <ul class="achievement-list">
+                            <li>法人向けAI研修を設計・実施</li>
+                            <li>長野県松本市で若手エンジニア向けAI研修を5回構成で実施</li>
+                            <li>長野県長野市で広告代理店社員向けAI研修を6回構成で実施</li>
+                            <li>長野県松本市の笹賀公民館で市民向けAI研修を定期実施</li>
+                            <li>管理職向けに「非構造化データ活用」の60分セミナーを設計</li>
+                            <li>Udemy講座5本、有料セミナー79名参加の教育実績</li>
+                        </ul>
+                    </div>
+
+                    <div class="achievement-card">
+                        <p class="achievement-kicker">Grant / Format</p>
+                        <h3 class="achievement-title">助成金・ハイブリッド研修対応</h3>
+                        <ul class="achievement-list">
+                            <li>人材開発支援助成金による半額助成を見据えた研修設計に対応</li>
+                            <li>オンライン研修とオフライン研修のハイブリッド形式に対応</li>
+                            <li>研修目的、カリキュラム、演習内容を企業課題に合わせて設計</li>
+                            <li>ChatGPT、Claude、Gemini、NotebookLMなど複数ツールを横断して指導</li>
+                            <li>RAG、ローカルLLM、AIエージェントまで扱う応用研修も実施可能</li>
+                        </ul>
+                    </div>
+
+                    <div class="achievement-card achievement-card-wide">
+                        <p class="achievement-kicker">Training Menu</p>
+                        <h3 class="achievement-title">扱えるAI研修メニュー</h3>
+                        <div class="achievement-tags">
+                            <span class="achievement-tag">ChatGPT</span>
+                            <span class="achievement-tag">Claude</span>
+                            <span class="achievement-tag">Gemini</span>
+                            <span class="achievement-tag">NotebookLM</span>
+                            <span class="achievement-tag">RAG</span>
+                            <span class="achievement-tag">ローカルLLM</span>
+                            <span class="achievement-tag">Claudeエージェント</span>
+                            <span class="achievement-tag">Codex</span>
+                            <span class="achievement-tag">非構造化データ活用</span>
+                            <span class="achievement-tag">業務プロセス自動化</span>
+                            <span class="achievement-tag">資料作成・情報整理</span>
+                            <span class="achievement-tag">社内AI活用ルール設計</span>
+                        </div>
+                    </div>
+
+                    <div class="achievement-card">
+                        <p class="achievement-kicker">Original Tools</p>
+                        <h3 class="achievement-title">自作AIツール・教材</h3>
+                        <ul class="achievement-list">
+                            <li>事業者ページ自動作成システムを開発</li>
+                            <li>業務委託先の入力フォームを自動で入力するツール</li>
+                            <li>購読中のメルマガを毎朝まとめて定期配信するアプリ</li>
+                            <li>毎朝6時のAIニュース便</li>
+                            <li>メルマガツールの始め方を解説する教材動画とLP</li>
+                            <li>宿泊施設向けスマートチェックインツール</li>
+                            <li>毎日30分のブラウザ操作をAIに自動化させる有料教材を制作中</li>
+                        </ul>
+                    </div>
+
+                    <div class="achievement-card">
+                        <p class="achievement-kicker">Web3 / Metaverse</p>
+                        <h3 class="achievement-title">Web3・NFT・メタバース</h3>
+                        <ul class="achievement-list">
+                            <li>ジェネラティブNFT「めたばっち」で総流通額4000万円以上</li>
+                            <li>NINJAメタバライブなど、メタバース音楽ライブに関わった実績</li>
+                            <li>NinjaDAOで初期から活動</li>
+                            <li>NFT、Web3、メタバース、AIを横断して活動</li>
+                            <li>子ども向け3D・AIワークショップを実施</li>
+                            <li>「Matsumoto 3DCG Project」へ参画</li>
+                            <li>県教育総合センターにてVR／メタバース／eスポーツ研修</li>
+                        </ul>
+                    </div>
+
+                    <div class="achievement-card achievement-card-wide">
+                        <p class="achievement-kicker">Local Field Sales</p>
+                        <h3 class="achievement-title">長野県の現場を歩いて、課題を聞いている</h3>
+                        <ul class="achievement-list">
+                            <li>長野県を中心に、現地を回りながら飛び込み営業を実施</li>
+                            <li>宿泊事業者、地域事業者と直接対話</li>
+                            <li>おてつたびの営業現場で、地方事業者の課題を肌で理解</li>
+                            <li>AIだけでなく、現場の人手不足、採用、業務の属人化に触れている</li>
+                            <li>机上の空論ではなく、地域の現場で提案している</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
         <!-- Reasons -->
-        <section class="section section-alt">
+        <section class="section">
             <div class="container">
                 <p class="section-label">Why metamake</p>
                 <h2 class="section-title" style="margin-bottom: 48px;">metamakeが選ばれる理由</h2>
