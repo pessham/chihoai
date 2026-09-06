@@ -691,6 +691,13 @@ h3 {
   white-space: nowrap;
 }
 
+.fde-head h2 span.wrap {
+  display: inline;
+  white-space: normal;
+  font-size: 0.72em;
+  font-weight: 700;
+}
+
 .fde-head > *,
 .fde-board > *,
 .fde-why > * {
@@ -2343,7 +2350,8 @@ h3 {
   h3,
   p,
   li {
-    word-break: break-all;
+    word-break: normal;
+    overflow-wrap: anywhere;
   }
 
   .section-heading h2,
@@ -2399,6 +2407,11 @@ h3 {
   .profile-avatar {
     width: 132px;
     height: 132px;
+  }
+
+  .achievement-thumb {
+    width: 100%;
+    margin-bottom: 18px;
   }
 
   .ig-steps,
